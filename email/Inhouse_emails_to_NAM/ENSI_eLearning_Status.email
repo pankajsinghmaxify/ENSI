@@ -1,0 +1,16 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 0, 0);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+Hi&nbsp;{!Job__c.NAM_Name__c}<br>
+<br>
+As you may recall all ENSI programs include access to our online reinforcement module for a period of 6 months from the conclusion of your program.<br>
+<br>
+To date, <strong><span style="color:#EE0090;">X</span></strong> of <span style="color:#EE0090;"><strong>X</strong></span> participants from your {!Job__c.Certificate_Date_Text__c} program have accessed the module.<br>
+<br>
+To guarantee the best return on your investment we encourage you to promote this resource to your group.<br>
+<br>
+Don’t hesitate to contact me if you would like further information.<br>
+<br>
+Regards</span></span>												
+</html>

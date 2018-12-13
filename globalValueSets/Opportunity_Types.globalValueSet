@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Training</fullName>
+        <default>false</default>
+        <label>Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Organisational transformation</fullName>
+        <default>false</default>
+        <label>Organisational transformation</label>
+    </customValue>
+    <customValue>
+        <fullName>Consulting / retainer</fullName>
+        <default>false</default>
+        <label>Consulting / retainer</label>
+    </customValue>
+    <customValue>
+        <fullName>Fundamentals</fullName>
+        <default>false</default>
+        <label>Fundamentals</label>
+    </customValue>
+    <customValue>
+        <fullName>Level 1</fullName>
+        <default>false</default>
+        <label>Module 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Level 2</fullName>
+        <default>false</default>
+        <label>Module 2</label>
+    </customValue>
+    <customValue>
+        <fullName>Level 3</fullName>
+        <default>false</default>
+        <label>Module 3</label>
+    </customValue>
+    <customValue>
+        <fullName>Refresher</fullName>
+        <default>false</default>
+        <label>Refresher</label>
+    </customValue>
+    <customValue>
+        <fullName>Verhandlungsführung mit System: Grenzen explorieren, Neues ausprobieren</fullName>
+        <default>false</default>
+        <label>Verhandlungsführung mit System: Grenzen explorieren, Neues ausprobieren</label>
+    </customValue>
+    <customValue>
+        <fullName>Retainer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Retainer</label>
+    </customValue>
+    <customValue>
+        <fullName>Consulting</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Consulting</label>
+    </customValue>
+    <customValue>
+        <fullName>Training_CDP-V</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Training CDP-V</label>
+    </customValue>
+    <customValue>
+        <fullName>Coaching</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Coaching</label>
+    </customValue>
+    <customValue>
+        <fullName>German open course</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>German open course</label>
+    </customValue>
+    <customValue>
+        <fullName>Training_CDP-C</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Training CDP-C</label>
+    </customValue>
+    <customValue>
+        <fullName>Training_CDP-F</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Training CDP-F</label>
+    </customValue>
+    <customValue>
+        <fullName>Training_Incompany</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Training Incompany</label>
+    </customValue>
+    <customValue>
+        <fullName>Opportunity for the master / summary of tickets (for Berlin / Singapore)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Opportunity for the master / summary of tickets (for Berlin / Singapore)</label>
+    </customValue>
+    <customValue>
+        <fullName>Opportunity per ticket</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Opportunity per ticket</label>
+    </customValue>
+    <customValue>
+        <fullName>Opportunity for the master / summary of tickets</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Opportunity for the master / summary of tickets</label>
+    </customValue>
+    <masterLabel>Opportunity Types</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

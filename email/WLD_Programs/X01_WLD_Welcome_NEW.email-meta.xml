@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>WLD Joining Instructions, plus PFQ for the WLD and NIP details</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>01 WLD Welcome - NEW</name>
+    <style>none</style>
+    <subject>Congratulations on your enrolment to the ENS Workshop Leader Development Program scheduled for {!Job__c.Certificate_Date_Text__c}</subject>
+    <textOnly>Negotiation &amp; Influencing
+
+
+
+
+Dear {!Contact.FirstName},
+
+&apos;Get more of what you want&apos;
+
+It is with great pleasure that I welcome you to the ENS Workshop Leader Development Program (WLD). The program will commence on {!Job__c.Certificate_Date_Text__c}.
+
+Before we begin, it is important to note that in addition to attending the program, you will be required to participate in various activities before and after the program. We encourage you to fully participate in the activities to maximise your learning outcomes.
+
+We believe that engaging you before and after the workshop will increase your learning outcomes and ask that you participate fully in the activities outlined below. Results of the post program case study and survey are returned to your management to assist them in understanding your challenges and successes.
+
+Pre-Program Requirements
+
+Current Curriculum Vitae (CV): please provide your current CV. This will assist the ENS Master Trainer, {!Job__c.Facilitator_names__c}, in understanding your background and existing exposure to negotiation workshop facilitation.
+Reference Manual: the ENS 2013 10th Edition revised manual &apos;Professional Negotiation &amp; Influencing&apos;, will be used throughout the program. You can check your manual edition by going to page 2 of your manual. Please let us know immediately if you require a replacement manual to be sent to you. Remember to provide us with your postal address details as well.
+Trainer agreement: please sign and return the document following this link prior to the program..
+
+Next week, you will receive additional information and instructions to prepare you for the workshop. In the meantime, please feel free to contact me if you have any questions
+
+Accreditation Process
+
+After the WLD you will need to take the following steps to become an accredited ENS trainer
+
+On successful completion of the WLD program each potential {!Job__c.Account_Name__c} trainer will be required to build their training competency by facilitating approximately two 3-day workshops for {!Job__c.Account_Name__c} staff.
+Performance on these workshops will be ‘mentored’ by either an ENS Master Trainer (ENSMT) or senior ENS consultant nominated by the ENSMT (jointly referred to as the Mentor) who will provide thorough feedback to each potential {!Job__c.Account_Name__c} trainer at the end of each day along with recommended actions. {!Job__c.Account_Name__c} trainers can elect to co-present with another {!Job__c.Account_Name__c} trainer or co-present with an ENS facilitator.
+After successful completion of the supervised practice programs by each {!Job__c.Account_Name__c} trainer (usually two supervised practice sessions will be required but this is subject to the recommendation of the ENSMT and Mentor) and providing all ENS workshop competencies have been achieved as ascertained by the Mentor, the {!Job__c.Account_Name__c} trainer/s will receive accreditation for them to deliver ENS programs independently of ENS.
+Each supervised practice session will be at a minimum a ENS 3-day Negotiation &amp; Influencing workshop, unless otherwise determined by the Mentor. The performance of the {!Job__c.Account_Name__c} trainer will be monitored for the entire duration of each workshop.
+As part of the ENS quality assurance program, we require an ENS Peer Review form be completed and emailed back to ENS after each in-house workshop. These are reviewed and further support can be provided, as required.
+Approximately every 18 months trainers will be required to review with ENS their further updating and upskilling requirements
+
+We look forward to accompanying you in your  ENS - {!Job__c.Account_Name__c} accreditation journey.
+
+Kind regards
+
+{!User.Name}
+{!User.Title}
+
+
+
+
+
+P +61 2 9299 9688  | E info.ens@negotiate.org
+Level 5  83 York Street  Sydney NSW 2000  Australia
+
+negotiate.org
+Manage subscription | Forward email</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

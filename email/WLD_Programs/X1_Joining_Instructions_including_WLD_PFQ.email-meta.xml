@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>WLD Joining Instructions, plus PFQ for the WLD and NIP details SG3</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>02 Joining Instructions WLD PFQ_NIP</name>
+    <style>none</style>
+    <subject>Participant Information: ENS Workshop Leader Development Program on {!Contact.Job_Certificate_Date__c}</subject>
+    <textOnly>ENS International Participant Email
+
+
+Dear {!Contact.FirstName},
+
+&apos;Get more of what you want&apos;
+
+Please read the following information to help you get started for your ENS WLD program on {!Contact.Job_Certificate_Date__c}.
+
+Location:
+The program will be held at {!Contact.Job_Venue_Name__c}, {!Contact.Job_Venue_Address__c}, {!Contact.Job_Venue_City__c}, {!Contact.Job_Venue_Country__c}
+
+Timing
+Currently we are planning to work from {!Contact.Job_Start_Finish_Time__c}, of course, this is subject to negotiation.
+
+You should also be prepared to schedule around 1 to 1.5 hours each evening for assignments in preparation for the following day. The atmosphere of the workshop will be informal and you will be more than welcome in smart casual wear.
+
+Pre-Program Requirements
+
+Program Focus Questionnaire &apos;PFQ&apos;- The PFQ helps the program leader to customise the program based on your needs. We ask that all PFQs are completed by {!Contact.Job_PFQ_Due_Date__c}.
+Click here to access the questionnaire.
+Note: This link is specific to you, please don&apos;t forward to others.
+Negotiating and Influencing Profile ‘NIP’ - the NIP is a profile covering 20 key competencies relating to the negotiation and influencing capabilities of individuals. You will receive a separate email with instructions to log on and complete the NIP online. This should take approximately 20 minutes. We ask that all NIPs are completed by {!Contact.Job_NIP_Due_Date__c}.
+
+
+Pre-Reading
+To assist with the progress of the WLD, please ensure you are capable of making quick reference by page number to the content contained in the green ENS manual &apos;Professional Negotiation &amp; Influencing&apos;.
+
+Program Outline
+Focusing on workshop facilitation of the ENS negotiation and influencing methodology, topics typically covered during this WLD workshop include but are not limited to:
+
+Adult learning and skills development
+Systematic consideration of the ENS philosophy &amp; materials
+Needs assessment of participants and organizations
+Program design for specific situations
+Best practice faciliation and team-teaching techniques
+Experiential learning methods, including active role reversal
+Managing the learning environment
+Classroom control
+Handling the unexpected
+Individual tuition and supervised practice
+Generate strategic options
+Personal critiquing and evaluation of individual presentations
+
+Program Materials
+At the commencement of the workshop, you will receive your personal copy of the Workshop Leader&apos;s Guide. Additional materials and handouts will be circulated during the workshop.
+
+Should you have any questions, please feel free to contact me.
+
+
+Kind regards,
+
+{!Contact.Job_CSM_Name__c}
+{!Contact.Job_CSC_Title__c}
+
+ENS International - Level 5, 83 York Street, Sydney 2000, NSW, Australia
+Phone: +61 2 9299 9688</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

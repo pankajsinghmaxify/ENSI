@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Includes customised survey link (Coveris 8 Week Post Program Survey) in SG3</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Coveris 8 Week Survey Invite</name>
+    <style>none</style>
+    <subject>ENSI Final Survey - Impact &amp; Value from {!Contact.Job_Certificate_Date__c} Program</subject>
+    <textOnly>Dear {!Contact.FirstName}
+
+I trust that you benefited from the application examples of the ENS methodology provided by your colleagues. Perhaps after seeing your example again you saw how another approach could have worked? Reflection is a key aspect of successfully managed negotiations. Remember that your colleagues are valuable assets for recall, reflection and review.
+
+As a final request, we would appreciate 5 minutes of your time to share with us and your {!Contact.Job_Account_Name__c} colleagues the impact and value you have seen from since your ENS workshop on {!Contact.Job_Certificate_Date__c}
+
+Please  click here to access the survey.
+http://www.surveygizmo.com/s3/1725411/ENS-Eight-Week-Must-Win-Can-t-Fail-Impact-and-Value-Survey?jid={!Contact.Last_Job_ID__c}&amp;pid={!Contact.Last_Participant_Id__c}
+The survey link is specific to you, please don&apos;t forward to others.
+
+We would appreciate if you could complete the survey by:  {!Contact.Job_3_month_case_study_due__c}.
+
+Thank you in advance for your cooperation. If you have any questions or comments, please don&apos;t hesitate to contact me directly.
+
+Kind regards
+
+{!Contact.Job_CSM_Name__c}
+Client Service Manager
+
+Suite 507, 83 York Street
+Sydney NSW 2000
+Australia
+p: +61 9299 9688  f: +61 9299 1633
+www.negotiate.org
+
+
+Note this email and any attachments may be privileged and confidential. If you are not the intended recipient please delete the message and notify the sender. Copying or distribution by anyone else is prohibited. Thank you.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>ENSI Retainer - Remaining Hours</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ENSI Retainer - Remaining Hours</name>
+    <style>none</style>
+    <subject>ENSI Retainer - Remaining Hours</subject>
+    <textOnly>Hi {!Job__c.NAM_Name__c}
+
+I trust this finds you well.
+
+After the sessions with {!Job__c.Facilitator_names__c} this week, there are XXX hours remaining on your retainer.
+
+Given the on-going work with {!Job__c.Facilitator_names__c}, would you like to roll the retainer over into another 35 hr block?
+
+Please let me know.
+
+Kind regards</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

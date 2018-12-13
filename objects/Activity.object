@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ComposeGmail</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>LogCall</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>MailMerge</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>RequestUpdate</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SendEmail</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewAll</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Activity_ENSCampaign_Status__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>IF this task resulted in a change of ENSCampaign Status for the Contact, please indicate here.
+NOTE: At this stage you still also have to update the Contact with the relevant status and other required details.</inlineHelpText>
+        <label>DELActivity ENSCampaign Status</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Yet Contacted</fullName>
+                    <default>false</default>
+                    <label>Not Yet Contacted</label>
+                </value>
+                <value>
+                    <fullName>Requested Information</fullName>
+                    <default>false</default>
+                    <label>Requested Information</label>
+                </value>
+                <value>
+                    <fullName>Information Sent</fullName>
+                    <default>false</default>
+                    <label>Information Sent</label>
+                </value>
+                <value>
+                    <fullName>Deferred Contact</fullName>
+                    <default>false</default>
+                    <label>Deferred Contact</label>
+                </value>
+                <value>
+                    <fullName>Interest in Meeting</fullName>
+                    <default>false</default>
+                    <label>Interest in Meeting</label>
+                </value>
+                <value>
+                    <fullName>Meeting Booked</fullName>
+                    <default>false</default>
+                    <label>Meeting Booked</label>
+                </value>
+                <value>
+                    <fullName>Meeting Cancelled</fullName>
+                    <default>false</default>
+                    <label>Meeting Cancelled</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Appointment_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date of the meeting</inlineHelpText>
+        <label>Appointment Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Appointment_Date_as_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(YEAR(  Appointment_Date__c  ) ) 
+&amp; IF (MONTH(Appointment_Date__c ) &lt;10,&quot;0&quot;,&quot;&quot;) 
+&amp; TEXT(MONTH(Appointment_Date__c ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Appointment Date YearMth as Number</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Appointment_Outcome__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the outcome of the meeting</inlineHelpText>
+        <label>Appointment Outcome</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Dropped</fullName>
+                    <default>false</default>
+                    <label>Dropped</label>
+                </value>
+                <value>
+                    <fullName>Move forward</fullName>
+                    <default>false</default>
+                    <label>Move forward</label>
+                </value>
+                <value>
+                    <fullName>Referral</fullName>
+                    <default>false</default>
+                    <label>Referral</label>
+                </value>
+                <value>
+                    <fullName>Stalled</fullName>
+                    <default>false</default>
+                    <label>Stalled</label>
+                </value>
+                <value>
+                    <fullName>Exploratory</fullName>
+                    <default>false</default>
+                    <label>Exploratory</label>
+                </value>
+                <value>
+                    <fullName>Stated Need</fullName>
+                    <default>false</default>
+                    <label>Stated Need</label>
+                </value>
+                <value>
+                    <fullName>Proposed solution</fullName>
+                    <default>false</default>
+                    <label>Proposed solution</label>
+                </value>
+                <value>
+                    <fullName>Sign off</fullName>
+                    <default>false</default>
+                    <label>Sign off</label>
+                </value>
+                <value>
+                    <fullName>Delivery</fullName>
+                    <default>false</default>
+                    <label>Delivery</label>
+                </value>
+                <value>
+                    <fullName>Post Delivery</fullName>
+                    <default>false</default>
+                    <label>Post Delivery</label>
+                </value>
+                <value>
+                    <fullName>Account Management</fullName>
+                    <default>false</default>
+                    <label>Account Management</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Appointment_Stalled_to__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date the appointment is stalled to</inlineHelpText>
+        <label>Appointment Stalled to</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Appointment_Type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of meeting</inlineHelpText>
+        <label>Appointment Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Face to Face</fullName>
+                    <default>false</default>
+                    <label>Face to Face</label>
+                </value>
+                <value>
+                    <fullName>Phone</fullName>
+                    <default>false</default>
+                    <label>Phone</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Assigned_to_NON_Staff__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>When the task responsibility isn&apos;t a member of staff</inlineHelpText>
+        <label>Assigned to NON Staff</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Drew McKinnie</fullName>
+                    <default>false</default>
+                    <label>Drew McKinnie</label>
+                </value>
+                <value>
+                    <fullName>John Barber</fullName>
+                    <default>false</default>
+                    <label>John Barber</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BD_Person__c</fullName>
+        <externalId>false</externalId>
+        <label>BD Person</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Duncan McClure</fullName>
+                    <default>false</default>
+                    <label>Duncan McClure</label>
+                </value>
+                <value>
+                    <fullName>Graeme and Phil</fullName>
+                    <default>false</default>
+                    <label>Graeme and Phil</label>
+                </value>
+                <value>
+                    <fullName>Graeme Orchiston</fullName>
+                    <default>false</default>
+                    <label>Graeme Orchiston</label>
+                </value>
+                <value>
+                    <fullName>Karey Payne</fullName>
+                    <default>false</default>
+                    <label>Karey Payne</label>
+                </value>
+                <value>
+                    <fullName>Phil Wade</fullName>
+                    <default>false</default>
+                    <label>Phil Wade</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Comment_Summary__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Shows the first 255 characters of the comments for use in custom views and related lists. This is updated by workflow field update whenever a task is saved.</inlineHelpText>
+        <label>Comment Summary</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Contact_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>WhoId</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_ID__c</fullName>
+        <description>GE 28/1/09: trying an idea to be able to relate activities to both jobs and accounts.</description>
+        <externalId>false</externalId>
+        <label>Job ID</label>
+        <length>18</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_No__c</fullName>
+        <externalId>false</externalId>
+        <label>Job No.</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Action__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What was the last activity with this contact/account</inlineHelpText>
+        <label>Last Action</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Lead_Status__c</fullName>
+        <description>List to show status of Lead</description>
+        <externalId>false</externalId>
+        <inlineHelpText>List to show status of Lead</inlineHelpText>
+        <label>Lead Status</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Make 1st contact</fullName>
+                    <default>false</default>
+                    <label>Make 1st contact</label>
+                </value>
+                <value>
+                    <fullName>Contact left/moved - insert comment</fullName>
+                    <default>false</default>
+                    <label>Contact left/moved - insert comment</label>
+                </value>
+                <value>
+                    <fullName>Follow up</fullName>
+                    <default>false</default>
+                    <label>Follow up</label>
+                </value>
+                <value>
+                    <fullName>Follow up - warmer</fullName>
+                    <default>false</default>
+                    <label>Follow up - warmer</label>
+                </value>
+                <value>
+                    <fullName>Follow up - send email (bcc SFDC)</fullName>
+                    <default>false</default>
+                    <label>Follow up - send email (bcc SFDC)</label>
+                </value>
+                <value>
+                    <fullName>Make post email phone call</fullName>
+                    <default>false</default>
+                    <label>Make post email phone call</label>
+                </value>
+                <value>
+                    <fullName>Follow up in X mths</fullName>
+                    <default>false</default>
+                    <label>Follow up in X mths</label>
+                </value>
+                <value>
+                    <fullName>For ENS discussion</fullName>
+                    <default>false</default>
+                    <label>For ENS discussion</label>
+                </value>
+                <value>
+                    <fullName>Add to Negotium list - NFA</fullName>
+                    <default>false</default>
+                    <label>Add to Negotium list - NFA</label>
+                </value>
+                <value>
+                    <fullName>No needs/not interested</fullName>
+                    <default>false</default>
+                    <label>No needs/not interested</label>
+                </value>
+                <value>
+                    <fullName>Appointment made</fullName>
+                    <default>false</default>
+                    <label>Appointment made</label>
+                </value>
+                <value>
+                    <fullName>Phone Appointment Made</fullName>
+                    <default>false</default>
+                    <label>Phone Appointment Made</label>
+                </value>
+                <value>
+                    <fullName>Do Not Call</fullName>
+                    <default>false</default>
+                    <label>Do Not Call</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Lifecycle_Stage__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>0 Research/create target list
+1 Initial contact, develop relationship, send info
+2 Needs analysis, information requested &amp; sent
+3 Informal/Formal 
+5 Proposal accepted 
+6 Job in progress
+6.2 Follow up
+6.3 Keep in contact back to 1</inlineHelpText>
+        <label>Lifecycle Stage</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>0 Target</fullName>
+                    <default>false</default>
+                    <label>0 Target</label>
+                </value>
+                <value>
+                    <fullName>1 Exploratory</fullName>
+                    <default>false</default>
+                    <label>1 Exploratory</label>
+                </value>
+                <value>
+                    <fullName>2 Stated Need</fullName>
+                    <default>false</default>
+                    <label>2 Stated Need</label>
+                </value>
+                <value>
+                    <fullName>3 Proposed Solution</fullName>
+                    <default>false</default>
+                    <label>3 Proposed Solution</label>
+                </value>
+                <value>
+                    <fullName>5 Sign Off</fullName>
+                    <default>false</default>
+                    <label>5 Sign Off</label>
+                </value>
+                <value>
+                    <fullName>6 Delivery</fullName>
+                    <default>false</default>
+                    <label>6 Delivery</label>
+                </value>
+                <value>
+                    <fullName>6.2 Post delivery</fullName>
+                    <default>false</default>
+                    <label>6.2 Post delivery</label>
+                </value>
+                <value>
+                    <fullName>6.3 Account Management</fullName>
+                    <default>false</default>
+                    <label>6.3 Account Management</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Materials_Report__c</fullName>
+        <externalId>false</externalId>
+        <label>Materials Report</label>
+        <required>false</required>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>NM_Call_Reason__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The networks managers reason for calling consultants</inlineHelpText>
+        <label>NM Call Reason</label>
+        <required>false</required>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Quarterly Catch Up</fullName>
+                    <default>false</default>
+                    <label>Quarterly Catch Up</label>
+                </value>
+                <value>
+                    <fullName>Marketing Discussion</fullName>
+                    <default>false</default>
+                    <label>Marketing Discussion</label>
+                </value>
+                <value>
+                    <fullName>Business Development</fullName>
+                    <default>false</default>
+                    <label>Business Development</label>
+                </value>
+                <value>
+                    <fullName>Admin</fullName>
+                    <default>false</default>
+                    <label>Admin</label>
+                </value>
+                <value>
+                    <fullName>Issue</fullName>
+                    <default>false</default>
+                    <label>Issue</label>
+                </value>
+                <value>
+                    <fullName>General</fullName>
+                    <default>false</default>
+                    <label>General</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>NM_Issue__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Networks managers list of issues from consultants</inlineHelpText>
+        <label>NM Issue</label>
+        <required>false</required>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>BDMs</fullName>
+                    <default>false</default>
+                    <label>BDMs</label>
+                </value>
+                <value>
+                    <fullName>CSC</fullName>
+                    <default>false</default>
+                    <label>CSC</label>
+                </value>
+                <value>
+                    <fullName>Workshop materials</fullName>
+                    <default>false</default>
+                    <label>Workshop materials</label>
+                </value>
+                <value>
+                    <fullName>Mkting splits</fullName>
+                    <default>false</default>
+                    <label>Mkting splits</label>
+                </value>
+                <value>
+                    <fullName>Management</fullName>
+                    <default>false</default>
+                    <label>Management</label>
+                </value>
+                <value>
+                    <fullName>License Agreement</fullName>
+                    <default>false</default>
+                    <label>License Agreement</label>
+                </value>
+                <value>
+                    <fullName>Insurance details</fullName>
+                    <default>false</default>
+                    <label>Insurance details</label>
+                </value>
+                <value>
+                    <fullName>No Issue</fullName>
+                    <default>false</default>
+                    <label>No Issue</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Next_Step_Comments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What is the next step required</inlineHelpText>
+        <label>Next Step Comments</label>
+        <length>250</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Next_Step__c</fullName>
+        <externalId>false</externalId>
+        <label>Next Step</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Call</fullName>
+                    <default>false</default>
+                    <label>Call</label>
+                </value>
+                <value>
+                    <fullName>Meeting</fullName>
+                    <default>false</default>
+                    <label>Meeting</label>
+                </value>
+                <value>
+                    <fullName>Send</fullName>
+                    <default>false</default>
+                    <label>Send</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>OLD_Contact_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>OLD Contact ID</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OLD_Creation_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>OLD Creation Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Offer__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>$ amount in proposal is one has been sent</inlineHelpText>
+        <label>Offer</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Contact_History_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Old Contact History ID</label>
+        <length>8</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Contact_Method__c</fullName>
+        <externalId>false</externalId>
+        <label>Old Contact Method</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Creation_User__c</fullName>
+        <externalId>false</externalId>
+        <label>Old Creation User</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Org_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Old Org ID</label>
+        <length>8</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Person_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Old Person ID</label>
+        <length>8</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Person_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Old Person Name</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Staff_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Old Staff Name</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Response__c</fullName>
+        <externalId>false</externalId>
+        <label>Response</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Source__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Voicemail</fullName>
+                    <default>false</default>
+                    <label>Voicemail</label>
+                </value>
+                <value>
+                    <fullName>Left msg</fullName>
+                    <default>false</default>
+                    <label>Left msg</label>
+                </value>
+                <value>
+                    <fullName>No answer</fullName>
+                    <default>false</default>
+                    <label>No answer</label>
+                </value>
+                <value>
+                    <fullName>Busy</fullName>
+                    <default>false</default>
+                    <label>Busy</label>
+                </value>
+                <value>
+                    <fullName>Conversation</fullName>
+                    <default>false</default>
+                    <label>Conversation</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Inbound Call</controllingFieldValue>
+                <controllingFieldValue>Outbound Call</controllingFieldValue>
+                <valueName>Left msg</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Inbound Call</controllingFieldValue>
+                <controllingFieldValue>Outbound Call</controllingFieldValue>
+                <valueName>Conversation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Outbound Call</controllingFieldValue>
+                <valueName>Voicemail</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Outbound Call</controllingFieldValue>
+                <valueName>No answer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Outbound Call</controllingFieldValue>
+                <valueName>Busy</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Resulting_Contact_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Resulting Contact Status</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Response__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Target</fullName>
+                    <default>false</default>
+                    <label>Target</label>
+                </value>
+                <value>
+                    <fullName>Lead</fullName>
+                    <default>false</default>
+                    <label>Lead</label>
+                </value>
+                <value>
+                    <fullName>Suspect</fullName>
+                    <default>false</default>
+                    <label>Suspect</label>
+                </value>
+                <value>
+                    <fullName>Prospect</fullName>
+                    <default>false</default>
+                    <label>Prospect</label>
+                </value>
+                <value>
+                    <fullName>Client</fullName>
+                    <default>false</default>
+                    <label>Client</label>
+                </value>
+                <value>
+                    <fullName>Inactive/not interested</fullName>
+                    <default>false</default>
+                    <label>Inactive/not interested</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Voicemail</controllingFieldValue>
+                <controllingFieldValue>Left msg</controllingFieldValue>
+                <controllingFieldValue>No answer</controllingFieldValue>
+                <controllingFieldValue>Busy</controllingFieldValue>
+                <controllingFieldValue>Conversation</controllingFieldValue>
+                <valueName>Target</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Voicemail</controllingFieldValue>
+                <controllingFieldValue>Left msg</controllingFieldValue>
+                <controllingFieldValue>No answer</controllingFieldValue>
+                <controllingFieldValue>Busy</controllingFieldValue>
+                <controllingFieldValue>Conversation</controllingFieldValue>
+                <valueName>Lead</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Voicemail</controllingFieldValue>
+                <controllingFieldValue>Left msg</controllingFieldValue>
+                <controllingFieldValue>No answer</controllingFieldValue>
+                <controllingFieldValue>Busy</controllingFieldValue>
+                <controllingFieldValue>Conversation</controllingFieldValue>
+                <valueName>Suspect</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Conversation</controllingFieldValue>
+                <valueName>Prospect</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Conversation</controllingFieldValue>
+                <valueName>Client</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Conversation</controllingFieldValue>
+                <valueName>Inactive/not interested</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Source</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Inbound Call</fullName>
+                    <default>false</default>
+                    <label>Inbound Call</label>
+                </value>
+                <value>
+                    <fullName>Outbound Call</fullName>
+                    <default>false</default>
+                    <label>Outbound Call</label>
+                </value>
+                <value>
+                    <fullName>Outbound Email</fullName>
+                    <default>false</default>
+                    <label>Outbound Email</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SysAd_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>SysAd Comments</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Telemarketing_Activity__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the activity which best described what happened.</inlineHelpText>
+        <label>Telemarketing Activity</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Conversation - General</fullName>
+                    <default>false</default>
+                    <label>Conversation - General</label>
+                </value>
+                <value>
+                    <fullName>Conversation - Meeting Arrangement</fullName>
+                    <default>false</default>
+                    <label>Conversation - Meeting Arrangement</label>
+                </value>
+                <value>
+                    <fullName>Call - Left message</fullName>
+                    <default>false</default>
+                    <label>Call - Left message</label>
+                </value>
+                <value>
+                    <fullName>Call - No Message</fullName>
+                    <default>false</default>
+                    <label>Call - No Message</label>
+                </value>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <searchLayouts>
+        <searchFilterFields>TASK.SUBJECT</searchFilterFields>
+        <searchFilterFields>TASK.TYPE</searchFilterFields>
+        <searchFilterFields>Comment_Summary__c</searchFilterFields>
+        <searchFilterFields>Job_ID__c</searchFilterFields>
+        <searchFilterFields>TASK.WHO_NAME</searchFilterFields>
+        <searchFilterFields>TASK.WHAT_NAME</searchFilterFields>
+        <searchFilterFields>CORE.USERS.FULL_NAME</searchFilterFields>
+        <searchResultsAdditionalFields>TASK.SUBJECT</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.WHO_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.WHAT_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.DUE_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

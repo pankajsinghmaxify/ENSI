@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>OC PAX</fullName>
+        <default>false</default>
+        <label>OC PAX</label>
+    </customValue>
+    <customValue>
+        <fullName>In-House</fullName>
+        <default>false</default>
+        <label>In-House</label>
+    </customValue>
+    <customValue>
+        <fullName>OC Course</fullName>
+        <default>false</default>
+        <label>OC Course</label>
+    </customValue>
+    <customValue>
+        <fullName>OC Course profit split</fullName>
+        <default>false</default>
+        <label>OC Course profit split</label>
+    </customValue>
+    <customValue>
+        <fullName>Organisational transformation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Organisational transformation</label>
+    </customValue>
+    <customValue>
+        <fullName>Negotiation Advice</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Negotiation Advice</label>
+    </customValue>
+    <customValue>
+        <fullName>In-house training</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>In-house training</label>
+    </customValue>
+    <customValue>
+        <fullName>Open Course</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Open Course</label>
+    </customValue>
+    <customValue>
+        <fullName>Joining ENSI</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Joining ENSI</label>
+    </customValue>
+    <masterLabel>Opp Record Types</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

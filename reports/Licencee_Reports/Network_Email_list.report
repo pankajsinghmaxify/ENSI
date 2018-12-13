@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>Contact.ENS_email_address_points_to__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <description>eNSI email accounts</description>
+    <filter>
+        <criteriaItems>
+            <column>CONTACT_RECORDTYPE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Contact.Network_Member</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FIRST_NAME</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>client referral,Andrew_Ken,INS,NBD,Public,ENS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LAST_NAME</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>de mole,AIM_VIC,HKMA,Referrals,deavin,parker</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Network_Member_status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Network Email list</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

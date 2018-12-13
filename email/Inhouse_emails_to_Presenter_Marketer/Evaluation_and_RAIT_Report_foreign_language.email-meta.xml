@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Evaluation and RAIT Report (foreign language)</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Evaluation and RAIT Report (foreign language)</name>
+    <style>none</style>
+    <subject>Evaluation and RAIT Report - {!Job__c.Account_Name__c}, {!Job__c.Certificate_Date_Text__c}</subject>
+    <textOnly>CC PRESENTER
+
+Hi {!Job__c.Account_Sell_1_Name__c}
+
+Attached are the evaluation and RAIT reports for the {!Job__c.Account_Name__c} program that took place on {!Job__c.Certificate_Date_Text__c}.
+
+* Evaluation Report (the Score page is in English – Report with no comments)
+OR
+* {!Job__c.Language__c} Evaluation Report (Score page is in {!Job__c.Language__c} along with; workshop comments in {!Job__c.Language__c} – copies are in the file attached).
+
+Also attached is a list of the pax that have indicated they would like follow on support.
+
+Cheers</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

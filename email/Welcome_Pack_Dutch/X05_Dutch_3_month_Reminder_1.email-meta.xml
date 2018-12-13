@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Includes Dutch 3 Month survey link in SG3</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>05 Dutch 3 month Reminder 1</name>
+    <style>none</style>
+    <subject>Denk eraan: ENSI-enquête over effect en betekenis VERWACHT: {!Contact.Job_3_month_case_study_due__c}</subject>
+    <textOnly>Beste {!Contact.FirstName}
+
+Vergeet niet om ons je mening te geven over het effect en de betekenis van je beïnvloedings- en onderhandelingsvaardigheden sinds je de ENSI-workshop van {!Contact.Job_Certificate_Date__c} hebt gevolgd.
+
+Klik hier om naar de enquête te gaan.
+http://www.surveygizmo.com/s3/1459109/Dutch-3-MONTH-POST-PROGRAM-SURVEY?jid={!Contact.Last_Job_ID__c}&amp;pid={!Contact.Last_Participant_Id__c}
+De link naar de enquête is specifiek voor jou; we verzoeken je om deze niet naar anderen door te sturen.
+
+NB:Als je al bent begonnen met de enquête en je hebt gekozen voor &apos;opslaan en doorgaan&apos; terwijl je ermee bezig was, gebruik dan de link die je is toegestuurd toen je je antwoorden bewaarde, anders wordt met bovenstaande link een nieuwe enquête geopend.
+
+We stellen het op prijs als je de enquête vóór:  {!Contact.Job_3_month_case_study_due__c} zou willen invullen.
+
+Met vriendelijke groet
+
+{!Contact.Job_CSM_Name__c}
+{!Contact.Job_CSC_Title__c}
+
+Suite 507, 83 York Street
+Sydney NSW 2000
+Australia
+p: +61 9299 9688  f: +61 9299 1633
+www.negotiate.org
+
+
+Note this email and any attachments may be privileged and confidential. If you are not the intended recipient please delete the message and notify the sender. Copying or distribution by anyone else is prohibited. Thank you.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

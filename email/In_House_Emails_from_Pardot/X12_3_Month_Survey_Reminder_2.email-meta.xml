@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>3 Month Survey Reminder 2 Email</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>12 3 Month Survey Reminder 2</name>
+    <style>none</style>
+    <subject>ENSI Final Survey - Impact &amp; Value DUE: {!Job__c.Three_Month_Survey_due_date__c}</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

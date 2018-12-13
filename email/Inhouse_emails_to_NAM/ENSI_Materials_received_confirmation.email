@@ -1,0 +1,12 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 0, 0);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+Hi&nbsp;{!Job__c.NAM_Name__c}<br>
+<br>
+For the program on {!Job__c.Certificate_Date_Text__c} could you please confirm you have received the materials ({!Job__c.Materials_delivery_number_of_boxes__c} Box).<br>
+<br>
+The shipment was delivered on <strong><span style="color:#EE0090;">XX</span></strong> and signed for by <strong><span style="color:#EE0090;">XX</span></strong>.<br>
+<br>
+Kind regards</span></span>												
+</html>

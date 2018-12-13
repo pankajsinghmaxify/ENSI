@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Job_email_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>Default</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Default</fullName>
+        <fields>Name</fields>
+        <fields>Job_email_template__c</fields>
+        <fields>Scheduled_date__c</fields>
+        <fields>Status__c</fields>
+        <fields>Job__c</fields>
+        <label>Default</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Emails that are sent as part of the management of a job</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Custom_paragraph__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter text here that you would like to insert into the email template. The placing of the text may differ per template.</inlineHelpText>
+        <label>(disabled) Custom paragraph</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Custom_paragraph_text__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pardot will only accept non HTML content.</inlineHelpText>
+        <label>Custom paragraph (text only)</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Job__c</fullName>
+        <externalId>false</externalId>
+        <label>Job</label>
+        <referenceTo>Job__c</referenceTo>
+        <relationshipLabel>Job emails</relationshipLabel>
+        <relationshipName>Job_emails</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Job_email_template__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Job email template</label>
+        <referenceTo>Job_email_template__c</referenceTo>
+        <relationshipLabel>Job emails</relationshipLabel>
+        <relationshipName>Job_emails</relationshipName>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Job_email_template_name__c</fullName>
+        <description>Admin only.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Admin only.</inlineHelpText>
+        <label>Job email template name</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recipient_group__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The group of email who will receive this email. This is defined at the template.</inlineHelpText>
+        <label>Recipient group</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Job_email_recipient_group</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Related_to_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Related to date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Related_to_training_dates</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Scheduled_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Scheduled date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Scheduling_delta__c</fullName>
+        <description>This is the difference between the base date, and the schedule date. e.g. to send an email 4 weeks (28 days) prior to the base date (i.e. the first day of training) the delta would be 28.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The delta is the number of days before or after the training date that you would like to send the email. To send an email before the training, make the number negative. To send one after, make it positive. A single week is equal to 7 days.</inlineHelpText>
+        <label>Scheduling delta</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>true</default>
+                    <label>Pending</label>
+                </value>
+                <value>
+                    <fullName>Scheduled</fullName>
+                    <default>false</default>
+                    <label>Scheduled</label>
+                </value>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                    <label>Cancelled</label>
+                </value>
+                <value>
+                    <fullName>Requires manual</fullName>
+                    <default>false</default>
+                    <label>Requires manual</label>
+                </value>
+                <value>
+                    <fullName>Skipped</fullName>
+                    <default>false</default>
+                    <label>Skipped</label>
+                </value>
+                <value>
+                    <fullName>Sent</fullName>
+                    <default>false</default>
+                    <label>Sent</label>
+                </value>
+                <value>
+                    <fullName>Failed</fullName>
+                    <default>false</default>
+                    <label>Failed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Test_contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Test this email by selecting a Contact here, and then hitting the &apos;Flow: Test email&apos; button from the top right drop down.</inlineHelpText>
+        <label>Test contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Job emails as test</relationshipLabel>
+        <relationshipName>Job_emails_as_test</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Training_date__c</fullName>
+        <description>Not editable by users. This date will be set based on the training first date. We&apos;ll use this date to calculate the scheduled send date.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the date of the training, use the delta to calculate the date this email will be scheduling for sending based on this training date.</inlineHelpText>
+        <label>Training date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Training_date_comparator__c</fullName>
+        <description>Because IsChanged can&apos;t detect going from null to something as a change (because it&apos;s stupid) this field helps us overcome this issue.</description>
+        <externalId>false</externalId>
+        <label>Training date comparator</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Job email</label>
+    <nameField>
+        <displayFormat>JEM-{0000}</displayFormat>
+        <label>Job email ID</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Job emails</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Job_email_template__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Job__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Scheduled_date__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Flow_Test_email</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Flow: Test email</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/flow/JobEmail_Populate_contact_Owner?vJobEmailId={!Job_email__c.Id}&amp;retURL=/{!Job_email__c.Id}</url>
+    </webLinks>
+</CustomObject>

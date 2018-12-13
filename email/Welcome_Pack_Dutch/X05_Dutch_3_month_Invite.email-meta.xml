@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Includes Dutch 3 Month survey link in SG3</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>05 Dutch 3 month invite</name>
+    <style>none</style>
+    <subject>ENSI afsluitende enquête - Effect en betekenis voor het onderhandelen van {!Contact.Job_Certificate_Date__c} programma</subject>
+    <textOnly>Beste {!Contact.FirstName}
+
+Ik hoop dat je baat hebt gehad bij de toepassingsvoorbeelden van de ENS-methode die je hebt gekregen van je {!Contact.Job_Account_Name__c} collega&apos;s. Besefte je toen je je voorbeeld terugzag misschien dat een andere aanpak ook effectief had kunnen zijn? Reflectie is een belangrijk aspect van geslaagde onderhandelingen. Vergeet niet dat je collega&apos;s van grote waarde kunnen zijn bij teruggrijpen, reflectie en evaluatie.
+
+Tot slot zouden we graag 5 minuten van je tijd willen vragen om je mening te geven over het effect en de betekenis van je beïnvloedings- en onderhandelingsvaardigheden sinds je de ENS-workshop van {!Contact.Job_Certificate_Date__c} hebt gevolgd.
+
+Klik hier om naar de enquête te gaan.
+http://www.surveygizmo.com/s3/1459109/Dutch-3-MONTH-POST-PROGRAM-SURVEY?jid={!Contact.Last_Job_ID__c}&amp;pid={!Contact.Last_Participant_Id__c}
+De link naar de enquête is specifiek voor jou; we verzoeken je om deze niet naar anderen door te sturen.
+
+We zouden het op prijs stellen als je de enquête vóór:  {!Contact.Job_3_month_case_study_due__c} wilt invullen.
+
+Bij voorbaat hartelijk dank voor je medewerking. Mocht je nog vragen of opmerkingen hebben, dan kun je altijd rechtstreeks contact met me opnemen.
+
+Met vriendelijke groet
+
+{!Contact.Job_CSM_Name__c}
+Client Service Manager
+
+Suite 507, 83 York Street
+Sydney NSW 2000
+Australia
+p: +61 9299 9688  f: +61 9299 1633
+www.negotiate.org
+
+
+Note this email and any attachments may be privileged and confidential. If you are not the intended recipient please delete the message and notify the sender. Copying or distribution by anyone else is prohibited. Thank you.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Client_Status__c</field>
+    </columns>
+    <columns>
+        <field>Account$Current_Claim_Expiry__c</field>
+    </columns>
+    <columns>
+        <field>Account$Suspect_Expiry_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account$Spot__c</field>
+    </columns>
+    <columns>
+        <field>Account$Spot_2__c</field>
+    </columns>
+    <columns>
+        <field>Account$Sell_1__c</field>
+    </columns>
+    <columns>
+        <field>Account$Sell_2__c</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts$Email</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts$MobilePhone</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts$Phone</field>
+    </columns>
+    <currency>AUD</currency>
+    <description>Includes a list of accounts and org contacts for a specified consultant. For spot 1 &amp; 2 or sell 1 &amp; 2</description>
+    <filter>
+        <booleanFilter>(((1 or 2 or 3 or 4) AND (5 or 6)) AND 7) AND 8</booleanFilter>
+        <criteriaItems>
+            <column>Account$Sell_2__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Philip Wade</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Spot__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Philip Wade</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Spot_2__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Philip Wade</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Sell_1__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Philip Wade</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Contacts$Org_Contact__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Contacts$Primary_Org_Contact__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>test account,testing account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Client_Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>GROUP</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Consultant Account and Contact Lists</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Account_Contact_Client_Ownership_report__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account$Current_Claim_Expiry__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

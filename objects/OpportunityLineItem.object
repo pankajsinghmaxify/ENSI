@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddProduct</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChoosePricebook</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditAllProduct</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Add_On_Finalise_Only__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Add On Finalise Only</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Amount_invoiced_so_far_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Amount_invoiced_so_far__c/Opportunity.Currency_exchange_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Amount invoiced so far AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Amount_invoiced_so_far__c</fullName>
+        <externalId>false</externalId>
+        <label>Amount invoiced so far</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Amount_invoiced_so_far_percent__c</fullName>
+        <externalId>false</externalId>
+        <formula>( Amount_invoiced_so_far__c /  TotalPrice )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Amount invoiced so far percent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Auto_create_time_records__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>(Deprecated) Auto create time records</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Auto_update_dates__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Hidden field used in processes</description>
+        <externalId>false</externalId>
+        <label>(deprecated) Auto update dates</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Converted_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>(1/CURRENCYRATE(TEXT(CurrencyIsoCode) ))* UnitPrice</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>(dep) Converted Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Create_actions_completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used for process ordering.</description>
+        <externalId>false</externalId>
+        <label>Create actions completed</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Date_tbc__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Checking this box will prevent the system from automatically creating time records for this service (that go towards recognised revenue). e.g. if this service is consulting / retainer, and you don&apos;t know what date it falls on then check this box.</inlineHelpText>
+        <label>(deprecated) Date TBC</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Deducted_fee_role__c</fullName>
+        <externalId>false</externalId>
+        <label>Deducted fee role</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Facilitator</fullName>
+                    <default>false</default>
+                    <label>Facilitator</label>
+                </value>
+                <value>
+                    <fullName>Marketing</fullName>
+                    <default>false</default>
+                    <label>Marketing</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Default_CUR__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;AUD&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>(dep) Default CUR</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>Discount</fullName>
+    </fields>
+    <fields>
+        <fullName>Facilitator__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the facilitator who will be delivering this service. If consulting style work that may have time added to it later on an ad hoc basis, please select &apos;Ad hoc&apos;.</inlineHelpText>
+        <label>Facilitator</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+                <value>
+                    <fullName>Ad hoc</fullName>
+                    <default>false</default>
+                    <label>Ad hoc</label>
+                </value>
+                <value>
+                    <fullName>Not related to a facilitator</fullName>
+                    <default>false</default>
+                    <label>Not related to a facilitator</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Facilitator_contact_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>(Deprecated) Facilitator contact ID</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Facilitator_contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>(deprecated) Facilitator contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Opportunity Products</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Has_role_records__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Has role records</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_ad_hoc__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is ad hoc</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Job_effort_name__c</fullName>
+        <externalId>false</externalId>
+        <label>(Deprecated) Job effort name</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ListPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>List_Price_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>ListPrice/Opportunity.Currency_exchange_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>List Price AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Not_equal_to_PAX__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>If set, this Opportunity Product will not update as the number of PAX changes.</inlineHelpText>
+        <label>Not equal to PAX</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>OPE_code__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Product Extension code</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OPE_code_current__c</fullName>
+        <externalId>false</externalId>
+        <label>OPE code, current</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OpportunityId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OpportunityProduct_ID_for_scheduler__c</fullName>
+        <description>Used for mass scheduler only.</description>
+        <externalId>false</externalId>
+        <label>OpportunityProduct ID for scheduler</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Role__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity Role</label>
+        <referenceTo>Opportunity_Role__c</referenceTo>
+        <relationshipLabel>Opportunity Products</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Order_form_instructions__c</fullName>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.Instructions__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Order form instructions</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product2Id</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ProductCode</fullName>
+    </fields>
+    <fields>
+        <fullName>Product_Family__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Family</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In-House</fullName>
+                    <default>false</default>
+                    <label>In-House</label>
+                </value>
+                <value>
+                    <fullName>Open Course</fullName>
+                    <default>false</default>
+                    <label>Open Course</label>
+                </value>
+                <value>
+                    <fullName>Both</fullName>
+                    <default>false</default>
+                    <label>Both</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Product_Name_shortened__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(LEN(Product_name__c) &gt; 43,LEFT(Product_name__c, 43) &amp; &quot;...&quot;,Product_name__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Name, shortened</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Product_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Product_is_f2f__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Product is face to face service</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Product_name__c</fullName>
+        <description>For roll up summaries</description>
+        <externalId>false</externalId>
+        <label>Product name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Proposed_end_date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>When is this service supposed to end? If the same as the proposed start date, or the Opportunity proposed end date leave blank.</inlineHelpText>
+        <label>(deprecated) Proposed end date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Proposed_start_date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>When is this service supposed to start? If the same as the Opportunity proposed start date leave blank.</inlineHelpText>
+        <label>(deprecated) Proposed start date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Quantity</fullName>
+    </fields>
+    <fields>
+        <fullName>Quantity_unit_of_measure__c</fullName>
+        <description>Used for roll up summaries</description>
+        <externalId>false</externalId>
+        <label>Quantity unit of measure</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recognised__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>(deprecated) Recognised</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Recognised_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Recognised date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Recognised_date_shortened__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(YEAR(Recognised_date__c)) &amp; TEXT(Month(Recognised_date__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Recognised date, shortened</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Expense_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Related Expense ID</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_to_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Related to date</label>
+        <required>true</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Related_to_training_dates</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ServiceDate</fullName>
+    </fields>
+    <fields>
+        <fullName>Subtotal</fullName>
+    </fields>
+    <fields>
+        <fullName>Sync_matched__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Sync matched</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TEMP_product_type_incorrect__c</fullName>
+        <externalId>false</externalId>
+        <formula>Quantity_unit_of_measure__c &lt;&gt; TEXT(PricebookEntry.Product2.QuantityUnitOfMeasure)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>TEMP product type incorrect</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TotalPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>TotalPrice_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>TotalPrice/Opportunity.Currency_exchange_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Price AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_List_Price_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_List_Price__c/Opportunity.Currency_exchange_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total List Price AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_List_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>ListPrice  *  Quantity</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total List Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Material_AUD_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>(1/CURRENCYRATE(TEXT(CurrencyIsoCode) ))* Opportunity.Total_Materials_Sales_Price__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Material AUD Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Servic_AUD_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>(1/CURRENCYRATE(TEXT(CurrencyIsoCode) ))* Opportunity.Total_Services_Sales_Price__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Servic AUD Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_converted_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>(1/CURRENCYRATE(TEXT(CurrencyIsoCode) ))*  TotalPrice</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>(dep) Total converted Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Touch_datetime__c</fullName>
+        <description>Field to allow the record to be touched, so that it then runs it&apos;s &apos;Upon update&apos; processes</description>
+        <externalId>false</externalId>
+        <label>Touch datetime</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>UnitPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>UnitPrice_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>UnitPrice/Opportunity.Currency_exchange_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sales Price AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Update_via_automation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Set to true when updated via code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set to true when updated via code</inlineHelpText>
+        <label>Update via automation</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Xero_code__c</fullName>
+        <externalId>false</externalId>
+        <label>Xero code</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

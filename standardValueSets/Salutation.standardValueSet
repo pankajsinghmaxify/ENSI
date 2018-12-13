@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Dr.</fullName>
+        <default>false</default>
+        <label>Dr.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mr.</fullName>
+        <default>false</default>
+        <label>Mr.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Miss</fullName>
+        <default>false</default>
+        <label>Miss</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mrs.</fullName>
+        <default>false</default>
+        <label>Mrs.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ms.</fullName>
+        <default>false</default>
+        <label>Ms.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Prof.</fullName>
+        <default>false</default>
+        <label>Prof.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Air Commodore</fullName>
+        <default>false</default>
+        <label>Air Commodore</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Air Marshal</fullName>
+        <default>false</default>
+        <label>Air Marshal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Air Vice-Marshal</fullName>
+        <default>false</default>
+        <label>Air Vice-Marshal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Brigadier</fullName>
+        <default>false</default>
+        <label>Brigadier</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Captain</fullName>
+        <default>false</default>
+        <label>Captain</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Chief Petty Officer</fullName>
+        <default>false</default>
+        <label>Chief Petty Officer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Colonel</fullName>
+        <default>false</default>
+        <label>Colonel</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Commander</fullName>
+        <default>false</default>
+        <label>Commander</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Commodore</fullName>
+        <default>false</default>
+        <label>Commodore</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Group Captain</fullName>
+        <default>false</default>
+        <label>Group Captain</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lieutenant Commander</fullName>
+        <default>false</default>
+        <label>Lieutenant Commander</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lieutenant Colonel</fullName>
+        <default>false</default>
+        <label>Lieutenant Colonel</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lieutenant General</fullName>
+        <default>false</default>
+        <label>Lieutenant General</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Major General</fullName>
+        <default>false</default>
+        <label>Major General</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rear Admiral</fullName>
+        <default>false</default>
+        <label>Rear Admiral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Vice Admiral</fullName>
+        <default>false</default>
+        <label>Vice Admiral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Warrant Officer</fullName>
+        <default>false</default>
+        <label>Warrant Officer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Wing Commander</fullName>
+        <default>false</default>
+        <label>Wing Commander</label>
+    </standardValue>
+</StandardValueSet>

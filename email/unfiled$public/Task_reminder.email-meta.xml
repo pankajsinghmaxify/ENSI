@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Task reminder</name>
+    <style>none</style>
+    <subject>Reminder - {!Task.Subject}</subject>
+    <textOnly>Hi {!User.FirstName}
+
+You have a task that is due within the hour.
+
+Subject: {!Task.Subject}
+Due: {!Task.ActivityDate}
+
+{!Task.Description}
+
+View Task: https://negotiate.lightning.force.com/one/one.app#/sObject/{!Task.Id}/view</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

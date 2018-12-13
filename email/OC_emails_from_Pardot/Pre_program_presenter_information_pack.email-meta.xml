@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Pre-program presenter information pack</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Pre-program presenter information pack</name>
+    <style>none</style>
+    <subject>Presenter Information for {!Job__c.Open_course_program_name__c} on {!Job__c.Certificate_Date_Text__c} in {!Job__c.Venue_City__c}</subject>
+    <textOnly>CC Ian
+
+Hi {!Job__c.Facilitator_1__c}
+
+Please find attached the following information, to help you prepare for {!Job__c.Certificate_Date_Text__c} open course.
+
+   PFQ Excerpt – groups the objectives, shortcomings and difficult aspects as indicated by participants.
+   PFQ Summary - includes most relevant information from the PFQ responses.
+   Confidence and Competence Graph (refer to PFQ summary spreadsheet – worksheet titled: Conf_Comp) for group.
+   Pax List – quick overview of participants including highlights of those who haven’t completed pre-work.
+   Leaders Guide timetable
+   Open Course Code of Practice
+   Peer Review Form - As part of the ENS Quality Assurance, please complete the attached ENS Peer/Self Review form after the workshop and return to me. (Solo facilitators will complete a self-assessment and dual facilitators will peer review each other)
+
+
+
+Venue
+{!Job__c.Venue_Name__c}
+{!Job__c.Venue_Address__c}
+{!Job__c.Venue_Contact__c}
+
+
+Materials and case studies include:
+Fundamentals Handbooks (and pens) Green Recourses / Seamless Enterprises
+Level 1 Workbook set (4 cards and pen) Crocodile eggs Red/Blue process observation sheet Process observation sheet
+Level 2 Manual set (4 cards and pen) Harbourside/Munal Garden Block Process observation sheet
+Level 3 Advanced Workbook set (4 cards and pen) Process observation sheet 3 recommendations Garden Block Customer Reluctance Sino Oil
+
+Program timetable
+0830 - 0845     Coffee/Tea – Meet and Greet
+0845 - 1030     Morning Session
+1030 - 1045     Coffee/Tea Break
+1045 - 1230     Morning Session continues
+1230 - 1330     Lunch
+1330 - 1530     Afternoon Session
+1530 - 1545     Coffee/Tea Break
+1545 - 1715     Afternoon Session continues
+
+The materials will be arriving on XXX
+
+Let me know if you need anything else.
+
+Kind regards</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

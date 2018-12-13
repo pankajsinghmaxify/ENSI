@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Fac_days_ad_hoc_comparator__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OP_is_Ad_Hoc__c,OP_Qty__c,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Facilitator days, ad hoc comparator</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Fac_days_comparator__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+AND(TEXT(OP_Type__c)=&quot;Service&quot;,
+TEXT(OP_Qty_UOM__c)=&quot;Day&quot;),
+IF(
+OP_f2f__c,
+OP_Qty__c*Opportunity__r.Number_of_Facilitators_on_commission__c,
+OP_Qty__c
+),
+0
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Facilitator days comparator</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Is_child__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Unfortunately required to be able to only SUM parent OPEs during roll-up summary field on the Opp.</inlineHelpText>
+        <label>Is child</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>OPE_code__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Product Extension code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OP_Facilitator_Position__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Product Facilitator Position</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Facilitator_position</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>OP_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>(deprecated) Opportunity Product ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OP_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Product Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OP_Qty_UOM__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Product Qty UOM</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Unit</fullName>
+                    <default>false</default>
+                    <label>Unit</label>
+                </value>
+                <value>
+                    <fullName>Day</fullName>
+                    <default>false</default>
+                    <label>Day</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>OP_Qty__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Product Qty</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OP_Total_Price_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>OP_Total_Price__c/Opportunity__r.Currency_exchange_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Product Total Price AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>OP_Total_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>OP_Qty__c*OP_Unit_Price__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Product Total Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>OP_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Product Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Product_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>OP_Unit_Price_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>OP_Unit_Price__c/Opportunity__r.Currency_exchange_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Product Unit Price AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>OP_Unit_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Product Unit Price</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>OP_f2f__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Opportunity Product is face to face</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>OP_is_Ad_Hoc__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Opportunity Product is Ad Hoc</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Product_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Product ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Opportunity Product Extensions</relationshipLabel>
+        <relationshipName>Opportunity_Product_Extensions</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Parent_OPE__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Parent OPE</label>
+        <referenceTo>Opportunity_Product_Extension__c</referenceTo>
+        <relationshipLabel>Monthly Opportunity Product Extensions</relationshipLabel>
+        <relationshipName>Opportunity_Product_Extensions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Rec_date_mth__c</fullName>
+        <externalId>false</externalId>
+        <formula>MONTH(rec_date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Recognised date, month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rec_date_yr__c</fullName>
+        <externalId>false</externalId>
+        <formula>YEAR(rec_date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Recognised date, year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Remaining_fac_days_ad_hoc__c</fullName>
+        <externalId>false</externalId>
+        <formula>Fac_days_ad_hoc_comparator__c-Sum_Total_fac_days_ad_hoc_form__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Remaining Facilitator days, ad hoc</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Shared_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Shared_ID_to_be_set__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Shared ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Shared_ID_static__c</fullName>
+        <description>Admin only</description>
+        <externalId>false</externalId>
+        <label>(deprecated) Shared ID static</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sum_Total_fac_days_ad_hoc_form__c</fullName>
+        <externalId>false</externalId>
+        <formula>Sum_Total_fac_hours_ad_hoc__c/Opportunity__r.Hours_in_a_day__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Sum total of all the days across all the months for this product.</inlineHelpText>
+        <label>Sum Total Facilitator Days, ad hoc</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sum_Total_fac_hours_ad_hoc__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Facilitator hours across all the months, not just a single month</inlineHelpText>
+        <label>Sum Total Facilitator Hours, Ad Hoc</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sync_updated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Sync updated</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Total_doll_comm_ENSI_perc_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_doll_comm_ENSI_perc__c/Opportunity__r.Currency_exchange_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total $ ENSI based on % AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_doll_comm_ENSI_perc__c</fullName>
+        <externalId>false</externalId>
+        <label>Total $ ENSI based on %</label>
+        <precision>13</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_doll_comm_ensi_ad_hoc_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_doll_comm_ensi_ad_hoc__c/Opportunity__r.Currency_exchange_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total $ ENSI from ad hoc AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_doll_comm_ensi_ad_hoc__c</fullName>
+        <externalId>false</externalId>
+        <label>Total $ ENSI from ad hoc</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_doll_comm_fac_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_doll_comm_fac__c/Opportunity__r.Currency_exchange_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total $ facilitator AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_doll_comm_fac__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OP_is_Ad_Hoc__c,Total_doll_comm_fac_ad_hoc__c,Total_doll_comm_fac_perc__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total $ facilitator</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_doll_comm_fac_ad_hoc_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_doll_comm_fac_ad_hoc__c/Opportunity__r.Currency_exchange_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total $ facilitator from ad hoc AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_doll_comm_fac_ad_hoc__c</fullName>
+        <externalId>false</externalId>
+        <label>Total $ facilitator from ad hoc</label>
+        <precision>13</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_doll_comm_fac_perc_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_doll_comm_fac_perc__c/Opportunity__r.Currency_exchange_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total $ facilitator based on % AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_doll_comm_fac_perc__c</fullName>
+        <externalId>false</externalId>
+        <label>Total $ facilitator based on %</label>
+        <precision>13</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_doll_comm_mark_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_doll_comm_mark__c/Opportunity__r.Currency_exchange_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total $ marketing AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_doll_comm_mark__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OP_is_Ad_Hoc__c,Total_doll_comm_mark_ad_hoc__c,Total_doll_comm_mark_perc__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total $ marketing</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_doll_comm_mark_ad_hoc_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_doll_comm_mark_ad_hoc__c/Opportunity__r.Currency_exchange_rate__c</formula>
+        <label>Total $ marketing from ad hoc AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_doll_comm_mark_ad_hoc__c</fullName>
+        <externalId>false</externalId>
+        <formula>doll_rev_rec_ad_hoc_check__c-Total_doll_comm_fac_ad_hoc__c-Total_doll_comm_ensi_ad_hoc__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total $ marketing from ad hoc</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_doll_comm_mark_perc_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_doll_comm_mark_perc__c/Opportunity__r.Currency_exchange_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total $ marketing based on % AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_doll_comm_mark_perc__c</fullName>
+        <externalId>false</externalId>
+        <label>Total $ marketing based on %</label>
+        <precision>13</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_doll_rev_rec_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_doll_rev_rec__c/Opportunity__r.Currency_exchange_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total $ revenue recognised AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_doll_rev_rec__c</fullName>
+        <externalId>false</externalId>
+        <label>Total $ revenue recognised</label>
+        <precision>13</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_doll_split_fees__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_doll_comm_mark__c + Total_doll_comm_fac__c + Total_doll_comm_ENSI_perc__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total $ split fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_fac_days__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Facilitator Days</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_fac_days_ad_hoc__c</fullName>
+        <externalId>false</externalId>
+        <label>(dep) Total Facilitator Days, ad hoc</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_fac_days_ad_hoc_form__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_fac_hours_ad_hoc__c/Opportunity__r.Hours_in_a_day__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Facilitator Days, ad hoc</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_fac_hours_ad_hoc__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Facilitator Hours, Ad Hoc</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_perc_comm__c</fullName>
+        <externalId>false</externalId>
+        <label>Total %</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>doll_rev_rec_ad_hoc_check_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>doll_rev_rec_ad_hoc_check__c/Opportunity__r.Currency_exchange_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>$ revenue recognised ad hoc check AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>doll_rev_rec_ad_hoc_check__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_fac_days_ad_hoc_form__c*OP_Unit_Price__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>$ revenue recognised ad hoc check</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>perc_comp_fac_days_ad_hoc__c</fullName>
+        <externalId>false</externalId>
+        <formula>Sum_Total_fac_days_ad_hoc_form__c/Fac_days_ad_hoc_comparator__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>% complete Facilitator days, ad hoc</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>rec_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Recognised Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Opportunity Product Extension</label>
+    <nameField>
+        <label>Opportunity Product Extension Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Opportunity Product Extensions</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <visibility>Public</visibility>
+</CustomObject>

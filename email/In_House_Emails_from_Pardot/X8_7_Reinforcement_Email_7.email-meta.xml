@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Reinforcement Email 7</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>8.7 Reinforcement Email 7</name>
+    <style>none</style>
+    <subject>{!Contact.FirstName}, here is your ENSI Reinforcement Email #7</subject>
+    <textOnly>Negotiation &amp; Influencing
+
+View this email in your browser
+
+
+{!Job__c.Account_Name__c} ENSI Reinforcement Email #7
+
+Greetings, {!Contact.FirstName}, the great negotiator
+
+Two questions:
+
+What is SYSTEMATIC PREPARATION all about? (Check your ENSI workshop text)
+Always remember – after every negotiation undertake a PROCESS REVIEW (Three Did Wells and three Do Differently&apos;s)
+
+AND three final tips:
+
+Continually separate the ‘Content’ from the ‘Process’
+– Stay PROCESS AWARE!
+
+Always remember the ENSI ‘SECRET’ STRATEGY
+– They [OP] choose my preferred OPTION!
+
+Continue to first seek out and build the ‘BLUE’ COMMON GROUND.
+
+This will be our last formal follow-up reinforcement email.
+
+Good luck and best wishes for achieving superior negotiation outcomes.
+
+
+{!Job__c.Facilitator_names__c}
+www.negotiate.org
+
+
+
+
+
+P +61 2 9299 9688  | E info.ens@negotiate.org
+Level 5  83 York Street  Sydney NSW 2000  Australia
+
+negotiate.org
+Manage subscription | Forward email</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

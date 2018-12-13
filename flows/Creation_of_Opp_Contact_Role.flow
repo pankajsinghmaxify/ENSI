@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <interviewLabel>Creation of Opp Contact Role {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Creation of Opp Contact Role</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Opp_Role_Creation</name>
+        <label>Opp Role Creation</label>
+        <locationX>334</locationX>
+        <locationY>201</locationY>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <elementReference>ContactRoleID_V</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OpportunityId</field>
+            <value>
+                <elementReference>OpportunityID_V</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Role</field>
+            <value>
+                <elementReference>Role_V</elementReference>
+            </value>
+        </inputAssignments>
+        <object>OpportunityContactRole</object>
+    </recordCreates>
+    <startElementReference>Opp_Role_Creation</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>ContactRoleID_V</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>OpportunityID_V</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>Role_V</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

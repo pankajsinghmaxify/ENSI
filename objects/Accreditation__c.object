@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Accreditation_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Accrediation_Comments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Comments in relation to the accrediation</inlineHelpText>
+        <label>Accrediation Comments</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Accredited_On__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the date of the Accreditation</inlineHelpText>
+        <label>Accredited On</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Accredited_for__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Hold Ctrl to select multiple options</inlineHelpText>
+        <label>Accredited for</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Co-faciliation</fullName>
+                    <default>false</default>
+                    <label>Co-faciliation</label>
+                </value>
+                <value>
+                    <fullName>Consulting</fullName>
+                    <default>false</default>
+                    <label>Consulting</label>
+                </value>
+                <value>
+                    <fullName>EBA Consulting</fullName>
+                    <default>false</default>
+                    <label>EBA Consulting</label>
+                </value>
+                <value>
+                    <fullName>In-house training</fullName>
+                    <default>false</default>
+                    <label>In-house training</label>
+                </value>
+                <value>
+                    <fullName>Master Trainer consulting</fullName>
+                    <default>false</default>
+                    <label>Master Trainer consulting</label>
+                </value>
+                <value>
+                    <fullName>Master Trainer training</fullName>
+                    <default>false</default>
+                    <label>Master Trainer training</label>
+                </value>
+                <value>
+                    <fullName>Master Trainer video</fullName>
+                    <default>false</default>
+                    <label>Master Trainer video</label>
+                </value>
+                <value>
+                    <fullName>Open Course Level 1</fullName>
+                    <default>false</default>
+                    <label>Open Course Level 1</label>
+                </value>
+                <value>
+                    <fullName>Open Course Level 2</fullName>
+                    <default>false</default>
+                    <label>Open Course Level 2</label>
+                </value>
+                <value>
+                    <fullName>Open Course Level 3</fullName>
+                    <default>false</default>
+                    <label>Open Course Level 3</label>
+                </value>
+                <value>
+                    <fullName>Refresher</fullName>
+                    <default>false</default>
+                    <label>Refresher</label>
+                </value>
+                <value>
+                    <fullName>Video practitioner</fullName>
+                    <default>false</default>
+                    <label>Video practitioner</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Approved_for__c</fullName>
+        <externalId>false</externalId>
+        <label>Approved for</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Co-faciliation</fullName>
+                    <default>false</default>
+                    <label>Co-faciliation</label>
+                </value>
+                <value>
+                    <fullName>Consulting</fullName>
+                    <default>false</default>
+                    <label>Consulting</label>
+                </value>
+                <value>
+                    <fullName>EBA Consulting</fullName>
+                    <default>false</default>
+                    <label>EBA Consulting</label>
+                </value>
+                <value>
+                    <fullName>In-house training</fullName>
+                    <default>false</default>
+                    <label>In-house training</label>
+                </value>
+                <value>
+                    <fullName>Master Trainer consulting</fullName>
+                    <default>false</default>
+                    <label>Master Trainer consulting</label>
+                </value>
+                <value>
+                    <fullName>Master Trainer training</fullName>
+                    <default>false</default>
+                    <label>Master Trainer training</label>
+                </value>
+                <value>
+                    <fullName>Open Course Level 1</fullName>
+                    <default>false</default>
+                    <label>Open Course Level 1</label>
+                </value>
+                <value>
+                    <fullName>Open Course Level 2</fullName>
+                    <default>false</default>
+                    <label>Open Course Level 2</label>
+                </value>
+                <value>
+                    <fullName>Open Course Level 3</fullName>
+                    <default>false</default>
+                    <label>Open Course Level 3</label>
+                </value>
+                <value>
+                    <fullName>Video practitioner</fullName>
+                    <default>false</default>
+                    <label>Video practitioner</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Certificate_Sent_On__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Date certificate has been sent</inlineHelpText>
+        <label>Certificate Sent On</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Completed_training_on__c</fullName>
+        <externalId>false</externalId>
+        <label>Completed training on</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the contact Accredited</inlineHelpText>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Accreditations</relationshipLabel>
+        <relationshipName>Accreditations</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Master_trainer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Master trainer</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Accreditations (Master trainer)</relationshipLabel>
+        <relationshipName>Accreditations1</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Network_Member_Status__c</fullName>
+        <description>This is a formula from the Contacts Network Member Status and can only be updated on the contact page</description>
+        <externalId>false</externalId>
+        <formula>CASE(Contact__r.Network_Member_status__c,
+&quot;Active&quot;,&quot;Active&quot;, 
+&quot;Inactive&quot;, &quot;Inactive&quot;,
+&quot;Prospective&quot;,&quot;Prospective&quot;,
+&quot;null&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This is a formula from the Contacts Network Member Status and can only be updated on the contact page</inlineHelpText>
+        <label>Network Member Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Accredited</label>
+                </value>
+                <value>
+                    <fullName>Attending CDP-C</fullName>
+                    <default>false</default>
+                    <label>Attending CDP-C</label>
+                </value>
+                <value>
+                    <fullName>Attending CDP-F</fullName>
+                    <default>false</default>
+                    <label>Attending CDP-F</label>
+                </value>
+                <value>
+                    <fullName>Attending CDP-V</fullName>
+                    <default>false</default>
+                    <label>Attending CDP-V</label>
+                </value>
+                <value>
+                    <fullName>Attending ENS Course</fullName>
+                    <default>false</default>
+                    <label>Attending ENS Course</label>
+                </value>
+                <value>
+                    <fullName>Attending WLD-F</fullName>
+                    <default>false</default>
+                    <label>Attending WLD-F</label>
+                </value>
+                <value>
+                    <fullName>Running practice workshops</fullName>
+                    <default>false</default>
+                    <label>Running practice workshops</label>
+                </value>
+                <value>
+                    <fullName>Working as Co-Facilitator</fullName>
+                    <default>false</default>
+                    <label>Working as Co-Facilitator</label>
+                </value>
+                <value>
+                    <fullName>Working on Marketing plan</fullName>
+                    <default>false</default>
+                    <label>Working on Marketing plan</label>
+                </value>
+                <value>
+                    <fullName>Working with clients</fullName>
+                    <default>false</default>
+                    <label>Working with clients</label>
+                </value>
+                <value>
+                    <fullName>Accreditation Suspended</fullName>
+                    <default>false</default>
+                    <label>Accreditation Suspended</label>
+                </value>
+                <value>
+                    <fullName>Former Network Member</fullName>
+                    <default>false</default>
+                    <label>Former Network Member</label>
+                </value>
+                <value>
+                    <fullName>Former In-house Trainer</fullName>
+                    <default>false</default>
+                    <label>Former In-house Trainer</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Accreditation</label>
+    <nameField>
+        <displayFormat>A-{000000}</displayFormat>
+        <label>Accreditation Name</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Accreditations</pluralLabel>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>CDP_C</fullName>
+        <active>true</active>
+        <label>CDP-C</label>
+        <picklistValues>
+            <picklist>Accredited_for__c</picklist>
+            <values>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBA Consulting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master Trainer consulting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master Trainer video</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Accreditation Suspended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Attending CDP-C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Former Network Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Working with clients</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>CDP_F</fullName>
+        <active>true</active>
+        <label>CDP-F</label>
+        <picklistValues>
+            <picklist>Accredited_for__c</picklist>
+            <values>
+                <fullName>Co-faciliation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In-house training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master Trainer training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master Trainer video</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open Course Level 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open Course Level 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open Course Level 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refresher</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Accreditation Suspended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Attending CDP-F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Attending ENS Course</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Former Network Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Running practice workshops</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Working as Co-Facilitator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Working on Marketing plan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>CDP_V</fullName>
+        <active>true</active>
+        <label>CDP-V</label>
+        <picklistValues>
+            <picklist>Accredited_for__c</picklist>
+            <values>
+                <fullName>Master Trainer video</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Video practitioner</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Accreditation Suspended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Attending CDP-V</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Former Network Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Working with clients</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>WLD</fullName>
+        <active>true</active>
+        <label>WLD</label>
+        <picklistValues>
+            <picklist>Accredited_for__c</picklist>
+            <values>
+                <fullName>In-house training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master Trainer training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master Trainer video</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refresher</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Attending ENS Course</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Attending WLD-F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Former In-house Trainer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Working as Co-Facilitator</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Contact__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Accredited_for__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Completed_training_on__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Accredited_On__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Contact__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Accredited_for__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>RECORDTYPE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Contact__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Accredited_for__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>Contact__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchFilterFields>Network_Member_Status__c</searchFilterFields>
+        <searchFilterFields>Master_trainer__c</searchFilterFields>
+        <searchFilterFields>RECORDTYPE</searchFilterFields>
+        <searchFilterFields>Accredited_On__c</searchFilterFields>
+        <searchFilterFields>Accredited_for__c</searchFilterFields>
+        <searchFilterFields>Certificate_Sent_On__c</searchFilterFields>
+        <searchFilterFields>Completed_training_on__c</searchFilterFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Contact__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Accredited_On__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Accredited_for__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Completed_training_on__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <visibility>Public</visibility>
+</CustomObject>

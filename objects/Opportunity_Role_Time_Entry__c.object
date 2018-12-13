@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The date the work was completed</inlineHelpText>
+        <label>Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_mth__c</fullName>
+        <externalId>false</externalId>
+        <formula>MONTH(Date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Date, month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_yr__c</fullName>
+        <externalId>false</externalId>
+        <formula>YEAR(Date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Date, year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_yr_mth__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(YEAR(Date__c)) &amp; &quot;-&quot; &amp; TEXT(MONTH(Date__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Date, year-month</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Duration__c</fullName>
+        <externalId>false</externalId>
+        <label>Duration</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Job</label>
+        <referenceTo>Job__c</referenceTo>
+        <relationshipLabel>Opportunity Role Time Entries</relationshipLabel>
+        <relationshipName>Opportunity_Role_Time_Entries</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Role_Record__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Role Record</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Opportunity_Role_Record__c.Role__c</field>
+                <operation>equals</operation>
+                <value>Facilitator</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Opportunity_Role_Record__c</referenceTo>
+        <relationshipLabel>Opportunity Role Time Entries</relationshipLabel>
+        <relationshipName>Opportunity_Role_Time_Entries</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Opportunity Role Time Entries</relationshipLabel>
+        <relationshipName>Opportunity_Role_Time_Entries</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>doll_comm_ENSI__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.ENSI_split_services_Per__c*doll_value__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>$ ENSI</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>doll_comm_ENSI_ruv__c</fullName>
+        <externalId>false</externalId>
+        <label>$ ENSI (ruv)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>doll_comm_fac__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Role_Record__r.perc_comm__c*doll_value__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>$ facilitator</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>doll_comm_fac_ruv__c</fullName>
+        <externalId>false</externalId>
+        <label>$ facilitator (ruv)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>doll_comm_mark__c</fullName>
+        <externalId>false</externalId>
+        <formula>doll_value__c-doll_comm_ENSI__c-doll_comm_fac__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>$ marketing</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>doll_comm_mark_ruv__c</fullName>
+        <externalId>false</externalId>
+        <label>$ marketing (ruv)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>doll_comm_sell_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Sell_1_Pec__c/Opportunity__r.Total_perc_commission_marketing_services__c*doll_comm_mark__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>$ Sell 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>doll_comm_sell_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Sell_2_Pec__c/Opportunity__r.Total_perc_commission_marketing_services__c*doll_comm_mark__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>$ Sell 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>doll_comm_spot_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Spot_1_Pec__c/Opportunity__r.Total_perc_commission_marketing_services__c*doll_comm_mark__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>$ Spot 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>doll_comm_spot_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Spot_2_Pec__c/Opportunity__r.Total_perc_commission_marketing_services__c*doll_comm_mark__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>$ Spot 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>doll_value__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Role_Record__r.OP_Unit_Price__c*Duration__c/Opportunity__r.Hours_in_a_day__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>$ value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Opportunity Role Time Entry</label>
+    <nameField>
+        <displayFormat>ORTE-{000000}</displayFormat>
+        <label>Opportunity Role Time Entry ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Opportunity Role Time Entries</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <fullName>Check_ORR_month</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(
+YEAR(Date__c) &lt;&gt; Opportunity_Role_Record__r.Rec_date_yr__c,
+MONTH(Date__c) &lt;&gt; Opportunity_Role_Record__r.Rec_date_mth__c
+)</errorConditionFormula>
+        <errorDisplayField>Date__c</errorDisplayField>
+        <errorMessage>Please make sure you have selected the Opportunity Role Record that is the same month as the Date you have entered.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ORR_remaining_days_check</fullName>
+        <active>false</active>
+        <errorConditionFormula>Duration__c &gt; Opportunity_Role_Record__r.Remain_Fac_hours_ad_hoc_for_prod_OPE__c</errorConditionFormula>
+        <errorDisplayField>Duration__c</errorDisplayField>
+        <errorMessage>The duration you have entered is greater than the remaining budget of days.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Opp_must_be_closed_won</fullName>
+        <active>true</active>
+        <description>Can&apos;t add time to an Opportunity that hasn&apos;t been won</description>
+        <errorConditionFormula>IF(TEXT(Opportunity_Role_Record__r.Opportunity__r.StageName) &lt;&gt; &quot;Closed Won&quot;,TRUE,FALSE)</errorConditionFormula>
+        <errorMessage>You cannot add time entries to an Opportunity that has not been Closed / Won</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

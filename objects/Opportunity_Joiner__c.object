@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Temp Object to join Opportunities</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Child_Opportunity_ID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Child Opportunity ID</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Opportunity Joiners (Child Opportunity ID)</relationshipLabel>
+        <relationshipName>Opportunity_Joiners1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Child_Opportunity_Total_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Child Opportunity Total Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Close_Child_Opportunities__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is controlled by Opportunity parent record through a process</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this to mark all Child Opportunities as Closed Won and Calculate the Commissions</inlineHelpText>
+        <label>Close Child Opportunities</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contact_PAX__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of PAX participant</inlineHelpText>
+        <label>Contact PAX</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Opportunity Joiners</relationshipLabel>
+        <relationshipName>Opportunity_Joiners</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Create_Participation_Record__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used by Process to create Participation record if conditions are met. Not for users</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Not for users</inlineHelpText>
+        <label>Create Participation Record</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Closed_Lost__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used in process</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used in process, show true if child opportunity stage is closed lost</inlineHelpText>
+        <label>Is Closed Lost</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_PAX_Stage_Closed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used as part of Process to create Pax record attached to Job</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used as part of Process to create Pax record attached to Job</inlineHelpText>
+        <label>Is PAX Stage Closed</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Job_ID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Job ID</label>
+        <referenceTo>Job__c</referenceTo>
+        <relationshipLabel>Opportunity Joiners</relationshipLabel>
+        <relationshipName>Opportunity_Joiners</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Parent__c</fullName>
+        <description>Master Joiner to ID the main Opportunity Not shown to Users</description>
+        <externalId>false</externalId>
+        <label>Opportunity Parent</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Opportunity Joiners</relationshipLabel>
+        <relationshipName>Opportunity_Joiners</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Participant_Created__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>If True Participant has been created</inlineHelpText>
+        <label>Participant Created</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Total_Commission_Child__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Commission Child</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Referrer__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Referrer</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Opportunity Joiner</label>
+    <nameField>
+        <displayFormat>OJ-{00000000}</displayFormat>
+        <label>Opportunity Joiner Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Opportunity Joiners</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <visibility>Public</visibility>
+</CustomObject>

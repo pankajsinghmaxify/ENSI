@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Welcome Email</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>1 Welcome Email</name>
+    <style>none</style>
+    <subject>ENSI program details for {!Contact.FirstName}</subject>
+    <textOnly>Negotiation &amp; Influencing
+
+View this email in your browser
+
+
+Dear {!Contact.FirstName}
+
+As part of the ENS International {!Job__c.Program_Name__c} Program for {!Job__c.Account_Name__c} on {!Job__c.Certificate_Date_Text__c}, please read the following information to help empower your negotiation success.
+
+Date:  {!Job__c.Certificate_Date_Text__c}
+Time:  {!Job__c.Start_Finish_Time__c}
+Venue:  {!Job__c.Venue_Name__c}
+{!Job__c.Venue_Address__c}
+{!Job__c.Venue_City__c} {!Job__c.Venue_State__c} {!Job__c.Venue_Postcode__c}
+{!Job__c.Venue_Country__c}
+Program Leader/s:   {!Job__c.Facilitator_names__c}
+{!Job__c.Facilitator_emails__c}
+Dress:  Smart casual
+Learning Outcomes:  Click here to see the Learning Outcomes
+
+
+The ENSI Program is not only about giving you the skills required to approach negotiations confidently but to also ensure that your learnings are sustained and become a force of habit.
+
+We believe that engaging you before and after the workshop will increase your learning outcomes and ask that you participate fully in the activities outlined below. Results of the post program case study and survey are returned to your management to assist them in understanding your challenges and successes.
+
+Pre-Program Requirements
+
+
+Program Focus Questionnaire &apos;PFQ&apos;- the PFQ helps the program leader to customise the program based on your needs. We ask that all PFQs are completed by {!Job__c.PFQ_Due_Date__c}. Click here* to access the questionnaire.
+
+Negotiating and Influencing Profile ‘NIP’ - the NIP covers 20 key competencies relating to the negotiation and influencing capabilities of individuals. We ask that all NIPs are completed by {!Job__c.NIP_Due_Date__c}. You will receive a separate email with instructions to logon and complete the NIP online.
+
+Please come briefed with notes on at least one current negotiation situation (for use in diagnosis and review sessions during the workshop).
+
+*Please note that this link is specific to you, please don&apos;t forward it to others.
+
+Post-Program Actions
+
++ You will receive 7 reinforcement emails sent fortnightly for 14 weeks.
++ ENSI 2-3 minute reinforcement eBites on Needs, Style, Climate, Tactics, Phases
+https://www.negotiate.org/ensi-reinforcement-ebites
+Password: ENSI.
++ Three months after the program we will ask you to complete a short survey summarising the value you have realised from your application of negotiation skills.
++ Subscription to our eBulletin Negotium. If you don’t sign the subscription form at the program, please feel free to register online at www.negotiate.org
+
+We look forward to seeing you at the workshop!
+
+Kind regards,
+{!User.Name}
+{!User.Title}
+
+XYZ83XYZ
+
+
+
+
+P +61 2 9299 9688  | E info.ens@negotiate.org
+Level 5  83 York Street  Sydney NSW 2000  Australia
+
+negotiate.org
+Manage subscription | Forward email</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 43, 73);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">Hi&nbsp;{!Job__c.Account_Sell_1_Name__c}<br>
+<br>
+Please give me an update on the proposals that you’ve sent out as 
+<span style="color:#FF0090; font-size:19px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">below attached</strong></span>.<br>
+<br>
+<span style="color:#FF0090; font-size:19px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">If below use this format</strong></span><br>
+Proposal_date: ACCOUNT — NAM: XXX — Work Type: XXX — Job days: DD — Value: $$$<br>
+<br>
+Also, below are people we’ve recorded as opportunities that haven’t reached the proposal stage – what is the status here?<br>
+<br>
+ENSI Lead Added Date – Person’s Name – Title – Account – Activity Description (reference from SF Activity History on Contact)<br>
+<br>
+Many thanks</span></span>
+												
+</html>

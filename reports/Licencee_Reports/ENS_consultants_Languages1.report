@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>Contact.Preferred_Start_Time__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Venue_Requirements__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Special_Materials__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Reinforcement_Emails__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Csm_Comments__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <description>List of special requirements for facilitators</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact.Network_Member_status__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CONTACT_RECORDTYPE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Contact.Network_Member</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Consultant Requirements</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>LAST_NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Contact.Licence_Expiry__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

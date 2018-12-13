@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>A read only object used purely for reporting purposes, with data populated via Apex tirggers.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>AUD_Share_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>FX_Share_Amount__c /  Job__r.Billing_X_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AUD Share Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>AUD_Share_As_Marketer__c</fullName>
+        <externalId>false</externalId>
+        <formula>FX_Share_As_Marketer__c / Job__r.Billing_X_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>marketing commission on professional fees + materials commission</inlineHelpText>
+        <label>AUD Share As Marketer</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>AUD_Share_As_Presenter__c</fullName>
+        <description>Presenters Fee
+
+There will only be an fee for the people who have presented the work. The BDM team will be $0</description>
+        <externalId>false</externalId>
+        <formula>FX_Share_As_Presenter__c / Job__r.Billing_X_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Presenters Fee
+
+There will only be an fee for the people who have presented the work. The BDM team will be $0</inlineHelpText>
+        <label>AUD Share As Presenter</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>AUD_Share_Material__c</fullName>
+        <externalId>false</externalId>
+        <formula>FX_Share_Material__c
+/ 
+Job__r.Billing_X_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>total material fees for the job</inlineHelpText>
+        <label>AUD Share Material</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>AUD_Share_Prof_Serv__c</fullName>
+        <externalId>false</externalId>
+        <formula>FX_Share_Prof_Serv__c
+/
+Job__r.Billing_X_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AUD Share Prof Serv</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Assoc_Fixed_Price_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Job_Item_Record_Type__c =&quot;Fixed_Fee&quot;
+,Job_Item_AUD_Value__c * Attrib_Mkting_PS_Pcnt__c
+,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Assoc_FixedPrice_Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Assoc_Mats_Revenue__c</fullName>
+        <description>Total Materials Fee Sold
+
+If jobs are shared, the fees are attributed to each marketer according to the marketing split</description>
+        <externalId>false</externalId>
+        <formula>IF( Job_Item_Record_Type__c =&quot;Material&quot; 
+,Job_Item_AUD_Value__c * Attrib_Mkting_Mats_Pcnt__c
+,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total Materials Fee Sold
+
+If jobs are shared, the fees are attributed to each marketer according to the marketing split</inlineHelpText>
+        <label>Assoc_Mats_Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Assoc_PS_Revenue__c</fullName>
+        <description>Total Professional Fee Sold
+
+If jobs are shared, the fees are attributed to each marketer according to the marketing split</description>
+        <externalId>false</externalId>
+        <formula>IF( Job_Item_Record_Type__c =&quot;Service&quot;
+    ,Job_Item_AUD_Value__c * Attrib_Mkting_PS_Pcnt__c
+    ,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total Professional Fee Sold
+
+If jobs are shared, the fees are attributed to each marketer according to the marketing split</inlineHelpText>
+        <label>Assoc_PS_Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Attrib_ENS_Mats_Share_Amount_AUD__c</fullName>
+        <description>ENS&apos;s share of the Materials Fee
+
+If jobs are shared, the fees are attributed to each marketer according to the marketing split
+
+times 80% of the materials fee</description>
+        <externalId>false</externalId>
+        <formula>IF( Job_Item_Record_Type__c = &quot;Material&quot;,
+Job_Item__r.Item_Value_AUD__c * 0.8 *  Attrib_Mkting_Mats_Pcnt__c,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>ENS&apos;s share of the Materials Fee
+
+If jobs are shared, the fees are attributed to each marketer according to the marketing split
+
+times 80% of the materials fee</inlineHelpText>
+        <label>Attrib ENS Mats Share Amount AUD 80%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Attrib_ENS_Mats_Share_Amount_AUD_new__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Job_Item_Record_Type__c = &quot;Material&quot;,
+
+Assoc_Mats_Revenue__c - 
+Attrib_Marketing_Mats_Share_Amount_AUD__c
+,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Attrib ENS Mats Share Amount AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Attrib_ENS_Share_Amount_AUD__c</fullName>
+        <description>Calculates the ENS professional fee revenue share generated on a pro-rata basis by this marketer.
+Times professional fee by 32.5%</description>
+        <externalId>false</externalId>
+        <formula>IF( Job_Item_Record_Type__c = &quot;Service&quot;,
+Job_Item__r.Item_Value_AUD__c * 0.325 *  Attrib_Mkting_PS_Pcnt__c,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>ENS&apos;s share of the Professional Fee
+
+If jobs are shared, the fees are attributed to each marketer according to the marketing split
+Times professional fee by 32.5% of the Assoc_PS_Revenue</inlineHelpText>
+        <label>Attrib ENS PS Share Amount AUD 32.5%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Attrib_Marketing_Mats_Share_Amount_AUD__c</fullName>
+        <description>Marketers share of the Materials Fee</description>
+        <externalId>false</externalId>
+        <formula>IF ( OR(Role__c = &quot;Sell&quot;, Role__c =&quot;Spot&quot;),
+AUD_Share_Material__c
+*
+Job_Role_Materials_Pct__c
+ ,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Marketers share of the Materials Fee</inlineHelpText>
+        <label>Attrib Marketing Mats Share Amount AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Attrib_Marketing_PS_Share_Amount_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( OR(Role__c = &quot;Sell&quot;, Role__c =&quot;Spot&quot;),
+Job_professional_fee_AUD__c
+* 
+Job_Role_Prof_Services_Pct__c 
+,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>marketing commission on professional fees</inlineHelpText>
+        <label>Attrib Marketing PS Share Amount AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Attrib_Mkt_F2F_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( Marketer__c =&quot;FALSE&quot; 
+,0 
+,Attrib_Mkting_PS_Pcnt__c *  Job_Item_F2F_Days__c 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Attrib Mkt F2F Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attrib_Mkting_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( Marketer__c =&quot;FALSE&quot;
+    ,0
+    ,IF (Job_Item_Record_Type__c =&quot;Service&quot;, Attrib_Mkting_PS_Pcnt__c *  Job_Item_AUD_Value__c ,0)
+                + IF (Job_Item_Record_Type__c =&quot;Material&quot;, Attrib_Mkting_Mats_Pcnt__c *  Job_Item_AUD_Value__c ,0)
+     )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Attrib_Mkting_AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Attrib_Mkting_Days__c</fullName>
+        <description>Total Job Days Sold (job item days)
+
+If jobs are shared, the number of days are attributed to each marketer according to the marketing split</description>
+        <externalId>false</externalId>
+        <formula>IF ( Marketer__c =&quot;FALSE&quot;
+    ,0
+    ,Attrib_Mkting_PS_Pcnt__c *  Job_Item_Days__c
+    )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total Job Days Sold (job item days)
+
+If jobs are shared, the number of days are attributed to each marketer according to the marketing split</inlineHelpText>
+        <label>Attrib_Mkting_Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attrib_Mkting_Mats_Pcnt__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(Job__r.Total_Mkting_Mat__c=0
+   ,0
+   ,Job_Role_Materials_Pct__c / Job__r.Total_Mkting_Mat__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Attrib_Mkting_Mats_Pcnt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Attrib_Mkting_PS_Pcnt__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(Job__r.Total_Mkting_PS__c =0
+    ,0
+    ,Job_Role_Prof_Services_Pct__c  / Job__r.Total_Mkting_PS__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Attrib_Mkting_PS_Pcnt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Attrib_Presenter_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( Role__c = &quot;Presenter&quot;
+    ,  Job_Item_AUD_Value__c 
+    , 0
+    )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Attrib_Presenter_AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Attrib_Presenter_Days__c</fullName>
+        <description>Number of days Presented 
+
+Will only show a number for those people do the training and consulting</description>
+        <externalId>false</externalId>
+        <formula>IF ( Role__c =&quot;Presenter&quot;,  Job_Item_Days__c ,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Number of days Presented 
+
+Will only show a number for those people do the training and consulting</inlineHelpText>
+        <label>Attrib_Presenter_Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attrib_Presenter_F2F_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (Role__c = &quot;Presenter&quot;, Job_Item_F2F_Days__c ,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Attrib Presenter F2F Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job_Role__r.Contact__r.FirstName &amp; &quot; &quot; &amp;  Job_Role__r.Contact__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ENS_Percentage__c</fullName>
+        <description>Only appears on the record where ENS is the Contact</description>
+        <externalId>false</externalId>
+        <formula>CASE( Job_Role__r.Contact__c ,&quot;0032000000JHXjk&quot;,  Job_Role__r.Prof_Serv_Share__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Only appears on the record where ENS is the Contact</inlineHelpText>
+        <label>ENS Percentage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>FX_Share_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( Job_Item_Record_Type__c =&quot;Material&quot;, 
+      Job_Role_Materials_Pct__c *  Job_Item__r.Item_Value_FX__c ,
+      if(  Role__c =&quot;Presenter&quot;,
+              Job_Item__r.Value_Share_Pcnt__c * Job_Item__r.Item_Value_FX__c,
+
+IF ( Job_Item_Record_Type__c =&quot;Fixed Fee&quot;,
+0,
+
+IF ( Job_Item_Record_Type__c =&quot;Travel Time&quot;,
+0, 
+
+              Job_Role_Prof_Services_Pct__c * Job_Item__r.Item_Value_FX__c)))
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FX Share Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FX_Share_As_Marketer__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (  OR(Role__c = &quot;Sell&quot;, Role__c =&quot;Spot&quot;), 
+FX_Share_Amount__c
+ ,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FX Share As Marketer</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FX_Share_As_Presenter__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( Role__c = &quot;Presenter&quot;, FX_Share_Amount__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FX Share As Presenter</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FX_Share_Material__c</fullName>
+        <externalId>false</externalId>
+        <formula>If( Job_Item_Record_Type__c =&quot;Material&quot;,  Job_Item__r.Item_Value_FX__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total materials for the job</inlineHelpText>
+        <label>FX Share Material</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FX_Share_Prof_Serv__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( Role__c =&quot;Presenter&quot;, 
+Job_Item__r.Value_Share_Pcnt__c * Job_Item__r.Item_Value_FX__c, 
+
+IF ( Job_Item_Record_Type__c =&quot;Fixed Fee&quot;,
+0,
+
+IF ( Job_Item_Record_Type__c =&quot;Travel Time&quot;,
+0,
+
+Job_Role_Prof_Services_Pct__c * Job_Item__r.Item_Value_FX__c)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total share on Professional fee on the job (ie marketing fee + presenter fee)</inlineHelpText>
+        <label>FX Share Prof Serv</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Face_to_Face_Day__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job_Item__r.Face_to_Face_Day__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Face to Face Day</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Item_AUD_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job_Item__r.Item_Value_AUD__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Item AUD Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Job_Item_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job_Item__r.Job_Item_Days__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Item Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Item_ENSProduct__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job_Item__r.ENSProduct__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Item ENSProduct</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Item_F2F_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job_Item__r.Job_Item_F2F_Days__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Item F2F Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Item_FX_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job_Item__r.Item_Value_FX__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Item FX Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Item_Presenter_Contact_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job_Item__r.Job_Role__r.Contact__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Item Presenter Contact ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Item_Record_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( Job_Item__r.RecordTypeId  = &quot;012200000000eEp&quot;, &quot;Material&quot;, 
+IF( Job_Item__r.RecordTypeId  = &quot;01220000000MIrJ&quot;, &quot;Fixed Fee&quot;, 
+IF( Job_Item__r.RecordTypeId  = &quot;012200000001Obz&quot;, &quot;Travel Time&quot;, 
+&quot;Service&quot;)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Item Record Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Item__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Job Item</label>
+        <referenceTo>Job_Item__c</referenceTo>
+        <relationshipLabel>Reporting Job Items</relationshipLabel>
+        <relationshipName>R00N20000001X4W4EAK</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Job_Role_Contact_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job_Role__r.Contact__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Role Contact ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Role_Materials_Pct__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job_Role__r.Materials_Share__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Role Materials %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Job_Role_Prof_Services_Pct__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job_Role__r.Prof_Serv_Share__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Role Prof Services %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Job_Role__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Job Role</label>
+        <referenceTo>Job_Role__c</referenceTo>
+        <relationshipLabel>Reporting Job Items</relationshipLabel>
+        <relationshipName>R00N20000001X4W8EAK</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Job__c</fullName>
+        <externalId>false</externalId>
+        <label>Job</label>
+        <referenceTo>Job__c</referenceTo>
+        <relationshipLabel>Reporting Job Items</relationshipLabel>
+        <relationshipName>ReportingJobItem</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Job_professional_fee_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Job_Item_Record_Type__c = &quot;Service&quot;, 
+Job_Item__r.Item_Value_AUD__c  ,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job professional fee AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Licensee_Region__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job_Role__r.Licensee_Region__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Licensee_Region</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Licensee_Reporting__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job_Role__r.Licensee_Reporting__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Licensee_Reporting</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Marketer__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (OR ( Role__c =&quot;Spot&quot;,Role__c=&quot;Sell&quot;)
+    ,&quot;TRUE&quot;
+    ,&quot;FALSE&quot;
+    )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Marketer</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pres_F2F_Negative__c</fullName>
+        <externalId>false</externalId>
+        <formula>-  Attrib_Presenter_F2F_Days__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pres F2F Negative</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Role_Contact_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job_Role__r.Role_Contact_Type__c</formula>
+        <label>Role_Contact_Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <externalId>false</externalId>
+        <formula>case(Job_Role__r.Role__c,
+&quot;Presenter&quot;,&quot;Presenter&quot;,
+&quot;ENS&quot;,&quot;ENS&quot;,
+&quot;Spot&quot;,&quot;Spot&quot;,
+&quot;Sell&quot;,&quot;Sell&quot;,
+&quot;ERROR&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Role</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Work_Start_Date_FIN_YR__c</fullName>
+        <description>Calculates the financial year that the job item date occurs in</description>
+        <externalId>false</externalId>
+        <formula>Job_Item__r.Work_Start_Date_FIN_YR__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Work Start Date FIN YR</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Work_Start_Date_YRMTH__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job_Item__r.Work_Start_Date_YRMTH__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Work Start Date YRMTH</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Work_Start_Date__c</fullName>
+        <description>dates are from the job item</description>
+        <externalId>false</externalId>
+        <formula>IF (  Job_Item_Record_Type__c &lt;&gt; &quot;Material&quot;
+      ,Job_Item__r.Work_Start_Date__c
+      , Job_Item__r.Job_Work_Start_Date__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>dates are from the job item, For a service the date should be the date of work. For materials the date should be the job first date</inlineHelpText>
+        <label>Work_Start_Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Reporting Job Item</label>
+    <nameField>
+        <displayFormat>RJI-{00000000}</displayFormat>
+        <label>Reporting Job Item Number</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Reporting Job Items</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

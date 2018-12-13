@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Digital Eskimo Public Program Level 1 - Sent once job is confirmed</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Digital Eskimo 01 Level 1 Professional Negotiator Welcome</name>
+    <style>none</style>
+    <subject>Participant Confirmation: ENS {!Contact.Job_Public_Program_Name__c} Program on {!Contact.Job_Certificate_Date__c}</subject>
+    <textOnly>ENS International Participant Email
+
+
+Dear {!Contact.FirstName},
+
+&apos;Get more of what you want&apos;
+
+As part of the ENS International {!Contact.Job_Public_Program_Name__c} program you are attending on {!Contact.Job_Certificate_Date__c} in {!Contact.Job_Venue_City__c}, please read the following information to help Empower your Negotiation Success.
+
+Date:
+
+{!Contact.Job_Certificate_Date__c}
+
+Time:
+
+{!Contact.Job_Start_Finish_Time__c}
+
+Venue:
+
+{!Contact.Job_Venue_Name__c}
+{!Contact.Job_Venue_Address__c}
+{!Contact.Job_City_State_PC__c}
+{!Contact.Job_Venue_Country__c}
+
+Program Leader/s:
+
+{!Contact.Job_Presenters__c}
+{!Contact.Job_Presenters_email__c}
+
+Dress:
+
+Smart Casual
+
+Learning Outcomes:
+
+Click here to see the Learning Outcomes
+
+The ENS {!Contact.Job_Public_Program_Name__c} program is not only about giving you the skills required to approach negotiations confidently but to also ensure that your learnings are sustained and become a force of habit. We believe that engaging you before and after the workshop will increase your learning outcomes and ask that you participate fully in the activities outlined below.
+
+We like to promote an informal atmosphere during the workshop and casual dress is welcome. Lunch will be provided and there will be suitable breaks during the program to enable participants to communicate with business colleagues and clients.
+
+No prior reading material is necessary. A comprehensive workbook will be made available at the beginning of the workshop.
+
+Pre-Program Requirements
+
+Program Focus Questionnaire &apos;PFQ&apos;- the PFQ helps the program leader to customise the program based on your needs. We ask that all PFQs are completed by {!Contact.Job_PFQ_Due_Date__c}.
+Click here to access the questionnaire.*Please note that this link is specific to you, please don&apos;t forward it to others.
+Please come briefed with notes on at least one current negotiation situation (for use in diagnosis and review sessions during the workshop).
+
+Post-Program Actions
+
+You will receive 4 reinforcement emails sent fortnightly.
+All attendees on our programs are automatically subscribed to our eBulletin Negotium. Negotium takes real-world negotiations and builds on them, providing commentary and tips that you can apply in your work and personal life. We have designed it to be useful to our past participants and those with a general interest in negotiation
+
+We look forward to seeing you at the workshop!
+
+Kind regards,
+
+{!Contact.Job_CSM_Name__c}
+{!Contact.Job_CSC_Title__c}
+
+ENS International - Level 5, 83 York Street, Sydney 2000, NSW, Australia
+Phone: +61 2 9299 9688</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

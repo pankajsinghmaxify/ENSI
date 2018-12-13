@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Jobs__r$Venue_Country__c</field>
+    </columns>
+    <columns>
+        <field>Account.Jobs__r$Job_Class__c</field>
+    </columns>
+    <columns>
+        <field>Account.Jobs__r$Certificate_Date_Text__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Jobs__r$Job_Days__c</field>
+    </columns>
+    <columns>
+        <field>Account.Jobs__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Jobs__r$Peer_Self_Review_Form_Received__c</field>
+    </columns>
+    <columns>
+        <field>Account.Jobs__r$Facilitator_names__c</field>
+    </columns>
+    <columns>
+        <field>Account.Jobs__r$Presenters__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <description>Includes a list of jobs a consultant has presented. Filtered by Contact person. Report is included on the Licensee contact layout</description>
+    <filter>
+        <booleanFilter>(1 Or 4) AND 2 AND 3</booleanFilter>
+        <criteriaItems>
+            <column>Account.Jobs__r$Presenters__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Geoff Powell</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Jobs__r$Status__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Confirmed,Completed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>test account,testing account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Jobs__r$Facilitator_names__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Geoff Powell</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Jobs presented - Current &amp; Previous Year</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_Jobs_Job_Items_with_Presenter__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account.Jobs__r$Name</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account.Jobs__r$Job_First_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

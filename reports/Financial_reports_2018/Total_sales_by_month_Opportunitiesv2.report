@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_67764443</developerName>
+        <masterLabel>Aust. / Intl.</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Opportunity.Region__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Africa</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Asia_other</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Canada</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Europe_other</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>France</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Germany</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Hong Kong</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>India</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Middle East</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Netherlands</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>New Zealand</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Russia</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Singapore</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>South America</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Spain</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Switzerland</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>United Kingdom</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>United States</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Central America</sourceValue>
+            </sourceValues>
+            <value>International</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Australia</sourceValue>
+            </sourceValues>
+            <value>Australia</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_41552063</developerName>
+        <masterLabel>Class</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Opportunity.Opportunity_Types__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Training</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Organisational transformation</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Fundamentals</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Level 1</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Level 2</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Level 3</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Refresher</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Verhandlungsführung mit System: Grenzen explorieren, Neues ausprobieren</sourceValue>
+            </sourceValues>
+            <value>Training</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Consulting / retainer</sourceValue>
+            </sourceValues>
+            <value>Consulting</value>
+        </values>
+    </buckets>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity.Days_sold__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity.Total_services_materials_fac_fees__c.CONVERT</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity.Proposed_Amount__c.CONVERT</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity.Total_Services_Sales_Price__c.CONVERT</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity.Total_Materials_Sales_Price__c.CONVERT</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Assigned_CSM__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Opportunity.OC_PAX</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_41552063</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_67764443</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>Opportunity.Training_starts__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Total sales by month, Opportunitiesv2</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Opportunity.Training_starts__c</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,16 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 0, 0);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+Hi {!Job__c.NAM_Name__c}<br>
+<br>
+I trust this finds you well.<br>
+<br>
+After the sessions with {!Job__c.Facilitator_names__c} this week, there are <strong><span style="color:#EE0090;">XXX</span></strong> hours remaining on your retainer.<br>
+<br>
+Given the on-going work with {!Job__c.Facilitator_names__c}, would you like to roll the retainer over into another 35 hr block?<br>
+<br>
+Please let me know.<br>
+<br>
+Kind regards</span></span>												
+</html>

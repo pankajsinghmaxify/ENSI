@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Reminder for program including venue details - PLUS Bring your manual</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>SAICA Program Reminder - Bring Manual</name>
+    <style>none</style>
+    <subject>Reminder: ENSI {!Contact.Program_Name__c} Program on {!Contact.Job_Certificate_Date__c}</subject>
+    <textOnly>ENS International Participant Email
+
+
+Dear {!Contact.FirstName},
+
+&apos;Small investment LARGE IMPACT&apos;
+
+We trust you enjoyed the first part of your ENSI journey.
+
+Heino and Elspeth focused on introducing you to some key ENSI concepts: separate process from content; build the common ground before reducing the variances; the ENSI secret strategy and four out of the five steps in the ENSI process model.
+
+For the second part of your ENSI {!Contact.Program_Name__c} Program you are attending, here are the details:
+
+Date:
+
+{!Contact.Job_Certificate_Date__c}
+
+Time:
+
+{!Contact.Job_Start_Finish_Time__c}
+
+Venue:
+
+{!Contact.Job_Venue_Name__c}
+{!Contact.Job_Venue_Address__c}
+{!Contact.Job_City_State_PC__c}
+{!Contact.Job_Venue_Country__c}
+
+Program Leader/s:
+
+{!Contact.Job_Presenters__c}
+{!Contact.Job_Presenters_email__c}
+
+Dress:
+
+Smart Casual
+
+Learning Outcomes:
+
+Click here to see the Learning Outcomes
+
+Please remember to bring along your ENSI materials along.
+
+Heino and Elspeth look forward to introducing you to the fifth step in the ENSI process model: Manage Phases and how to break deadlocks and plan concession exchange in your negotiations. There will be lots of opportunity to practise your negotiation and process observation skills.
+
+Heino and Elspeth are very much looking forward to seeing you again and hearing how you have been using the concepts, tools and techniques since the first part of the program.
+
+Kind regards,
+
+{!Contact.Job_CSM_Name__c}
+{!Contact.Job_CSC_Title__c}
+
+ENS International - Level 5, 83 York Street, Sydney 2000, NSW, Australia
+Phone: +61 2 9299 9688</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

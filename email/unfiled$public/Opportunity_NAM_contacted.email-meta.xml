@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Opportunity NAM contacted</name>
+    <style>none</style>
+    <subject>NAM Contacted - {!Opportunity.Name}</subject>
+    <textOnly>Hi {!Opportunity.OwnerFirstName}
+
+A new Opportunity has been assigned to you!
+
+* Name: {!Opportunity.Name}
+* Region: {!Opportunity.Region__c}
+* Company: {!Opportunity.Account}
+* Type: {!Opportunity.RecordType} {!Opportunity.Opportunity_Types__c}
+* Deadline for contact: {!Opportunity.Deadline_for_contact__c}
+
+View Opportunity: https://negotiate.lightning.force.com/one/one.app#/sObject/{!Opportunity.Id}/view</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

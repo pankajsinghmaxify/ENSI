@@ -1,0 +1,26 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 43, 73);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+Hi&nbsp;{!Job__c.NAM_Name__c}<br>
+								<br>
+									I trust all is well and that your group has been practicing their negotiation skills from the {!Job__c.Certificate_Date_Text__c}&nbsp;ENSI workshop.<br>
+												<br>
+												<strong><span style="color:#EE0090;">Today</span></strong> I issued an invitation to the same group to complete ENSI’s <span style="color:#84bd00;"><strong>3 month post-program ‘Impact and Value’ Survey</strong></span> which asks them to provide their impressions on what impact and value they have seen from the workshop. We have given them until&nbsp;{!Job__c.X3_month_case_study_due__c} to complete the survey. Let me know if you’d like to alter this timeline as I’d be happy to work with what fits your group best.<br>
+												<br>
+												On completion, we will produce a report to show:
+
+				<ul>
+					<li>perceived performance improvement</li>
+					<li>key concepts remembered</li>
+					<li>overall benefit of course</li>
+					<li>noticed areas of improvement</li>
+					<li>broad estimate of the total financial benefit achieved over the last three months as a result of the workshop</li>
+									</ul>
+
+<span style="font-size:16px; color:#EE0090;"><strong>An example of the impact and value report is attached. I’ve also included a copy of the invitation sent to participants for your reference.</strong></span><br>
+						<br>
+We will be back in contact post the survey due date if we haven’t received sufficient responses.&nbsp;<br>
+												<br>
+Kind regards</div></span></span>												
+</html>

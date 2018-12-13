@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Job_email_template_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>Default</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Default</fullName>
+        <fields>Name</fields>
+        <fields>Recipient_group__c</fields>
+        <fields>Opportunity_job_record_type__c</fields>
+        <fields>Opportunity_job_type_and_sub_type__c</fields>
+        <label>Default</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Uncheck this if you would like to stop these emails being created.</inlineHelpText>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Conditional_scheduling__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this field if this email is not sent with every training e.g. PFQ email is not required for trainings that do not include PFQ survey.</inlineHelpText>
+        <label>Conditional scheduling</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_job_record_type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pick the Opportunity / Job record type this email template is available for.</inlineHelpText>
+        <label>Opportunity / job record type</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In-House</fullName>
+                    <default>false</default>
+                    <label>In-House</label>
+                </value>
+                <value>
+                    <fullName>Open Course (OC)</fullName>
+                    <default>false</default>
+                    <label>Open Course (OC)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Opportunity_job_type_and_sub_type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pick the Opportunity / Job type and sub type combination this email template is available for.</inlineHelpText>
+        <label>Opportunity / job type and sub type</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Opportunity_job_record_type__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In-House Training Incompany All</fullName>
+                    <default>false</default>
+                    <label>In-House Training Incompany All</label>
+                </value>
+                <value>
+                    <fullName>In-House Training Incompany by ENSI</fullName>
+                    <default>false</default>
+                    <label>In-House Training Incompany by ENSI</label>
+                </value>
+                <value>
+                    <fullName>In-House Training Incompany by WLD</fullName>
+                    <default>false</default>
+                    <label>In-House Training Incompany by WLD</label>
+                </value>
+                <value>
+                    <fullName>In-House Training CDP All</fullName>
+                    <default>false</default>
+                    <label>In-House Training CDP All</label>
+                </value>
+                <value>
+                    <fullName>In-House Training CDP-F</fullName>
+                    <default>false</default>
+                    <label>In-House Training CDP-F</label>
+                </value>
+                <value>
+                    <fullName>In-House Training CDP-C</fullName>
+                    <default>false</default>
+                    <label>In-House Training CDP-C</label>
+                </value>
+                <value>
+                    <fullName>In-House Training CDP-V</fullName>
+                    <default>false</default>
+                    <label>In-House Training CDP-V</label>
+                </value>
+                <value>
+                    <fullName>In-House Training WLD</fullName>
+                    <default>false</default>
+                    <label>In-House Training WLD</label>
+                </value>
+                <value>
+                    <fullName>Open Course All</fullName>
+                    <default>false</default>
+                    <label>Open Course All</label>
+                </value>
+                <value>
+                    <fullName>Open Course Fundamentals</fullName>
+                    <default>false</default>
+                    <label>Open Course Fundamentals</label>
+                </value>
+                <value>
+                    <fullName>Open Course Level 1</fullName>
+                    <default>false</default>
+                    <label>Open Course Level 1</label>
+                </value>
+                <value>
+                    <fullName>Open Course Level 2</fullName>
+                    <default>false</default>
+                    <label>Open Course Level 2</label>
+                </value>
+                <value>
+                    <fullName>Open Course Level 3</fullName>
+                    <default>false</default>
+                    <label>Open Course Level 3</label>
+                </value>
+                <value>
+                    <fullName>Open Course Refresher</fullName>
+                    <default>false</default>
+                    <label>Open Course Refresher</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>In-House</controllingFieldValue>
+                <valueName>In-House Training Incompany All</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>In-House</controllingFieldValue>
+                <valueName>In-House Training Incompany by ENSI</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>In-House</controllingFieldValue>
+                <valueName>In-House Training Incompany by WLD</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>In-House</controllingFieldValue>
+                <valueName>In-House Training CDP All</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>In-House</controllingFieldValue>
+                <valueName>In-House Training CDP-F</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>In-House</controllingFieldValue>
+                <valueName>In-House Training CDP-C</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>In-House</controllingFieldValue>
+                <valueName>In-House Training CDP-V</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>In-House</controllingFieldValue>
+                <valueName>In-House Training WLD</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Open Course (OC)</controllingFieldValue>
+                <valueName>Open Course All</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Open Course (OC)</controllingFieldValue>
+                <valueName>Open Course Fundamentals</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Open Course (OC)</controllingFieldValue>
+                <valueName>Open Course Level 1</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Open Course (OC)</controllingFieldValue>
+                <valueName>Open Course Level 2</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Open Course (OC)</controllingFieldValue>
+                <valueName>Open Course Level 3</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Open Course (OC)</controllingFieldValue>
+                <valueName>Open Course Refresher</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Recipient_group__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The group of email who will receive this email.</inlineHelpText>
+        <label>Recipient group</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Job_email_recipient_group</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Related_to_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Related to date</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Related_to_training_dates</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Scheduling_delta_default__c</fullName>
+        <description>This is the difference between the base date, and the schedule date. e.g. to send an email 4 weeks (28 days) prior to the base date (i.e. the first day of training) the delta would be 28.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The delta is the number of days before or after the training date that you would like to send the email. To send an email before the training, make the number negative. To send one after, make it positive. A single week is equal to 7 days.</inlineHelpText>
+        <label>Scheduling delta default</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Job email template</label>
+    <nameField>
+        <label>Job email template name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Job email templates</pluralLabel>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Recipient_group__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Opportunity_job_record_type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Opportunity_job_type_and_sub_type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Scheduling_delta_default__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Active__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Conditional_or_scheduled</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+Conditional_scheduling__c = False,
+ISBLANK(Scheduling_delta_default__c) = True
+)</errorConditionFormula>
+        <errorMessage>Job email templates either must have a scheduling delta, or conditional scheduling.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

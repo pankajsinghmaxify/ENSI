@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Impact and Value Report</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Impact and Value Report</name>
+    <style>none</style>
+    <subject>Impact and Value Report for {!Job__c.Account_Name__c}, {!Job__c.Certificate_Date_Text__c}</subject>
+    <textOnly>CC PRESENTER
+
+Hi {!Job__c.Account_Sell_1_Name__c}
+
+Attached is the report for the 3 month post program ‘Impact and Value’ survey issued for the {!Job__c.Account_Name__c}, {!Job__c.Certificate_Date_Text__c} program.
+
+X of X responded. The respondent key is for your eyes only.
+
+Please forward to NAM for discussion.
+
+Cheers</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

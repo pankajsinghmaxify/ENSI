@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>2nd Reminder for PFQ, RAIT and/or NIP</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>3 Reminder 2 PFQ_RAIT_NIP</name>
+    <style>none</style>
+    <subject>Final Reminder: ENSI Program Focus Questionnaire for ​​​​​{!Job__c.Certificate_Date_Text__c} Program</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

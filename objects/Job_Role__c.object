@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Records the roles for each job - ENS, Presenter, Spot and Sell</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>AccessLevel__c</fullName>
+        <description>For Partner Community Sharing Report (Job Access Level)</description>
+        <externalId>false</externalId>
+        <formula>&apos;Read&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>For Partner Community Sharing Report (Job Access Level)</inlineHelpText>
+        <label>AccessLevel</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccountAccessLevel__c</fullName>
+        <externalId>false</externalId>
+        <formula>&apos;Edit&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AccountAccessLevel</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccountId__c</fullName>
+        <description>For Partner Community Sharing Report (Account ID)</description>
+        <externalId>false</externalId>
+        <formula>Job__r.Account__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>For Partner Community Sharing Report (Account ID)</inlineHelpText>
+        <label>AccountId</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Account__r.Name</formula>
+        <label>Job Account Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CaseAccessLevel__c</fullName>
+        <description>For Partner Community Sharing Report</description>
+        <externalId>false</externalId>
+        <formula>&apos;None&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>For Partner Community Sharing Report</inlineHelpText>
+        <label>CaseAccessLevel</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Account_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.Account.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Account Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Job Roles</relationshipLabel>
+        <relationshipName>R00N20000001UZYzEAO</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact_is_ENS_Staff__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (Contact__r.Contact_Type__c = &quot;ENS Staff&quot;
+    ,&quot;TRUE&quot;
+    ,&quot;FALSE&quot;
+    )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact is ENS Staff</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Account_Id__c</fullName>
+        <description>For Partner Sharing Purpose</description>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Job__r.Account__r.Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>For Partner Sharing Purpose</inlineHelpText>
+        <label>Job Account Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Job_Days__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Calculated Field</inlineHelpText>
+        <label>Job Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_FX_Materials_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.FX_Materials_Total__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job FX Materials Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_FX_Prof_Serv_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.FX_Prof_Serv_Total__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job FX Prof Serv Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Item_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Total_Job_Item_Days__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Item Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Role__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Role__c , 
+&quot;Spot&quot;, &quot;Spot&quot;,
+&quot;Sell&quot;, &quot;Sell&quot;,
+&quot;ENS&quot;, &quot;ENS&quot;,
+&quot;Presenter&quot;, &quot;Presenter&quot;,
+&quot;ERROR&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Role</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>case(Job__r.Status__c, 
+&quot;Proposed&quot;, &quot;Proposed&quot;, 
+&quot;Proposal Declined&quot;, &quot;Proposal Declined&quot;, 
+&quot;Completed&quot;,&quot;Completed&quot;, 
+&quot;Cancelled&quot;,&quot;Cancelled&quot;, 
+&quot;Postponed&quot;,&quot;Postponed&quot;, 
+&quot;Confirmed&quot;,&quot;Confirmed&quot;, 
+&quot;Closed&quot;, &quot;Closed&quot;,
+&quot;tentative&quot;, &quot;Tentative&quot;,
+&quot;ERROR&quot; 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Total_ENS_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Total_ENS_AUD__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Total ENS AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Training_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>case(Job__r.Training_Type__c, 
+&quot;Advanced&quot;, &quot;Advanced&quot;, 
+&quot;CDP&quot;, &quot;CDP&quot;, 
+&quot;ENS NWM&quot;,&quot;ENS NWM&quot;, 
+&quot;Event&quot;,&quot;Event&quot;, 
+&quot;Incompany&quot;,&quot;Incompany&quot;, 
+&quot;Incompany - by inhouse trainers&quot;,&quot;Incompany - by inhouse trainers&quot;, 
+&quot;Public&quot;, &quot;Public&quot;, 
+&quot;Sales Negotiator&quot;, &quot;Sales Negotiator&quot;, 
+&quot;WLD&quot;, &quot;WLD&quot;, 
+&quot;ERROR&quot; 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Training Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Job_Class__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job__c</fullName>
+        <externalId>false</externalId>
+        <label>Job</label>
+        <referenceTo>Job__c</referenceTo>
+        <relationshipLabel>Job Roles</relationshipLabel>
+        <relationshipName>JobRoles</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Job_billing_currency__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Billing_Currency__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job billing currency</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Licensee_Region__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE ( Contact__r.Licensee_Region__c 
+, &quot;Australia / NZ&quot;, &quot;Australia / NZ&quot; 
+, &quot;Asia&quot;,&quot;Asia&quot; 
+, &quot;Europe&quot;,&quot;Europe&quot; 
+, &quot;North America&quot;,&quot;North America&quot; 
+, &quot;South America&quot;,&quot;South America&quot; 
+, &quot;Unknown&quot; 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Licensee Region</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Licensee_Reporting__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Contact__r.Licensee_Reporting__c 
+                , &quot;YES&quot;,&quot;YES&quot;
+                ,&quot;NO&quot;
+             )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Licensee_Reporting</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Marketing_Role__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (
+     OR ( Job_Role__c = &quot;Spot&quot;, Job_Role__c = &quot;Sell&quot;)
+      , &quot;YES&quot;
+      , &quot;NO&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Marketing Role</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Materials_Share_AUD_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (Job__r.Billing_X_Rate__c =0,0,  Materials_Share_FX_Total__c   /  Job__r.Billing_X_Rate__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Materials Share AUD Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Materials_Share_FX_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job_FX_Materials_Total__c * Materials_Share__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Materials Share FX Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Materials_Share__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter 80% for ENS role
+Enter appropriate % for Sell role (eg 20% if 1 seller, 10% each if 2 sellers, etc)</inlineHelpText>
+        <label>Materials Share %</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>NAM__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.NAM_Name__r.FirstName  &amp; &quot; &quot;  &amp; Job__r.NAM_Name__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>NAM</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Job_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Old_Job_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Old Job ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Job_ID_on_Job_Role__c</fullName>
+        <externalId>false</externalId>
+        <label>Old Job ID (on Job Role)</label>
+        <length>8</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Job_Person_Role__c</fullName>
+        <description>Temporary field to use as a unique key for bulk importing (GE 10/10/08).</description>
+        <externalId>false</externalId>
+        <label>Old Job Person Role</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Person_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.Old_Person_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Old Person ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Person_ID_on_Job_Role__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>GE 1/2/09: we write the old person ID from the migrated Job Roles here, for reconciliation for those that don&apos;t match a contact.</inlineHelpText>
+        <label>Old Person ID on Job Role</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Person_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Old Person Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Person_Role_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Old Person Role ID</label>
+        <length>8</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OpportunityAccessLevel__c</fullName>
+        <description>For Partner Community Sharing Report (Opportunity Access Level)</description>
+        <externalId>false</externalId>
+        <formula>&apos;None&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>For Partner Community Sharing Report (Opportunity Access Level)</inlineHelpText>
+        <label>OpportunityAccessLevel</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ParentId__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ParentId</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Partner_Contact_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Partner Contact Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Presenter_1_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Presenter_No__c, &quot;1&quot;,   Contact__r.Full_Name__c  , &quot; &quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Presenter 1 Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Presenter_Fee_FX__c</fullName>
+        <description>Updated via Apex. GE 22/9/08.</description>
+        <externalId>false</externalId>
+        <label>Presenter Fee FX</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Presenter_Fee__c</fullName>
+        <description>Updated via Apex. GE 22/9/08.</description>
+        <externalId>false</externalId>
+        <label>Presenter Fee</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Presenter_No__c</fullName>
+        <externalId>false</externalId>
+        <label>Presenter No.</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>true</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Prof_Serv_Share_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (Job__r.Billing_X_Rate__c =0,0, Prof_Serv_Share_FX_Total__c  /  Job__r.Billing_X_Rate__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Prof Serv Share AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Prof_Serv_Share_FX_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( $RecordType.Name = &quot;Presenter&quot;,
+    Presenter_Fee__c ,   
+    Job_FX_Prof_Serv_Total__c * Prof_Serv_Share__c
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Prof Serv Share FX Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prof_Serv_Share__c</fullName>
+        <externalId>false</externalId>
+        <label>Prof Serv Share %</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Recon_PS_Fee_FX__c</fullName>
+        <externalId>false</externalId>
+        <label>Recon PS Fee FX</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Role_Contact_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.FirstName &amp; &quot; &quot; &amp;  Contact__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Role Contact Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Role_Contact_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Contact__r.RecordTypeId 
+, &quot;012200000000hmj&quot;, &quot;ENS Staff&quot; 
+, &quot;012200000000gto&quot;, &quot;Licencee&quot; 
+, &quot;012200000000gtt&quot;,&quot;Marketer&quot; 
+, &quot;012200000000hmZ&quot;,&quot;InHouse Trainer&quot; 
+, &quot;012200000005KyV&quot;,&quot;Licencee&quot; 
+, &quot;012200000000rcp&quot;,&quot;Licencee&quot; 
+, &quot;01220000000Q6fc&quot;, &quot;Public Program&quot;
+, &quot;012w0000000JZP5&quot;, &quot;Business Development Licencee&quot;
+,&quot;012w0000000V9WS&quot;, &quot;Customer&quot;
+, &quot;012w0000000V9WT&quot;, &quot;ENSi Employee&quot;
+, &quot;012w0000000V9WU&quot;, &quot;In-House Trainer&quot;
+, &quot;012w0000000V9WV&quot;, &quot;Network Member&quot;
+,&quot;OTHER&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Role_Contact_Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <externalId>false</externalId>
+        <label>Role</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ENS</fullName>
+                    <default>false</default>
+                    <label>ENS</label>
+                </value>
+                <value>
+                    <fullName>Spot</fullName>
+                    <default>false</default>
+                    <label>Spot</label>
+                </value>
+                <value>
+                    <fullName>Sell</fullName>
+                    <default>false</default>
+                    <label>Sell</label>
+                </value>
+                <value>
+                    <fullName>Present</fullName>
+                    <default>false</default>
+                    <label>Present</label>
+                </value>
+                <value>
+                    <fullName>Presenter</fullName>
+                    <default>false</default>
+                    <label>Presenter</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SysAd_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>SysAd Comments</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Temp__c</fullName>
+        <description>Used for data migration. GE 10/10/08.</description>
+        <externalId>false</externalId>
+        <label>Temp</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserOrGroupId__c</fullName>
+        <description>For Partner Community Sharing Report</description>
+        <externalId>false</externalId>
+        <formula>&apos;&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>For Partner Community Sharing Report</inlineHelpText>
+        <label>UserOrGroupId</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Work_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Job_Last_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Work End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Work_Start_Date_YearMth__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Job_first_date_YearMth_as_Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Work Start Date YearMth</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Work_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Job_First_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Work Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Job Role</label>
+    <nameField>
+        <displayFormat>JR-{00000}</displayFormat>
+        <label>Job Role Number</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Job Roles</pluralLabel>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>NonPresenter</fullName>
+        <active>true</active>
+        <label>Non Presenter</label>
+        <picklistValues>
+            <picklist>Presenter_No__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Role__c</picklist>
+            <values>
+                <fullName>ENS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spot</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Presenter</fullName>
+        <active>true</active>
+        <description>Includes Job Items as a related list.</description>
+        <label>Presenter</label>
+        <picklistValues>
+            <picklist>Presenter_No__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Role__c</picklist>
+            <values>
+                <fullName>Presenter</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Job__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Contact__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Role__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Materials_Share__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Materials_Share_FX_Total__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Prof_Serv_Share__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Prof_Serv_Share_FX_Total__c</customTabListAdditionalFields>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <listViewButtons>Mass_Delete</listViewButtons>
+        <lookupDialogsAdditionalFields>Job__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Contact__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Role__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Materials_Share__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Materials_Share_FX_Total__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Prof_Serv_Share__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Prof_Serv_Share_FX_Total__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchResultsAdditionalFields>Job__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Contact__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Role__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Materials_Share__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Materials_Share_FX_Total__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Prof_Serv_Share__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Prof_Serv_Share_FX_Total__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Unable_to_Change_Job_Role_for_Sell</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISCHANGED(Job_Role__c )  &amp;&amp; Job_Role__c = &apos;Sell&apos;</errorConditionFormula>
+        <errorMessage>Changing existing job role to Sell is not allowed. To do this, you will need to delete and re-entry as a Sell Job Role</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Add_Non_Presenter</fullName>
+        <availability>online</availability>
+        <description>Creates a new Job Role record of record type Non Presenter.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Add Non-Presenter</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a09/e?CF00N20000001UcYt={!Job__c.Name}&amp;CF00N20000001UcYt_lkid={!Job__c.Id}&amp;retURL=%2F{!Job__c.Id}&amp;RecordType= 012200000000eFd&amp;cancelURL=%2F{!Job__c.Id}&amp;saveURL=%2F{!Job__c.Id}&amp;ent=01I200000000w9G</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Add_Presenter</fullName>
+        <availability>online</availability>
+        <description>Adds a new Job Role record of record type Presenter.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Add Presenter</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a09/e?CF00N20000001UcYt={!Job__c.Name}&amp;CF00N20000001UcYt_lkid={!Job__c.Id}&amp;retURL=%2F{!Job__c.Id}&amp;RecordType=012200000000eFT&amp;cancelURL=%2F{!Job__c.Id}&amp;saveURL=%2F{!Job__c.Id}&amp;ent=01I200000000w9G</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Delete</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Mass Delete</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/9.0/connection.js&quot;)} 
+
+var records = {!GETRECORDIDS( $ObjectType.Event )}; 
+var taskRecords = {!GETRECORDIDS( $ObjectType.Task)}; 
+records = records.concat(taskRecords); 
+
+
+if (records[0] == null) { 
+alert(&quot;Please select at least one record.&quot;) } 
+else { 
+
+var errors = []; 
+var result = sforce.connection.deleteIds(records); 
+if (result &amp;&amp; result.length){ 
+var numFailed = 0; 
+var numSucceeded = 0; 
+for (var i = 0; i &lt; result.length; i++){ 
+var res = result[i]; 
+if (res &amp;&amp; res.success == &apos;true&apos;){ 
+numSucceeded++; 
+} else { 
+var es = res.getArray(&quot;errors&quot;); 
+if (es.length &gt; 0) { 
+errors.push(es[0].message); 
+} 
+numFailed++; 
+} 
+} 
+if (numFailed &gt; 0){ 
+alert(&quot;Failed: &quot; + numFailed + &quot;\nSucceeded: &quot; + numSucceeded + &quot; \n Due to: &quot; + errors.join(&quot;\n&quot;)); 
+} else { 
+alert(&quot;Number of records deleted: &quot; + numSucceeded); 
+} 
+} 
+window.location.reload(); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Send_Brief_Sheet</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send Briefing Sheet</masterLabel>
+        <openType>sidebar</openType>
+        <page>confirmsend</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Send_Briefing_Sheet</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send Briefing Sheet</masterLabel>
+        <openType>sidebar</openType>
+        <page>confirmsend</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+</CustomObject>

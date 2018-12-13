@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Opportunity_sub_types__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Opportunity_Types__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Service_Pec_Check__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Material_Check__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity.Total_perc_serv_to_allocate__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <description>Shows opportunities where the Service and Materials Split is not 100%</description>
+    <filter>
+        <booleanFilter>(1 OR 2) AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <column>Opportunity.Service_Pec_Check__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Okay,Ready to calculate Commissions</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Material_Check__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Okay,Ready to calculate Commissions</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Opportunity.In_House,Opportunity.OC_Course_profit_split</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Assigned_CSM__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Split Check</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <roleHierarchyFilter>ENSRole</roleHierarchyFilter>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

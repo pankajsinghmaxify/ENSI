@@ -1,0 +1,1347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>responses from the workshop evaluation</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Coaching_Mentoring__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>What is your interest in follow-on support?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What is your interest in follow-on support?</inlineHelpText>
+        <label>Coaching/Mentoring</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Participant__r.Contact__r.Full_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Follow_on_support__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>To select multiple options, click Ctrl and select the options required</inlineHelpText>
+        <label>Follow-on support</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Further training</fullName>
+                    <default>false</default>
+                    <label>Further training</label>
+                </value>
+                <value>
+                    <fullName>Coaching / Mentoring</fullName>
+                    <default>false</default>
+                    <label>Coaching / Mentoring</label>
+                </value>
+                <value>
+                    <fullName>Preparation assistance</fullName>
+                    <default>false</default>
+                    <label>Preparation assistance</label>
+                </value>
+                <value>
+                    <fullName>Process observation</fullName>
+                    <default>false</default>
+                    <label>Process observation</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Further_Training__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>What is your interest in follow-on support?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What is your interest in follow-on support?</inlineHelpText>
+        <label>Further Training</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Job__c</fullName>
+        <externalId>false</externalId>
+        <label>Job</label>
+        <referenceTo>Job__c</referenceTo>
+        <relationshipLabel>Responses Evaluations</relationshipLabel>
+        <relationshipName>Responses_Evaluation</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>One_more_thing__c</fullName>
+        <description>What are your final comments about this workshop as a whole?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What are your final comments about this workshop as a whole?</inlineHelpText>
+        <label>One more thing</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Organisation_Recommendations_1__c</fullName>
+        <description>What are your specific recommendations to enhance your organisation&apos;s overall negotiating effectiveness?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What are your specific recommendations to enhance your organisation&apos;s overall negotiating effectiveness?</inlineHelpText>
+        <label>Organisation Recommendations 1</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Organisation_Recommendations_2__c</fullName>
+        <description>What are your specific recommendations to enhance your organisation&apos;s overall negotiating effectiveness?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What are your specific recommendations to enhance your organisation&apos;s overall negotiating effectiveness?</inlineHelpText>
+        <label>Organisation Recommendations 2</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Organisation_Recommendations_3__c</fullName>
+        <description>What are your specific recommendations to enhance your organisation&apos;s overall negotiating effectiveness?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What are your specific recommendations to enhance your organisation&apos;s overall negotiating effectiveness?</inlineHelpText>
+        <label>Organisation Recommendations 3</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Participant__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Participant</label>
+        <referenceTo>Participant__c</referenceTo>
+        <relationshipLabel>Evaluation responses</relationshipLabel>
+        <relationshipName>Responses_Evaluation</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Preparation_Assistance__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>What is your interest in follow-on support?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What is your interest in follow-on support?</inlineHelpText>
+        <label>Preparation Assistance</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Presenter_1_Clarity__c</fullName>
+        <description>Presenter 1 - How well did we help you learn? - Clarity of presentation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Presenter 1 - How well did we help you learn? - Clarity of presentation</inlineHelpText>
+        <label>Presenter 1 - Clarity</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Excellent</fullName>
+                    <default>false</default>
+                    <label>Excellent</label>
+                </value>
+                <value>
+                    <fullName>Good</fullName>
+                    <default>false</default>
+                    <label>Good</label>
+                </value>
+                <value>
+                    <fullName>Average</fullName>
+                    <default>false</default>
+                    <label>Average</label>
+                </value>
+                <value>
+                    <fullName>Below average</fullName>
+                    <default>false</default>
+                    <label>Below average</label>
+                </value>
+                <value>
+                    <fullName>Poor</fullName>
+                    <default>false</default>
+                    <label>Poor</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Presenter_1_Language__c</fullName>
+        <description>Presenter 1 - How well did we help you learn? - Relevant language</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Presenter 1 - How well did we help you learn? - Relevant language</inlineHelpText>
+        <label>Presenter 1 - Language</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Excellent</fullName>
+                    <default>false</default>
+                    <label>Excellent</label>
+                </value>
+                <value>
+                    <fullName>Good</fullName>
+                    <default>false</default>
+                    <label>Good</label>
+                </value>
+                <value>
+                    <fullName>Average</fullName>
+                    <default>false</default>
+                    <label>Average</label>
+                </value>
+                <value>
+                    <fullName>Below average</fullName>
+                    <default>false</default>
+                    <label>Below average</label>
+                </value>
+                <value>
+                    <fullName>Poor</fullName>
+                    <default>false</default>
+                    <label>Poor</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Presenter_1_Negotiating_Exerptise__c</fullName>
+        <description>Presenter 1 - How well did we help you learn? - Negotiating expertise</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Presenter 1 - How well did we help you learn? - Negotiating expertise</inlineHelpText>
+        <label>Presenter 1 - Negotiating Exerptise</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Excellent</fullName>
+                    <default>false</default>
+                    <label>Excellent</label>
+                </value>
+                <value>
+                    <fullName>Good</fullName>
+                    <default>false</default>
+                    <label>Good</label>
+                </value>
+                <value>
+                    <fullName>Average</fullName>
+                    <default>false</default>
+                    <label>Average</label>
+                </value>
+                <value>
+                    <fullName>Below average</fullName>
+                    <default>false</default>
+                    <label>Below average</label>
+                </value>
+                <value>
+                    <fullName>Poor</fullName>
+                    <default>false</default>
+                    <label>Poor</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Presenter_1_Overall__c</fullName>
+        <description>Presenter 1 - How well did we help you learn? - Overall</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Presenter 1 - How well did we help you learn? - Overall</inlineHelpText>
+        <label>Presenter 1 - Overall</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Excellent</fullName>
+                    <default>false</default>
+                    <label>Excellent</label>
+                </value>
+                <value>
+                    <fullName>Good</fullName>
+                    <default>false</default>
+                    <label>Good</label>
+                </value>
+                <value>
+                    <fullName>Average</fullName>
+                    <default>false</default>
+                    <label>Average</label>
+                </value>
+                <value>
+                    <fullName>Below average</fullName>
+                    <default>false</default>
+                    <label>Below average</label>
+                </value>
+                <value>
+                    <fullName>Poor</fullName>
+                    <default>false</default>
+                    <label>Poor</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Presenter_1_Responsiveness__c</fullName>
+        <description>Presenter 1 - How well did we help you learn? - Responsiveness to participants</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Presenter 1 - How well did we help you learn? - Responsiveness to participants</inlineHelpText>
+        <label>Presenter 1 - Responsiveness</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Excellent</fullName>
+                    <default>false</default>
+                    <label>Excellent</label>
+                </value>
+                <value>
+                    <fullName>Good</fullName>
+                    <default>false</default>
+                    <label>Good</label>
+                </value>
+                <value>
+                    <fullName>Average</fullName>
+                    <default>false</default>
+                    <label>Average</label>
+                </value>
+                <value>
+                    <fullName>Below average</fullName>
+                    <default>false</default>
+                    <label>Below average</label>
+                </value>
+                <value>
+                    <fullName>Poor</fullName>
+                    <default>false</default>
+                    <label>Poor</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Presenter_2_Clarity__c</fullName>
+        <description>Presenter 2 - How well did we help you learn? - Clarity of presentation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Presenter 2 - How well did we help you learn? - Clarity of presentation</inlineHelpText>
+        <label>Presenter 2 - Clarity</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Excellent</fullName>
+                    <default>false</default>
+                    <label>Excellent</label>
+                </value>
+                <value>
+                    <fullName>Good</fullName>
+                    <default>false</default>
+                    <label>Good</label>
+                </value>
+                <value>
+                    <fullName>Average</fullName>
+                    <default>false</default>
+                    <label>Average</label>
+                </value>
+                <value>
+                    <fullName>Below average</fullName>
+                    <default>false</default>
+                    <label>Below average</label>
+                </value>
+                <value>
+                    <fullName>Poor</fullName>
+                    <default>false</default>
+                    <label>Poor</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Presenter_2_Language__c</fullName>
+        <description>Presenter 2 - How well did we help you learn? - Relevant language</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Presenter 2 - How well did we help you learn? - Relevant language</inlineHelpText>
+        <label>Presenter 2 - Language</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Excellent</fullName>
+                    <default>false</default>
+                    <label>Excellent</label>
+                </value>
+                <value>
+                    <fullName>Good</fullName>
+                    <default>false</default>
+                    <label>Good</label>
+                </value>
+                <value>
+                    <fullName>Average</fullName>
+                    <default>false</default>
+                    <label>Average</label>
+                </value>
+                <value>
+                    <fullName>Below average</fullName>
+                    <default>false</default>
+                    <label>Below average</label>
+                </value>
+                <value>
+                    <fullName>Poor</fullName>
+                    <default>false</default>
+                    <label>Poor</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Presenter_2_Negotiating_Exerptise__c</fullName>
+        <description>Presenter 2- How well did we help you learn? - Negotiating expertise</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Presenter 2 - How well did we help you learn? - Negotiating expertise</inlineHelpText>
+        <label>Presenter 2 - Negotiating Exerptise</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Excellent</fullName>
+                    <default>false</default>
+                    <label>Excellent</label>
+                </value>
+                <value>
+                    <fullName>Good</fullName>
+                    <default>false</default>
+                    <label>Good</label>
+                </value>
+                <value>
+                    <fullName>Average</fullName>
+                    <default>false</default>
+                    <label>Average</label>
+                </value>
+                <value>
+                    <fullName>Below average</fullName>
+                    <default>false</default>
+                    <label>Below average</label>
+                </value>
+                <value>
+                    <fullName>Poor</fullName>
+                    <default>false</default>
+                    <label>Poor</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Presenter_2_Overall__c</fullName>
+        <description>Presenter 2 - How well did we help you learn? - Overall</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Presenter 2- How well did we help you learn? - Overall</inlineHelpText>
+        <label>Presenter 2 - Overall</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Excellent</fullName>
+                    <default>false</default>
+                    <label>Excellent</label>
+                </value>
+                <value>
+                    <fullName>Good</fullName>
+                    <default>false</default>
+                    <label>Good</label>
+                </value>
+                <value>
+                    <fullName>Average</fullName>
+                    <default>false</default>
+                    <label>Average</label>
+                </value>
+                <value>
+                    <fullName>Below average</fullName>
+                    <default>false</default>
+                    <label>Below average</label>
+                </value>
+                <value>
+                    <fullName>Poor</fullName>
+                    <default>false</default>
+                    <label>Poor</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Presenter_2_Responsiveness__c</fullName>
+        <description>Presenter 2 - How well did we help you learn? - Responsiveness to participants</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Presenter 2 - How well did we help you learn? - Responsiveness to participants</inlineHelpText>
+        <label>Presenter 2 - Responsiveness</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Excellent</fullName>
+                    <default>false</default>
+                    <label>Excellent</label>
+                </value>
+                <value>
+                    <fullName>Good</fullName>
+                    <default>false</default>
+                    <label>Good</label>
+                </value>
+                <value>
+                    <fullName>Average</fullName>
+                    <default>false</default>
+                    <label>Average</label>
+                </value>
+                <value>
+                    <fullName>Below average</fullName>
+                    <default>false</default>
+                    <label>Below average</label>
+                </value>
+                <value>
+                    <fullName>Poor</fullName>
+                    <default>false</default>
+                    <label>Poor</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Process_Observation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>What is your interest in follow-on support?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What is your interest in follow-on support?</inlineHelpText>
+        <label>Process Observation</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Requested_further_development__c</fullName>
+        <externalId>false</externalId>
+        <formula>OR(
+Further_Training__c,
+Preparation_Assistance__c,
+Coaching_Mentoring__c,
+Process_Observation__c
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Requested further development</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SC_Presenter_1_Average__c</fullName>
+        <externalId>false</externalId>
+        <formula>(SC_Presenter_1_Clarity__c + SC_Presenter_1_Language__c + SC_Presenter_1_Negotiating_Exerptise__c + SC_Presenter_1_Overall__c + SC_Presenter_1_Responsiveness__c)/5</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SC-Presenter 1 - Average</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SC_Presenter_1_Clarity__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Presenter_1_Clarity__c,
+&quot;Excellent&quot;,5,
+&quot;Good&quot;,4,
+&quot;Average&quot;,3,
+&quot;Below average&quot;,2,
+&quot;Poor&quot;,1,
+0)</formula>
+        <label>SC-Presenter 1 - Clarity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SC_Presenter_1_Language__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Presenter_1_Language__c,
+&quot;Excellent&quot;,5,
+&quot;Good&quot;,4,
+&quot;Average&quot;,3,
+&quot;Below average&quot;,2,
+&quot;Poor&quot;,1,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SC-Presenter 1 - Language</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SC_Presenter_1_Negotiating_Exerptise__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Presenter_1_Negotiating_Exerptise__c,
+&quot;Excellent&quot;,5,
+&quot;Good&quot;,4,
+&quot;Average&quot;,3,
+&quot;Below average&quot;,2,
+&quot;Poor&quot;,1,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SC-Presenter 1 - Negotiating Exerptise</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SC_Presenter_1_Overall__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Presenter_1_Overall__c,
+&quot;Excellent&quot;,5,
+&quot;Good&quot;,4,
+&quot;Average&quot;,3,
+&quot;Below average&quot;,2,
+&quot;Poor&quot;,1,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SC-Presenter 1 - Overall</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SC_Presenter_1_Responsiveness__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Presenter_1_Responsiveness__c,
+&quot;Excellent&quot;,5,
+&quot;Good&quot;,4,
+&quot;Average&quot;,3,
+&quot;Below average&quot;,2,
+&quot;Poor&quot;,1,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SC-Presenter 1 - Responsiveness</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SC_Presenter_2_Clarity__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Presenter_2_Clarity__c,
+&quot;Excellent&quot;,5,
+&quot;Good&quot;,4,
+&quot;Average&quot;,3,
+&quot;Below average&quot;,2,
+&quot;Poor&quot;,1,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SC-Presenter 2 - Clarity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SC_Presenter_2_Language__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Presenter_2_Language__c,
+&quot;Excellent&quot;,5,
+&quot;Good&quot;,4,
+&quot;Average&quot;,3,
+&quot;Below average&quot;,2,
+&quot;Poor&quot;,1,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SC-Presenter 2 - Language</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SC_Presenter_2_Negotiating_Exerptise__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Presenter_2_Negotiating_Exerptise__c,
+&quot;Excellent&quot;,5,
+&quot;Good&quot;,4,
+&quot;Average&quot;,3,
+&quot;Below average&quot;,2,
+&quot;Poor&quot;,1,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SC-Presenter 2 - Negotiating Exerptise</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SC_Presenter_2_Overall__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Presenter_2_Overall__c,
+&quot;Excellent&quot;,5,
+&quot;Good&quot;,4,
+&quot;Average&quot;,3,
+&quot;Below average&quot;,2,
+&quot;Poor&quot;,1,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SC-Presenter 2 - Overall</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SC_Presenter_2_Responsiveness__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Presenter_2_Responsiveness__c,
+&quot;Excellent&quot;,5,
+&quot;Good&quot;,4,
+&quot;Average&quot;,3,
+&quot;Below average&quot;,2,
+&quot;Poor&quot;,1,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SC-Presenter 2 - Responsiveness</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SC_Your_Workshop_Duration__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Your_Workshop_Duration__c,
+&quot;Right length&quot;,5,
+&quot;Somewhat long&quot;,4,
+&quot;Somewhat short&quot;,3,
+&quot;Too short&quot;,2,
+&quot;Too long&quot;,1,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SC-Your Workshop - Duration</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SC_Your_Workshop_apply_learnings__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Your_Workshop_apply_learnings__c,
+&quot;Definitely&quot;,5,
+&quot;Probably&quot;,4,
+&quot;Possibly&quot;,3,
+&quot;Probably not&quot;,2,
+&quot;Would not&quot;,1,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SC-Your Workshop - apply learnings</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SC_Your_Workshop_content__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Your_Workshop_content__c,
+&quot;Appropriate&quot;,5,
+&quot;Somewhat simple&quot;,4,
+&quot;Somewhat complex&quot;,3,
+&quot;Too simple&quot;,2,
+&quot;Too complex&quot;,1,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SC-Your Workshop - content</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SC_Your_Workshop_materials__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Your_Workshop_materials__c,
+&quot;Excellent&quot;,5,
+&quot;Good&quot;,4,
+&quot;Average&quot;,3,
+&quot;Below average&quot;,2,
+&quot;Poor&quot;,1,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SC-Your Workshop - materials</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SC_Your_Workshop_objectives__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Your_Workshop_objectives__c,
+&quot;Exceeded&quot;,5,
+&quot;Achieved&quot;,4,
+&quot;Mostly met&quot;,3,
+&quot;Partially met&quot;,2,
+&quot;Not met&quot;,1,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SC-Your Workshop - objectives</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SC_Your_Workshop_recommend__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Your_Workshop_recommend__c,
+&quot;Definitely&quot;,5,
+&quot;Probably&quot;,4,
+&quot;Possibly&quot;,3,
+&quot;Probably not&quot;,2,
+&quot;Would not&quot;,1,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SC-Your Workshop - recommend</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SC_Your_Workshop_theory_and_practice__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Your_Workshop_theory_and_practice__c,
+&quot;Well balanced&quot;,5,
+&quot;Somewhat practical&quot;,4,
+&quot;Somewhat theoretical&quot;,3,
+&quot;Too theoretical&quot;,2,
+&quot;Too practical&quot;,1,
+0
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SC-Your Workshop - theory and practice</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Survey_response_status</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Touch__c</fullName>
+        <externalId>false</externalId>
+        <label>Touch</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Your_Workshop_Duration__c</fullName>
+        <description>Duration of workshop? (Based on workshop content, not time away from work)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Duration of workshop? (Based on workshop content, not time away from work)</inlineHelpText>
+        <label>Your Workshop - Duration</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Too Short</fullName>
+                    <default>false</default>
+                    <label>Too Short</label>
+                </value>
+                <value>
+                    <fullName>Somewhat short</fullName>
+                    <default>false</default>
+                    <label>Somewhat short</label>
+                </value>
+                <value>
+                    <fullName>Right Length</fullName>
+                    <default>false</default>
+                    <label>Right Length</label>
+                </value>
+                <value>
+                    <fullName>Somewhat long</fullName>
+                    <default>false</default>
+                    <label>Somewhat long</label>
+                </value>
+                <value>
+                    <fullName>Too long</fullName>
+                    <default>false</default>
+                    <label>Too long</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Your_Workshop_apply_learnings__c</fullName>
+        <description>Able to apply the workshop learnings immediately?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Able to apply the workshop learnings immediately?</inlineHelpText>
+        <label>Your Workshop - apply learnings</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Definitely</fullName>
+                    <default>false</default>
+                    <label>Definitely</label>
+                </value>
+                <value>
+                    <fullName>Probably</fullName>
+                    <default>false</default>
+                    <label>Probably</label>
+                </value>
+                <value>
+                    <fullName>Possibly</fullName>
+                    <default>false</default>
+                    <label>Possibly</label>
+                </value>
+                <value>
+                    <fullName>Probably not</fullName>
+                    <default>false</default>
+                    <label>Probably not</label>
+                </value>
+                <value>
+                    <fullName>Would not</fullName>
+                    <default>false</default>
+                    <label>Would not</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Your_Workshop_content__c</fullName>
+        <description>Level of workshop content?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Level of workshop content?</inlineHelpText>
+        <label>Your Workshop - content</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Too simple</fullName>
+                    <default>false</default>
+                    <label>Too simple</label>
+                </value>
+                <value>
+                    <fullName>Somewhat simple</fullName>
+                    <default>false</default>
+                    <label>Somewhat simple</label>
+                </value>
+                <value>
+                    <fullName>Appropriate</fullName>
+                    <default>false</default>
+                    <label>Appropriate</label>
+                </value>
+                <value>
+                    <fullName>Somewhat complex</fullName>
+                    <default>false</default>
+                    <label>Somewhat complex</label>
+                </value>
+                <value>
+                    <fullName>Too complex</fullName>
+                    <default>false</default>
+                    <label>Too complex</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Your_Workshop_materials__c</fullName>
+        <description>Usefulness of materials (manual, workbook, cards etc)?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Usefulness of materials (manual, workbook, cards etc)?</inlineHelpText>
+        <label>Your Workshop - materials</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Excellent</fullName>
+                    <default>false</default>
+                    <label>Excellent</label>
+                </value>
+                <value>
+                    <fullName>Good</fullName>
+                    <default>false</default>
+                    <label>Good</label>
+                </value>
+                <value>
+                    <fullName>Average</fullName>
+                    <default>false</default>
+                    <label>Average</label>
+                </value>
+                <value>
+                    <fullName>Below average</fullName>
+                    <default>false</default>
+                    <label>Below average</label>
+                </value>
+                <value>
+                    <fullName>Poor</fullName>
+                    <default>false</default>
+                    <label>Poor</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Your_Workshop_objectives__c</fullName>
+        <description>How well were your objectives met?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>How well were your objectives met?</inlineHelpText>
+        <label>Your Workshop - objectives</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Exceeded</fullName>
+                    <default>false</default>
+                    <label>Exceeded</label>
+                </value>
+                <value>
+                    <fullName>Achieved</fullName>
+                    <default>false</default>
+                    <label>Achieved</label>
+                </value>
+                <value>
+                    <fullName>Mostly met</fullName>
+                    <default>false</default>
+                    <label>Mostly met</label>
+                </value>
+                <value>
+                    <fullName>Partially met</fullName>
+                    <default>false</default>
+                    <label>Partially met</label>
+                </value>
+                <value>
+                    <fullName>Not met</fullName>
+                    <default>false</default>
+                    <label>Not met</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Your_Workshop_recommend__c</fullName>
+        <description>Recommend workshop to others?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Recommend workshop to others?</inlineHelpText>
+        <label>Your Workshop - recommend</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Definitely</fullName>
+                    <default>false</default>
+                    <label>Definitely</label>
+                </value>
+                <value>
+                    <fullName>Probably</fullName>
+                    <default>false</default>
+                    <label>Probably</label>
+                </value>
+                <value>
+                    <fullName>Possibly</fullName>
+                    <default>false</default>
+                    <label>Possibly</label>
+                </value>
+                <value>
+                    <fullName>Probably not</fullName>
+                    <default>false</default>
+                    <label>Probably not</label>
+                </value>
+                <value>
+                    <fullName>Would not</fullName>
+                    <default>false</default>
+                    <label>Would not</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Your_Workshop_theory_and_practice__c</fullName>
+        <description>Balance of theory and practice?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Balance of theory and practice?</inlineHelpText>
+        <label>Your Workshop - theory and practice</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Too theoretical</fullName>
+                    <default>false</default>
+                    <label>Too theoretical</label>
+                </value>
+                <value>
+                    <fullName>Somewhat theoretical</fullName>
+                    <default>false</default>
+                    <label>Somewhat theoretical</label>
+                </value>
+                <value>
+                    <fullName>Well balanced</fullName>
+                    <default>false</default>
+                    <label>Well balanced</label>
+                </value>
+                <value>
+                    <fullName>Somewhat practical</fullName>
+                    <default>false</default>
+                    <label>Somewhat practical</label>
+                </value>
+                <value>
+                    <fullName>Too practical</fullName>
+                    <default>false</default>
+                    <label>Too practical</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Response Evaluation</label>
+    <nameField>
+        <displayFormat>R-E-{000000000}</displayFormat>
+        <label>Response Evaluation Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Responses Evaluation</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Job_or_PAX</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+ISBLANK(Participant__c),
+ISBLANK(Job__c)
+)</errorConditionFormula>
+        <errorMessage>Please select either a Job (for anonymous evaluation) or a Participant (of not anonymous).</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

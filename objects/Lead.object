@@ -1,0 +1,1230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddToCampaign</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CallHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChangeStatus</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Convert</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>FindDup</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ListClean</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SmsHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Lead_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <compactLayoutAssignment>Lead_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Lead_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Title</fields>
+        <fields>Company</fields>
+        <fields>Product_type__c</fields>
+        <fields>Region__c</fields>
+        <fields>Phone</fields>
+        <fields>Email</fields>
+        <label>Lead Layout</label>
+    </compactLayouts>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <fields>
+        <fullName>Acceptance_of_terms_and_conditions__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Acceptance of terms and conditions</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Address</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>AnnualRevenue</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Assigned_BDM__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Assigned BDM</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Leads_as_BDM</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_CSM__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Assigned CSM</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Leads_as_CSM</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CampaignId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Company</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>CurrencyIsoCode</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Deadline_for_contact__c</fullName>
+        <externalId>false</externalId>
+        <formula>Now()+1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Deadline for contact</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Department__c</fullName>
+        <externalId>false</externalId>
+        <label>Department</label>
+        <length>35</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>DoNotCall</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Fax</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>HasOptedOutOfEmail</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>HasOptedOutOfFax</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Industry</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Jigsaw</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>LastTransferDate</fullName>
+    </fields>
+    <fields>
+        <fullName>Last_referring_page__c</fullName>
+        <externalId>false</externalId>
+        <label>Last referring page</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LeadSource</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Lead_inquiry__c</fullName>
+        <externalId>false</externalId>
+        <label>(deprecated) Lead inquiry</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Lead_referred_by__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Lead referred by</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Leads</relationshipLabel>
+        <relationshipName>Leads</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MobilePhone</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Negotum_Subscription__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Negotum Subscription</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Network_Member_Responsible__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Who is responsible for following up with the lead</inlineHelpText>
+        <label>Network Member Responsible</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <filterItems>
+                <field>Contact.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>Network_Member</value>
+            </filterItems>
+            <filterItems>
+                <field>Contact.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>ENSi_Employee</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Leads (Network Member Responsible)</relationshipLabel>
+        <relationshipName>Leads_Responsibility</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>NumberOfEmployees</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Number_of_Participants__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Participants</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_from_lead__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Admin only</inlineHelpText>
+        <label>Opportunity from lead</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_record_type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the type of Opportunity this will become</inlineHelpText>
+        <label>Opportunity record type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Opp_Record_Types</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Opportunity_type__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Opportunity_record_type__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetName>Opportunity_Types</valueSetName>
+            <valueSettings>
+                <controllingFieldValue>In-House</controllingFieldValue>
+                <valueName>Training</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>In-House</controllingFieldValue>
+                <valueName>Organisational transformation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>In-House</controllingFieldValue>
+                <valueName>Consulting / retainer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OC Course</controllingFieldValue>
+                <controllingFieldValue>OC Course profit split</controllingFieldValue>
+                <controllingFieldValue>OC PAX</controllingFieldValue>
+                <valueName>Fundamentals</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OC Course</controllingFieldValue>
+                <controllingFieldValue>OC Course profit split</controllingFieldValue>
+                <controllingFieldValue>OC PAX</controllingFieldValue>
+                <valueName>Level 1</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OC Course</controllingFieldValue>
+                <controllingFieldValue>OC Course profit split</controllingFieldValue>
+                <controllingFieldValue>OC PAX</controllingFieldValue>
+                <valueName>Level 2</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OC Course</controllingFieldValue>
+                <controllingFieldValue>OC Course profit split</controllingFieldValue>
+                <controllingFieldValue>OC PAX</controllingFieldValue>
+                <valueName>Level 3</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OC Course</controllingFieldValue>
+                <controllingFieldValue>OC Course profit split</controllingFieldValue>
+                <controllingFieldValue>OC PAX</controllingFieldValue>
+                <valueName>Refresher</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OC Course</controllingFieldValue>
+                <controllingFieldValue>OC Course profit split</controllingFieldValue>
+                <controllingFieldValue>OC PAX</controllingFieldValue>
+                <valueName>Verhandlungsführung mit System: Grenzen explorieren, Neues ausprobieren</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Pardot_Rating__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE(
+IF(pi__score__c&lt;1, &quot;/img/samples/stars_000.gif&quot;,
+IF(pi__score__c&lt;50, &quot;/img/samples/stars_100.gif&quot;,
+IF(pi__score__c&lt;100, &quot;/img/samples/stars_200.gif&quot;,
+IF(pi__score__c&lt;150, &quot;/img/samples/stars_300.gif&quot;,
+IF(pi__score__c&lt;200, &quot;/img/samples/stars_400.gif&quot;, &quot;/img/samples/stars_500.gif&quot;
+))))),
+&quot;Rating&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pardot Rating</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Parent Opportunity (for OC PAX only)</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <errorMessage>Parent can only be of type OC Course OR OC Course Profit Split</errorMessage>
+            <filterItems>
+                <field>Opportunity.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>OC_Course</value>
+            </filterItems>
+            <filterItems>
+                <field>Opportunity.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>OC_Course_profit_split</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Leads</relationshipLabel>
+        <relationshipName>Leads</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PartnerAccountId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Preferred_language__c</fullName>
+        <externalId>false</externalId>
+        <label>(deprecated) Preferred language</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>English</fullName>
+                    <default>false</default>
+                    <label>English</label>
+                </value>
+                <value>
+                    <fullName>Dutch</fullName>
+                    <default>false</default>
+                    <label>Dutch</label>
+                </value>
+                <value>
+                    <fullName>French</fullName>
+                    <default>false</default>
+                    <label>French</label>
+                </value>
+                <value>
+                    <fullName>Germany</fullName>
+                    <default>false</default>
+                    <label>Germany</label>
+                </value>
+                <value>
+                    <fullName>Spanish</fullName>
+                    <default>false</default>
+                    <label>Spanish</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Preferred_primary_language__c</fullName>
+        <externalId>false</externalId>
+        <label>Preferred primary language</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Language</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Product_type__c</fullName>
+        <externalId>false</externalId>
+        <label>Product type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open Course</fullName>
+                    <default>false</default>
+                    <label>Open Course</label>
+                </value>
+                <value>
+                    <fullName>In-house training</fullName>
+                    <default>false</default>
+                    <label>In-house training</label>
+                </value>
+                <value>
+                    <fullName>Negotiation Consulting</fullName>
+                    <default>false</default>
+                    <label>Negotiation Consulting</label>
+                </value>
+                <value>
+                    <fullName>Organisational transformation</fullName>
+                    <default>false</default>
+                    <label>Organisational transformation</label>
+                </value>
+                <value>
+                    <fullName>Interested in joining ENS</fullName>
+                    <default>false</default>
+                    <label>Interested in joining ENS</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Promo_Subscription__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Promo Subscription</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Questionnaire_values__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field includes values provided by a website user if they have filled out one of the questionnaires available</inlineHelpText>
+        <label>(deprecated) Questionnaire values</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Rating</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Region</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Region_List</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Secondary_lead_source__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If the lead comes through via phone please ask them what led them to call us and note it here</inlineHelpText>
+        <label>Secondary lead source</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Secondary_lead_source</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sub_Industry__c</fullName>
+        <externalId>false</externalId>
+        <label>Sub-Industry</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Industry</controllingField>
+            <restricted>true</restricted>
+            <valueSetName>Sub_Industry</valueSetName>
+            <valueSettings>
+                <controllingFieldValue>Not For Profit</controllingFieldValue>
+                <valueName>Advocacy Organisations</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Not For Profit</controllingFieldValue>
+                <valueName>Charitable Organisations &amp; Foundations</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Not For Profit</controllingFieldValue>
+                <valueName>Religious Organisations</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Not For Profit</controllingFieldValue>
+                <valueName>Social &amp; Membership Organisations</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Not For Profit</controllingFieldValue>
+                <valueName>Trade Groups &amp; Labour Unions</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cultural/Recreational</controllingFieldValue>
+                <valueName>Film Production</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cultural/Recreational</controllingFieldValue>
+                <valueName>Libraries, Museums &amp; The Arts</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cultural/Recreational</controllingFieldValue>
+                <valueName>Radio &amp; Television</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cultural/Recreational</controllingFieldValue>
+                <valueName>Sport, Sports Facilities &amp; Gaming</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cultural/Recreational</controllingFieldValue>
+                <valueName>Recreational Facilities</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Technology/IT/Internet</controllingFieldValue>
+                <valueName>Software</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Technology/IT/Internet</controllingFieldValue>
+                <valueName>Telecommunications</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Technology/IT/Internet</controllingFieldValue>
+                <valueName>Saas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Technology/IT/Internet</controllingFieldValue>
+                <valueName>Hardware</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Technology/IT/Internet</controllingFieldValue>
+                <valueName>Internet Service Providers</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Technology/IT/Internet</controllingFieldValue>
+                <valueName>Video &amp; Teleconferencing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Technology/IT/Internet</controllingFieldValue>
+                <valueName>Wireless &amp; Mobile</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Education/Training</controllingFieldValue>
+                <valueName>School &amp; Tertiary Education</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Education/Training</controllingFieldValue>
+                <valueName>Vocational Education &amp; Training</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Transport</controllingFieldValue>
+                <valueName>Air</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Transport</controllingFieldValue>
+                <valueName>Rail</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Transport</controllingFieldValue>
+                <valueName>Road</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Transport</controllingFieldValue>
+                <valueName>Marine</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Transport</controllingFieldValue>
+                <valueName>Logistics Management</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Transport</controllingFieldValue>
+                <valueName>Postal Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Transport</controllingFieldValue>
+                <valueName>Courier Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Energy/Utilities</controllingFieldValue>
+                <valueName>Alternative Energy Sources</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Energy/Utilities</controllingFieldValue>
+                <valueName>Waste Management &amp; Recycling</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Energy/Utilities</controllingFieldValue>
+                <valueName>Water Supply, Sewerage &amp; Drainage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Energy/Utilities</controllingFieldValue>
+                <valueName>Gas &amp; Electricity Supply</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Business Services</controllingFieldValue>
+                <valueName>Accounting Services &amp; Tax Preparation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Business Services</controllingFieldValue>
+                <valueName>Business &amp; Professional Associations</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Business Services</controllingFieldValue>
+                <valueName>Management Services &amp; Consultancies</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Business Services</controllingFieldValue>
+                <valueName>Employment Services/ HR/ Recruitment/ Payroll</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Business Services</controllingFieldValue>
+                <valueName>Legal Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Business Services</controllingFieldValue>
+                <valueName>Project Management</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Business Services</controllingFieldValue>
+                <valueName>Technical Services/Asset Management</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Business Services</controllingFieldValue>
+                <valueName>Marketing/PR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Business Services</controllingFieldValue>
+                <valueName>Security</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Business Services</controllingFieldValue>
+                <valueName>Facility Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Agriculture</controllingFieldValue>
+                <valueName>Agriculture</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Agriculture</controllingFieldValue>
+                <valueName>Forestry &amp; Logging</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Agriculture</controllingFieldValue>
+                <valueName>Agriculture Equipment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Communications Services</controllingFieldValue>
+                <valueName>Publishing, Printing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Communications Services</controllingFieldValue>
+                <valueName>Newspapers, Magazines, Print</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Communications Services</controllingFieldValue>
+                <valueName>News Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <valueName>Computer &amp; Business Machinery</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <valueName>Heavy Industry</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <valueName>Light Industry</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <valueName>Other Manufacturing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <valueName>Petrochemical &amp; Chemicals</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <valueName>Retail/Fashion/Accessorises</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <valueName>Food, Beverage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <valueName>Automotive</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <valueName>Packaging</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <valueName>Plastics &amp; Rubber</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manufacturing</controllingFieldValue>
+                <valueName>Electrical/Electronic</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Unknown</controllingFieldValue>
+                <valueName>Unknown</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Services/Insurance</controllingFieldValue>
+                <valueName>Banking</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Services/Insurance</controllingFieldValue>
+                <valueName>Building Societies</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Services/Insurance</controllingFieldValue>
+                <valueName>Credit Cards &amp; Related Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Services/Insurance</controllingFieldValue>
+                <valueName>Credit Unions</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Services/Insurance</controllingFieldValue>
+                <valueName>Finance Brokers</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Services/Insurance</controllingFieldValue>
+                <valueName>Financiers</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Services/Insurance</controllingFieldValue>
+                <valueName>Lending &amp; Mortgages</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Services/Insurance</controllingFieldValue>
+                <valueName>Insurance &amp; Risk Management</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Services/Insurance</controllingFieldValue>
+                <valueName>Advisors</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Services/Insurance</controllingFieldValue>
+                <valueName>Superannuation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Financial Services/Insurance</controllingFieldValue>
+                <valueName>Securities Agents</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Government/Public Authorities</controllingFieldValue>
+                <valueName>Federal Government</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Government/Public Authorities</controllingFieldValue>
+                <valueName>State Government</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Government/Public Authorities</controllingFieldValue>
+                <valueName>Local Government</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Government/Public Authorities</controllingFieldValue>
+                <valueName>Corrective Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Government/Public Authorities</controllingFieldValue>
+                <valueName>Defence Department</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Government/Public Authorities</controllingFieldValue>
+                <valueName>Fire &amp; Emergency Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Government/Public Authorities</controllingFieldValue>
+                <valueName>Justice Administration</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Government/Public Authorities</controllingFieldValue>
+                <valueName>Police</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Government/Public Authorities</controllingFieldValue>
+                <valueName>Public Authorities</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Government/Public Authorities</controllingFieldValue>
+                <valueName>Research</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Government/Public Authorities</controllingFieldValue>
+                <valueName>International Bodies/Organisations</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Hospitality/Tourism</controllingFieldValue>
+                <valueName>Clubs, Hotels, Resorts &amp; Conference Facilities</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Hospitality/Tourism</controllingFieldValue>
+                <valueName>Food, Beverages &amp; Catering</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Hospitality/Tourism</controllingFieldValue>
+                <valueName>Tourism &amp; Travel Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Maritime &amp; Port Consultancy</controllingFieldValue>
+                <valueName>Maritime &amp; Port Consultancy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Mining</controllingFieldValue>
+                <valueName>Mining</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Mining</controllingFieldValue>
+                <valueName>Oil &amp; Gas Extraction &amp; Refineries</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pharmaceutical/Health/Biotech</controllingFieldValue>
+                <valueName>Medical Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pharmaceutical/Health/Biotech</controllingFieldValue>
+                <valueName>Pharmaceuticals</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pharmaceutical/Health/Biotech</controllingFieldValue>
+                <valueName>Hospitals &amp; Nursing Homes</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pharmaceutical/Health/Biotech</controllingFieldValue>
+                <valueName>Biotechnology</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pharmaceutical/Health/Biotech</controllingFieldValue>
+                <valueName>Medical Suppliers &amp; Equipment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property/Development/Construction</controllingFieldValue>
+                <valueName>Architecture, Engineering &amp; Design</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property/Development/Construction</controllingFieldValue>
+                <valueName>Real Estate</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property/Development/Construction</controllingFieldValue>
+                <valueName>Property Operators &amp; Developers</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property/Development/Construction</controllingFieldValue>
+                <valueName>Concrete, Glass &amp; Building Materials</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property/Development/Construction</controllingFieldValue>
+                <valueName>Construction Equipment &amp; Suppliers</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property/Development/Construction</controllingFieldValue>
+                <valueName>Commercial Property Development</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property/Development/Construction</controllingFieldValue>
+                <valueName>Residential Property Development</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property/Development/Construction</controllingFieldValue>
+                <valueName>Industrial Development</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property/Development/Construction</controllingFieldValue>
+                <valueName>All Construction</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Retail/Wholesale Trade</controllingFieldValue>
+                <valueName>All Retail Trade</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Retail/Wholesale Trade</controllingFieldValue>
+                <valueName>All Wholesale Trade</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Title</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Training_City__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the City that the training is going to be conducted in</inlineHelpText>
+        <label>Training City</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Training_Country__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the Country that the training will be conducted in</inlineHelpText>
+        <label>Training Country</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Country_Listing</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Training_Preferred_Finish__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the finish date for when the customer would like the training</inlineHelpText>
+        <label>Training Preferred Finish</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Training_Preferred_Start__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the start date for when the customer would like the training</inlineHelpText>
+        <label>Training Preferred Start</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Website</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <searchLayouts>
+        <customTabListAdditionalFields>FULL_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LEAD.COMPANY</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LEAD.PHONE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LEAD.COMPANY</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>FULL_NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LEAD.COMPANY</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LEAD.PHONE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LEAD.MOBILE_PHONE</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>FULL_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.TITLE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.COMPANY</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.PHONE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.MOBILE_PHONE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.EMAIL</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.STATUS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWriteTransfer</sharingModel>
+    <validationRules>
+        <fullName>OC_PAX_must_have_parent</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+TEXT(Opportunity_record_type__c) = &quot;OC PAX&quot;,
+ISBLANK(Parent_Opportunity__c),
+TEXT(Status) = &quot;Converted&quot;
+)</errorConditionFormula>
+        <errorDisplayField>Parent_Opportunity__c</errorDisplayField>
+        <errorMessage>To create an OC PAX Opportunity you must define a parent.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Parent_only_for_OC_PAX</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+TEXT(Opportunity_record_type__c) &lt;&gt; &quot;OC PAX&quot;,
+ISBLANK(Parent_Opportunity__c) = False
+)</errorConditionFormula>
+        <errorDisplayField>Parent_Opportunity__c</errorDisplayField>
+        <errorMessage>You cannot define a parent for an Opportunity that isn&apos;t an OC PAX. Please empty this field, or change the Opportunity record type.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Add_Attachments</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Attachments</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>window.parent.frames.location.href = &quot;../apex/addAttachments?parentId=&quot;+&apos;{!Lead.Id}&apos; ;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>AltavistaNews</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Altavista News</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://news.altavista.com/search?nc=0&amp;q={!Lead_Company}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://maps.google.com/maps?f=q&amp;hl=en&amp;q={!Lead_Street}+{!Lead_City}+{!Lead_State}&amp;om=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleNews</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google News</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/news?&amp;q={!Lead_Company}&amp;btnG=Search+News</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleSearch</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Search</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/search?q={!Lead_Company}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>HooversProfile</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Hoovers Profile</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://search.hoovers.com/cgi-bin/hol_search?which=company&amp;query_string={!Lead_Company}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SendGmail</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Send Gmail</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://mail.google.com/mail?view=cm&amp;tf=0&amp;to={!Lead_Email}&lt;{!Lead_LastName}, {!Lead_FirstName}&gt;&amp;tf=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>YahooMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Yahoo Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://maps.yahoo.com/py/maps.py?cn={!Lead_Country}&amp;csz={!Lead_City}+{!Lead_State}+{!Lead_PostalCode}+&amp;addr={!Lead_Address}</url>
+    </webLinks>
+</CustomObject>

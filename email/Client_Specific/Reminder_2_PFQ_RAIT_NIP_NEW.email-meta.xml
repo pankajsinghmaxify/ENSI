@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Final Reminder to pax to complete their PFQ NIP and RAIT. PFQ in SG3</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>TAKEDA Reminder 2 PFQ_RAIT_NIP</name>
+    <style>none</style>
+    <subject>[Reminder] ENSI Program Focus Questionnaire for {!Contact.Job_Certificate_Date__c} Program</subject>
+    <textOnly>ENS International Participant Email
+
+
+Dear {!Contact.FirstName},
+
+M4NTRA Program – Think &amp; Act Differently to GET MORE
+
+Please note this will be your last chance to complete the ENS Program Focus Questionnaire (PFQ). The PFQ helps the Lead Facilitator to customise the program based on your needs and it is highly recommended that you complete the questionnaire for your own benefit..
+
+There are 2 pre-program questionnaires:
+
+1. Program Focus Questionnaire (PFQ) - the PFQ helps the Lead Facilitator to customise the workshop based on your needs.
+
+Click here to access the questionnaire.*Please note that this link is specific to you, please don&apos;t forward it to others.
+
+Please complete the PFQ by {!Contact.Job_PFQ_Due_Date__c}.
+
+2. Negotiating and Influencing Profile ‘NIP’ -  the NIP is a profile covering 20 key competencies relating to the negotiation and influencing capabilities of individuals. A separate reminder with a link to your NIP will be emailed to you if you haven&apos;t already completed it
+
+NB: If you have already started your questionnaire and have opted to &apos;save and continue&apos; while in the questionnaire - it is important that you use the link that was sent to you at the time you saved your response, otherwise the above link will open a new questionnaire.
+
+We look forward to seeing you at the workshop, a key part of Takeda&apos;s M4NTRA Program!
+
+Kind regards,
+
+{!Contact.Job_CSM_Name__c}
+{!Contact.Job_CSC_Title__c}
+
+ENS International - Level 5, 83 York Street, Sydney 2000, NSW, Australia
+Phone: +61 2 9299 9688</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

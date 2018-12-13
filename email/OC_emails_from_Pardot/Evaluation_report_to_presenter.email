@@ -1,0 +1,14 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 0, 0);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+
+Hi {!Job__c.Facilitator_1__c}<br>
+<br>
+
+Please find attached the Evaluation Report for the {!Job__c.Venue_City__c}, {!Job__c.Open_course_program_name__c} that took place on {!Job__c.Certificate_Date_Text__c}.
+
+<br>
+<br>
+Kind regards</span></span>												
+</html>

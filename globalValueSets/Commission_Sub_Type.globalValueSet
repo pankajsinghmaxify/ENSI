@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Sell 1</fullName>
+        <default>false</default>
+        <label>Sell 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Sell 2</fullName>
+        <default>false</default>
+        <label>Sell 2</label>
+    </customValue>
+    <customValue>
+        <fullName>Spot 1</fullName>
+        <default>false</default>
+        <label>Spot 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Spot 2</fullName>
+        <default>false</default>
+        <label>Spot 2</label>
+    </customValue>
+    <customValue>
+        <fullName>Presenter 1</fullName>
+        <default>false</default>
+        <label>Presenter 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Presenter 2</fullName>
+        <default>false</default>
+        <label>Presenter 2</label>
+    </customValue>
+    <masterLabel>Commission Sub Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

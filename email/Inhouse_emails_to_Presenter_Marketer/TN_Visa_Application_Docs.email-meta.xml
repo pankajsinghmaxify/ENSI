@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>TN Visa Application Docs</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>TN Visa Application Docs</name>
+    <style>none</style>
+    <subject>TN Visa Application Docs for {!Job__c.Account_Name__c} program on {!Job__c.Certificate_Date_Text__c}</subject>
+    <textOnly>Hi {!Job__c.Facilitator_names__c}
+
+Attached is the ENSI reference letter to support your TN Visa Application for the {!Job__c.Account_Name__c} workshop on {!Job__c.Certificate_Date_Text__c}.
+
+Please make sure to bring the following with you when you make your application:
+
+Proof of identity and Canadian citizenship
+
+Letter from client
+
+Reference from ENSI
+
+Original academic credentials plus one copy
+
+Copy of NAFTA approved professions list
+
+Evidence of any your ties to Canada (such as dependent family members, real property or bank accounts, dependents)
+
+Filing fee - $50 USD (approx)
+
+Form I94 fee - $6 USD (approx)
+
+
+I think that about covers it. Let me know if you have any questions or concerns.
+
+Kind regards</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

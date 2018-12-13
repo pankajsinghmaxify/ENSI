@@ -1,0 +1,17 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 43, 73);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+Hi&nbsp;{!Opportunity.NAM_Contact__c}<br>
+<br>
+Attached are the relevant confirmation documents related to the provision of consulting support as agreed with {!Opportunity.Sell_1__c}.
+
+<ul>
+	<li>Consulting Agreement</li>
+	<li>Terms of Business</li>
+	<li>50% Confirmation Invoice</li>
+</ul>
+We look forward to empowering your negotiation success.<br>
+<br>
+Kind regards</div></span></span>												
+</html>

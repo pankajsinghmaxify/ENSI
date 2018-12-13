@@ -1,0 +1,126 @@
+<apex:page standardController="Job__c" Extensions="JobExt" showheader="false" renderAs="PDF" action="{!Totals}">
+  <table width="700" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td><span style="font-family:  Verdana, Arial, Helvetica, sans-serif;font-size: 23px; font-weight: normal; color: #355a80;">Public Program Briefing Sheet</span></td>
+      <td align="right"><img src="{!URLFOR($Resource.Logo)}" border="0" alt=""/></td>
+    </tr>
+  </table>
+  <br/>
+  <table width="700" align="center" style="margin-top:3px;border:1px solid #d9e6f0;" cellpadding="2" cellspacing="2">
+    <tr>
+      <td width="22%"><strong>Workshop Dates:</strong></td>
+      <td width="28%"><apex:outputField value="{!Job__c.Certificate_Date_Text__c}" /></td>
+      <td width="16%"><strong>ENS Job No.:</strong></td>
+      <td width="34%"><apex:outputField value="{!Job__c.Name}" /></td>
+    </tr>
+    <tr>
+      <td><strong>Program Name:</strong></td>
+      <td><apex:outputText value="{!Job__c.Public_Program_Name__c}" /></td>
+      <td><strong>Workshop Leader/s:</strong></td>
+      <td><apex:outputField value="{!Job__c.Presenters__c}" /></td>
+      
+    </tr>
+    <tr>
+      <td><strong>No. of Participants:</strong></td>
+      <td><apex:outputText value="{!Job__c.No_of_Participants__c}" /></td>
+      <td><strong>Status:</strong></td>
+      <td><apex:outputText value="{!Job__c.Status__c}" /></td>      
+    </tr>
+       </table>
+  <br/>
+
+  <table width="700" align="center" style="margin-top:5px;border:1px solid #d9e6f0;" cellpadding="2" cellspacing="2">    
+    <tr>
+      <td width="22%" valign="top"><strong>Location:</strong></td>
+      <td width="28%" valign="top">
+          <table cellpadding="0" cellspacing="0">
+              <tr>
+                  <td><apex:outputField value="{!Job__c.Account__c}" /></td>
+              </tr>
+
+          </table>
+       </td>
+       <td width="16%" valign="top"><strong>Venue Address:</strong></td>
+      <td width="34%">
+          <table cellpadding="0" cellspacing="0">
+             
+              <tr>
+                  <td><apex:outputField value="{!Job__c.Venue_Name__c}" /></td>
+              </tr>
+              <tr>
+                  <td><apex:outputField value="{!Job__c.Venue_Address__c}" /></td>
+              </tr>
+              <tr>
+                  <td><apex:outputField value="{!Job__c.Venue_City__c}" />, &nbsp;<apex:outputField value="{!Job__c.Venue_State__c}" />, &nbsp;<apex:outputField value="{!Job__c.Venue_Postcode__c}" /></td>
+              </tr>    
+              <tr>
+                  <td><apex:outputField value="{!Job__c.Venue_Country__c}" /></td>       
+                   <tr>
+                  <td><apex:outputField value="{!Job__c.Venue_Contact__c}" />&nbsp;-&nbsp;<apex:outputField value="{!Job__c.Venue_Phone__c}" /></td>              
+              </tr>        
+              </tr>      
+          </table>
+       </td>
+    </tr>
+  </table>
+  <br/>
+
+
+  <br/>
+  <table width="700" align="center" style="margin-top:3px;border:1px solid #d9e6f0;" cellpadding="2" cellspacing="2">
+
+
+        <tr>
+      <td><strong>Materials:</strong></td>
+      <td><apex:outputText value="{!Job__c.Public_Program_Materials__c}" /></td>
+   
+       </tr>       
+<tr>
+      <td><strong>Welcome pack sent:</strong></td>
+      <td><apex:outputField value="{!Job__c.Date_WP_Sent__c}" /></td>
+      </tr>
+            <tr>
+      <td><strong>PFQ Due:</strong></td>
+      <td><apex:outputText value="{!Job__c.PFQ_Due_Date__c}" /></td>
+      </tr>   
+  </table>
+
+  <table width="700" align="center" style="margin-top:5px;border:1px solid #d9e6f0;" cellpadding="2" cellspacing="2">
+
+      <td><strong>Start/Finish Time:</strong></td>
+      </tr>
+      <tr>
+      <td><apex:outputText value="{!Job__c.Start_Finish_Time__c}" /></td>
+       </tr>
+    <tr>
+      <td width="130"><strong>Timetable</strong></td>
+    </tr>
+          <tr>    
+    <tr>
+      <td><apex:outputfield value="{!Job__c.Public_Program_Timetable__c}" /></td>
+    </tr>
+  </table>
+
+
+ 
+                            
+
+  <table width="700" align="center" style="margin-top:5px;border:1px solid #d9e6f0;" cellpadding="2" cellspacing="2">
+    <tr>
+      <td width="130"><strong>Expenses Agreed</strong></td>
+    </tr>
+    <tr>
+      <td><apex:outputfield value="{!Job__c.Expenses_Agreed__c}" /></td>
+    </tr>
+  </table>
+
+  <br/>
+  <table width="700" align="center" style="margin-top:5px;border:1px solid #d9e6f0;" cellpadding="2" cellspacing="2">
+    <tr>
+      <td width="130"><strong>Other Comments</strong></td>
+    </tr>
+    <tr>
+      <td><apex:outputfield value="{!Job__c.Comments__c}" /></td>
+    </tr>
+  </table>
+</apex:page>

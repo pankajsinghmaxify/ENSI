@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta content="text/html; charset=utf-8"
+ http-equiv="Content-Type">
+  <title>ENS International Participant Email</title>
+</head>
+<body topmargin="0" leftmargin="0"
+ style="margin: 0px; background-color: rgb(244, 244, 241);"
+ marginheight="0" marginwidth="0">
+<!--100% body table -->
+<table bgcolor="#edf5fc" border="0" cellpadding="0"
+ cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <td><!--view in browser link-->
+      <table bgcolor="#f4f4f1" border="0"
+ cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td align="center" height="45"
+ valign="middle">
+            <p
+ style="margin: 5px auto 0pt; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 300;"></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--header-->
+<table style="background-color: rgb(255, 255, 255);"
+ align="center" bgcolor="#ffffff" border="0"
+ cellpadding="0" cellspacing="0" width="600">
+  <tbody>
+    <tr>
+      <td>
+      <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+        <tbody>
+          <tr>
+            <td height="119" valign="top" width="600"><a
+ href="http://www.negotiate.org/"><img
+ src="http://www.negotiate.org/images/ENSI_header.jpg"
+ style="display: block;" alt="ENSIHeader" border="0"
+ height="119" width="600"></a></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--email container-->
+<table align="center" bgcolor="#ffffff" border="0"
+ cellpadding="25" cellspacing="0" width="550">
+  <tbody>
+    <tr>
+      <td><!--email content-->
+      <table id="email-content" border="0"
+ cellpadding="0" cellspacing="0" width="550">
+        <tbody>
+          <tr>
+            <td>
+            <table border="0" cellpadding="0"
+ cellspacing="0" width="100%">
+              <tbody>
+                <tr>
+                  <td align="left" valign="top">
+                  <table border="0" cellpadding="0"
+ cellspacing="0" width="100%">
+                    <tbody>
+                      <tr>
+                      </tr>
+                    </tbody>
+                  </table>
+<!--email greeting/body--> </td>
+                  <td border="none" style="padding: 0px;"
+ valign="top" width="100%">
+                  <p class="MsoNormal"><span
+ style="font-size: 16.5pt; font-family: &quot;Arial&quot;,sans-serif; color: rgb(110, 180, 63);">M4NTRA
+Coaching Clinic – Think &amp; Act Differently to GET
+MORE&nbsp;</span><u5:p></u5:p><o:p></o:p></p>
+                  <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">Dear
+{!Contact.FirstName},</p>
+                  <font
+ style="font-family: Georgia,serif; font-size: 22px; font-style: italic; text-align: center; color: rgb(110, 180, 63);">
+                  </font>
+                  <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;"><span
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; font-style: normal; font-weight: 100; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;">Please
+note this will be your<span class="Apple-converted-space">&nbsp;</span></span><span
+ style="font-family: Arial,Helvetica,sans-serif; font-size: 14px; font-style: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); color: rgb(0, 153, 0); font-weight: bold;">last
+chance</span><span
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; font-style: normal; font-weight: 100; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"><span
+ class="Apple-converted-space">&nbsp;</span>to
+complete the ENSI Program Focus Questionnaire (PFQ). The PFQ helps the Facilitators to focus the Clinic based on your negotiation and it is
+highly recommended that you complete the questionnaire for your own
+benefit.</span><br>
+                  <br>
+                  <a
+ href="http://www.surveygizmo.com/s3/3914029/Takeda-M4NTRA-Coaching-Clinic-Focus-Questionnaire?pfq-rait&rait=NO&jid={!Contact.Last_Job_ID__c}&pid={!Contact.Last_Participant_Id__c}"
+ style="color: rgb(110, 180, 63); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: top;">Click
+here</a><a
+ href="http://www.surveygizmo.com/s3/3914029/Takeda-M4NTRA-Coaching-Clinic-Focus-Questionnaire?pfq-rait&rait=NO&jid={!Contact.Last_Job_ID__c}&pid={!Contact.Last_Participant_Id__c}"
+ style="color: rgb(110, 180, 63); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: top;">
+                  </a>to access the questionnaire.<font
+ style="font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; font-style: italic; color: red;">*Please
+note that this link is specific to you, please don't forward it to
+others.</font></p>
+                  <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;"><span
+ style="color: rgb(0, 0, 0); font-family: Arial,Helvetica,sans-serif; font-size: 14px; font-style: normal; font-weight: 100; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;">Please
+complete the PFQ by</span><span
+ style="color: rgb(0, 0, 0); font-family: Arial,Helvetica,sans-serif; font-size: 14px; font-style: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); font-weight: bold;"><span
+ class="Apple-converted-space">&nbsp;</span>{!Contact.Job_PFQ_Due_Date__c}.</span></p>
+                  <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;"><span
+ style="color: rgb(0, 0, 0); font-family: Arial,Helvetica,sans-serif; font-size: 14px; font-style: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); font-weight: bold;"></span><span
+ style="font-weight: bold;">NB:</span>
+If you have already started your questionnaire and have opted to 'save
+and continue' while in the questionnaire - it is important that you use
+the link that was sent to you at the time you saved your response,
+otherwise the above link will open a new questionnaire.</p>
+                  <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;"><span
+ style="font-weight: bold; color: rgb(0, 102, 0);">Remember
+to bring along your Green Negotiation and Influencing Manual.</span></p>
+                  <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">Should
+you have any questions, please don't hesitate to contact me.</p>
+                  <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">Kind
+regards,<br>
+                  <br>
+{!Contact.Job_CSM_Name__c}<br>
+                  <span style="font-weight: bold;">{!Contact.Job_CSC_Title__c}</span></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--footer-->
+<table style="background-color: rgb(255, 255, 255);"
+ align="center" border="0" cellpadding="0"
+ cellspacing="0" width="600">
+  <tbody>
+    <tr>
+      <td>
+      <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+        <tbody>
+          <tr>
+            <td border="0" height="77" valign="top"
+ width="600"><a href="http://www.negotiate.org/"><img
+ src="http://www.negotiate.org/images/ENSI_footer.jpg" alt=""
+ style="border: 0px none ; display: block; padding-top: 15px;"
+ height="77" width="600">
+            </a></td>
+          </tr>
+        </tbody>
+      </table>
+<!--footer info-->
+      <table bgcolor="#f4f4f1" border="0"
+ cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td align="center" height="60"
+ valign="middle">
+            <p
+ style="margin: 5px auto 0pt; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.4; font-weight: 300;"><a
+ href="http://www.negotiate.org/"
+ style="color: rgb(51, 51, 51); margin-bottom: 80px;">ENS
+International</a> - Level 5, 83 York Street, Sydney 2000, NSW,
+Australia <br>
+Phone: +61 2 9299 9688 </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--/email container-->
+<!--/1body table-->
+</body>
+</html>

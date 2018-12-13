@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Updates pax list with pre-work status</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Updates pax list with pre-work status - V2.0</name>
+    <style>none</style>
+    <subject>Updates pax list with pre-work status for {!Job__c.Account_Name__c} program on {!Job__c.Certificate_Date_Text__c}</subject>
+    <textOnly>Cc Marketer
+
+Hi {!Job__c.Facilitator_names__c}
+
+Please find attached the latest participant list with pre-work status for the {!Job__c.Account_Name__c}, {!Job__c.Certificate_Date_Text__c} program.
+
+As part of the ENSI Quality Assurance, please complete the attached ENSI Peer/Self Review form after the workshop and return to me. (Solo facilitators will complete a self-assessment and dual facilitators will peer review each other)
+
+All the best</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

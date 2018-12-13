@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Program follow-up</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Program follow-up</name>
+    <style>none</style>
+    <subject>Program follow-up - {!Job__c.Account_Name__c} program on {!Job__c.Certificate_Date_Text__c}</subject>
+    <textOnly>Hi {!Job__c.Facilitator_names__c}
+
+Hope the workshop went well.
+
+Just a couple of things to tidy up.
+
+Were there any changes to the participants? Attached is the pax list as I last had it
+
+Do you want me to send a reminder to participants re their 2nd 2 days? If yes, is there anything in particular you want me to say to them?  What time do you want them to start?
+
+Please send me your invoice when ready – your fees for this workshop are:
+Presenter PROF_FEE x XX% = $XXX
+Marketing x XX% = $XXX
+Materials commission MAT_FEE x XX% = $XXX
+Plus GST
+Plus Expenses (please list if they’re GST inclusive or exclusive). Remember to include your receipts
+If we’re paying you in a different currency then above, please advise exchange rate used on invoice
+
+Peer/Self review - please complete the attached ENSI Peer/Self Review form and return to me. (Solo facilitators will complete a self-assessment and dual facilitators will peer review each other)
+
+
+Thanks</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

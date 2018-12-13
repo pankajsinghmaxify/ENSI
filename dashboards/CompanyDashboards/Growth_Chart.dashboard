@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dashboard xmlns="http://soap.sforce.com/2006/04/metadata">
+    <backgroundEndColor>#FFFFFF</backgroundEndColor>
+    <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
+    <backgroundStartColor>#FFFFFF</backgroundStartColor>
+    <dashboardFilters>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>LAST_YEAR</values>
+        </dashboardFilterOptions>
+        <name>Work Start Date</name>
+    </dashboardFilters>
+    <dashboardType>SpecifiedUser</dashboardType>
+    <description>Summarises ENS&apos;s job activity.</description>
+    <isGridLayout>false</isGridLayout>
+    <leftSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartSummary>
+                <aggregate>Sum</aggregate>
+                <column>Account.Jobs__r.JobItems__r$Item_Value_AUD__c</column>
+            </chartSummary>
+            <componentType>Metric</componentType>
+            <dashboardFilterColumns>
+                <column>Account.Jobs__r.JobItems__r$Work_Start_Date__c</column>
+            </dashboardFilterColumns>
+            <displayUnits>Integer</displayUnits>
+            <footer>All confirmed and completed jobs in the current financial year. Fees are in AUD, including professional fees and materials</footer>
+            <header>Total Revenue - Financial Year</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Total revenue for the current Financial Year</metricLabel>
+            <report>ENS_Dashboard_Support/GC_Total_Revenue_i</report>
+            <showRange>false</showRange>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardFilterColumns>
+                <column>Account.Jobs__r.JobItems__r$Work_Start_Date__c</column>
+            </dashboardFilterColumns>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <header>Total revnue by month</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>ENS_Dashboard_Support/GC_Total_revenue_by_month</report>
+            <showPicturesOnTables>false</showPicturesOnTables>
+            <sortBy>RowLabelAscending</sortBy>
+        </components>
+    </leftSection>
+    <middleSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Metric</componentType>
+            <dashboardFilterColumns>
+                <column>Account.Jobs__r.JobItems__r$Work_Start_Date__c</column>
+            </dashboardFilterColumns>
+            <displayUnits>Integer</displayUnits>
+            <footer>Includes Inhouse and Public Programs. All confirmed and completed jobs in the last financial quarter. Fees are in AUD,  including professional fees and materials</footer>
+            <header>Total Revenue - Financial Quarter</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Total revenue for the last quarter</metricLabel>
+            <report>ENS_Dashboard_Support/GC_Total_Revenue</report>
+            <showRange>false</showRange>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardFilterColumns>
+                <column>Account.Jobs__r.JobItems__r$Work_Start_Date__c</column>
+            </dashboardFilterColumns>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <header>Total revenue for completed quarters</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>ENS_Dashboard_Support/GC_Total_revenue_by_Quarter</report>
+            <showPicturesOnTables>false</showPicturesOnTables>
+            <sortBy>RowLabelAscending</sortBy>
+        </components>
+    </middleSection>
+    <rightSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <aggregate>Sum</aggregate>
+                <axisBinding>y</axisBinding>
+                <column>Account.Jobs__r.JobItems__r$Item_Value_AUD__c</column>
+            </chartSummary>
+            <componentType>Bar</componentType>
+            <dashboardFilterColumns>
+                <column>Account.Jobs__r.JobItems__r$Work_Start_Date__c</column>
+            </dashboardFilterColumns>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <groupingColumn>Account.Jobs__r.JobItems__r$Work_Start_Date_YRMTH__c</groupingColumn>
+            <header>Total Revenue - In-house</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>ENS_Dashboard_Support/GC_Total_Revenue</report>
+            <showPercentage>false</showPercentage>
+            <showPicturesOnCharts>false</showPicturesOnCharts>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <useReportChart>false</useReportChart>
+        </components>
+    </rightSection>
+    <runningUser>lforster.ens@negotiate.org</runningUser>
+    <textColor>#000000</textColor>
+    <title>Growth Chart</title>
+    <titleColor>#000000</titleColor>
+    <titleSize>12</titleSize>
+</Dashboard>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Open Course</fullName>
+        <default>false</default>
+        <label>Open Course</label>
+    </customValue>
+    <customValue>
+        <fullName>Training</fullName>
+        <default>false</default>
+        <label>Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Organisational transformation</fullName>
+        <default>false</default>
+        <label>Organisational transformation</label>
+    </customValue>
+    <customValue>
+        <fullName>Consulting / retainer</fullName>
+        <default>false</default>
+        <label>Consulting / retainer</label>
+    </customValue>
+    <masterLabel>Financial reporting type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

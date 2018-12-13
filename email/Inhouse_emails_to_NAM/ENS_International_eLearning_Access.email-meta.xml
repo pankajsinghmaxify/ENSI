@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>ENS International: eLearning Access</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ENS International: eLearning Access</name>
+    <style>none</style>
+    <subject>ENS International: eLearning Acess</subject>
+    <textOnly>Hi {!Job__c.NAM_Name__c}
+
+Please note that access to our online reinforcement module is now available to you and your participants.
+
+Feel free to login and see the module yourself using your email address as the username and password.
+
+Access to the reinforcement module is via: http://www.negotiate.org/ens-reinforcement-login
+
+Kind regards</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,26 @@
+<apex:page tabstyle="Report_Batch__c" Controller="SendActivityReport" >
+  <apex:sectionHeader title="Send Report Batch" />
+  <apex:form >
+  <apex:pageBlock >
+    <apex:pageBlockButtons >
+      <apex:commandButton action="{!save}" value="Send Batch"/>
+    </apex:pageBlockButtons>
+    <apex:pageblockSection title="information" collapsible="false" columns="2">
+      <apex:pageblocksectionitem >
+        <apex:outputLabel value="Report Type" />
+        <apex:inputField value="{!NewRB.Report_Type__c}" />
+      </apex:pageblocksectionitem>
+      <apex:pageblocksectionitem >
+        <apex:outputLabel value="Period - Month" />
+        <apex:inputField value="{!NewRB.Period__c}" />
+      </apex:pageblocksectionitem>
+      <apex:pageblocksectionitem >
+      </apex:pageblocksectionitem>
+      <apex:pageblocksectionitem >
+        <apex:outputLabel value="Period - Year" />
+        <apex:inputField value="{!NewRB.Year__c}" />
+      </apex:pageblocksectionitem>
+    </apex:pageblockSection>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

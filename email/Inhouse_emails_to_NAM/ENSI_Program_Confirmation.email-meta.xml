@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>ENSI Program Confirmation to NAM CC Marketer</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ENSI Program Confirmation</name>
+    <style>none</style>
+    <subject>ENSI Program confirmation, {!Job__c.Account_Name__c}, {!Job__c.Certificate_Date_Text__c}</subject>
+    <textOnly>Hi {!Job__c.NAM_Name__c}
+
+Thank you for booking a program with ENSI.
+OR
+We’re delighted to be working with {!Job__c.Account_Name__c} again.
+
+I am writing to introduce myself as MARKETER’s Client Services Manager. As per your communications with MARKETER, attached are the relevant confirmation documents relating to the workshop booked for {!Job__c.Certificate_Date_Text__c}:
+
+Letter of Engagement
+Terms of Business
+50% Confirmation Invoice
+Venue Administration Checklist (attach venue admin relevant to presenter)
+TN Visa Application Letters for ENS Consultants (if applicable)
+
+I look forward to working together to ensure we deliver a great workshop.
+
+Kind regards</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

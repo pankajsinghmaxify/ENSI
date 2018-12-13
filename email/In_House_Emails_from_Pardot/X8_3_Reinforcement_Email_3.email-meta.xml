@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Reinforcement Email 3</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>8.3 Reinforcement Email 3</name>
+    <style>none</style>
+    <subject>{!Contact.FirstName}, here is your ENSI Reinforcement Email #3</subject>
+    <textOnly>Negotiation &amp; Influencing
+
+View this email in your browser
+
+
+{!Job__c.Account_Name__c} ENSI Reinforcement Email #3
+
+Greetings {!Contact.FirstName}
+
+Three questions today:
+
+How consciously are you applying ENSI concepts at work AND in your personal life?
+How focused are you on the PROCESS – or are you too fixated on the Content?
+What are the ENSI 3 Pillars which are the foundation of all effective negotiation?
+
+Please continue working with your mentoring partner.
+Check with them every second day to see how they are going.
+
+Help each other to BE ASPIRATIONAL!
+And, like all skilful negotiators, continue to **MEMO
+
+Creating greater negotiation success…
+
+{!Job__c.Facilitator_names__c}
+www.negotiate.org
+
+** MEMO ­– Meet Early Meet Often
+ENSI 3 Pillars: Split Process/Content, Use Secret Strategy, Build Common Ground
+
+
+
+
+
+P +61 2 9299 9688  | E info.ens@negotiate.org
+Level 5  83 York Street  Sydney NSW 2000  Australia
+
+negotiate.org
+Manage subscription | Forward email</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

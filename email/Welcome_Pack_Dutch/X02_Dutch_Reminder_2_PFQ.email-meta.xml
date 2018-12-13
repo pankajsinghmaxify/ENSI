@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Final Reminder to pax to complete their Dutch PFQ ONLY. PFQ in SG3</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>02 Dutch Reminder 2 PFQ</name>
+    <style>none</style>
+    <subject>[Herinnering] ENSI Program Focus Questionnaire DUE: {!Contact.Job_PFQ_Due_Date__c}</subject>
+    <textOnly>Beste {!Contact.FirstName}
+
+Dit is je laatste kans om de vragenlijsten voorafgaand aan de ENSI-workshop in te vullen. De PFQ helpt de workshopleider om de workshop op jouw behoeften af te stemmen. Het is in je eigen belang om de vragenlijst in te vullen en dit wordt dan ook sterk aanbevolen.
+
+Klik hier om naar de vragenlijst te gaan.
+http://www.surveygizmo.com/s3/1391618/ENS-Dutch-Program-Focus-Questionnaire?pfq-rait&amp;rait=NO&amp;jid={!Contact.Last_Job_ID__c}&amp;pid={!Contact.Last_Participant_Id__c}
+Opmerking: De link is specifiek voor jou; we verzoeken je om deze niet naar anderen door te sturen.
+Zorg ervoor dat Java in je browser is ingeschakeld.
+
+Gelieve de PFQ vóór {!Contact.Job_PFQ_Due_Date__c}in te vullen.
+
+NB: Als je al bent begonnen met je vragenlijst en je hebt gekozen voor &apos;opslaan en doorgaan&apos; terwijl je ermee bezig was, dan moet je de link gebruiken die je is toegestuurd toen je je antwoorden bewaarde, anders wordt met bovenstaande link een nieuwe enquête geopend.
+
+Mocht je nog vragen hebben, dan kun je altijd contact met me opnemen.
+
+Met vriendelijke groet
+
+{!Contact.Job_CSM_Name__c}
+{!Contact.Job_CSC_Title__c}
+
+Suite 507, 83 York Street
+Sydney NSW 2000
+Australia
+p: +61 9299 9688  f: +61 9299 1633
+www.negotiate.org
+
+
+Note this email and any attachments may be privileged and confidential. If you are not the intended recipient please delete the message and notify the sender. Copying or distribution by anyone else is prohibited. Thank you.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

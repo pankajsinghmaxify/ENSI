@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>15.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>The decommissioned, old version of the briefing sheet. No longer in use. Remains in production as it is referenced in the Send Briefing Sheet Apex class, which remains in production but is not in use. (GE 13/2/2013)</description>
+    <label>briefingsheet</label>
+</ApexPage>

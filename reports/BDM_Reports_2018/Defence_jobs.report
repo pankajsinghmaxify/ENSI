@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Jobs__r$Status__c</field>
+    </columns>
+    <columns>
+        <field>Account.Jobs__r$Certificate_Date_Text__c</field>
+    </columns>
+    <columns>
+        <field>Account.Jobs__r$Presenters__c</field>
+    </columns>
+    <columns>
+        <field>Account.Jobs__r$Facilitator_names__c</field>
+    </columns>
+    <columns>
+        <field>Account.Jobs__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Jobs__r$Job_First_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account.Jobs__r$Training_starts__c</field>
+    </columns>
+    <columns>
+        <field>Account.Jobs__r$CreatedDate</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <booleanFilter>1 or 2</booleanFilter>
+        <criteriaItems>
+            <column>Account.Jobs__r$Account_GROUP__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Department of Defence (GROUP see GO)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Jobs__r$Opportunity__c.Client_Account_Group__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Department of Defence (GROUP see GO)</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>Defence jobs</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_Jobs_Job_Items_with_Presenter__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account.Jobs__r$CreatedDate</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account.Jobs__r$Job_First_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

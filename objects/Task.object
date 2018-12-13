@@ -1,0 +1,3325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Close</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteSeries</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewTask</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>ActivityDate</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDisposition</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDurationInSeconds</fullName>
+    </fields>
+    <fields>
+        <fullName>CallObject</fullName>
+    </fields>
+    <fields>
+        <fullName>CallType</fullName>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+    </fields>
+    <fields>
+        <fullName>IsRecurrence</fullName>
+    </fields>
+    <fields>
+        <fullName>IsReminderSet</fullName>
+    </fields>
+    <fields>
+        <fullName>IsVisibleInSelfService</fullName>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RecurrenceInterval</fullName>
+    </fields>
+    <fields>
+        <fullName>RecurrenceRegeneratedType</fullName>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>TaskSubtype</fullName>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>WhatId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WhoId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <recordTypes>
+        <fullName>BD_Task</fullName>
+        <active>true</active>
+        <description>Business Development related tasks</description>
+        <label>BD Task</label>
+        <picklistValues>
+            <picklist>Activity_ENSCampaign_Status__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest in Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting Booked</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Yet Contacted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requested Information</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Appointment_Outcome__c</picklist>
+            <values>
+                <fullName>Account Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dropped</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exploratory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move forward</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposed solution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sign off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stalled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stated Need</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Appointment_Type__c</picklist>
+            <values>
+                <fullName>Face to Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Assigned_to_NON_Staff__c</picklist>
+            <values>
+                <fullName>Drew McKinnie</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>John Barber</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BD_Person__c</picklist>
+            <values>
+                <fullName>Duncan McClure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graeme Orchiston</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graeme and Phil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Karey Payne</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phil Wade</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Status__c</picklist>
+            <values>
+                <fullName>Add to Negotium list - NFA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Appointment made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact left%2Fmoved - insert comment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do Not Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up - send email %28bcc SFDC%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up - warmer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up in X mths</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>For ENS discussion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make 1st contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make post email phone call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No needs%2Fnot interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Appointment Made</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lifecycle_Stage__c</picklist>
+            <values>
+                <fullName>0 Target</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 Exploratory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 Stated Need</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 Proposed Solution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 Sign Off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E2 Post delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E3 Account Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>NM_Call_Reason__c</picklist>
+            <values>
+                <fullName>Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Discussion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly Catch Up</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>NM_Issue__c</picklist>
+            <values>
+                <fullName>BDMs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CSC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance details</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>License Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mkting splits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workshop materials</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Next_Step__c</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Urgent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Response__c</picklist>
+            <values>
+                <fullName>Busy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Left msg</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No answer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Resulting_Contact_Status__c</picklist>
+            <values>
+                <fullName>Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive%2Fnot interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Suspect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source__c</picklist>
+            <values>
+                <fullName>Inbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Email</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Assignment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BD Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bounce Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Telemarketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Ownership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Updates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact Us</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D%2FB Registration Form</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Negotium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Telemarketing_Activity__c</picklist>
+            <values>
+                <fullName>Call - Left message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - No Message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversation - General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversation - Meeting Arrangement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Business_Development</fullName>
+        <active>true</active>
+        <description>For ENS BD sales process</description>
+        <label>Business Development</label>
+        <picklistValues>
+            <picklist>Activity_ENSCampaign_Status__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest in Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting Booked</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Yet Contacted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requested Information</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Appointment_Outcome__c</picklist>
+            <values>
+                <fullName>Account Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dropped</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exploratory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move forward</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposed solution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sign off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stalled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stated Need</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Appointment_Type__c</picklist>
+            <values>
+                <fullName>Face to Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Assigned_to_NON_Staff__c</picklist>
+            <values>
+                <fullName>Drew McKinnie</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>John Barber</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BD_Person__c</picklist>
+            <values>
+                <fullName>Duncan McClure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graeme Orchiston</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graeme and Phil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Karey Payne</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phil Wade</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Status__c</picklist>
+            <values>
+                <fullName>Add to Negotium list - NFA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Appointment made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact left%2Fmoved - insert comment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do Not Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up - send email %28bcc SFDC%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up - warmer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up in X mths</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>For ENS discussion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make 1st contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make post email phone call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No needs%2Fnot interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Appointment Made</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lifecycle_Stage__c</picklist>
+            <values>
+                <fullName>0 Target</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 Exploratory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 Stated Need</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 Proposed Solution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 Sign Off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E2 Post delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E3 Account Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>NM_Call_Reason__c</picklist>
+            <values>
+                <fullName>Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Discussion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly Catch Up</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>NM_Issue__c</picklist>
+            <values>
+                <fullName>BDMs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CSC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance details</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>License Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mkting splits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workshop materials</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Next_Step__c</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Urgent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Response__c</picklist>
+            <values>
+                <fullName>Busy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Left msg</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No answer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Resulting_Contact_Status__c</picklist>
+            <values>
+                <fullName>Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive%2Fnot interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Suspect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source__c</picklist>
+            <values>
+                <fullName>Inbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Email</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Assignment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BD Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bounce Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Telemarketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Ownership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Updates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact Us</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D%2FB Registration Form</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Negotium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Telemarketing_Activity__c</picklist>
+            <values>
+                <fullName>Call - Left message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - No Message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversation - General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversation - Meeting Arrangement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Materials_Order</fullName>
+        <active>true</active>
+        <label>Materials Order</label>
+        <picklistValues>
+            <picklist>Activity_ENSCampaign_Status__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest in Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting Booked</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Yet Contacted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requested Information</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Appointment_Outcome__c</picklist>
+            <values>
+                <fullName>Account Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dropped</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exploratory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move forward</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposed solution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sign off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stalled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stated Need</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Appointment_Type__c</picklist>
+            <values>
+                <fullName>Face to Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Assigned_to_NON_Staff__c</picklist>
+            <values>
+                <fullName>Drew McKinnie</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>John Barber</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BD_Person__c</picklist>
+            <values>
+                <fullName>Duncan McClure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graeme Orchiston</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graeme and Phil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Karey Payne</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phil Wade</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Status__c</picklist>
+            <values>
+                <fullName>Add to Negotium list - NFA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Appointment made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact left%2Fmoved - insert comment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do Not Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up - send email %28bcc SFDC%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up - warmer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up in X mths</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>For ENS discussion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make 1st contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make post email phone call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No needs%2Fnot interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Appointment Made</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lifecycle_Stage__c</picklist>
+            <values>
+                <fullName>0 Target</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 Exploratory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 Stated Need</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 Proposed Solution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 Sign Off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E2 Post delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E3 Account Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>NM_Call_Reason__c</picklist>
+            <values>
+                <fullName>Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Discussion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly Catch Up</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>NM_Issue__c</picklist>
+            <values>
+                <fullName>BDMs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CSC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance details</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>License Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mkting splits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workshop materials</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Next_Step__c</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Urgent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Response__c</picklist>
+            <values>
+                <fullName>Busy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Left msg</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No answer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Resulting_Contact_Status__c</picklist>
+            <values>
+                <fullName>Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive%2Fnot interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Suspect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source__c</picklist>
+            <values>
+                <fullName>Inbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Email</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Assignment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BD Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bounce Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Telemarketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Ownership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Updates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact Us</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D%2FB Registration Form</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Negotium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Telemarketing_Activity__c</picklist>
+            <values>
+                <fullName>Call - Left message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - No Message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversation - General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversation - Meeting Arrangement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Network_Managers_Call</fullName>
+        <active>true</active>
+        <description>used to record the networks managers calls to consultants</description>
+        <label>Network Managers Calls</label>
+        <picklistValues>
+            <picklist>Activity_ENSCampaign_Status__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest in Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting Booked</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Yet Contacted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requested Information</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Appointment_Outcome__c</picklist>
+            <values>
+                <fullName>Account Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dropped</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exploratory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move forward</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposed solution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sign off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stalled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stated Need</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Appointment_Type__c</picklist>
+            <values>
+                <fullName>Face to Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Assigned_to_NON_Staff__c</picklist>
+            <values>
+                <fullName>Drew McKinnie</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>John Barber</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BD_Person__c</picklist>
+            <values>
+                <fullName>Duncan McClure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graeme Orchiston</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graeme and Phil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Karey Payne</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phil Wade</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Status__c</picklist>
+            <values>
+                <fullName>Add to Negotium list - NFA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Appointment made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact left%2Fmoved - insert comment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do Not Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up - send email %28bcc SFDC%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up - warmer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up in X mths</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>For ENS discussion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make 1st contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make post email phone call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No needs%2Fnot interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Appointment Made</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lifecycle_Stage__c</picklist>
+            <values>
+                <fullName>0 Target</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 Exploratory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 Stated Need</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 Proposed Solution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 Sign Off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E2 Post delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E3 Account Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>NM_Call_Reason__c</picklist>
+            <values>
+                <fullName>Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Discussion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly Catch Up</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>NM_Issue__c</picklist>
+            <values>
+                <fullName>BDMs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CSC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance details</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>License Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mkting splits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workshop materials</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Next_Step__c</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Urgent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Response__c</picklist>
+            <values>
+                <fullName>Busy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Left msg</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No answer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Resulting_Contact_Status__c</picklist>
+            <values>
+                <fullName>Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive%2Fnot interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Suspect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source__c</picklist>
+            <values>
+                <fullName>Inbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Email</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Assignment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BD Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bounce Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Telemarketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Ownership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Updates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact Us</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D%2FB Registration Form</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Negotium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Telemarketing_Activity__c</picklist>
+            <values>
+                <fullName>Call - Left message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - No Message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversation - General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversation - Meeting Arrangement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Standard</fullName>
+        <active>true</active>
+        <description>Standard Tasks</description>
+        <label>Standard</label>
+        <picklistValues>
+            <picklist>Activity_ENSCampaign_Status__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest in Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting Booked</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Yet Contacted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requested Information</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Appointment_Outcome__c</picklist>
+            <values>
+                <fullName>Account Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dropped</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exploratory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move forward</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposed solution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sign off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stalled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stated Need</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Appointment_Type__c</picklist>
+            <values>
+                <fullName>Face to Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Assigned_to_NON_Staff__c</picklist>
+            <values>
+                <fullName>Drew McKinnie</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>John Barber</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BD_Person__c</picklist>
+            <values>
+                <fullName>Duncan McClure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graeme Orchiston</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graeme and Phil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Karey Payne</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phil Wade</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Status__c</picklist>
+            <values>
+                <fullName>Add to Negotium list - NFA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Appointment made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact left%2Fmoved - insert comment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do Not Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up - send email %28bcc SFDC%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up - warmer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up in X mths</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>For ENS discussion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make 1st contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make post email phone call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No needs%2Fnot interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Appointment Made</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lifecycle_Stage__c</picklist>
+            <values>
+                <fullName>0 Target</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 Exploratory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 Stated Need</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 Proposed Solution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 Sign Off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E2 Post delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E3 Account Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>NM_Call_Reason__c</picklist>
+            <values>
+                <fullName>Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Discussion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly Catch Up</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>NM_Issue__c</picklist>
+            <values>
+                <fullName>BDMs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CSC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance details</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>License Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mkting splits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workshop materials</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Next_Step__c</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Urgent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Response__c</picklist>
+            <values>
+                <fullName>Busy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Left msg</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No answer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Resulting_Contact_Status__c</picklist>
+            <values>
+                <fullName>Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive%2Fnot interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Suspect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source__c</picklist>
+            <values>
+                <fullName>Inbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Email</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Assignment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BD Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bounce Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Telemarketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Ownership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Updates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact Us</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D%2FB Registration Form</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Negotium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Telemarketing_Activity__c</picklist>
+            <values>
+                <fullName>Call - Left message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - No Message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversation - General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversation - Meeting Arrangement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Telemarketing</fullName>
+        <active>true</active>
+        <description>Telemarketing Tasks</description>
+        <label>Telemarketing</label>
+        <picklistValues>
+            <picklist>Activity_ENSCampaign_Status__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest in Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting Booked</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Yet Contacted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requested Information</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Appointment_Outcome__c</picklist>
+            <values>
+                <fullName>Account Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dropped</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exploratory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move forward</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposed solution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sign off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stalled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stated Need</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Appointment_Type__c</picklist>
+            <values>
+                <fullName>Face to Face</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Assigned_to_NON_Staff__c</picklist>
+            <values>
+                <fullName>Drew McKinnie</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>John Barber</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BD_Person__c</picklist>
+            <values>
+                <fullName>Duncan McClure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graeme Orchiston</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graeme and Phil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Karey Payne</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phil Wade</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Status__c</picklist>
+            <values>
+                <fullName>Add to Negotium list - NFA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Appointment made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact left%2Fmoved - insert comment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do Not Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up - send email %28bcc SFDC%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up - warmer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up in X mths</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>For ENS discussion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make 1st contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make post email phone call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No needs%2Fnot interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Appointment Made</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lifecycle_Stage__c</picklist>
+            <values>
+                <fullName>0 Target</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 Exploratory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 Stated Need</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 Proposed Solution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 Sign Off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E2 Post delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%2E3 Account Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>NM_Call_Reason__c</picklist>
+            <values>
+                <fullName>Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Discussion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly Catch Up</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>NM_Issue__c</picklist>
+            <values>
+                <fullName>BDMs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CSC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance details</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>License Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mkting splits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workshop materials</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Next_Step__c</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Urgent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Response__c</picklist>
+            <values>
+                <fullName>Busy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Left msg</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No answer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Resulting_Contact_Status__c</picklist>
+            <values>
+                <fullName>Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive%2Fnot interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Suspect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source__c</picklist>
+            <values>
+                <fullName>Inbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Email</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Assignment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BD Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bounce Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Telemarketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Ownership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Updates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact Us</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D%2FB Registration Form</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Negotium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Telemarketing_Activity__c</picklist>
+            <values>
+                <fullName>Call - Left message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - No Message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversation - General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conversation - Meeting Arrangement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Partner_User_Only_Can_Create_Own_Task</fullName>
+        <active>true</active>
+        <errorConditionFormula>(NOT ISPICKVAL($User.UserType , &quot;Standard&quot;)) &amp;&amp; $User.ContactId &lt;&gt; &quot;&quot; &amp;&amp; Owner:User.Id &lt;&gt; $User.Id</errorConditionFormula>
+        <errorMessage>Partner can only create own task</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Add_Comment</fullName>
+        <availability>online</availability>
+        <description>Add a standard activity to a contact and link to the account</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Add Comment</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/00T/e?title=Call&amp;who_id={!Contact.Id}&amp;tsk5=&amp;retURL=%2F{!Contact.Id}&amp;RecordType=012200000001LGs&amp;what_id={!Account.Id}&amp;followup=0</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Business_Development_Task</fullName>
+        <availability>online</availability>
+        <description>logging a open BD task</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Business Development Task</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/00T/e?who_id={!Contact.Id}&amp;tsk5=BD Task&amp;retURL=%2F{!Contact.Id}&amp;RecordType=01220000000Pvbn&amp;what_id={!Account.Id}&amp;ent=Task</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Client_Update</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Client Update</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/00T/e?title=Client Update&amp;what_id={!Job__c.AccountId__c}&amp;followup=0&amp;tsk5=&amp;retURL=%2F{!Job__c.Id}&amp;00NR0000000ZcWK={!Job__c.Id} 
+
+{!Account.Sell_1__c} 
+{!Account.Sell_2__c} 
+{!Account.Spot__c} 
+{!Account.Spot_2__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_a_task</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Create a task</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/00T/e?title=Call&amp;what_id={!Job__c.AccountId__c}&amp;followup=0&amp;tsk5=&amp;retURL=%2F{!Job__c.Id}&amp;00NR0000000ZcWK={!Job__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Log_Business_Development_Task</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Log Business Development Meeting</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/00T/e?title=Call&amp;who_id={!Contact.Id}&amp;tsk5=Meeting&amp;retURL=%2F{!Contact.Id}&amp;RecordType=01220000000PokK&amp;what_id={!Account.Id}&amp;followup=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Log_Open_Business_Development_Task</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Log Open Business Development Meeting</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/00T/e?who_id={!Contact.Id}&amp;tsk5=Meeting&amp;retURL=%2F{!Contact.Id}&amp;RecordType=01220000000PokK&amp;what_id={!Account.Id}&amp;ent=Task</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Log_Telemarketing_Task</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Log Telemarketing Task</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/00T/e?title=Call&amp;who_id={!Contact.Id}&amp;tsk5=Telemarketing&amp;retURL=%2F{!Contact.Id}&amp;RecordType=012200000001LGx&amp;what_id={!Account.Id}&amp;followup=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Network_Managers_Call</fullName>
+        <availability>online</availability>
+        <description>used to log the network managers completed calls</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Network Managers Call</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/00T/e?title=Call&amp;who_id={!Contact.Id}&amp;tsk5=NM Call&amp;retURL=%2F{!Contact.Id}&amp;RecordType=012w0000000JXD0&amp;what_id={!Account.Id}&amp;followup=0</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Network_Managers_Scheduled_Call</fullName>
+        <availability>online</availability>
+        <description>logging an open call (scheduled a date for a call in the future)</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Network Managers Scheduled Call</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/00T/e?who_id={!Contact.Id}&amp;tsk5=NM Call&amp;retURL=%2F{!Contact.Id}&amp;RecordType=012w0000000JXD0&amp;what_id={!Account.Id}&amp;ent=Task</url>
+    </webLinks>
+</CustomObject>

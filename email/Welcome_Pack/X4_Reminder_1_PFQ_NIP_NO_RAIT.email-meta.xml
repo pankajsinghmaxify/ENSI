@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Includes PFQ and NIP. PFQ in SG3. NO RAIT</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>02 Reminder 1 PFQ_NIP - No RAIT</name>
+    <style>none</style>
+    <subject>[Reminder] ENSI Program Focus Questionnaire for {!Contact.Job_Certificate_Date__c} Program</subject>
+    <textOnly>ENS International Participant Email
+
+
+Dear {!Contact.FirstName},
+
+&apos;Small investment LARGE IMPACT&apos;
+
+Please remember to complete your two ENS International Pre-Program Questionnaires by {!Contact.Job_PFQ_Due_Date__c}.
+
+The 2 pre-program questionnaires are:
+
+Program Focus Questionnaire &apos;PFQ&apos;- the PFQ helps the program leader to customise the program based on your needs. We ask that all PFQs are completed by {!Contact.Job_PFQ_Due_Date__c}.
+Click here to access the questionnaire.*Please note that this link is specific to you, please don&apos;t forward it to others.
+Negotiating and Influencing Profile ‘NIP’ - the NIP covers 20 key competencies relating to the negotiation and influencing capabilities of individuals. You will receive a separate email with instructions to logon and complete the NIP online. This should take approximately 20 minutes. We ask that all NIPs are completed by {!Contact.Job_NIP_Due_Date__c}.
+Please come briefed with notes on at least one current negotiation situation (for use in diagnosis and review sessions during the workshop).
+
+NB: If you have already started your questionnaire and have opted to &apos;save and continue&apos; while in the questionnaire - it is important that you use the link that was sent to you at the time you saved your response, otherwise the above link will open a new questionnaire.
+
+
+Should you have any questions, please don&apos;t hesitate to contact me.
+
+Kind regards,
+
+{!Contact.Job_CSM_Name__c}
+{!Contact.Job_CSC_Title__c}
+
+ENS International - Level 5, 83 York Street, Sydney 2000, NSW, Australia
+Phone: +61 2 9299 9688</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

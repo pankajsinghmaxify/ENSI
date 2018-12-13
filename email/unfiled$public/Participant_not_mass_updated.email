@@ -1,0 +1,6 @@
+* {!Participant__c.Id}
+* {!Participant__c.Job__c}
+* {!Participant__c.Job_Type__c}
+* {!Participant__c.Job_Training_Type__c}
+* {!Participant__c.Job_Status__c}
+* {!Participant__c.Contact__c}

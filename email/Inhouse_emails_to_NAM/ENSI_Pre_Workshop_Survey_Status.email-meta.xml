@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>ENSI Pre-Workshop Survey Status</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ENSI Pre-Workshop Survey Status</name>
+    <style>none</style>
+    <subject>ENSI Pre-Workshop Survey Status</subject>
+    <textOnly>Hi {!Job__c.NAM_Name__c}
+
+Please find attached a status update of how your participants are going with their pre-workshop requirements for the ENSI workshop taking place on {!Job__c.Certificate_Date_Text__c}.
+
+As you can see, there are a few participants that have not completed their surveys and I would appreciate if you could also prompt them to have this completed by {!Job__c.PFQ_Due_Date__c}, in order for us to have enough time to customise the program. A reminder from ENSI was sent to participants yesterday.
+
+For your reference, the pre-program surveys being completed is/are:
+
+Program Focus Questionnaires (PFQs)
+The Program Focus Questionnaire (PFQ) is the first part of their pre-program preparation and helps presenter’s structure the program based on the key needs and development areas defined by participant responses.
+
+Negotiating &amp; Influencing Profiles (NIPs)
+The NIP is an online profile covering 20 key competencies relating to the negotiation and influencing capabilities of individuals. At the program, participants will receive their individual profile, which will be discussed in detail.
+
+Thank you in advance for your assistance.
+
+Kind regards</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

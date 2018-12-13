@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>ENSI Retainer Confirmation</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ENSI Retainer Confirmation</name>
+    <style>none</style>
+    <subject>ENSI Retainer Confirmation, {!Opportunity.Client_Account__c}, {!Opportunity.Training_starts__c}</subject>
+    <textOnly>Hi {!Opportunity.NAM_Contact__c}
+
+As per your communications with {!Opportunity.Sell_1__c}, attached are the relevant confirmation documents for establishment of an ENSI ‘on-call’ retainer:
+
+Retainer agreement
+Terms of Business
+{!Opportunity.Amount_invoiced_so_far__c}% Confirmation Invoice
+
+Please return a signed copy of the retainer agreement at your earliest convenience.
+
+We look forward to empowering your negotiation success.
+
+Kind regards</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

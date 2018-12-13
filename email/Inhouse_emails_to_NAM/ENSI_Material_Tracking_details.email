@@ -1,0 +1,15 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 0, 0);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+Hi {!Job__c.NAM_Name__c}<br>
+<br>
+Just letting you know that the ENSI materials for the {!Job__c.Certificate_Date_Text__c} program are on their way. {!Job__c.Materials_delivery_number_of_boxes__c} box<strong><span style="color:#EE0090;">es</span></strong> should be delivered to {!Job__c.Delivery_Company_Name__c} by <strong><span style="color:#EE0090;">the end of next week</span></strong>. The box<strong><span style="color:#EE0090;">es</span></strong> ha<strong><span style="color:#EE0090;">ve</span></strong> been addressed to <strong><span style="color:#EE0090;">{!Job__c.Delivery_Contact_Person__c}</span></strong>'s attention.<br>
+<br>
+For reference, the DHL Tracking details are: {!Job__c.Materials_delivery_tracking_number__c} and can be tracked <a href="http://www.dhl.com.au/en/express/tracking.html" style="color:#84bd00;">here</a>.<br>
+<strong><span style="color:#EE0090;">OR</span></strong><br>
+For reference, the TNT Tracking details are: {!Job__c.Materials_delivery_tracking_number__c} and can be tracked <a href="https://www.tnt.com/express/en_au/site/home.html" style="color:#84bd00;">here</a>.<br>
+
+<br>
+Kind regards</span></span>												
+</html>

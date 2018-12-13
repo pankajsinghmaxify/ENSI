@@ -1,0 +1,132 @@
+<apex:page standardController="Processed_Report__c" extensions="LicenseeActivityReport">
+ <!--  Page Break Syntax
+ <div style="page-break-after: always;">
+ </div>
+ Page Break Syntax -->
+ 
+  <table width="700" style="border-collapse: collapse;">
+
+      <tr>
+
+          <td align="right" style="border: 0px;padding: 2px 8px 2px 0px;"><img src="{!URLFOR($Resource.Logo)}" border="0" alt=""/></td>
+
+      </tr>
+
+  </table>
+
+  <table width="400" style="border-collapse: collapse;">
+
+      <tr><td colspan="2" style="border: 0px;padding: 2px 8px 2px 0px;"><span style="font-family:  Verdana, Arial, Helvetica, sans-serif;font-size: 23px; font-weight: normal; color: #2554C7;">Licencee Activity Report</span></td></tr>
+
+      <tr><td colspan="2" style="border: 0px;padding: 2px 8px 2px 0px;">&nbsp;</td></tr>
+
+      <tr><td width="20%" style="border: 0px;padding: 2px 8px 2px 0px;"><span style="font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;font-size: 12px; font-weight: heavy; color: #000000;">Licencee:</span></td>
+
+          <td style="border: 0px;padding: 2px 8px 2px 0px;">{!Contact}</td>
+
+      </tr>
+
+      <tr height="1"><td colspan="2"> </td></tr>
+
+      <tr><td style="border: 0px;padding: 2px 8px 2px 0px;" width="20%"><span style="font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;font-size: 12px; font-weight: heavy; color: #000000;">Period:</span></td>
+
+          <td style="border: 0px;padding: 2px 8px 2px 0px;"><apex:outputField value="{!Processed_Report__c.From_Date__c}" /> &nbsp; To &nbsp; <apex:outputField value="{!Processed_Report__c.To_Date__c}" /></td>
+
+      </tr>
+
+  </table>
+
+  <br/>
+
+  <br/>
+  <span style="font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;font-size: 15px; font-weight: normal; color: #2B547E;">Job Pipeline</span>
+
+  <p>The following lists the number of jobs in your pipeline as at <apex:outputField value="{!Processed_Report__c.From_Date__c}" /> &nbsp; To &nbsp; <apex:outputField value="{!Processed_Report__c.To_Date__c}" />.</p>
+
+  <table width="200" style="border-collapse: collapse;">
+
+      <tr>
+
+          <td style="border-left: 1px solid #98AFC7;border-right: 1px solid #98AFC7;border-top: 1px solid #98AFC7;border-bottom: 1px solid #98AFC7;padding: 3px 6px 3px 3px;background: #C6DEFF;font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;"><strong>Status</strong></td>
+
+          <td style="border-left: 1px solid #98AFC7;border-right: 1px solid #98AFC7;border-top: 1px solid #98AFC7;border-bottom: 1px solid #98AFC7;padding: 3px 6px 3px 3px;background: #C6DEFF;font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;" align="right"><strong>No. of Jobs</strong></td>
+
+      </tr>
+
+      <tr>
+
+          <td style="border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;border-bottom: 1px solid #cccccc;padding: 3px 6px 3px 3px;">Proposed</td>
+
+          <td style="border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;border-bottom: 1px solid #cccccc;padding: 3px 6px 3px 3px;" align="right">{!Proposed}</td>
+
+      </tr>
+
+      <tr>
+
+          <td style="border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;border-bottom: 1px solid #cccccc;padding: 3px 6px 3px 3px;">Postponed</td>
+
+          <td style="border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;border-bottom: 1px solid #cccccc;padding: 3px 6px 3px 3px;" align="right">{!Postponed}</td>
+
+      </tr>
+
+      <tr>
+
+          <td style="border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;border-bottom: 1px solid #cccccc;padding: 3px 6px 3px 3px;">Confirmed</td>
+
+          <td style="border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;border-bottom: 1px solid #cccccc;padding: 3px 6px 3px 3px;" align="right">{!Confirmed}</td>
+
+      </tr>
+
+  </table>
+
+  <br/>
+
+  <br/>
+
+  <span style="font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;font-size: 15px; font-weight: normal; color: #2B547E;">Revenue Earned</span>
+
+  <p>The following shows revenue earned for jobs conducted during <apex:outputField value="{!Processed_Report__c.From_Date__c}" /> &nbsp; To &nbsp; <apex:outputField value="{!Processed_Report__c.To_Date__c}" />.</p>
+
+
+
+    <table width="600" style="border-collapse: collapse;">
+
+        <tr>
+
+            <td style="border-left: 1px solid #98AFC7;border-right: 1px solid #98AFC7;border-top: 1px solid #98AFC7;border-bottom: 1px solid #98AFC7;padding: 3px 6px 3px 3px;background: #C6DEFF;font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;"><strong>Customer</strong></td>
+
+            <td style="border-left: 1px solid #98AFC7;border-right: 1px solid #98AFC7;border-top: 1px solid #98AFC7;border-bottom: 1px solid #98AFC7;padding: 3px 6px 3px 3px;background: #C6DEFF;font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;"><strong>Job Number</strong></td>
+
+            <td style="border-left: 1px solid #98AFC7;border-right: 1px solid #98AFC7;border-top: 1px solid #98AFC7;border-bottom: 1px solid #98AFC7;padding: 3px 6px 3px 3px;background: #C6DEFF;font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;"><strong>Role</strong></td>
+
+            <td style="border-left: 1px solid #98AFC7;border-right: 1px solid #98AFC7;border-top: 1px solid #98AFC7;border-bottom: 1px solid #98AFC7;padding: 3px 6px 3px 3px;background: #C6DEFF;font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;" align="center"><strong>Work Date</strong></td>
+
+            <td style="border-left: 1px solid #98AFC7;border-right: 1px solid #98AFC7;border-top: 1px solid #98AFC7;border-bottom: 1px solid #98AFC7;padding: 3px 6px 3px 3px;background: #C6DEFF;font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;" align="right"><strong>Share Percentage</strong></td>
+
+            <td style="border-left: 1px solid #98AFC7;border-right: 1px solid #98AFC7;border-top: 1px solid #98AFC7;border-bottom: 1px solid #98AFC7;padding: 3px 6px 3px 3px;background: #C6DEFF;font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;" align="right"><strong>Amount Earned</strong></td>
+
+        </tr>
+
+        <apex:repeat value="{!Report}" var="r" id="TheActivityReport">
+
+            <tr>
+
+            <td style="border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;border-bottom: 1px solid #cccccc;padding: 3px 6px 3px 3px;"><apex:outputField value="{!r.Job_Role__r.Account_Name__c}" /></td>
+
+            <td style="border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;border-bottom: 1px solid #cccccc;padding: 3px 6px 3px 3px;"><apex:outputText value="{!r.Job_Role__r.Job__r.Name}" /></td>
+
+            <td style="border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;border-bottom: 1px solid #cccccc;padding: 3px 6px 3px 3px;"><apex:outputField value="{!r.Role__c}" /></td>
+
+            <td style="border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;border-bottom: 1px solid #cccccc;padding: 3px 6px 3px 3px;" align="center"><apex:outputField value="{!r.Job_Item__r.Work_Start_Date__c}" /></td>
+
+            <td style="border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;border-bottom: 1px solid #cccccc;padding: 3px 6px 3px 3px;" align="right"><apex:outputField value="{!r.Job_Role_Prof_Services_Pct__c}" /></td>
+
+            <td style="border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;border-bottom: 1px solid #cccccc;padding: 3px 6px 3px 3px;" align="right">&#36;<apex:outputField value="{!r.FX_Share_Amount__c}" /></td>
+
+            </tr>
+
+        </apex:repeat>
+
+    </table>
+
+</apex:page>

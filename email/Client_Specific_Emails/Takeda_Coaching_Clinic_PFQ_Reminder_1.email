@@ -1,0 +1,31 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 0, 0);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+<span style="font-size: 16.5pt; color:#84bd00;">M4NTRA
+Coaching Clinic
+&nbsp;</span><br><br>
+
+Dear {!Contact.FirstName}<br>
+<br>
+Please remember to complete your ENSI Pre-Program Questionnaire by <strong>{!Job__c.PFQ_Survey_due_date__c}</strong>. The PFQ helps the program leader to customise the program based on your needs.<br>
+
+
+
+
+
+<p>
+
+<a href="{!Contact.Job_PFQ_Survey_PAX_Url__c}" style="color:#84bd00;">Click here*</a> to access the questionnaire.*Please note that this link is specific to you, please don't forward it to others.</span></p>
+
+<strong>NB</strong>: If you have already started your questionnaire and have opted to 'save and continue' while in the questionnaire - it is important that you use the link that was sent to you at the time you saved your response, otherwise the above link will open a new questionnaire.<br>
+
+
+
+
+<span style="color:#84bd00;">Remember to bring along your Green Negotiation and Influencing Manual.</span><br>
+
+<p class="mcnTextContent">Should you have any questions, please don't hesitate to contact me.</p><br>
+
+<p class="mcnTextContent">Kind regards</span></span>												
+</html>

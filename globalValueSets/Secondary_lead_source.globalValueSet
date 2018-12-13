@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>3rd party marketing</fullName>
+        <default>false</default>
+        <label>3rd party marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Contact Us</fullName>
+        <default>false</default>
+        <label>Contact Us</label>
+    </customValue>
+    <customValue>
+        <fullName>Database</fullName>
+        <default>false</default>
+        <label>Database</label>
+    </customValue>
+    <customValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Email</label>
+    </customValue>
+    <customValue>
+        <fullName>Negotium</fullName>
+        <default>false</default>
+        <label>Negotium</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Phone</fullName>
+        <default>false</default>
+        <label>Phone</label>
+    </customValue>
+    <customValue>
+        <fullName>Referral</fullName>
+        <default>false</default>
+        <label>Referral</label>
+    </customValue>
+    <customValue>
+        <fullName>The Influencer</fullName>
+        <default>false</default>
+        <label>The Influencer</label>
+    </customValue>
+    <customValue>
+        <fullName>Web</fullName>
+        <default>false</default>
+        <label>Web</label>
+    </customValue>
+    <masterLabel>Secondary lead source</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

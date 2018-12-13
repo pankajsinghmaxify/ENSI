@@ -1,0 +1,9 @@
+Dear {!Contact.FirstName},
+
+Your {!Organization.Name} partner portal login and password information is below.
+
+Partner Community URL: https://enspartner.force.com/login  
+
+Thank you,
+
+{!Organization.Name} Customer Support

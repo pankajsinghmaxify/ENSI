@@ -1,0 +1,16 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 43, 73);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+Hi&nbsp;{!Job__c.NAM_Name__c}<br>
+<br>
+Please find attached the status of responses for the 3 month post-workshop ‘Impact and Value’ Survey that was sent to participants who attended an ENSI program on {!Job__c.Certificate_Date_Text__c}.<br>
+<br>
+Could you please prompt those who haven’t completed their survey to do so by {!Job__c.X3_month_case_study_due__c}. To date <strong><span style="color:#EE0090;">X</span></strong> of <span style="color:#EE0090;"><strong>X</strong></span> have responded<br>
+												<br>
+												Don’t hesitate to contact me if you have any questions or concerns.<br>
+												<br>
+												The survey takes approximately 5 minutes to complete.<br>
+<br>
+Thanks!</span></span>												
+</html>

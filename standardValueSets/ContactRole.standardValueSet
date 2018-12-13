@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NAM</fullName>
+        <default>false</default>
+        <label>NAM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Admin</fullName>
+        <default>false</default>
+        <label>Admin</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PAX</fullName>
+        <default>false</default>
+        <label>PAX</label>
+    </standardValue>
+</StandardValueSet>

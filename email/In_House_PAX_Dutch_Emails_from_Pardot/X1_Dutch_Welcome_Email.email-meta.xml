@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Welcome Email</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>1 Dutch Welcome Email</name>
+    <style>none</style>
+    <subject>ENSI-programmadetails voor {!Contact.FirstName}</subject>
+    <textOnly>Negotiation &amp; Influencing
+
+View this email in your browser
+
+
+Beste {!Contact.FirstName}
+
+Als onderdeel van het ENS International {!Job__c.Program_Name__c} Program voor {!Job__c.Account_Name__c} op {!Job__c.Certificate_Date_Text__c}, verzoeken wij je de volgende informatie te lezen om succesvoller te kunnen onderhandelen.
+
+Datum:  {!Job__c.Certificate_Date_Text__c}
+Tijdstip:  {!Job__c.Start_Finish_Time__c}
+Plaats:  {!Job__c.Venue_Name__c}
+{!Job__c.Venue_Address__c}
+{!Job__c.Venue_City__c} {!Job__c.Venue_State__c} {!Job__c.Venue_Postcode__c}
+{!Job__c.Venue_Country__c}
+Workshopleider(s):   {!Job__c.Facilitator_names__c}
+{!Job__c.Facilitator_emails__c}
+Kleding:  Netjes, maar casual
+
+
+De ENSI-workshop biedt je niet alleen de vereiste vaardigheden om onderhandelingen met vertrouwen te beginnen, maar zorgt er ook voor dat het geleerde beklijft en dat je je de stof volledig eigen maakt. Door je ook voor en na de workshop hierbij te betrekken, zullen je leerresultaten verbeteren. We vragen je dan ook om mee te doen aan alle onderstaande activiteiten.
+
+Wat je vóór de workshop moet doen
+
+
+Program Focus Questionnaire &apos;PFQ&apos;- de PFQ helpt de workshopleider om de workshop op jouw behoeften af te stemmen. Alle PFQs moeten vóór {!Job__c.PFQ_Due_Date__c} zijn ingevuld. Klik hier* om naar de vragenlijst te gaan.
+
+Negotiating and Influencing Profile ‘NIP’ - Het profiel beslaat 20 kernvaardigheden met betrekking tot de onderhandelings- en beïnvloedingscapaciteiten van individuele personen. Je krijgt een aparte e-mail met instructies om in te loggen en het NIP online in te vullen. Dit zal ongeveer 20 minuten in beslag nemen. Alle NIPs moeten vóór {!Job__c.NIP_Due_Date__c} zijn ingevuld.
+
+Neem aantekeningen mee van minimaal één actuele onderhandelingssituatie (voor gebruik bij de diagnose- en beoordelingssessies tijdens de workshop).
+
+*Opmerking: De link is specifiek voor jou; we verzoeken je om deze niet naar anderen door te sturen.
+
+Wat je na de workshop moet doen
+
++ Je krijgt 14 weken lang elke twee weken een aanmoedigingsmail, dus in totaal zeven mails.
++ Drie maanden na de workshop vragen we je om een ​​korte enquête in te vullen die samenvat wat de toepassing van jouw onderhandelingsvaardigheden je heeft opgeleverd.
++ Abonnement op ons eBulletin &apos;Negotium&apos;. Als je tijdens de workshop het inschrijfformulier niet hebt ondertekend, kun je je alsnog online aanmelden op www.negotiate.org
+
+We hopen je op de workshop te mogen begroeten
+
+Met vriendelijke groet
+{!User.Name}
+{!User.Title}
+
+XYZ83XYZ
+
+
+
+
+P +61 2 9299 9688  | E info.ens@negotiate.org
+Level 5  83 York Street  Sydney NSW 2000  Australia
+
+negotiate.org
+Unsubscribe | Forward email</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

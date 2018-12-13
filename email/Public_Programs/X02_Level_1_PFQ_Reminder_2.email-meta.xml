@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Level 1 - includes PFQ only with SG3</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>02 Level 1 PFQ Reminder 2</name>
+    <style>none</style>
+    <subject>[Reminder] ENSI Program Focus Questionnaire for {!Contact.Job_Certificate_Date__c} Program</subject>
+    <textOnly>Dear {!Contact.FirstName}
+
+Please note this will be your last chance to complete the ENS Program Focus Questionnaire (PFQ). The PFQ helps the program leader to customise the program based on your needs and it is highly recommended that you complete the questionnaire for your own benefit.
+
+Click below to access your PFQ.
+http://www.surveygizmo.com/s3/1264861/97b47b780e94?pfq-rait&amp;rait=NO&amp;jid={!Contact.Last_Job_ID__c}&amp;pid={!Contact.Last_Participant_Id__c}
+
+Note: This link is specific to you, please don&apos;t forward to others.
+Please ensure Java is enabled in your web browser.
+
+NB: If you have already started your questionnaire and have opted to &apos;save and continue&apos; while in the questionnaire - it is important that you use the link that was sent to you at the time you saved your response, otherwise the above link will open a new questionnaire.
+
+Should you have any questions, please don&apos;t hesitate to contact me.
+
+Kind regards
+
+{!Contact.Job_CSM_Name__c}
+Public Program Coordinator
+
+Suite 507, 83 York Street
+Sydney NSW 2000
+Australia
+p: +61 9299 9688  f: +61 9299 1633
+www.negotiate.org
+
+
+Note this email and any attachments may be privileged and confidential. If you are not the intended recipient please delete the message and notify the sender. Copying or distribution by anyone else is prohibited. Thank you.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

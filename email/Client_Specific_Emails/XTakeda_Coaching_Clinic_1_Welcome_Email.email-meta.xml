@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Takeda Coaching - Welcome Email</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Takeda Coaching Clinic 1  Welcome Email</name>
+    <style>none</style>
+    <subject>{!Contact.Program_Name__c} details for {!Contact.FirstName}</subject>
+    <textOnly>Dear {!Contact.FirstName}
+
+As already introduced by {!Job__c.NAM_Name__c} we are happy to invite you to the
+
+M4NTRA Coaching Clinic
+
+Date:  {!Job__c.Certificate_Date_Text__c}
+Time:  {!Job__c.Start_Finish_Time__c}
+Venue:  {!Job__c.Venue_Name__c}
+{!Job__c.Venue_Address__c}
+{!Job__c.Venue_City__c} {!Job__c.Venue_State__c} {!Job__c.Venue_Postcode__c}
+{!Job__c.Venue_Country__c}
+Program Leader/s:   {!Job__c.Facilitator_names__c}
+{!Job__c.Facilitator_emails__c}
+Dress:  Smart casual
+
+
+The Coaching Clinic is designed to practically apply the ENS International negotiation &amp; influencing frameworks, tools and techniques or a structured approach during preparation for an immediate real-life negotiation.
+
+Remember to bring along your GREEN Professional Negotiation and Influencing Manual.
+
+
+Pre-Program Requirements
+
+
+Program Focus Questionnaire &apos;PFQ&apos;- the PFQ helps the program leader to customise the program based on your needs. We ask that all PFQs are completed by {!Job__c.PFQ_Survey_due_date__c}. Click here* to access the questionnaire.
+
+*Please note that this link is specific to you, please don&apos;t forward it to others.
+
+
+Please come briefed with notes as this is a practical, hands on session, in the preparations for the real-life negotiation.
+
+We look forward to seeing you at the Clinic, a key part of Takeda&apos;s M4NTRA investment to help you think and act differently, to help Takeda and patients get better results!
+
+
+Kind regards</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

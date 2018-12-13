@@ -1,0 +1,4 @@
+<apex:page standardController="Job__c" Extensions="EmailtoPresenterSpotSell" action="{!UpdateContacts}">
+    <apex:pageMessages id="apexmsg"/>
+    <p>Check that ...</p>
+</apex:page>

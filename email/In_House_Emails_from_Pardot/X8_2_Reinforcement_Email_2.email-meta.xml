@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Reinforcement Email 2</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>8.2 Reinforcement Email 2</name>
+    <style>none</style>
+    <subject>{!Contact.FirstName}, here is your ENSI Reinforcement Email #2</subject>
+    <textOnly>Negotiation &amp; Influencing
+
+View this email in your browser
+
+
+{!Job__c.Account_Name__c} ENSI Reinforcement Email #2
+
+Good morning  {!Contact.FirstName}
+
+Two questions…
+
+What is the ENSI wide definition of **negotiation?
+
+What time will you check in with your mentoring partner tomorrow?
+
+Over the next two months you will receive some short, sharp reinforcement questions to remind you of key ENSI concepts together with selected workshop charts. You will also receive the ENS International occasional eNewsletter ‘Negotium’ which reviews current areas of negotiation interest and draws out learning tips.
+
+We’ll be back in touch soon…
+
+Best wishes
+
+{!Job__c.Facilitator_names__c}
+www.negotiate.org
+
+** Remember the ENSI wide definition:
+You are negotiating every time you seek to influence other/s.
+It’s an Ongoing Process, rarely a one-off event.
+
+
+
+
+
+P +61 2 9299 9688  | E info.ens@negotiate.org
+Level 5  83 York Street  Sydney NSW 2000  Australia
+
+negotiate.org
+Manage subscription | Forward email</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,7 @@
+<apex:page standardController="Job__c" Extensions="TestUpdateContactFromJob" action="{!UpdateContacts}">
+<!-- Begin Default Content REMOVE THIS -->
+
+
+
+<!-- End Default Content REMOVE THIS -->
+</apex:page>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Reminder to pax to complete their PFQ and RAIT - usually sent 3 days prior to due date</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>02 Reminder 1 PFQ_RAIT</name>
+    <style>none</style>
+    <subject>[Reminder] ENSI Program Focus Questionnaire for {!Contact.Job_Certificate_Date__c} Program</subject>
+    <textOnly>Dear {!Contact.FirstName}
+
+Please remember to complete the ENS International Program Focus Questionnaire (PFQ) by {!Contact.Job_PFQ_Due_Date__c}. The PFQ helps the program leader to customise the program based on your needs.
+
+To access your PFQ copy and paste the link below to your web browser: Note: This link is specific to you, please don&apos;t forward to others. Please ensure Java is enabled in your web browser.
+
+http://www.surveygizmo.com/s3/756776/PFQ-AND-RAIT-Survey?pfq-rait&amp;rait=YES&amp;jid={!Contact.Last_Job_ID__c}&amp;pid={!Contact.Last_Participant_Id__c}
+
+NB: If you have already started your questionnaire and have opted to &apos;save and continue&apos; while in the questionnaire - it is important that you use the link that was sent to you at the time you saved your response, otherwise the above link will open a new questionnaire.
+
+Should you have any questions, please don&apos;t hesitate to contact me. 
+
+Kind regards
+
+{!Contact.Job_CSM_Name__c} 
+Client Service Manager</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

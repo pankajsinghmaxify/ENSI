@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>ENSI 3-month Survey Status</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ENSI 3-month Survey Status</name>
+    <style>none</style>
+    <subject>ENSI 3 Month Survey Status</subject>
+    <textOnly>Hi {!Job__c.NAM_Name__c}
+
+Please find attached the status of responses for the 3 month post-workshop ‘Impact and Value’ Survey that was sent to participants who attended an ENSI program on {!Job__c.Certificate_Date_Text__c}.
+
+Could you please prompt those who haven’t completed their survey to do so by {!Job__c.X3_month_case_study_due__c}. To date X of X have responded
+
+Don’t hesitate to contact me if you have any questions or concerns.
+
+The survey takes approximately 5 minutes to complete.
+
+Thanks!</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Includes details for Takeda 3.5 Intensive Program includes PFQ, NIP and eLearning NO LEARNING OUTCOMES</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Takeda Welcome Pack PFQ_NIP - eLearn NO LEARNING OUTCOMES</name>
+    <style>none</style>
+    <subject>{!Contact.Program_Name__c}</subject>
+    <textOnly>ENS International Participant Email
+
+
+Dear {!Contact.FirstName},
+
+M4NTRA Program – Think &amp; Act Differently to GET MORE
+
+In preparation for your Takeda M4NTRA Program workshop on the {!Contact.Job_Certificate_Date__c}, please read the following information.
+
+Date:
+
+{!Contact.Job_Certificate_Date__c}
+
+Time:
+
+{!Contact.Job_Start_Finish_Time__c}
+
+Venue:
+
+{!Contact.Job_Venue_Name__c}
+{!Contact.Job_Venue_Address__c}
+{!Contact.Job_City_State_PC__c}
+{!Contact.Job_Venue_Country__c}
+
+Program Leader/s:
+
+{!Contact.Job_Presenters__c}
+{!Contact.Job_Presenters_email__c}
+
+Dress:
+
+Smart Casual
+
+The ENS International Program is not only about giving you the skills required to think and act differently to get more of whatever it is your require, but to also ensure that your learnings are sustained and become a force of habit.
+
+We believe that engaging you before and after the workshop will increase your learning outcomes and ask that you participate fully in the activities outlined below. Results of the post-workshop case study and survey are returned to your management to assist them in understanding your challenges and successes.
+
+Pre-Workshop Requirements
+
+Program Focus Questionnaire &apos;PFQ&apos;- the PFQ helps the Lead Facilitator to focus the workshop based on your needs.  We ask that all PFQs are completed by {!Contact.Job_PFQ_Due_Date__c}.
+Click here to access the questionnaire.*Please note that this link is specific to you, please don&apos;t forward it to others.
+Negotiating and Influencing Profile ‘NIP’ - the NIP covers 20 key competencies relating to the negotiation and influencing capabilities of individuals. You will receive a separate email with instructions to logon and complete the NIP online. This should take approximately 20 minutes. We ask that all NIPs are completed by {!Contact.Job_NIP_Due_Date__c}.
+Please come briefed with notes on at least one current situation when you need to negotiate or influence (for use in diagnosis and review sessions during the workshop).
+Pre-reading: please read the attached pre-reading documents in preparation of the upcoming program.
+
+Post-Workshop Actions
+
+Within a week of the program finishing you will be sent login details to the ENS online reinforcement module which you’ll have 6 months unlimited access to.
+Six weeks after the workshop you will be sent a survey to provide a short example of how you have applied your new skills. These will be reviewed by your Lead Facilitator and provided back to the group on an anonymous basis.
+Three months after the workshop we will ask you to complete a short survey summarising the value you have realised from your application of your skills.
+Subscription to our eBulletin Negotium. If you don’t sign the subscription form at the program, please feel free to register online at www.negotiate.org
+
+We look forward to seeing you at the workshop, a key part of Takeda&apos;s M4NTRA Program!
+
+Kind regards,
+
+{!Contact.Job_CSM_Name__c}
+{!Contact.Job_CSC_Title__c}
+
+ENS International - Level 5, 83 York Street, Sydney 2000, NSW, Australia
+Phone: +61 2 9299 9688</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

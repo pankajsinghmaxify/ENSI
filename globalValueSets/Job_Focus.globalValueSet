@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Cross Cultural</fullName>
+        <default>false</default>
+        <label>Cross Cultural</label>
+    </customValue>
+    <customValue>
+        <fullName>EBA</fullName>
+        <default>false</default>
+        <label>EBA</label>
+    </customValue>
+    <customValue>
+        <fullName>Procurement</fullName>
+        <default>false</default>
+        <label>Procurement</label>
+    </customValue>
+    <customValue>
+        <fullName>Project management team</fullName>
+        <default>false</default>
+        <label>Project management team</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales</fullName>
+        <default>false</default>
+        <label>Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Stakeholder engagement</fullName>
+        <default>false</default>
+        <label>Stakeholder engagement</label>
+    </customValue>
+    <masterLabel>Job Focus</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

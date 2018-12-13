@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>ENSI Program Confirmation to Presenter</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ENSI Program Confirmation to Presenter</name>
+    <style>none</style>
+    <subject>{!Job__c.Venue_City__c} {!Job__c.Open_course_program_name__c}, {!Job__c.Certificate_Date_Text__c}</subject>
+    <textOnly>CC Ian
+
+Hi {!Job__c.Facilitator_1__c}
+
+I can now confirm that the {!Job__c.Venue_City__c}, Module XX Open Course on {!Job__c.Certificate_Date_Text__c} is going ahead.  The program will take place at {!Job__c.Venue_Name__c}, located at {!Job__c.Venue_Address__c}. If you need early access, please let me know so that I can arrange it with the venue.
+
+I’ll be forwarding the participant list shortly.
+
+The PFQ has been sent to the pax (due on {!Job__c.PFQ_Due_Date__c}), and you will receive the presenter information on DATE.
+
+Kind regards</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

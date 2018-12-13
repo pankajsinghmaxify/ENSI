@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta content="text/html; charset=utf-8"
+ http-equiv="Content-Type">
+  <title>ENS International Participant Email</title>
+</head>
+<body topmargin="0" leftmargin="0"
+ style="margin: 0px; background-color: rgb(244, 244, 241);"
+ marginheight="0" marginwidth="0">
+<!--100% body table -->
+<table bgcolor="#edf5fc" border="0" cellpadding="0"
+ cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <td><!--view in browser link-->
+      <table bgcolor="#f4f4f1" border="0"
+ cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td align="center" height="45"
+ valign="middle">
+            <p
+ style="margin: 5px auto 0pt; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 300;"></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--header-->
+<table style="background-color: rgb(255, 255, 255);"
+ align="center" bgcolor="#ffffff" border="0"
+ cellpadding="0" cellspacing="0" width="600">
+  <tbody>
+    <tr>
+      <td>
+      <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+        <tbody>
+          <tr>
+            <td height="119" valign="top" width="600"><a
+ href="http://www.negotiate.org/"><img
+ src="http://www.negotiate.org/images/ENSI_header.jpg"
+ style="display: block;" alt="ENSIHeader" border="0"
+ height="119" width="600"></a></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--email container-->
+<table align="center" bgcolor="#ffffff" border="0"
+ cellpadding="25" cellspacing="0" width="550">
+  <tbody>
+    <tr>
+      <td><!--email content-->
+      <table id="email-content" border="0"
+ cellpadding="0" cellspacing="0" width="550">
+        <tbody>
+          <tr>
+            <td>
+            <table border="0" cellpadding="0"
+ cellspacing="0" width="100%">
+              <tbody>
+                <tr>
+                  <td align="left" valign="top">
+                  <table border="0" cellpadding="0"
+ cellspacing="0" width="100%">
+                    <tbody>
+                      <tr>
+                      </tr>
+                    </tbody>
+                  </table>
+<!--email greeting/body--> </td>
+                  <td border="none" style="padding: 0px;"
+ valign="top" width="100%">
+                  <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">Dear
+{!Contact.FirstName},</p>
+                  <font
+ style="font-family: Georgia,serif; font-size: 22px; font-style: italic; text-align: center; color: rgb(110, 180, 63);">'Get
+more of what you want'<br>
+                  </font>
+                  <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">Please
+read the following information to help you get started for your ENS WLD
+Train the Trainer program on {!Job__c.Certificate_Date_Text__c} which
+will be run by {!Job__c.Facilitator_1__c}.<br>
+                  </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+<!--email content-->
+            <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;"><span
+ style="font-weight: bold; color: rgb(51, 51, 255);">Location:</span><br>
+The program will be held at {!Job__c.Venue_Name__c},
+{!Job__c.Venue_Address__c}, {!Job__c.Venue_City__c} {!Job__c.Venue_State__c} {!Job__c.Venue_Postcode__c},
+{!Job__c.Venue_Country__c}&nbsp;</p>
+            <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;"><span
+ style="font-weight: bold; color: rgb(51, 51, 255);">Timing
+            </span><br>
+Currently we are planning to work from {!Job__c.Start_Finish_Time__c}, of course, this is subject to negotiation.</p>
+            <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">You
+should also be prepared to schedule around 1 to 1.5 hours each evening
+for assignments in preparation for the following day. The atmosphere of
+the workshop will be informal and you will be more than welcome in smart
+casual wear.</p>
+<!--Pre-program-->
+            <p
+ style="font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: top; color: rgb(51, 51, 255);">Pre-Program
+Requirements</p>
+            <ol
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">
+              <li><span style="font-weight: bold;">Program
+Focus Questionnaire 'PFQ'- </span>The PFQ helps the program
+leader to customise the program based on your needs. We ask that all
+PFQs are completed by <span style="font-weight: bold;">{!Job__c.PFQ_Survey_due_date__c}.</span><br>
+Click<a
+ href="{!Participant__c.PFQ_Survey_URL__c}"
+ style="color: rgb(110, 180, 63); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: top;">
+here </a>to access the questionnaire.<br>
+                <span style="font-weight: bold; color: red;">Note:
+This link is specific to you, please don't forward to others.</span><br>
+                <br>
+              </li>
+            </ol>
+<!--Post-program-->
+            <p
+ style="color: rgb(0, 38, 76); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; vertical-align: top;"><span
+ style="font-weight: bold; color: rgb(51, 51, 255);">Pre-Reading</span><br>
+To assist with the progress of the WLD, please ensure you are capable
+of making quick reference by page number to the content contained in
+the green ENS manual 'Professional Negotiation &amp; Influencing'.</p>
+            <p
+ style="color: rgb(0, 38, 76); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; vertical-align: top;"><span
+ style="font-weight: bold; color: rgb(0, 102, 0);">Please
+also bring this manual with you to this program.</span></p>
+            <p
+ style="color: rgb(0, 38, 76); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: top;"><span
+ style="color: rgb(51, 51, 255);">Program Outline</span><br>
+            <span style="font-weight: normal;">Focusing on
+workshop facilitation of the ENS negotiation and influencing
+methodology, topics typically covered during this WLD workshop include
+but are not limited to:</span></p>
+            <ul
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">
+              <li>Adult learning and skills development</li>
+              <li>Systematic consideration of the ENS philosophy
+&amp; materials</li>
+              <li>Needs assessment of participants and
+organizations</li>
+              <li>Program design for specific situations</li>
+              <li>Best practice faciliation and team-teaching
+techniques</li>
+              <li>Experiential learning methods, including active
+role reversal</li>
+              <li>Managing the learning environment</li>
+              <li>Classroom control</li>
+              <li>Handling the unexpected</li>
+              <li>Individual tuition and supervised practice</li>
+              <li>Generate strategic options</li>
+              <li>Personal critiquing and evaluation of
+individual presentations</li>
+            </ul>
+<!--Sign-off-->
+            <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;"><span
+ style="font-weight: bold; color: rgb(51, 51, 255);">Program
+Materials</span><br>
+At the commencement of the workshop, you will receive your personal
+copy of the Workshop Leader's Guide. Additional materials and handouts
+will be circulated during the workshop.</p>
+            <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">Should
+you have any questions, please feel free to contact me.</p>
+            <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;"><br>
+Kind regards
+            </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--footer-->
+<table style="background-color: rgb(255, 255, 255);"
+ align="center" border="0" cellpadding="0"
+ cellspacing="0" width="600">
+  <tbody>
+    <tr>
+      <td>
+      <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+        <tbody>
+          <tr>
+            <td border="0" height="77" valign="top"
+ width="600"><a href="http://www.negotiate.org/"><img
+ src="http://www.negotiate.org/images/ENSI_footer.jpg" alt=""
+ style="border: 0px none ; display: block; padding-top: 15px;"
+ height="77" width="600">
+            </a></td>
+          </tr>
+        </tbody>
+      </table>
+<!--footer info-->
+      <table bgcolor="#f4f4f1" border="0"
+ cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td align="center" height="60"
+ valign="middle">
+            <p
+ style="margin: 5px auto 0pt; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.4; font-weight: 300;"><a
+ href="http://www.negotiate.org/"
+ style="color: rgb(51, 51, 51); margin-bottom: 80px;">ENS
+International</a> - Level 5, 83 York Street, Sydney 2000, NSW,
+Australia <br>
+Phone: +61 2 9299 9688 </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--/email container-->
+<!--/1body table-->
+</body>
+</html>

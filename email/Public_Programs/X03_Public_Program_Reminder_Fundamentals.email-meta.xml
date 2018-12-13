@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Public Program Fundamentals Reminder with venue details</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>03 Public Program Reminder - Fundamentals</name>
+    <style>none</style>
+    <subject>Reminder: ENSI {!Contact.Job_Public_Program_Name__c} Program on {!Contact.Job_Certificate_Date__c}</subject>
+    <textOnly>Dear {!Contact.FirstName}
+
+We&apos;re looking forward to working with you on the ENS International {!Contact.Job_Public_Program_Name__c} program on {!Contact.Job_Certificate_Date__c} in {!Contact.Job_Venue_City__c}. Please take note of the below regarding timing and location.
+
+Date:   {!Contact.Job_Certificate_Date__c}
+Time:   {!Contact.Job_Start_Finish_Time__c}
+Venue:
+
+{!Contact.Job_Venue_Name__c}
+{!Contact.Job_Venue_Address__c}
+{!Contact.Job_City_State_PC__c}
+{!Contact.Job_Venue_Country__c}
+A map for the venue can be viewed at {!Contact.Job_venue_map__c}
+
+Program Leader/s:   {!Contact.Job_Presenters__c}
+Dress:   Smart casual
+
+See you then!
+
+Kind regards
+
+{!Contact.Job_CSM_Name__c}
+Public Program Coordinator
+
+Suite 507, 83 York Street
+Sydney NSW 2000
+Australia
+p: +61 9299 9688  f: +61 9299 1633
+www.negotiate.org
+
+
+Note this email and any attachments may be privileged and confidential. If you are not the intended recipient please delete the message and notify the sender. Copying or distribution by anyone else is prohibited. Thank you.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

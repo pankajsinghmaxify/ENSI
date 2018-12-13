@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Includes link for Takeda Refresher PFQ. NO RAIT (Bring Manual)</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Takeda Refresher PFQ Reminder 1 (Bring Manual)</name>
+    <style>none</style>
+    <subject>[Reminder] ENSI Program Focus Questionnaire for {!Contact.Job_Certificate_Date__c} Refresher Program</subject>
+    <textOnly>M4NTRA Refresher Program – Think &amp; Act Differently to GET MORE
+
+Dear {!Contact.FirstName},
+
+Please remember to complete your ENSI Pre-Program Questionnaire by {!Contact.Job_PFQ_Due_Date__c}. The PFQ helps the program leader to customise the program based on your needs.
+
+Click here to access the questionnaire.*Please note that this link is specific to you, please don&apos;t forward it to others.
+http://www.surveygizmo.com/s3/3292401/b466acee2463?pfq-rait&amp;rait=NO&amp;jid={!Contact.Last_Job_ID__c}&amp;pid={!Contact.Last_Participant_Id__c}
+
+NB: If you have already started your questionnaire and have opted to &apos;save and continue&apos; while in the questionnaire - it is important that you use the link that was sent to you at the time you saved your response, otherwise the above link will open a new questionnaire.
+
+Remember to bring along your Green Negotiation and Influencing Manual.
+
+Should you have any questions, please don&apos;t hesitate to contact me.
+
+Kind regards,
+
+{!Contact.Job_CSM_Name__c}
+{!Contact.Job_CSC_Title__c}
+
+
+ENS International - Level 5, 83 York Street, Sydney 2000, NSW, Australia
+Phone: +61 2 9299 9688</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

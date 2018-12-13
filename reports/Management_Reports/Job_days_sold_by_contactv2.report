@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>Reporting_Job_Item__c.Assoc_PS_Revenue__c:SUM/Reporting_Job_Item__c.Attrib_Mkting_Days__c:SUM</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Daily Professional Fee</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>(Reporting_Job_Item__c.Attrib_ENS_Share_Amount_AUD__c:SUM
+/
+Reporting_Job_Item__c.Assoc_PS_Revenue__c:SUM)
+* 100</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Percentage to ENS</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>(Reporting_Job_Item__c.Attrib_Marketing_PS_Share_Amount_AUD__c:SUM
+/
+Reporting_Job_Item__c.Assoc_PS_Revenue__c:SUM)
+*100</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA3</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Percentage to Marketer</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Jobs__r.ReportingJobItem__r$Attrib_Mkting_Days__c</field>
+    </columns>
+    <columns>
+        <field>Account.Jobs__r.ReportingJobItem__r$Job_Role__c.Contact__c.RecordType</field>
+    </columns>
+    <currency>AUD</currency>
+    <description>shows the number of days sold by ENSI staff and  Network Member</description>
+    <filter>
+        <booleanFilter>(1 AND 2 AND (3 or 4)) AND 5</booleanFilter>
+        <criteriaItems>
+            <column>Account.Jobs__r$Status__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Confirmed,Completed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>ENS 4 Frens,test account,testing account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Jobs__r.ReportingJobItem__r$Job_Role__c.Contact__c.RecordType</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Contact.ENSi_Employee</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Jobs__r.ReportingJobItem__r$Job_Role__c.Contact__c.RecordType</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Contact.Network_Member</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Jobs__r.ReportingJobItem__r$Contact__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>NBD ENS</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Jobs__r.ReportingJobItem__r$Work_Start_Date_FIN_YR__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Jobs__r.ReportingJobItem__r$Contact__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Marketers by Job days sold</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Account_Job_Reporting_Job_Item_with_Job_Role__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account.Jobs__r.ReportingJobItem__r$Work_Start_Date__c</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

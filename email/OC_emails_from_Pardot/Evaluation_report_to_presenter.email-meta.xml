@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Evaluation report to presenter</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Evaluation report to presenter</name>
+    <style>none</style>
+    <subject>Evaluation Report for {!Job__c.Open_course_program_name__c} on {!Job__c.Certificate_Date_Text__c} in {!Job__c.Venue_City__c}</subject>
+    <textOnly>Hi {!Job__c.Facilitator_1__c}
+
+Please find attached the Evaluation Report for the {!Job__c.Venue_City__c}, {!Job__c.Open_course_program_name__c} that took place on {!Job__c.Certificate_Date_Text__c}.
+
+Kind regards</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

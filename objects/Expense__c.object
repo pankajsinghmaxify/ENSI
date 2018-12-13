@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Expense_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object to record expenses that have been incurred by staff performing training</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the account that the referrer belongs to or the account the contact works for</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Expenses</relationshipLabel>
+        <relationshipName>Expenses</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Amount_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Amount__c/Related_Opportunity__r.Currency_exchange_rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Amount AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Amount__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the amount of for the expense</inlineHelpText>
+        <label>Amount</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Amount_comparator__c</fullName>
+        <externalId>false</externalId>
+        <label>Amount, comparator</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Code2__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(
+Joining_of_Types__c,
+&quot;Other Australian&quot;,&quot;5-10253&quot;,
+&quot;Other International&quot;,&quot;5-20253&quot;,
+&quot;Facilitator fixed fee PF 1 Leader (Australian)&quot;,&quot;1-10201&quot;,
+&quot;Facilitator fixed fee PF 2 Leader (Australian)&quot;,&quot;1-10220&quot;,
+&quot;Facilitator fixed fee PF 3 Leader (Australian)&quot;,&quot;1-10230&quot;,
+&quot;Facilitator fixed fee PF 1 Leader (International)&quot;,&quot;1-20201&quot;,
+&quot;Facilitator fixed fee PF 2 Leader (International)&quot;,&quot;1-20220&quot;,
+&quot;Facilitator fixed fee PF 3 Leader (International)&quot;,&quot;1-20230&quot;,
+NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Code2</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Code3__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(
+Joining_of_Types__c,
+&quot;Flights International&quot;,&quot;5-20253&quot;,
+&quot;Travel Australian&quot;,&quot;5-10250&quot;,
+&quot;Travel International&quot;,&quot;5-20250&quot;,
+&quot;Travel time Australian&quot;,&quot;1-10109&quot;,
+&quot;Travel time International&quot;,&quot;1-20109&quot;,
+&quot;Venue Australian&quot;,&quot;5-10251&quot;,
+&quot;Venue International&quot;,&quot;5-20251&quot;,
+&quot;Freight&quot;,&quot;freight&quot;, 
+&quot;Accommodation Australian&quot;,&quot;5-10253&quot;,
+NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Code3</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Code4__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(
+Joining_of_Types__c,
+&quot;Profit commission PF 1 Leader&quot;,&quot;1-20201&quot;,
+&quot;Profit commission PF 2 Leader&quot;,&quot;1-20220&quot;,
+&quot;Profit commission PF 3 Leader&quot;,&quot;1-20230&quot;,
+&quot;Referral / rebate CAANZ&quot;,NULL,
+&quot;Referral / rebate Takeda&quot;,NULL,
+&quot;Referral / rebate Other&quot;,NULL,
+&quot;Meals Australian&quot;,&quot;5-10253&quot;,
+&quot;Meals International&quot;,&quot;5-20253&quot;,
+&quot;Accommodation International&quot;,&quot;5-20253&quot;,
+NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Code4</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Code5__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(
+Joining_of_Types__c,
+&quot;Services commission PF 1 Leader (Australian)&quot;,&quot;1-10201&quot;,
+&quot;Services commission PF 2 Leader (Australian)&quot;,&quot;1-10220&quot;,
+&quot;Services commission PF 3 Leader (Australian)&quot;,&quot;1-10230&quot;,
+&quot;Services commission PF 1 Leader (International)&quot;,&quot;1-20201&quot;,
+&quot;Services commission PF 2 Leader (International)&quot;,&quot;1-20220&quot;,
+&quot;Services commission PF 3 Leader (International)&quot;,&quot;1-20230&quot;,
+&quot;Materials commission Australian&quot;,&quot;5-10370&quot;,
+&quot;Materials commission International&quot;,&quot;5-20370&quot;, 
+NULL)
+
+/* 
+Part of coding expenses works with process builder updating Code field this is due to compiling length of single formula field 
+Process running: Expense Coding
+*/</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Code5</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Commission_as_percentage__c</fullName>
+        <externalId>false</externalId>
+        <label>Commission as percentage</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Expenses</relationshipLabel>
+        <relationshipName>Expenses</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Converted_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>Amount__c *(1/CURRENCYRATE(TEXT(CurrencyIsoCode)))</formula>
+        <label>(dep) Converted Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the date for the expense. If you leave this empty it will use the Proposed start date from the Opportunity.</inlineHelpText>
+        <label>Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_mth__c</fullName>
+        <externalId>false</externalId>
+        <formula>MONTH(Date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Date, month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_yr__c</fullName>
+        <externalId>false</externalId>
+        <formula>YEAR(Date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Date, year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_effort__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a number of days here only if the expense is a Facilitator fee.</inlineHelpText>
+        <label>Days effort</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Default_CUR__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;AUD&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>(dep) Default CUR</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expense_Sub_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Expense Sub Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Expense_Type__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Australian</fullName>
+                    <default>false</default>
+                    <label>Australian</label>
+                </value>
+                <value>
+                    <fullName>International</fullName>
+                    <default>false</default>
+                    <label>International</label>
+                </value>
+                <value>
+                    <fullName>PF 1 Leader (Australian)</fullName>
+                    <default>false</default>
+                    <label>PF 1 Leader (Australian)</label>
+                </value>
+                <value>
+                    <fullName>PF 1 Leader (International)</fullName>
+                    <default>false</default>
+                    <label>PF 1 Leader (International)</label>
+                </value>
+                <value>
+                    <fullName>PF 2 Leader (Australian)</fullName>
+                    <default>false</default>
+                    <label>PF 2 Leader (Australian)</label>
+                </value>
+                <value>
+                    <fullName>PF 2 Leader (International)</fullName>
+                    <default>false</default>
+                    <label>PF 2 Leader (International)</label>
+                </value>
+                <value>
+                    <fullName>PF 3 Leader (Australian)</fullName>
+                    <default>false</default>
+                    <label>PF 3 Leader (Australian)</label>
+                </value>
+                <value>
+                    <fullName>PF 3 Leader (International)</fullName>
+                    <default>false</default>
+                    <label>PF 3 Leader (International)</label>
+                </value>
+                <value>
+                    <fullName>Sell</fullName>
+                    <default>false</default>
+                    <label>Sell</label>
+                </value>
+                <value>
+                    <fullName>Spot</fullName>
+                    <default>false</default>
+                    <label>Spot</label>
+                </value>
+                <value>
+                    <fullName>CAANZ</fullName>
+                    <default>false</default>
+                    <label>CAANZ</label>
+                </value>
+                <value>
+                    <fullName>PF 1 Leader</fullName>
+                    <default>false</default>
+                    <label>PF 1 Leader</label>
+                </value>
+                <value>
+                    <fullName>PF 2 Leader</fullName>
+                    <default>false</default>
+                    <label>PF 2 Leader</label>
+                </value>
+                <value>
+                    <fullName>PF 3 Leader</fullName>
+                    <default>false</default>
+                    <label>PF 3 Leader</label>
+                </value>
+                <value>
+                    <fullName>Takeda</fullName>
+                    <default>false</default>
+                    <label>Takeda</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Facilitator</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Facilitator</label>
+                </value>
+                <value>
+                    <fullName>Freight</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Freight</label>
+                </value>
+                <value>
+                    <fullName>Rebate</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Rebate</label>
+                </value>
+                <value>
+                    <fullName>Referral</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Referral</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Profit fee split</controllingFieldValue>
+                <valueName>PF 1 Leader</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Profit fee split</controllingFieldValue>
+                <valueName>PF 2 Leader</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Profit fee split</controllingFieldValue>
+                <valueName>PF 3 Leader</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Services fee split</controllingFieldValue>
+                <controllingFieldValue>Facilitator fixed fee</controllingFieldValue>
+                <valueName>PF 1 Leader (Australian)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Services fee split</controllingFieldValue>
+                <controllingFieldValue>Facilitator fixed fee</controllingFieldValue>
+                <valueName>PF 1 Leader (International)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Services fee split</controllingFieldValue>
+                <controllingFieldValue>Facilitator fixed fee</controllingFieldValue>
+                <valueName>PF 2 Leader (Australian)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Services fee split</controllingFieldValue>
+                <controllingFieldValue>Facilitator fixed fee</controllingFieldValue>
+                <valueName>PF 2 Leader (International)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Services fee split</controllingFieldValue>
+                <controllingFieldValue>Facilitator fixed fee</controllingFieldValue>
+                <valueName>PF 3 Leader (Australian)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Services fee split</controllingFieldValue>
+                <controllingFieldValue>Facilitator fixed fee</controllingFieldValue>
+                <valueName>PF 3 Leader (International)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Accommodation</controllingFieldValue>
+                <controllingFieldValue>Flights</controllingFieldValue>
+                <controllingFieldValue>Meals</controllingFieldValue>
+                <controllingFieldValue>Other</controllingFieldValue>
+                <controllingFieldValue>Travel</controllingFieldValue>
+                <controllingFieldValue>Travel time</controllingFieldValue>
+                <controllingFieldValue>Venue</controllingFieldValue>
+                <controllingFieldValue>Materials fee split</controllingFieldValue>
+                <valueName>Australian</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Accommodation</controllingFieldValue>
+                <controllingFieldValue>Flights</controllingFieldValue>
+                <controllingFieldValue>Meals</controllingFieldValue>
+                <controllingFieldValue>Other</controllingFieldValue>
+                <controllingFieldValue>Travel</controllingFieldValue>
+                <controllingFieldValue>Travel time</controllingFieldValue>
+                <controllingFieldValue>Venue</controllingFieldValue>
+                <controllingFieldValue>Materials fee split</controllingFieldValue>
+                <valueName>International</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Referral / rebate</controllingFieldValue>
+                <valueName>CAANZ</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Referral / rebate</controllingFieldValue>
+                <valueName>Takeda</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Referral / rebate</controllingFieldValue>
+                <valueName>Other</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Expense_Type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the type of expense</inlineHelpText>
+        <label>Expense Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Facilitator fixed fee</fullName>
+                    <default>false</default>
+                    <label>Facilitator fixed fee</label>
+                </value>
+                <value>
+                    <fullName>Travel time</fullName>
+                    <default>false</default>
+                    <label>Travel time</label>
+                </value>
+                <value>
+                    <fullName>Venue</fullName>
+                    <default>false</default>
+                    <label>Venue</label>
+                </value>
+                <value>
+                    <fullName>Accommodation</fullName>
+                    <default>false</default>
+                    <label>Accommodation</label>
+                </value>
+                <value>
+                    <fullName>Freight</fullName>
+                    <default>false</default>
+                    <label>Freight</label>
+                </value>
+                <value>
+                    <fullName>Flights</fullName>
+                    <default>false</default>
+                    <label>Flights</label>
+                </value>
+                <value>
+                    <fullName>Meals</fullName>
+                    <default>false</default>
+                    <label>Meals</label>
+                </value>
+                <value>
+                    <fullName>Travel</fullName>
+                    <default>false</default>
+                    <label>Travel</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Referral / rebate</fullName>
+                    <default>false</default>
+                    <label>Referral / rebate</label>
+                </value>
+                <value>
+                    <fullName>Materials fee split</fullName>
+                    <default>false</default>
+                    <label>Materials fee split</label>
+                </value>
+                <value>
+                    <fullName>Profit fee split</fullName>
+                    <default>false</default>
+                    <label>Profit fee split</label>
+                </value>
+                <value>
+                    <fullName>Services fee split</fullName>
+                    <default>false</default>
+                    <label>Services fee split</label>
+                </value>
+                <value>
+                    <fullName>Professional services commission</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Professional services commission</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Expense_chargeable_to_client__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>If the client is paying for this expense please check this box.</inlineHelpText>
+        <label>Expense chargeable to client</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Expense_to_be_deleted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used in flows only</description>
+        <externalId>false</externalId>
+        <label>Expense to be deleted</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Facilitator_position__c</fullName>
+        <externalId>false</externalId>
+        <label>Facilitator position</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+                <value>
+                    <fullName>Not related to a facilitator</fullName>
+                    <default>false</default>
+                    <label>Not related to a facilitator</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Invoice_Line_Item__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Invoice Line Item</label>
+        <referenceTo>invt__Invoice_Line_Item__c</referenceTo>
+        <relationshipLabel>Expenses</relationshipLabel>
+        <relationshipName>Expenses</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Invoices_received__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Invoice_Line_Item__r.invt__Invoice__r.Invoices_received__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Invoice(s) received</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Joining_of_Types__c</fullName>
+        <description>Text field to correctly code the expense this is not shown to users</description>
+        <externalId>false</externalId>
+        <formula>Text(Expense_Type__c) &amp; &quot; &quot; &amp; Text( Expense_Sub_Type__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Not for Users pages</inlineHelpText>
+        <label>Joining of Types</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Notes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter any notes for this expense if required</inlineHelpText>
+        <label>Notes</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Role__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity Role</label>
+        <referenceTo>Opportunity_Role__c</referenceTo>
+        <relationshipLabel>Expenses</relationshipLabel>
+        <relationshipName>Expenses</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Related_OpportunityProduct_ID__c</fullName>
+        <description>Used for processes</description>
+        <externalId>false</externalId>
+        <label>Related OpportunityProduct ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the related opportunity that this expense related to</inlineHelpText>
+        <label>Related Opportunity</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+            <filterItems>
+                <field>Opportunity.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>In_House</value>
+            </filterItems>
+            <filterItems>
+                <field>Opportunity.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>OC_Course</value>
+            </filterItems>
+            <filterItems>
+                <field>Opportunity.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>OC_Course_profit_split</value>
+            </filterItems>
+            <filterItems>
+                <field>Opportunity.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>OC_Pax</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Expenses</relationshipLabel>
+        <relationshipName>Expenses</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Related_receivable_name__c</fullName>
+        <description>Used for processes / flows</description>
+        <externalId>false</externalId>
+        <label>Related receivable name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <description>This field is used to identify the Role that is receiving the expense.</description>
+        <externalId>false</externalId>
+        <label>Role</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Sell</fullName>
+                    <default>false</default>
+                    <label>Sell</label>
+                </value>
+                <value>
+                    <fullName>Spot</fullName>
+                    <default>false</default>
+                    <label>Spot</label>
+                </value>
+                <value>
+                    <fullName>Facilitator</fullName>
+                    <default>false</default>
+                    <label>Facilitator</label>
+                </value>
+                <value>
+                    <fullName>Referrer</fullName>
+                    <default>false</default>
+                    <label>Referrer</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the status for this expense</inlineHelpText>
+        <label>Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Submitted</fullName>
+                    <default>false</default>
+                    <label>Submitted</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>true</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Declined</fullName>
+                    <default>false</default>
+                    <label>Declined</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TEMP_legacy_fee_split__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>TEMP legacy fee split</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Touch__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Admin only</inlineHelpText>
+        <label>Touch</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Xero_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(Related_Opportunity__r.Parent_Opportunity__c),Related_Opportunity__r.Xero_ID__c,Related_Opportunity__r.Parent_Opportunity__r.Xero_ID__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Xero ID</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Expense</label>
+    <nameField>
+        <displayFormat>E-{000000}</displayFormat>
+        <label>Expense ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Expenses</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Account_or_Contact_or_fac_pos</fullName>
+        <active>false</active>
+        <description>Either Account or Contact or Fac pos must be completed.</description>
+        <errorConditionFormula>AND(
+ISBLANK(Account__c),
+ISBLANK(Contact__c),
+ISBLANK(TEXT(Facilitator_position__c))
+)</errorConditionFormula>
+        <errorMessage>Please select a Facilitator position if this expense is for a facilitator, OR a Contact or Account must be present. Who are we paying this money to? Which company or person? Or both?</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Account_or_Contact_or_opp_role</fullName>
+        <active>true</active>
+        <description>Either Account or Contact or Opp Role must be completed.</description>
+        <errorConditionFormula>AND(
+ISBLANK(Account__c),
+ISBLANK(Contact__c),
+ISBLANK(Opportunity_Role__c)
+)</errorConditionFormula>
+        <errorMessage>Please select an Opportuinty Role if this expense is for a facilitator. Otherwise a Contact or Account must be present. Who are we paying this money to? Which company or person? Or both?</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Currency_must_match_Opportunity</fullName>
+        <active>true</active>
+        <errorConditionFormula>TEXT(CurrencyIsoCode) &lt;&gt; TEXT(Related_Opportunity__r.CurrencyIsoCode)</errorConditionFormula>
+        <errorDisplayField>CurrencyIsoCode</errorDisplayField>
+        <errorMessage>Currency of expenses must match that of the Opportunity. Please run a conversion on the amount prior to entering the information. Record the exchange rate in the notes.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Days_effort_empty</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+ISBLANK(Days_effort__c),
+TEXT(Expense_Type__c) = &quot;Facilitator fixed fee&quot;
+)</errorConditionFormula>
+        <errorDisplayField>Days_effort__c</errorDisplayField>
+        <errorMessage>How many days effort is this facilitator fee for?</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Days_effort_not_empty</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+ISBLANK(Days_effort__c) = False,
+TEXT(Expense_Type__c) &lt;&gt; &quot;Facilitator fixed fee&quot;
+)</errorConditionFormula>
+        <errorDisplayField>Days_effort__c</errorDisplayField>
+        <errorMessage>Days effort should not be entered if the expense type is anything but Facilitator fee. Please empty this field and try again.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Facilitator_fee_position</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+OR(
+TEXT(Expense_Type__c) = &quot;Facilitator fixed fee&quot;,
+TEXT(Expense_Type__c) = &quot;Travel time&quot;
+),
+ISBLANK(Opportunity_Role__c)
+)</errorConditionFormula>
+        <errorDisplayField>Facilitator_position__c</errorDisplayField>
+        <errorMessage>Which facilitator does this expense relate to? Please relate to an Opportunity Role.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Opp_fac_empty</fullName>
+        <active>false</active>
+        <description>No longer required as we&apos;re using the OppRole instead</description>
+        <errorConditionFormula>OR(
+AND(
+TEXT(Facilitator_position__c) = &quot;1&quot;,
+ISBLANK(Related_Opportunity__r.Facilitator_1__c)
+),
+AND(
+TEXT(Facilitator_position__c) = &quot;2&quot;,
+ISBLANK(Related_Opportunity__r.Facilitator_2__c)
+),
+AND(
+TEXT(Facilitator_position__c) = &quot;3&quot;,
+ISBLANK(Related_Opportunity__r.Facilitator_3__c)
+),
+AND(
+TEXT(Facilitator_position__c) = &quot;4&quot;,
+ISBLANK(Related_Opportunity__r.Facilitator_4__c)
+)
+)</errorConditionFormula>
+        <errorDisplayField>Facilitator_position__c</errorDisplayField>
+        <errorMessage>To assign this expense to a facilitator, the facilitator needs to already be defined on the Opportunity. Please make sure a facilitator has been defined for this position.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Retainer_and_date_empty</fullName>
+        <active>true</active>
+        <description>The date can&apos;t be left empty if it&apos;s a retainer. Otherwise the system doesn&apos;t know which invoice to put it against.</description>
+        <errorConditionFormula>AND(
+OR(
+ISBLANK(Date__c),
+AND(
+MONTH(Date__c) &lt; MONTH(Related_Opportunity__r.CloseDate),
+YEAR(Date__c) &lt; YEAR(Related_Opportunity__r.CloseDate)
+)
+),
+TEXT(Related_Opportunity__r.Opportunity_Types__c) = &quot;Consulting / retainer&quot;
+)</errorConditionFormula>
+        <errorDisplayField>Date__c</errorDisplayField>
+        <errorMessage>For expenses on a retainer, please make sure a date has been entered that is greater than or equal to the close date of the Opportunity..</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

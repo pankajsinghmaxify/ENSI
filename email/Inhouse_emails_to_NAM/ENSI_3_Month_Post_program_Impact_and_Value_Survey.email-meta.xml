@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>ENSI 3 Month Post-program Impact and Value Survey</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ENSI 3 Month Post-program Impact and Value Survey</name>
+    <style>none</style>
+    <subject>ENSI 3 Month Post-program Impact and Value Survey</subject>
+    <textOnly>Hi {!Job__c.NAM_Name__c}
+
+I trust all is well and that you enjoyed seeing how your group has been using their skills from the {!Job__c.Certificate_Date_Text__c} ENSI workshop in our Application report that was forwarded earlier.
+
+Today I issued an invitation to the same group to complete ENSI’s 3 month post-program ‘Impact and Value’ Survey which asks them to provide their impressions on what impact and value they have seen from the workshop. We have given them until {!Job__c.X3_month_case_study_due__c} to complete the survey. Let me know if you’d like to alter this timeline as I’d be happy to work with what fits your group best.
+
+On completion, we will produce a report to show:
+
+perceived performance improvement
+key concepts remembered
+overall benefit of course
+noticed areas of improvement
+broad estimate of the total financial benefit achieved over the last three months as a result of the workshop
+
+An example of the impact and value report is attached. I’ve also included a copy of the invitation sent to participants for your reference.
+
+We will be back in contact post the survey due date if we haven’t received sufficient responses.
+
+Kind regards</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

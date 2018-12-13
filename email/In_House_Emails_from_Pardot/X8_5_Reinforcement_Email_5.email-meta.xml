@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Reinforcement Email 5</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>8.5 Reinforcement Email 5</name>
+    <style>none</style>
+    <subject>{!Contact.FirstName}, here is your ENSI Reinforcement Email #5</subject>
+    <textOnly>Negotiation &amp; Influencing
+
+View this email in your browser
+
+
+{!Job__c.Account_Name__c} ENSI Reinforcement Email #5
+
+
+Hi {!Contact.FirstName}
+
+Check: How are you going with your PERSONAL ACTION PLANS? (Refer to your ENSI workshop text).
+
+Two questions:
+
+How can you better control the negotiation CLIMATE (Time / Place / Mood)?
+Who has the PROCESS power – Identifying TACTICS?
+
+Keep asking yourself: What Tactic is the OP using to influence me? Simply naming the tactic will significantly reduce its power.
+
+Towards more successfully negotiated OUTCOMES...
+
+Best regards
+
+{!Job__c.Facilitator_names__c}
+www.negotiate.org
+
+Special note: Hey you – Stay PROCESS Aware!
+
+
+
+
+
+P +61 2 9299 9688  | E info.ens@negotiate.org
+Level 5  83 York Street  Sydney NSW 2000  Australia
+
+negotiate.org
+Manage subscription | Forward email</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

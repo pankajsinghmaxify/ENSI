@@ -1,0 +1,14 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 43, 73);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+<span style="color:#FF0090; font-size:19px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;"><strong>CC Marketer </strong></span><br><br>
+
+Hi {!Job__c.Facilitator_names__c}<br>
+<br>
+Please find attached the latest participant list with pre-work status for the&nbsp;{!Job__c.Account_Name__c}, {!Job__c.Certificate_Date_Text__c}&nbsp;program.<br>
+&nbsp;<br>
+As part of the ENSI Quality Assurance, please complete the attached ENSI Peer/Self Review form after the workshop and return to me. (Solo facilitators will complete a self-assessment and dual facilitators will peer review each other)<br>
+&nbsp;<br>
+All the best</span></span>												
+</html>

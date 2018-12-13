@@ -1,0 +1,23 @@
+<apex:page standardController="Participant__c" extensions="paxHistoryController">
+    
+    <apex:pageBlock mode="mainDetail">
+    
+    	<apex:pageBlockTable value="{!jobMap}" var="job" >
+        
+            <apex:column headerValue="Job Number">
+                <a href="/{!job.Id}" target="_blank">{!job.Name}</a>
+            </apex:column>
+            <apex:column headerValue="Program" value="{!job.Public_Program_Name__c}" />
+            <apex:column headerValue="Presenter">
+                <a href="/{!jobMap[job].Id}" target="_blank">{!jobMap[job].Contact__r.FirstName} {!jobMap[job].Contact__r.LastName}</a>
+            </apex:column>
+            <apex:column headerValue="First Date" value="{!job.Job_First_Date__c}"/>
+            <apex:column headerValue="Last Date" value="{!job.Job_Last_Date__c}"/>
+            <apex:column headerValue="Certificate Date" value="{!job.Certificate_Date_Text__c}" />
+            <apex:column headerValue="Job Comments" value="{!job.Comments__c}" />
+        
+        </apex:pageBlockTable>
+        
+    </apex:pageBlock>
+    
+</apex:page>

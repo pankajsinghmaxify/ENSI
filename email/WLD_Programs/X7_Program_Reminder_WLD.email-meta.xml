@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>reminder for WLD program including venue details - PLUS Bring your manual</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>04 Program Reminder WLD</name>
+    <style>none</style>
+    <subject>Reminder: ENS Workshop Leader Development Program on {!Job__c.Certificate_Date_Text__c}</subject>
+    <textOnly>ENS International Participant Email
+
+
+Dear {!Contact.FirstName},
+
+&apos;Small investment LARGE IMPACT&apos;
+
+For the ENS International Workshop Leader Development Program you are attending, here are the details.
+
+Date:
+
+{!Job__c.Certificate_Date_Text__c}
+
+Time:
+
+{!Job__c.Start_Finish_Time__c}
+
+Venue:
+
+{!Job__c.Venue_Name__c}
+{!Job__c.Venue_Address__c}
+{!Job__c.Venue_City__c} {!Job__c.Venue_State__c} {!Job__c.Venue_Postcode__c}
+{!Job__c.Venue_Country__c}
+
+Program Leader/s:
+
+{!Job__c.Facilitator_names__c}
+{!Job__c.Facilitator_emails__c}
+
+Dress:
+
+Smart Casual
+
+Remember to bring along your Green Negotiation and Influencing Manual.
+
+We look forward to seeing you at the workshop!
+
+Kind regards,
+
+{!User.Name}
+{!User.Title}
+XYZ83XYZ
+
+ENS International - Level 5, 83 York Street, Sydney 2000, NSW, Australia
+Phone: +61 2 9299 9688</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

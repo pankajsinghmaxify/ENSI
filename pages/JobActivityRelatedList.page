@@ -1,0 +1,16 @@
+<apex:page standardController="Job__c" Extensions="JobActivityRelatedList" action="{!ShowTasks}">
+<apex:pageblock >
+
+<apex:pageblocktable value="{!AllTasks}" var="Tasks">
+<apex:column headerValue="Subject"><apex:outputLink value="/{!Tasks.Id}" target="_parent">{!Tasks.subject}</apex:outputlink></apex:column>
+<apex:column headerValue="Name"><apex:outputLink value="/{!Tasks.WhoId}" target="_parent">{!Tasks.Who.Name}</apex:outputlink></apex:column>
+<apex:column headerValue="Related To"><apex:outputLink value="/{!Tasks.WhatId}" target="_parent">{!Tasks.What.Name}</apex:outputlink></apex:column>
+<apex:column headerValue="Assigned To"><apex:outputLink value="/{!Tasks.OwnerId}" target="_parent">{!Tasks.Owner.Name}</apex:outputlink></apex:column>
+<apex:column headerValue="Status" value="{!Tasks.Status}"></apex:column>
+<apex:column headerValue="Priority" value="{!Tasks.Priority}"></apex:column>
+<apex:column headerValue="Created Date" value="{!Tasks.CreatedDate}"></apex:column>
+</apex:pageblocktable>
+
+</apex:pageblock>
+    
+</apex:page>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Job__c.Participants__r$CAANZ_Trns_ID__c</field>
+    </columns>
+    <columns>
+        <field>Job__c.Participants__r$Contact__c</field>
+    </columns>
+    <columns>
+        <field>Job__c.Participants__r$Name</field>
+    </columns>
+    <columns>
+        <field>Job__c.Participants__r$Job_Currency__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Job__c.Participants__r$Fee__c</field>
+    </columns>
+    <columns>
+        <field>Job__c.Participants__r$CAANZ_registration_date__c</field>
+    </columns>
+    <columns>
+        <field>Job__c$Certificate_Date_Text__c</field>
+    </columns>
+    <columns>
+        <field>Job__c.Participants__r$Payment_received__c</field>
+    </columns>
+    <columns>
+        <field>Job__c.Participants__r$Invoice_Number2__c</field>
+    </columns>
+    <columns>
+        <field>Job__c.Participants__r$Invoice_Date__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <description>shows contacts for an open course registered by CAANZ Including reference ID, booking date and fee</description>
+    <format>Tabular</format>
+    <name>CAANZ Open Course Pax</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Pax_Report__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Job__c.Participants__r$CAANZ_registration_date__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Job__c.Participants__r$CAANZ_registration_date__c</dateColumn>
+        <interval>INTERVAL_PREVFY</interval>
+    </timeFrameFilter>
+</Report>

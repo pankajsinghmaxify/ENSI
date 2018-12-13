@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Task alert</name>
+    <style>none</style>
+    <subject>New task - {!Task.Subject}</subject>
+    <textOnly>Hi {!User.FirstName}
+
+A new task has been assigned to you.
+
+Subject: {!Task.Subject}
+Due: {!Task.ActivityDate}
+
+View Task: https://negotiate.lightning.force.com/one/one.app#/sObject/{!Task.Id}/view
+
+**Summary**
+
+{!Task.Description}
+
+View Task: https://negotiate.lightning.force.com/one/one.app#/sObject/{!Task.Id}/view</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

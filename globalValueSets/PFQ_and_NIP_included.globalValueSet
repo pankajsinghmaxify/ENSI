@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Neither</fullName>
+        <default>true</default>
+        <label>Neither</label>
+    </customValue>
+    <customValue>
+        <fullName>PFQ Only</fullName>
+        <default>false</default>
+        <label>PFQ Only</label>
+    </customValue>
+    <customValue>
+        <fullName>NIP Only</fullName>
+        <default>false</default>
+        <label>NIP Only</label>
+    </customValue>
+    <customValue>
+        <fullName>Both</fullName>
+        <default>false</default>
+        <label>Both</label>
+    </customValue>
+    <masterLabel>PFQ and NIP included</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

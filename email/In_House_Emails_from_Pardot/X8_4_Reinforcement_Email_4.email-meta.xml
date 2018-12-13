@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Reinforcement Email 4</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>8.4 Reinforcement Email 4</name>
+    <style>none</style>
+    <subject>{!Contact.FirstName}, here is your ENSI Reinforcement Email #4</subject>
+    <textOnly>Negotiation &amp; Influencing
+
+View this email in your browser
+
+
+{!Job__c.Account_Name__c} ENSI Reinforcement Email #4
+
+Greetings {!Contact.FirstName}
+
+Two questions…
+
+What is the meaning of: **WATNOTOS?
+How intentionally STYLE flexible are you?
+
+Personal double check:
+What is your underlying reflex style – tending to be more ‘Red’ or more ‘Blue’?
+Remember under stress there is a strong likelihood you will drift to your reflex style.
+
+Best wishes
+
+{!Job__c.Facilitator_names__c}
+www.negotiate.org
+
+** WATNOTOS – What Are The Needs Of The Other Side?
+
+
+
+
+
+P +61 2 9299 9688  | E info.ens@negotiate.org
+Level 5  83 York Street  Sydney NSW 2000  Australia
+
+negotiate.org
+Manage subscription | Forward email</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

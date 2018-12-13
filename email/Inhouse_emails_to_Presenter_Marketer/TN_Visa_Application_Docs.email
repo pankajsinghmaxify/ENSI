@@ -1,0 +1,27 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 43, 73);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+Hi {!Job__c.Facilitator_names__c}<br>
+<br>
+Attached is the ENSI reference letter to support your TN Visa Application for the {!Job__c.Account_Name__c} workshop on {!Job__c.Certificate_Date_Text__c}.<br>
+&nbsp;<br>
+Please make sure to bring the following with you when you make your application:<br>
+
+<ul>
+	<li>Proof of identity and Canadian citizenship</li><br>
+	<li>Letter from client</li><br>
+	<li>Reference from ENSI</li><br>
+	<li>Original academic credentials plus one copy</li><br>
+	<li>Copy of NAFTA approved professions list</li><br>
+	<li>Evidence of any your ties to Canada (such as dependent family members, real property or bank accounts, dependents)</li><br>
+	<li>Filing fee - $50 USD (approx)</li><br>
+	<li>Form I94 fee - $6 USD (approx)</li>
+</ul>
+
+<div>&nbsp;<br>
+I think that about covers it. Let me know if you have any questions or concerns.<br>
+&nbsp;<br>
+Kind regards</span></span>
+												
+</html>

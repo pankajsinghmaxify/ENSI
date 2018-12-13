@@ -1,0 +1,17 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 43, 73);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+<span style="color:#FF0090; font-size:19px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;"><strong>CC MARKETER</strong></span><br>
+<br>
+Hi  {!Job__c.Facilitator_names__c}<br>
+<br>
+Attached is the current pax list and briefing sheet for the {!Job__c.Account_Name__c} workshop scheduled for {!Job__c.Certificate_Date_Text__c}.<br>
+&nbsp;<br>
+This may change as we lead up to the workshop but I wanted you to have the initial list.<br>
+&nbsp;<br>
+If you require any specific case studies, please let me know by <span style="color:#FF0090; font-size:19px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;"><strong>DATE</span></strong>. Please note that only Crocodile Eggs and Munal Harbourside have been translated in {!Job__c.Language__c}, any other case studies required will be provided in English.<br>
+&nbsp;<br>
+Cheers</span></span><br>
+												
+</html>

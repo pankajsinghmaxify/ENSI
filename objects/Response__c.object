@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Records survey responses from SurveyGizmo.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Answer_Number_18_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Answer_Number__r.Answer_Number_18_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Answer Number 18 ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Answer_Number__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Answer Number</label>
+        <referenceTo>Answer__c</referenceTo>
+        <relationshipLabel>Responses</relationshipLabel>
+        <relationshipName>Responses</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Answer_Text__c</fullName>
+        <externalId>false</externalId>
+        <formula>Answer_Number__r.Answer_Text__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Answer Text</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Answer_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>Answer_Number__r.Answer_Value__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Answer Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Certificate_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Certificate_Date_Text__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Certificate Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Duration__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Job__r.Program_Duration__c
+,&quot;one-day&quot;,&quot;one-day&quot;
+,&quot;two-day&quot;,&quot;two-day&quot;
+,&quot;three-day&quot;,&quot;three-day&quot;
+,&quot;four-day&quot;,&quot;four-day&quot;
+,&quot;five-day&quot;,&quot;five-day&quot;
+,&quot;1.5 day&quot;,&quot;1.5 day&quot;
+,&quot;2.5 day&quot;
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Duration</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Get_Response_Text__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Answer_Number__r.Name, 
+&quot;AN-0161&quot;, Response_Text__c+ &apos; &apos;+Answer_Text__c, 
+&quot;AN-0160&quot;, Response_Text__c+ &apos; &apos;+Answer_Text__c, 
+&quot;AN-0159&quot;,Answer_Text__c,
+Response_Text__c
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Get Response Text</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_18_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Job_18_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job 18 ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Account_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Account__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Account Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Start_Date_Calendar_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Job_Start_Date_Calendar_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Start Date Calendar Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_TrainingType__c</fullName>
+        <externalId>false</externalId>
+        <formula>Case(Job__r.Training_Type__c
+,&quot;CDP&quot;,&quot;CDP&quot;
+,&quot;ENS NWM&quot;,&quot;ENS NWM&quot;
+,&quot;Event&quot;,&quot;Event&quot;
+,&quot;Incompany&quot;,&quot;Incompany&quot;
+,&quot;Incompany - by inhouse trainers&quot;,&quot;Incompany - by inhouse trainers&quot;
+,&quot;Public&quot;,&quot;Public&quot;
+,&quot;WLD&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Training Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This relationship is really only necessary for anonymous responses, but we populate it for all.</inlineHelpText>
+        <label>Job</label>
+        <referenceTo>Job__c</referenceTo>
+        <relationshipLabel>Survey Responses</relationshipLabel>
+        <relationshipName>Responses</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Job_first_date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Job_First_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job first date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_participants__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.No_of_Participants__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Number of participants</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Participant_ID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Links survey responses to a participant.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Links survey responses to a participant.</inlineHelpText>
+        <label>Participant ID</label>
+        <referenceTo>Participant__c</referenceTo>
+        <relationshipLabel>Responses</relationshipLabel>
+        <relationshipName>Responses</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Participant_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Participant_ID__r.Contact__r.FirstName  &amp; &quot; &quot;  &amp; Participant_ID__r.Contact__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Participant Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Presenter_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Question_Number__c, &quot;2.1&quot;,&quot;Presenter 1&quot;
+              , &quot;2.2&quot;,&quot;Presenter 1 &quot;
+              , &quot;2.3&quot;,&quot;Presenter 1 &quot;
+              , &quot;2.4&quot;,&quot;Presenter 1 &quot;
+              , &quot;2.5&quot;,&quot;Presenter 1 &quot;
+             , &quot; &quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Presenter 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Presenter_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Question_Number__c, &quot;2.6&quot;,&quot;Presenter 2&quot; 
+, &quot;2.7&quot;,&quot;Presenter 2 &quot; 
+, &quot;2.8&quot;,&quot;Presenter 2 &quot; 
+, &quot;2.9&quot;,&quot;Presenter 2 &quot; 
+, &quot;2.91&quot;,&quot;Presenter 2 &quot; 
+, &quot; &quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Presenter 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Presenter_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>If(Question_Number__c = &quot;2.1&quot; ||  Question_Number__c = &quot;2.2&quot; || Question_Number__c = &quot;2.3&quot; ||  Question_Number__c = &quot;2.4&quot; || Question_Number__c = &quot;2.5&quot;,
+   Job__r.Presenter_1__r.Contact__r.FirstName &amp; &quot; &quot; &amp; Job__r.Presenter_1__r.Contact__r.LastName,
+   If(Question_Number__c = &quot;2.6&quot; ||  Question_Number__c = &quot;2.7&quot; || Question_Number__c = &quot;2.8&quot; ||  Question_Number__c = &quot;2.9&quot; || Question_Number__c = &quot;2.91&quot;,
+      Job__r.Presenter_2__r.Contact__r.FirstName &amp; &quot; &quot; &amp; Job__r.Presenter_2__r.Contact__r.LastName,
+      &quot;&quot;)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Looks up the related presenter&apos;s name from the Job if the question relates to a presenter.</inlineHelpText>
+        <label>Presenter Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Presenters__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Presenters__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Presenters</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_Number_Text__c</fullName>
+        <externalId>false</externalId>
+        <formula>Question_Number__c &amp; &quot; &quot; &amp;  Question_Text__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The question number and text in a single field, to allow summary reports of responses by question.</inlineHelpText>
+        <label>Question Number &amp; Text</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Answer_Number__r.Question_ID__r.Question_Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Question Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_Order_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Answer_Number__r.Question_ID__r.Question_Order_Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Question Order Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_Text__c</fullName>
+        <externalId>false</externalId>
+        <formula>Answer_Number__r.Question_ID__r.Question_Text__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Question Text</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Response_Order__c</fullName>
+        <externalId>false</externalId>
+        <formula>Participant_ID__r.Name &amp; &quot; &quot; &amp;  text(Answer_Number__r.Question_ID__r.Question_Order_Number__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Response Order</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Response_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>Response Text</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Submission_ID__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The submission ID from SurveyGizmo, which represents one instance of a person completing a survey. (SurveyGizmo refers to this as the ResponseID.)</inlineHelpText>
+        <label>Submission ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Survey_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Links survey responses to a survey.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Links survey responses to a survey.</inlineHelpText>
+        <label>Survey Name</label>
+        <referenceTo>Survey__c</referenceTo>
+        <relationshipLabel>Responses</relationshipLabel>
+        <relationshipName>Responses</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Response</label>
+    <nameField>
+        <displayFormat>RE-{000000}</displayFormat>
+        <label>Response Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Responses</pluralLabel>
+    <searchLayouts>
+        <listViewButtons>Mass_Delete</listViewButtons>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Mass_Delete</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Mass Delete</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&apos;/soap/ajax/29.0/connection.js&apos;)}
+try
+{
+  var selectedRecords = {!GETRECORDIDS( $ObjectType.Response__c)};
+  if(selectedRecords.length&lt;1)
+    alert(&apos;Please Select at Least One Row !&apos;);
+  else
+  {
+    userConsent = confirm(
+        selectedRecords.length + 
+        &apos; Record(s) will be Deleted. Continue ? &apos;
+      );
+    if(userConsent == true)
+    {
+      delResult = sforce.connection.deleteIds(selectedRecords);
+      if (delResult[0].getBoolean(&quot;success&quot;))
+      {
+        alert(&apos;The Record(s) were Deleted Successfully.&apos;); 
+        window.location.reload();
+      }
+      else
+        alert(
+          &apos;The Record(s) Could Not be Deleted. Error Message: &apos; + 
+          delResult[0].errors.message
+        );
+    }  
+  }
+}
+catch(e)
+{
+  alert(&apos;The Action Could not be Completed. Error Message: &apos; + e);
+}</url>
+    </webLinks>
+</CustomObject>

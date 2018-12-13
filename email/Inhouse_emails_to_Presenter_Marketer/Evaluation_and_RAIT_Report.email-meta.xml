@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Evaluation and RAIT Report</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Evaluation and RAIT Report</name>
+    <style>none</style>
+    <subject>Evaluation and RAIT Report - {!Job__c.Account_Name__c}, {!Job__c.Certificate_Date_Text__c}</subject>
+    <textOnly>CC PRESENTER
+
+Hi {!Job__c.Account_Sell_1_Name__c}
+
+Attached are the evaluation and RAIT reports for the {!Job__c.Account_Name__c} program that took place on {!Job__c.Certificate_Date_Text__c}.
+OR
+Attached is the evaluation report for the {!Job__c.Account_Name__c} program that took place on {!Job__c.Certificate_Date_Text__c}.
+
+Also attached is a list of the pax that have indicated they would like follow on support.
+
+Cheers</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

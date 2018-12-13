@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>26.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>The certificates awarded to participants, accessed from a custom button on job and displayed as a PDF for printing on headed paper. (GE 7/2/2013)</description>
+    <label>CertificatesAccrediation</label>
+</ApexPage>

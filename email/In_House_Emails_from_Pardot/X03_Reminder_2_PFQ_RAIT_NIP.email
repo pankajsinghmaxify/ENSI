@@ -1,0 +1,22 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 0, 0);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">Hi {!Contact.FirstName}<br>
+<br>
+<span style="font-size: 16.5pt; color:#84bd00;">'Small investment LARGE IMPACT'
+&nbsp;</span><br><br>
+Please note this will be your last chance to complete the ENSI Program Focus Questionnaire (PFQ). The PFQ helps the program leader to customise the program based on your needs and it is highly recommended that you complete the questionnaire for your own benefit.<br><br>
+
+Please remember to complete your ENSI Pre-Program Questionnaires by <span style="color:#84bd00;">{!Job__c.PFQ_Due_Date__c}</span>.<br><br>
+
+<strong>Program Focus Questionnaire 'PFQ'</strong>- the PFQ helps the program leader to customise the program based on your needs. <a href="{!Job__c.PFQ_Survey_URL__c}" style="color:#84bd00;">click here*</a> to access the questionnaire.<br><br>
+
+<strong>Negotiating and Influencing Profile ‘NIP’</strong> - the NIP covers 20 key competencies relating to the negotiation and influencing capabilities of individuals. We ask that all NIPs are completed by <span style="color:#84bd00;">{!Job__c.NIP_Due_Date__c}</span>. You will receive a separate email with instructions to logon and complete the NIP online.<br><br>
+
+<strong>*Please note that this link is specific to you, please don't forward it to others.</strong><br><br>
+
+
+<strong>NB</strong>: If you have already started your questionnaire and have opted to 'save and continue' while in the questionnaire - it is important that you use the link that was sent to you at the time you saved your response, otherwise the above link will open a new questionnaire.<br><br>
+
+Kind regards</span></span>												
+</html>

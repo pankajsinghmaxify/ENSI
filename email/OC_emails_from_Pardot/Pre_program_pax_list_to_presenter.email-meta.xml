@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Pre-program pax list to presenter</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Pre-program pax list to presenter</name>
+    <style>none</style>
+    <subject>Pax list for {!Job__c.Open_course_program_name__c} on {!Job__c.Certificate_Date_Text__c} in {!Job__c.Venue_City__c}</subject>
+    <textOnly>CC Ian
+
+Hi {!Job__c.Facilitator_1__c}
+
+For reference, attached is the current pax list for the above mentioned open course.  I will send the confirmed participant list after the program. It’s not too late to add more people in! Contact Ian or me for further information.
+
+Kind regards</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

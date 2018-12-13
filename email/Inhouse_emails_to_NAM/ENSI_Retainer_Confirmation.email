@@ -1,0 +1,20 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 0, 0);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+Hi {!Opportunity.NAM_Contact__c}<br>
+<br>
+As per your communications with {!Opportunity.Sell_1__c}, attached are the relevant confirmation documents for establishment of an ENSI ‘on-call’ retainer:
+
+<ul>
+	<li>Retainer agreement</li>
+	<li>Terms of Business</li>
+	<li>{!Opportunity.Amount_invoiced_so_far__c}% Confirmation Invoice</li>
+</ul>
+
+Please return a signed copy of the retainer agreement at your earliest convenience.<br>
+<br>
+We look forward to empowering your negotiation success.<br>
+<br>
+Kind regards</span></span>												
+</html>

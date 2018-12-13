@@ -1,0 +1,4 @@
+* {!Job__c.Id}
+* {!Job__c.RecordType}
+* {!Job__c.Status__c}
+* {!Job__c.NAM_Name__c}

@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta content="text/html; charset=utf-8"
+ http-equiv="Content-Type">
+  <title>ENS International Participant Email</title>
+</head>
+<body topmargin="0"
+ style="margin: 0px; background-color: rgb(244, 244, 241);"
+ leftmargin="0" bgcolor="#edf5fc" marginheight="0"
+ marginwidth="0">
+<!--100% body table -->
+<table bgcolor="#edf5fc" border="0" cellpadding="0"
+ cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <td><!--view in browser link-->
+      <table bgcolor="#f4f4f1" border="0"
+ cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td align="center" height="45"
+ valign="middle">
+            <p
+ style="margin: 5px auto 0pt; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 300;"></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--header-->
+<table style="background-color: rgb(255, 255, 255);"
+ align="center" bgcolor="#ffffff" border="0"
+ cellpadding="0" cellspacing="0" width="600">
+  <tbody>
+    <tr>
+      <td>
+      <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+        <tbody>
+          <tr>
+            <td height="119" valign="top" width="600"><a
+ href="http://www.negotiate.org/"><img
+ src="http://www.negotiate.org/images/ENSI_header.jpg"
+ style="display: block;" alt="ENSIHeader" border="0"
+ height="119" width="600"></a></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--email container-->
+<table align="center" bgcolor="#ffffff" border="0"
+ cellpadding="25" cellspacing="0" width="550">
+  <tbody>
+    <tr>
+      <td><!--email content-->
+      <table id="email-content" border="0"
+ cellpadding="0" cellspacing="0" width="550">
+        <tbody>
+          <tr>
+            <td>
+            <table border="0" cellpadding="0"
+ cellspacing="0" width="100%">
+              <tbody>
+                <tr>
+                  <td align="left" valign="top">
+                  <table border="0" cellpadding="0"
+ cellspacing="0" width="100%">
+                    <tbody>
+                      <tr>
+                      </tr>
+                    </tbody>
+                  </table>
+<!--email greeting/body--> </td>
+                  <td border="none" style="padding: 0px;"
+ valign="top" width="100%">
+                  <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">Estimado/a&nbsp;{!Contact.FirstName},</p>
+                  <font
+ style="font-family: Georgia,serif; font-size: 22px; font-style: italic; text-align: center; color: rgb(110, 180, 63);">'Get
+more of what you want'<br>
+                  </font>
+                  <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">Dentro
+del Programa sobre&nbsp;{!Contact.Program_Name__c} que ENS
+International ofrecerá a {!Contact.Job_Account_Name__c} con fecha <font
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: top;">{!Contact.Job_Certificate_Date__c}</font>,
+le rogamos lea la siguiente información, que le ayudará a mejorar los
+resultados de sus negociaciones.<br>
+                  </p>
+<!--Date-->
+                  <table align="center" bgcolor="#e5e5e5"
+ border="0" bordercolor="#999999" cellpadding="25"
+ cellspacing="0" height="40" width="550">
+                    <tbody>
+                      <tr>
+                        <td
+ style="border: 1px solid rgb(153, 153, 153); padding: 0px 0px 0px 10px; vertical-align: middle;"
+ height="40" valign="middle" width="30%">
+                        <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: middle; display: block; text-align: left; padding-left: 10px;">Fecha:</p>
+                        </td>
+                        <td
+ style="border-top: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); border-bottom: 1px solid rgb(153, 153, 153); padding: 0px 0px 0px 10px; vertical-align: middle;"
+ bgcolor="#e5e5e5" valign="middle" width="70%">
+                        <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: middle; display: block; text-align: left; padding-left: 10px;">{!Contact.Job_Certificate_Date__c}
+                        </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+<!--Time-->
+                  <table align="center" bgcolor="#cccccc"
+ border="0" bordercolor="#999999" cellpadding="25"
+ cellspacing="0" height="40" width="550">
+                    <tbody>
+                      <tr>
+                        <td
+ style="border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); border-bottom: 1px solid rgb(153, 153, 153); padding: 0px 0px 0px 10px; vertical-align: middle;"
+ height="40" valign="middle" width="30%">
+                        <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: middle; display: block; text-align: left; padding-left: 10px;">Hora:</p>
+                        </td>
+                        <td
+ style="border-right: 1px solid rgb(153, 153, 153); border-bottom: 1px solid rgb(153, 153, 153); padding: 0px 0px 0px 10px; vertical-align: middle;"
+ bgcolor="#cccccc" valign="middle" width="70%">
+                        <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: middle; display: block; text-align: left; padding-left: 10px;">
+{!Contact.Job_Start_Finish_Time__c} </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+<!--Venue-->
+                  <table align="center" bgcolor="#e5e5e5"
+ border="0" bordercolor="#999999" cellpadding="25"
+ cellspacing="0" height="40" width="550">
+                    <tbody>
+                      <tr>
+                        <td
+ style="border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); border-bottom: 1px solid rgb(153, 153, 153); padding: 0px 0px 0px 10px; vertical-align: middle;"
+ height="40" valign="middle" width="30%">
+                        <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: middle; display: block; text-align: left; padding-left: 10px;">Lugar:</p>
+                        </td>
+                        <td
+ style="border-right: 1px solid rgb(153, 153, 153); border-bottom: 1px solid rgb(153, 153, 153); padding: 0px 0px 0px 10px; vertical-align: middle;"
+ bgcolor="#e5e5e5" valign="middle" width="70%">
+                        <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: middle; display: block; text-align: left; padding-left: 10px;">{!Contact.Job_Venue_Name__c}<br>
+{!Contact.Job_Venue_Address__c}<br>
+{!Contact.Job_City_State_PC__c} <br>
+{!Contact.Job_Venue_Country__c}</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+<!--Program Leader/s-->
+                  <table align="center" bgcolor="#cccccc"
+ border="0" bordercolor="#999999" cellpadding="25"
+ cellspacing="0" height="40" width="550">
+                    <tbody>
+                      <tr>
+                        <td
+ style="border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); border-bottom: 1px solid rgb(153, 153, 153); padding: 0px 0px 0px 10px; vertical-align: middle;"
+ height="40" valign="middle" width="30%">
+                        <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: middle; display: block; text-align: left; padding-left: 10px;">Responsables
+del programa:</p>
+                        </td>
+                        <td
+ style="border-right: 1px solid rgb(153, 153, 153); border-bottom: 1px solid rgb(153, 153, 153); padding: 0px 0px 0px 10px; vertical-align: middle;"
+ bgcolor="#cccccc" valign="middle" width="70%">
+                        <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: middle; display: block; text-align: left; padding-left: 10px;">
+{!Contact.Job_Presenters__c}<br>
+{!Contact.Job_Presenters_email__c}</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+<!--Venue-->
+                  <table align="center" bgcolor="#e5e5e5"
+ border="0" bordercolor="#999999" cellpadding="25"
+ cellspacing="0" height="40" width="550">
+                    <tbody>
+                      <tr>
+                        <td
+ style="border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); border-bottom: 1px solid rgb(153, 153, 153); padding: 0px 0px 0px 10px; vertical-align: middle;"
+ height="40" valign="middle" width="30%">
+                        <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: middle; display: block; text-align: left; padding-left: 10px;">Vestimenta:</p>
+                        </td>
+                        <td
+ style="border-right: 1px solid rgb(153, 153, 153); border-bottom: 1px solid rgb(153, 153, 153); padding: 0px 0px 0px 10px; vertical-align: middle;"
+ bgcolor="#e5e5e5" valign="middle" width="70%">
+                        <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: middle; display: block; text-align: left; padding-left: 10px;">Informal
+elegante</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+<!--Program Leader/s--><!--email content-->
+                  <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">El
+objetivo del Programa de ENS no sólo es proporcionarle las técnicas
+necesarias para abordar negociaciones con confianza, sino también
+garantizar que lo que en él aprenda adquiera continuidad en el tiempo y
+llegue a convertirse en costumbre. Creemos que recabar su participación
+tanto antes como después del curso contribuirá a mejorar los resultados
+de su aprendizaje, por lo que le pedimos que participe plenamente en
+las actividades que se describen a continuación. Los resultados del
+cuestionario y del estudio de caso que se realiza una vez finalizado el
+programa se devolverán a la dirección de su organización, para
+ayudarles a entender las dificultades a las que se ha enfrentado y los
+resultados positivos conseguidos.<br>
+                  </p>
+<!--Pre-program-->
+                  <p
+ style="color: rgb(0, 38, 76); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: top;">Requisitos
+previos al Programa</p>
+                  <ol
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">
+                    <li>Cuestionario de Orientación del
+Programa&nbsp;'PFQ'- este cuestionario ayudará al responsable del
+programa a personalizarlo para adaptarlo a sus necesidades concretas.
+Le rogamos rellene todos los cuestionarios PFQ antes del <font
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: top;">{!Contact.Job_PFQ_Due_Date__c}</font>.
+                      <br>
+                      <a
+ href="http://www.surveygizmo.com/s3/1176348/Spanish-PFQ-AND-RAIT-Survey?pfq-rait&amp;rait=NO&amp;jid={!Contact.Last_Job_ID__c}&amp;pid={!Contact.Last_Participant_Id__c}"
+ style="color: rgb(110, 180, 63); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: top;">Haga
+clic</a> aquí para acceder al cuestionario.<font
+ style="font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; font-style: italic; color: red;">*Nota:
+este vínculo es exclusivo para usted, por lo que le rogamos que no lo
+reenvíe a otras personas.</font></li>
+                    <li>Perfil de Negociación e Influencia ‘NIP’
+- el NIP abarca 20 competencias clave relacionadas con las capacidades
+personales de negociación y persuasión o influencia en otras personas.
+Recibirá un email aparte con instrucciones para conectarse y rellenar
+el cuestionario NIP online. Sólo le llevará unos 20 minutos. Le
+agradeceríamos que rellenase todos los NIPs antes del <span
+ style="font-weight: bold;">{!Contact.Job_NIP_Due_Date__c}</span>.</li>
+                    <li>Le rogamos acuda al curso con notas
+acerca de al menos una situación de negociación reciente, para que
+podamos utilizarlas en las sesiones de diagnóstico y análisis que
+tendrán lugar durante el curso.</li>
+                  </ol>
+<!--Post-program-->
+                  <p
+ style="color: rgb(0, 38, 76); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: top;">Requisitos
+una vez finalizado el Programa</p>
+                  <ul
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">
+                    <li>Recibirá 6 emails de refuerzo durante 12
+semanas (uno cada quince días).</li>
+                    <li>Seis semanas después de acabar el curso,
+se le hará llegar un cuestionario en el que se le pedirá que describa
+brevemente un ejemplo de la manera en que ha aplicado las nuevas
+técnicas que ha aprendido. Este cuestionario será analizado por el
+responsable del curso y se pondrá en común con todo el grupo, de forma
+anónima.</li>
+                    <li>A los tres meses de acabar el programa,
+le pediremos que rellene un breve cuestionario que resume la utilidad
+que ha supuesto para usted la aplicación de las técnicas de negociación
+aprendidas.</li>
+                    <li>Suscripción a nuestro boletín electrónico
+Negotium. Si no llegó a firmar el formulario de suscripción al realizar
+el curso, puede hacerlo cuando quiera en la dirección&nbsp;<a
+ href="http://www.negotiate.org"
+ style="color: rgb(110, 180, 63); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: top;">www.negotiate.org</a></li>
+                  </ul>
+<!--Sign-off-->
+                  <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">Esperamos
+verle en el curso<br>
+                  <br>
+Un saludo cordial, <br>
+                  <br>
+{!Contact.Job_CSM_Name__c}<br>
+                  <font
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: top;">{!Contact.Job_CSC_Title__c}</font><br>
+                  </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--footer-->
+<table style="background-color: rgb(255, 255, 255);"
+ align="center" border="0" cellpadding="0"
+ cellspacing="0" width="600">
+  <tbody>
+    <tr>
+      <td>
+      <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+        <tbody>
+          <tr>
+            <td border="0" height="77" valign="top"
+ width="600"><a href="http://www.negotiate.org/"><img
+ src="http://www.negotiate.org/images/ENSI_footer.jpg" alt=""
+ style="border: 0px none ; display: block; padding-top: 15px;"
+ height="77" width="600">
+            </a></td>
+          </tr>
+        </tbody>
+      </table>
+<!--footer info-->
+      <table bgcolor="#f4f4f1" border="0"
+ cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td align="center" height="60"
+ valign="middle">
+            <p
+ style="margin: 5px auto 0pt; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.4; font-weight: 300;"><a
+ href="http://www.negotiate.org/"
+ style="color: rgb(51, 51, 51); margin-bottom: 80px;">ENS
+International</a> - Level 5, 83 York Street, Sydney 2000, NSW,
+Australia <br>
+Phone: +61 2 9299 9688 </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--/email container-->
+<!--/1body table-->
+</body>
+</html>

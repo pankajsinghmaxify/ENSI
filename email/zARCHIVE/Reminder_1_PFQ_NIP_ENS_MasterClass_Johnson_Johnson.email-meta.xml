@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Includes PFQ and NIP. PFQ in SG3. NO RAIT</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Reminder 1 PFQ_NIP - ENS MasterClass Johnson &amp; Johnson</name>
+    <style>none</style>
+    <subject>[Reminder] ENS Program Focus Questionnaire for {!Contact.Job_Certificate_Date__c} Program</subject>
+    <textOnly>Dear {!Contact.FirstName}
+
+Please remember to complete your two ENS Pre-Program Questionnaires by {!Contact.Job_PFQ_Due_Date__c}.
+
+The 2 pre-program questionnaires are
+
+1.  Program Focus Questionnaire (PFQ) - the PFQ helps the program leader to customise the program based on your needs.
+
+Click here to access the questionnaire.
+http://sgiz.mobi/s3/fdfdf68af772?pfq-rait&amp;rait=NO&amp;jid={!Contact.Last_Job_ID__c}&amp;pid={!Contact.Last_Participant_Id__c} 
+
+Note: This link is specific to you, please don&apos;t forward to others.
+Please ensure Java is enabled in your web browser.
+
+2. Negotiating and Influencing Profile ‘NIP’ 360 - the NIP 360 covers 20 key competencies relating to the negotiation and influencing capabilities of individuals. You will receive a separate email with instructions to logon and complete the NIP online in the coming week. The colleagues you have nominated to also complete the NIP 360 as a reviewer will also receive a separate email invitation to do this. This should take approximately 20 minutes A separate reminder with a link to your NIP will be emailed to you if you haven&apos;t already completed it
+
+NB: If you have already started your questionnaire and have opted to &apos;save and continue&apos; while in the questionnaire - it is important that you use the link that was sent to you at the time you saved your response, otherwise the above link will open a new questionnaire.
+
+Should you have any questions, please don&apos;t hesitate to contact me.
+
+Kind regards
+
+{!Contact.Job_CSM_Name__c}
+Client Service Manager
+
+Suite 507, 83 York Street
+Sydney NSW 2000
+Australia
+p: +61 9299 9688  f: +61 9299 1633
+www.negotiate.org
+
+
+Note this email and any attachments may be privileged and confidential. If you are not the intended recipient please delete the message and notify the sender. Copying or distribution by anyone else is prohibited. Thank you.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

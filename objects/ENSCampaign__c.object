@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Each &apos;campaign&apos; is created by Marketing (Lisa) as a focused way of generating appointments as part of the Target process. Campaigns are associated with contacts, who are designated as being of Record Type &apos;Client Staff - Target&apos;.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>ENSCampaign_Geography__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the geographic focus of this campaign, so that we can report on relative marketing campaign efforts in different regions.</inlineHelpText>
+        <label>ENSCampaign Geography</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Australia</fullName>
+                    <default>true</default>
+                    <label>Australia</label>
+                </value>
+                <value>
+                    <fullName>UK</fullName>
+                    <default>false</default>
+                    <label>UK</label>
+                </value>
+                <value>
+                    <fullName>DENECH</fullName>
+                    <default>false</default>
+                    <label>DENECH</label>
+                </value>
+                <value>
+                    <fullName>Other Europe</fullName>
+                    <default>false</default>
+                    <label>Other Europe</label>
+                </value>
+                <value>
+                    <fullName>North America</fullName>
+                    <default>false</default>
+                    <label>North America</label>
+                </value>
+                <value>
+                    <fullName>South America</fullName>
+                    <default>false</default>
+                    <label>South America</label>
+                </value>
+                <value>
+                    <fullName>Asia</fullName>
+                    <default>false</default>
+                    <label>Asia</label>
+                </value>
+                <value>
+                    <fullName>Global</fullName>
+                    <default>false</default>
+                    <label>Global</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ENSCampaign_Goal__c</fullName>
+        <externalId>false</externalId>
+        <label>ENSCampaign Goal</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New Clients</fullName>
+                    <default>true</default>
+                    <label>New Clients</label>
+                </value>
+                <value>
+                    <fullName>Existing Clients</fullName>
+                    <default>false</default>
+                    <label>Existing Clients</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ENSCampaign_Name__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Name of the campaign (list)</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Enter the name of the ENSCampaign. Please do not duplicate names (it&apos;s confusing).</inlineHelpText>
+        <label>ENSCampaign Name</label>
+        <length>80</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>ENSCampaign_Reference_Lookup__c</fullName>
+        <externalId>false</externalId>
+        <formula>Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ENSCampaign Reference Lookup</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ENSCampaign_Responsibility__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Identify who will mainly be responsible for executing this campaign.</inlineHelpText>
+        <label>ENSCampaign Responsibility</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>ENSCampaigns</relationshipLabel>
+        <relationshipName>ENSCampaigns</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ENSCampaign_Status__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the current status of the campaign. In some reports, only &apos;In Progress&apos; campaigns will be shown.</inlineHelpText>
+        <label>ENSCampaign Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>Not Started</fullName>
+                    <default>false</default>
+                    <label>Not Started</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>ENSCampaign</label>
+    <nameField>
+        <displayFormat>C-{0000}</displayFormat>
+        <label>ENSCampaign Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>ENSCampaigns</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>ENSCampaign_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ENSCampaign_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ENSCampaign_Responsibility__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ENSCampaign_Geography__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ENSCampaign_Goal__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>ENSCampaign_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ENSCampaign_Status__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>ENSCampaign_Geography__c</searchFilterFields>
+        <searchFilterFields>ENSCampaign_Goal__c</searchFilterFields>
+        <searchFilterFields>ENSCampaign_Name__c</searchFilterFields>
+        <searchFilterFields>ENSCampaign_Reference_Lookup__c</searchFilterFields>
+        <searchFilterFields>ENSCampaign_Responsibility__c</searchFilterFields>
+        <searchFilterFields>ENSCampaign_Status__c</searchFilterFields>
+        <searchResultsAdditionalFields>ENSCampaign_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ENSCampaign_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ENSCampaign_Responsibility__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ENSCampaign_Geography__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ENSCampaign_Goal__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>ENSCampaign_Geography</fullName>
+        <active>true</active>
+        <errorConditionFormula>len(text( ENSCampaign_Geography__c ))=0</errorConditionFormula>
+        <errorMessage>Please enter the geographic focus of this campaign</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Mandatory_Status</fullName>
+        <active>true</active>
+        <errorConditionFormula>len(text(ENSCampaign_Status__c ))=0</errorConditionFormula>
+        <errorDisplayField>ENSCampaign_Status__c</errorDisplayField>
+        <errorMessage>You must enter ENSCampaign Status</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

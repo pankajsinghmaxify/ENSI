@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>ENSI Material - Tracking details</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ENSI Material - Tracking details</name>
+    <style>none</style>
+    <subject>ENSI Workshop materials for {!Job__c.Account_Name__c} program - Tracking details</subject>
+    <textOnly>Hi {!Job__c.NAM_Name__c}
+
+Just letting you know that the ENSI materials for the {!Job__c.Certificate_Date_Text__c} program are on their way. {!Job__c.Materials_delivery_number_of_boxes__c} boxes should be delivered to {!Job__c.Delivery_Company_Name__c} by the end of next week. The boxes have been addressed to {!Job__c.Delivery_Contact_Person__c}&apos;s attention.
+
+For reference, the DHL Tracking details are: {!Job__c.Materials_delivery_tracking_number__c} and can be tracked here.
+OR
+For reference, the TNT Tracking details are: {!Job__c.Materials_delivery_tracking_number__c} and can be tracked here.
+
+Kind regards</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

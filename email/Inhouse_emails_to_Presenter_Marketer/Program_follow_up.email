@@ -1,0 +1,26 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 43, 73);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+Hi {!Job__c.Facilitator_names__c}<br>
+<br>
+Hope the workshop went well.<br>
+&nbsp;<br>
+Just a couple of things to tidy up.<br>
+
+<ul>
+	<li><strong>Were there any changes to the participants?</strong> &nbsp;Attached is the pax list as I last had it</li>
+	<li><strong>Do you want me to send a reminder to participants re their 2nd 2 days?</strong> If yes, is there anything in particular you want me to say to them? &nbsp;What time do you want them to start?</li>
+	<li><strong>Please send me your invoice when ready</strong> – your fees for this workshop are:<br>
+	Presenter PROF_FEE x XX% = $XXX<br>
+	Marketing x XX% = $XXX<br>
+	Materials commission MAT_FEE x XX% = $XXX<br>
+	Plus GST<br>
+	Plus Expenses (please list if they’re GST inclusive or exclusive). Remember to include your receipts<br>
+	If we’re paying you in a different currency then above, please advise exchange rate used on invoice
+	<li><strong>Peer/Self review</strong>&nbsp; - please complete the attached ENSI Peer/Self Review form and return to me. (Solo facilitators will complete a self-assessment and dual facilitators will peer review each other)</li>
+</ul>
+
+Thanks</span></span>
+												
+</html>

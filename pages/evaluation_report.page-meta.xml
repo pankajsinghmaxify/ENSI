@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>15.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>The ENS-branded workshop evaluation report for a job, accessed from a custom button and displayed as a PDF. (GE 7/2/2013)</description>
+    <label>Evaluation Report</label>
+</ApexPage>

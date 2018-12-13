@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Includes Dutch PFQ RAIT and NIP. PFQ in SG3</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>02 Dutch Reminder 1 PFQ_RAIT_NIP</name>
+    <style>none</style>
+    <subject>[Herinnering] ENSI Program Focus Questionnaire voor {!Contact.Job_Certificate_Date__c} Workshop</subject>
+    <textOnly>Beste {!Contact.FirstName}
+
+Vergeet niet om de vragenlijsten voorafgaand aan de ENSI-workshop voor {!Contact.Job_PFQ_Due_Date__c} in te vullen.
+
+De vragenlijsten voorafgaand aan de workshop die ingevuld moeten worden, zijn
+
+1.  Program Focus Questionnaire (PFQ) - de PFQ helpt de workshopleider om de workshop op jouw behoeften af te stemmen.
+
+Klik hier om naar jouw PFQ te gaan.
+http://www.surveygizmo.com/s3/1391618/ENS-Dutch-Program-Focus-Questionnaire?pfq-rait&amp;rait=YES&amp;jid={!Contact.Last_Job_ID__c}&amp;pid={!Contact.Last_Participant_Id__c}
+Opmerking: De link is specifiek voor jou; we verzoeken je om deze niet naar anderen door te sturen.
+Zorg ervoor dat Java in je browser is ingeschakeld.
+
+
+2. Negotiating and Influencing Profile (NIP) - Het profiel Onderhandelen en Beïnvloeden beslaat 20 kernvaardigheden met betrekking tot de onderhandelings- en beïnvloedingscapaciteiten van individuele personen. Als je je profiel nog niet hebt ingevuld, krijg je per e-mail een aparte herinnering met een link naar jouw NIP.
+
+NB: Als je al bent begonnen met je PFQ en je hebt gekozen voor &apos;opslaan en doorgaan&apos; terwijl je ermee bezig was, dan moet je de link gebruiken die je is toegestuurd toen je je antwoorden bewaarde, anders wordt met bovenstaande link een nieuwe enquête geopend.
+
+Mocht je nog vragen hebben, dan kun je altijd contact met me opnemen.
+
+Met vriendelijke groet
+
+{!Contact.Job_CSM_Name__c}
+{!Contact.Job_CSC_Title__c}
+
+Suite 507, 83 York Street
+Sydney NSW 2000
+Australia
+p: +61 9299 9688  f: +61 9299 1633
+www.negotiate.org
+
+
+Note this email and any attachments may be privileged and confidential. If you are not the intended recipient please delete the message and notify the sender. Copying or distribution by anyone else is prohibited. Thank you.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

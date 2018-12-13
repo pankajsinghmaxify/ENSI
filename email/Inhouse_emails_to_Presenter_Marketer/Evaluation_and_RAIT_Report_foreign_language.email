@@ -1,0 +1,18 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 43, 73);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+<span style="color:#FF0090; font-size:19px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;"><strong>CC PRESENTER</strong></span><br><br>
+Hi&nbsp;{!Job__c.Account_Sell_1_Name__c}<br>
+<br>
+Attached are the evaluation and RAIT reports for the {!Job__c.Account_Name__c} program that took place on {!Job__c.Certificate_Date_Text__c}.<br>
+<br>
+* Evaluation Report (the Score page is in English – Report with no comments)<br>
+<span style="color:#FF0090; font-size:19px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;"><strong>OR</strong></span><br>
+* {!Job__c.Language__c} Evaluation Report (Score page is in {!Job__c.Language__c} along with; workshop comments in {!Job__c.Language__c} – copies are in the file attached).<br>
+<br>
+Also attached is a list of the pax that have indicated they would like follow on support.<br>
+<br>
+Cheers</span></span>
+												
+</html>

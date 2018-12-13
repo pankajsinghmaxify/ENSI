@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Reinforcement Email 6</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>8.6 Reinforcement Email 6</name>
+    <style>none</style>
+    <subject>{!Contact.FirstName}, here is your ENSI Reinforcement Email #6</subject>
+    <textOnly>Negotiation &amp; Influencing
+
+View this email in your browser
+
+
+{!Job__c.Account_Name__c} ENSI Reinforcement Email #6
+
+
+Hello {!Contact.FirstName}
+
+Three reminders:
+
+What is **N.A.F.O.F. ?
+How can you best pace the negotiation through the four PHASES?
+What is the value of REHEARSALS before negotiating?
+
+Towards even better OUTCOMES…
+
+Best wishes
+
+{!Job__c.Facilitator_names__c}
+www.negotiate.org
+
+NOTE: ** N.A.F.O.F. – Never Assume Find Out First
+Review the ENSI PHASES aide-memoire card before every formal negotiation
+Process beats Content in the hands of a skilled negotiator!
+
+
+
+
+
+P +61 2 9299 9688  | E info.ens@negotiate.org
+Level 5  83 York Street  Sydney NSW 2000  Australia
+
+negotiate.org
+Manage subscription | Forward email</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,1279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Records the deliverables for each job. The job items should match the pricing sheet</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Amount__c</fullName>
+        <description>[need to consider forex angle later]</description>
+        <externalId>false</externalId>
+        <label>FMPro Amount</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Consultant_Invoice_Received__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Have you received the consultants invoice for this session</inlineHelpText>
+        <label>Consultant Invoice Received</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Current_Month_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  AND 
+               (MONTH(Work_Start_Date__c) =MONTH(TODAY()) ,
+               YEAR (Work_Start_Date__c) = YEAR(TODAY()) ), 
+                          Item_Value_AUD__c , 
+                          0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Current Month AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Current_Year_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (
+            AND (MONTH(TODAY()) &lt;7, YEAR( Work_Start_Date__c )=YEAR(TODAY()) ) ,
+                     Item_Value_AUD__c  , 
+                     IF (YEAR( Work_Start_Date__c )=YEAR(TODAY()) - 1 ,
+                              Item_Value_AUD__c  , 
+                              0 )
+    )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Current Year AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Deliverable__c</fullName>
+        <description>Product Name</description>
+        <externalId>false</externalId>
+        <label>Deliverable</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ENSProduct__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>ENSProduct</label>
+        <referenceTo>ENSProduct__c</referenceTo>
+        <relationshipLabel>Job Items</relationshipLabel>
+        <relationshipName>R00N20000001UZTxEAO</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Engagement_Report_Received__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Ticked means received</inlineHelpText>
+        <label>Engagement Report Received</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Engagement_Report_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Ticked means required</inlineHelpText>
+        <label>Engagement Report Required</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>F2F_Lookup__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(ENSProduct__r.Face_to_Face_Day__c
+         ,&quot;YES&quot;,&quot;YES&quot;
+         ,&quot;NO&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>F2F Lookup</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Face_to_Face_Day__c</fullName>
+        <defaultValue>&quot;NO&quot;</defaultValue>
+        <description>From ENS Product. To be inserted by Workflow Action.</description>
+        <externalId>false</externalId>
+        <label>Face to Face Day</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hours_per_session__c</fullName>
+        <externalId>false</externalId>
+        <formula>Quantity__c *7</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hours per session</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Item_Value_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Item_Value_FX__c  /  Job_Billing_X_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Item Value AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Item_Value_FX__c</fullName>
+        <externalId>false</externalId>
+        <formula>Price_FX__c * Quantity__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Item Value FX</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>JI_C_YTD_AUD_S__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>JI C_YTD AUD S</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>JI_F_YTD_AUD_S__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>JI F_YTD AUD S</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>JI_Last_Cyear_AUD_S__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>JI Last_Cyear AUD S</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>JI_Last_Fyear_AUD_S__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (
+            AND (MONTH(TODAY()) &lt;7, YEAR( Work_Start_Date__c )=YEAR(TODAY()) -1 ) ,
+                     Item_Value_AUD__c  , 
+                     IF (YEAR( Work_Start_Date__c )=YEAR(TODAY()) - 2 ,
+                              Item_Value_AUD__c  , 
+                              0 )
+    )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>JI Last_Fyear AUD S</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>JI_Last_Month_AUD_S__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>JI Last Month AUD S</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>JI_Last_Qtr_AUD_S__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>JI Last Qtr AUD S</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>JI_MTD_AUD_S__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>JI MTD AUD S</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>JI_Next_Cyear_AUD_S__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>JI Next_Cyear AUD S</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>JI_Next_Fyear_AUD_S__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>JI Next_Fyear AUD S</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>JI_Next_Month_AUD_S__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>JI Next_Month AUD S</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>JI_Next_Qtr_AUD_S__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>JI Next_Qtr AUD S</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>JI_QTD_AUD_S__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>JI QTD AUD S</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>JI_This_Cyear_AUD_S__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>JI This_Cyear AUD S</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>JI_This_Fyear_AUD_S__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>JI This_Fyear AUD S</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>JI_This_Month_AUD_S__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>JI This_Month AUD S</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>JI_This_Qtr_AUD_S__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>JI This_Qtr AUD S</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>JI_YearMth_as_Number__c</fullName>
+        <description>Creates text field in format YYYYMM for reporting purposes</description>
+        <externalId>false</externalId>
+        <formula>TEXT(YEAR(  Job_Item_Revenue_Date__c )  )
+       &amp; IF (MONTH(Job_Item_Revenue_Date__c ) &lt;10,&quot;0&quot;,&quot;&quot;)
+       &amp; TEXT(MONTH(Job_Item_Revenue_Date__c ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>JI_YearMth as Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Account_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Account__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Account Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Billing_X_Rate__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Billing_X_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Billing X Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Class__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Job_Class__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Class</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Item_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( UOM__c =&quot;Days&quot;,  Quantity__c ,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Item Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Item_F2F_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (F2F_Lookup__c =&quot;YES&quot;
+           , Job_Item_Days__c 
+           ,0
+     )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Item F2F Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Item_Fixed_Presenter_Fee_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( $RecordType.Name =&quot;Fixed_Fee&quot;, Item_Value_AUD__c ,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Item Fixed Presenter Fee AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Job_Item_Material_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( $RecordType.Name =&quot;Material&quot;,  Item_Value_AUD__c ,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Item Material AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Job_Item_Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>MONTH(Job_Item_Revenue_Date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Item Month as number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Item_Month_as_text__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Job_Item_Month__c,
+1,&quot;January&quot;,
+2,&quot;February&quot;,
+3,&quot;March&quot;,
+4,&quot;April&quot;,
+5,&quot;May&quot;,
+6,&quot;June&quot;,
+7,&quot;July&quot;,
+8,&quot;August&quot;,
+9,&quot;September&quot;,
+10,&quot;October&quot;,
+11,&quot;November&quot;,
+&quot;December&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Item Month</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Item_Revenue_Date__c</fullName>
+        <description>Since there is no Work Start Date entered for Materials, we pick up [Job Start Date] from JOB for items of type Materials, and [Job Item Work Start Date] for Service.</description>
+        <externalId>false</externalId>
+        <formula>IF( $RecordType.Name &lt;&gt;&quot;Material&quot;,  Work_Start_Date__c ,  Job_Work_Start_Date__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Item Revenue Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Job_Item_Service_AUD__c</fullName>
+        <description>Value of AUD Job Item for Service types only</description>
+        <externalId>false</externalId>
+        <formula>IF( $RecordType.Name =&quot;Service&quot;,  Item_Value_AUD__c ,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Item Service AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Job_Item_Travel_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF($RecordType.Name =&quot;Travel Time&quot;, Item_Value_AUD__c ,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Item Travel AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Job_Role__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Job Role</label>
+        <referenceTo>Job_Role__c</referenceTo>
+        <relationshipLabel>Job Items</relationshipLabel>
+        <relationshipName>JobItems</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Job_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Job_First_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Job_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Job__r.Status__c
+          , &quot;Confirmed&quot;, &quot;Confirmed&quot;
+          , &quot;Completed&quot; , &quot;Completed&quot;
+          , &quot;OTHER&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE (Job__r.Job_Type__c
+            ,&quot;Consulting&quot;,&quot;Consulting&quot;
+            ,&quot;Retainer&quot;,&quot;Consulting&quot;
+            ,&quot;Training&quot;,&quot;Training&quot;
+            ,&quot;OTHER&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Work_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Job_First_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>the first day of a job</inlineHelpText>
+        <label>Job Work Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Job__c</fullName>
+        <externalId>false</externalId>
+        <label>Job</label>
+        <referenceTo>Job__c</referenceTo>
+        <relationshipLabel>Job Items</relationshipLabel>
+        <relationshipName>JobItems</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Last_Year_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (
+            AND (MONTH(TODAY()) &lt;7, YEAR( Work_Start_Date__c )=YEAR(TODAY()) -1 ) ,
+                     Item_Value_AUD__c  , 
+                     IF (YEAR( Work_Start_Date__c )=YEAR(TODAY()) - 2 ,
+                              Item_Value_AUD__c  , 
+                              0 )
+    )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Last Year AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OLD_Role_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>OLD Role Name</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Job_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Old Job ID</label>
+        <length>8</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Job_Item_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Old Job Item ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Job_Role__c</fullName>
+        <externalId>false</externalId>
+        <label>Old Job Role</label>
+        <length>8</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Price__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Used for data migration only. This is the price of the material from FMPro.</inlineHelpText>
+        <label>Old Price</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Presenter__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job_Role__r.Contact__r.FirstName  &amp; &quot; &quot; &amp;  Job_Role__r.Contact__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Presenter</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Presenters__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Presenters__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Presenters</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Price_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (Job_Billing_X_Rate__c =0,0, Price_FX__c  /  Job_Billing_X_Rate__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Price AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Price_FX__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Service - Enter the DAILY rate
+Materials - Enter ITEM Price</inlineHelpText>
+        <label>Price FX</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>7</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quantity__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Service - enter number of DAYS
+Materials - enter number of ITEMS
+For in house trainer jobs, add the prof fee quantity as 0</inlineHelpText>
+        <label>Quantity</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>7</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recon_AUD_Prof_Fee__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>GE 1/2/09: Migrated AUD Prof Fee.</inlineHelpText>
+        <label>Recon AUD Prof Fee</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recon_Alloc_To_Percentage__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>GE 1/2/09: Contains the migrated value from Alloc To Percentage from FMPro.</inlineHelpText>
+        <label>Recon Alloc To Percentage</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recon_FX_Prof_Fee__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>GE 1/2/09: Migrated FX Prof Fee.</inlineHelpText>
+        <label>Recon FX Prof Fee</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recon_Value_Share_FX__c</fullName>
+        <externalId>false</externalId>
+        <label>Recon Value Share FX</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sell_Aid__c</fullName>
+        <externalId>false</externalId>
+        <formula>Item_Value_FX__c  *0.1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sell Aid</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SysAd_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>SysAd Comments</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Expenses__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>expenses incurred for this session</inlineHelpText>
+        <label>Total Expenses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>UOM__c</fullName>
+        <externalId>false</externalId>
+        <formula>case(    ENSProduct__r.UOM__c,
+    &quot;Days&quot;, &quot;Days&quot;,
+    &quot;Hours&quot;,&quot;Hours&quot;,
+   &quot;Units&quot;,&quot;Units&quot;,
+   &quot;Other&quot;
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>UOM</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Value_Share_AUD_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>Value_Share_FX_Total__c  /  Job_Billing_X_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Value Share AUD Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Value_Share_FX_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>Item_Value_FX__c *  Value_Share_Pcnt__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Value Share FX Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Value_Share_Pcnt__c</fullName>
+        <defaultValue>IF (  $RecordType.Name = &quot;Service&quot;
+        ,0.35
+, + IF($RecordType.Name =&quot;Fixed_Fee&quot;
+,1
+, + IF($RecordType.Name =&quot;Travel Time&quot;
+,1
+        ,0)))</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>ENS ratio split</inlineHelpText>
+        <label>Value Share Pcnt</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Work_Start_Date_FIN_YR__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( $RecordType.Name &lt;&gt;&quot;Material&quot;
+     ,TEXT(YEAR( Work_Start_Date__c ) + IF (MONTH (Work_Start_Date__c )&gt;6,1,0))
+     ,TEXT(YEAR( Job_Work_Start_Date__c ) + IF (MONTH (Job_Work_Start_Date__c )&gt;6,1,0))
+     )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>FIN Year based off the Job Item Work Start Date</inlineHelpText>
+        <label>Work Start Date FIN YR</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Work_Start_Date_YRMTH__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ($RecordType.Name &lt;&gt;&quot;Material&quot;
+      ,TEXT(YEAR( Work_Start_Date__c ))
+                &amp; IF ( MONTH( Work_Start_Date__c ) &lt;10,&quot;0&quot;,&quot;&quot;)
+                &amp; TEXT(MONTH( Work_Start_Date__c ))
+      ,TEXT(YEAR(  Job_Work_Start_Date__c  ))
+                &amp; IF ( MONTH( Job_Work_Start_Date__c  ) &lt;10,&quot;0&quot;,&quot;&quot;)
+                &amp; TEXT(MONTH( Job_Work_Start_Date__c  ))
+      )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Work Start Date YRMTH</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Work_Start_Date__c</fullName>
+        <description>[Address Michael&apos;s issue of wanting to add multiple days of work in one record. This creates no problem apart from reporting granularity]</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date that the service was performed.</inlineHelpText>
+        <label>Work Start Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Work_start_date_month__c</fullName>
+        <externalId>false</externalId>
+        <formula>MONTH( Work_Start_Date__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Work start date month as Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Work_start_date_monthastext__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Job_Item_Month__c,
+01, &quot;g January&quot;,
+02,&quot;h February&quot;,
+03,&quot;i March&quot;,
+04,&quot;j April&quot;,
+05,&quot;k May&quot;,
+06,&quot;l June&quot;,
+07,&quot;a July&quot;,
+08,&quot;b August&quot;,
+09,&quot;c September&quot;,
+10,&quot;d October&quot;,
+11,&quot;e November&quot;,
+12,&quot;f December&quot;,
+&quot;z error&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Work start date month</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Job Item</label>
+    <nameField>
+        <displayFormat>JI-{000000}</displayFormat>
+        <label>Job Item Number</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Job Items</pluralLabel>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Fixed_Fee</fullName>
+        <active>true</active>
+        <description>When fixed fee has been agreed for presenter, exclusive to standard splits</description>
+        <label>Fixed_Fee</label>
+        <picklistValues>
+            <picklist>Consultant_Invoice_Received__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Material</fullName>
+        <active>true</active>
+        <description>Physical merchandise sold by ENS International, such as books.</description>
+        <label>Material</label>
+        <picklistValues>
+            <picklist>Consultant_Invoice_Received__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Service</fullName>
+        <active>true</active>
+        <description>Professional services sold by ENS International, such as consulting or training courses.</description>
+        <label>Service</label>
+        <picklistValues>
+            <picklist>Consultant_Invoice_Received__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Travel_Time</fullName>
+        <active>true</active>
+        <description>When travel time is 100% to consultant</description>
+        <label>Travel Time</label>
+        <picklistValues>
+            <picklist>Consultant_Invoice_Received__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Job__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ENSProduct__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Presenter__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Job_Role__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Quantity__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UOM__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Price_FX__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Work_Start_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Item_Value_FX__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Job__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ENSProduct__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Job_Role__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Presenter__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Quantity__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>UOM__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Price_FX__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Work_Start_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Item_Value_FX__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>ENSProduct__c</searchFilterFields>
+        <searchFilterFields>Work_Start_Date__c</searchFilterFields>
+        <searchFilterFields>Presenter__c</searchFilterFields>
+        <searchResultsAdditionalFields>Job__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ENSProduct__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Job_Role__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Presenter__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Quantity__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>UOM__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Price_FX__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Work_Start_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Item_Value_FX__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Enforce_Work_Start_Date</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISNULL( Work_Start_Date__c)</errorConditionFormula>
+        <errorDisplayField>Work_Start_Date__c</errorDisplayField>
+        <errorMessage>You must enter a Work Start Date for a Job Item</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Add_Fixed_Presenter_Fee</fullName>
+        <availability>online</availability>
+        <description>To record payment to consultant without Splits applying</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Add Fixed Presenter Fee</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/a08/e?CF00N20000001UZZ8={!Job_Role__c.Name}&amp;CF00N20000001UZZ8_lkid={!Job_Role__c.Id}&amp;CF00N20000001UZYo={!Job_Role__c.Job_Number__c}&amp;CF00N20000001UZYo_lkid={!Job_Role__c.JobId__c}&amp;retURL=%2F{!Job_Role__c.Id}&amp;RecordType=01220000000MIrJ&amp;cancelURL=%2F{!Job_Role__c.Id}&amp;ent=01I200000000w9B&amp;saveURL=%2F{!Job_Role__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Add_Material</fullName>
+        <availability>online</availability>
+        <description>Creates a new Job Item record of record type Material.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Add Material</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a08/e?CF00N20000001UZYo={!Job__c.Name}&amp;CF00N20000001UZYo_lkid={!Job__c.Id}&amp;retURL=%2F{!Job__c.Id}&amp;RecordType=012200000000eEp&amp;cancelURL=%2F{!Job__c.Id}&amp;saveURL=%2F{!Job__c.Id}&amp;ent=01I200000000w9B</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Add_Travel_Time_100_to_Consultant</fullName>
+        <availability>online</availability>
+        <description>To add travel time to a job where 100% of fee goes to consultant</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Add Travel Time (100% to Consultant)</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/a08/e?CF00N20000001UZZ8={!Job_Role__c.Name}&amp;CF00N20000001UZZ8_lkid={!Job_Role__c.Id}&amp;CF00N20000001UZYo={!Job_Role__c.Job_Number__c}&amp;CF00N20000001UZYo_lkid={!Job_Role__c.JobId__c}&amp;retURL=%2F{!Job_Role__c.Id}&amp;RecordType=012200000001Obz&amp;cancelURL=%2F{!Job_Role__c.Id}&amp;ent=01I200000000w9B&amp;saveURL=%2F{!Job_Role__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Add_Work_Allocation_from_JR</fullName>
+        <availability>online</availability>
+        <description>Creates a new Job Item record of record type Service. Works from the context of a Job Role.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Add Work Allocation</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a08/e?CF00N20000001UZZ8={!Job_Role__c.Name}&amp;CF00N20000001UZZ8_lkid={!Job_Role__c.Id}&amp;CF00N20000001UZYo={!Job_Role__c.Job_Number__c}&amp;CF00N20000001UZYo_lkid={!Job_Role__c.JobId__c}&amp;retURL=%2F{!Job_Role__c.Id}&amp;RecordType=012200000000eEu&amp;cancelURL=%2F{!Job_Role__c.Id}&amp;ent=01I200000000w9B&amp;saveURL=%2F{!Job_Role__c.Id}</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Includes details for Takeda Refresher Program</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Takeda Refresher Program Reminder, Bring Manual</name>
+    <style>none</style>
+    <subject>Reminder: ENSI {!Contact.Program_Name__c} on {!Contact.Job_Certificate_Date__c}</subject>
+    <textOnly>ENS International Participant Email
+
+
+Dear {!Contact.FirstName},
+
+M4NTRA Refresher Program – Think &amp; Act Differently to GET MORE
+
+In preparation for your Takeda M4NTRA Refresher Program on the {!Contact.Job_Certificate_Date__c}, please read the following information.
+
+Date:
+
+{!Contact.Job_Certificate_Date__c}
+
+Time:
+
+{!Contact.Job_Start_Finish_Time__c}
+
+Venue:
+
+{!Contact.Job_Venue_Name__c}
+{!Contact.Job_Venue_Address__c}
+{!Contact.Job_City_State_PC__c}
+{!Contact.Job_Venue_Country__c}
+
+Program Leader/s:
+
+{!Contact.Job_Presenters__c}
+{!Contact.Job_Presenters_email__c}
+
+Dress:
+
+Smart Casual
+
+Remember to bring along your Green Negotiation and Influencing Manual.
+
+We look forward to seeing you at the workshop, a key part of Takeda&apos;s M4NTRA Refresher Program!
+
+Kind regards,
+
+{!Contact.Job_CSM_Name__c}
+{!Contact.Job_CSC_Title__c}
+
+ENS International - Level 5, 83 York Street, Sydney 2000, NSW, Australia
+Phone: +61 2 9299 9688</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

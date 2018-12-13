@@ -1,0 +1,6 @@
+<apex:page controller="ID15to18Converter" showheader="false" action="{!StartConvert}"> 
+15 code:{!char15}<br/><br/>
+18 code: {!char18}
+<br/><br/>
+bin 15:{!bin15}
+</apex:page>

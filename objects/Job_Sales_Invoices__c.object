@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Summarises details of sales invoices to customers</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Amount_Received_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Amount_Received_FX__c / Invoice_Billing_X_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Amount Received AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Amount_Received_Comments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Record any comments related to payments received</inlineHelpText>
+        <label>Amount Received Comments</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Amount_Received_FX__c</fullName>
+        <description>Record total amount received in relation to this invoice</description>
+        <externalId>false</externalId>
+        <label>Amount Received FX</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Aust_Int__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE (Job__r.Aust_Int__c
+                      ,&quot;Australia&quot;,&quot;Australia&quot;
+                      ,&quot;International&quot;,&quot;International&quot;
+                      ,&quot;UNKNOWN&quot; )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Aust/Int</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoice_Billing_X_Rate__c</fullName>
+        <defaultValue>1</defaultValue>
+        <description>Exchange rate recorded in MYOB for this invoice</description>
+        <externalId>false</externalId>
+        <label>Invoice Billing X Rate</label>
+        <precision>16</precision>
+        <required>true</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE (Job__r.Job_Type__c 
+                      ,&quot;Retainer&quot;,&quot;Consulting&quot;
+                      ,&quot;Consulting&quot;,&quot;Consulting&quot;
+                      ,&quot;Coaching&quot;,&quot;Consulting&quot;
+                      ,&quot;Training&quot;
+            )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job_Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Job</label>
+        <referenceTo>Job__c</referenceTo>
+        <relationshipLabel>Job Sales Invoices</relationshipLabel>
+        <relationshipName>Job_Sales_Invoices</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Last_Receipt_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Record the latest date that any payments were received against this invoice</inlineHelpText>
+        <label>Last Receipt Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Prov_ENS_Staff_Pcnt__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the total percentage due to ENS Staff (not counting the ENS Ratio) for this invoice</inlineHelpText>
+        <label>Prov_ENS_Staff_Pcnt</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Prov_Ext_Oth_Pcnt__c</fullName>
+        <defaultValue>0.325</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the total percentage of this invoice payable as ENS Ratio to ENS</inlineHelpText>
+        <label>Prov_ENS_Ratio_Pcnt</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Prov_Ext_Pres_Pcnt__c</fullName>
+        <defaultValue>0.45</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the total percentage of this invoice to be paid as &apos;Presenter&apos; to parties outside ENS</inlineHelpText>
+        <label>Prov_Ext_Pres_Pcnt</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Prov_Ext_Sell_Pcnt__c</fullName>
+        <defaultValue>0.1125</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the total percentage of this invoice to be paid as &apos;SELL&apos; to parties outside ENS</inlineHelpText>
+        <label>Prov_Ext_Sell_Pcnt</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Prov_Ext_Spot_Pcnt__c</fullName>
+        <defaultValue>0.1125</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the total percentage of this invoice to be paid as &apos;SPOT&apos; to parties outside ENS</inlineHelpText>
+        <label>Prov_Ext_Spot_Pcnt</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Prov_Marketing_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Prov_Marketing_FX__c /  Invoice_Billing_X_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Prov_Marketing_AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Prov_Marketing_FX__c</fullName>
+        <externalId>false</externalId>
+        <formula>( Prov_Ext_Sell_Pcnt__c +  Prov_Ext_Spot_Pcnt__c ) *  Sales_Inv_Prof_Fee_FX__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Prov_Marketing_FX</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prov_Materials_Comm_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Prov_Materials_Comm_FX__c /  Invoice_Billing_X_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Prov_Materials_Comm_AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Prov_Materials_Comm_FX__c</fullName>
+        <externalId>false</externalId>
+        <formula>Prov_Materials_Pcnt__c *   Sales_Inv_Materials_FX__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Prov_Materials_Comm_FX</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prov_Materials_Pcnt__c</fullName>
+        <defaultValue>0.2</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the total Materials % due to external parties</inlineHelpText>
+        <label>Prov_Materials_Pcnt</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Prov_Presenter_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Prov_Presenter_FX__c /  Invoice_Billing_X_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Prov_Presenter_AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Prov_Presenter_FX__c</fullName>
+        <externalId>false</externalId>
+        <formula>Prov_Ext_Pres_Pcnt__c *  Sales_Inv_Prof_Fee_FX__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Prov_Presenter_FX</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prov_Total_Pcnt__c</fullName>
+        <externalId>false</externalId>
+        <formula>Prov_Ext_Oth_Pcnt__c + Prov_ENS_Staff_Pcnt__c + Prov_Ext_Pres_Pcnt__c + Prov_Ext_Sell_Pcnt__c  + Prov_Ext_Spot_Pcnt__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Prov_Total_Pcnt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Inv_Materials_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Sales_Inv_Materials_FX__c / Invoice_Billing_X_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sales Inv Materials AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Inv_Materials_FX__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Sales Inv Materials FX</label>
+        <precision>14</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Inv_Prof_Fee_AUD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Sales_Inv_Prof_Fee_FX__c  /  Invoice_Billing_X_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sales Inv Prof Fee AUD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Inv_Prof_Fee_FX__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Total Professional fees value for this invoice related to current job</description>
+        <externalId>false</externalId>
+        <label>Sales Inv Prof Fee FX</label>
+        <precision>14</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Inv_Tot_FX_Check__c</fullName>
+        <externalId>false</externalId>
+        <formula>Sales_Inv_Materials_FX__c  +  Sales_Inv_Prof_Fee_FX__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sales Inv Tot FX Check</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Inv_Total_FX__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Record the total invoice amount for this invoice</description>
+        <externalId>false</externalId>
+        <label>Sales Inv Total FX</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Invoice_Date__c</fullName>
+        <description>Same date as recorded in MYOB for this invoice</description>
+        <externalId>false</externalId>
+        <label>Sales Invoice Date</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Job Sales Invoice</label>
+    <nameField>
+        <label>Job Sales Invoice Number</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Job Sales Invoices</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Validate_Total_Provision_Percent</fullName>
+        <active>true</active>
+        <description>Ensures that total % provisions for invoice add to 100%</description>
+        <errorConditionFormula>Prov_Total_Pcnt__c  &lt;&gt;1.0</errorConditionFormula>
+        <errorMessage>You must ensure that the total provision percentages add to 100%</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Zero_Exchange_Rate</fullName>
+        <active>true</active>
+        <errorConditionFormula>Invoice_Billing_X_Rate__c = 0</errorConditionFormula>
+        <errorDisplayField>Invoice_Billing_X_Rate__c</errorDisplayField>
+        <errorMessage>Exchange rate must not be equal to zero.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Reminder for program including venue details - PLUS Bring your materials</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>03 Program Reminder - Next days</name>
+    <style>none</style>
+    <subject>Reminder: ENSI {!Contact.Program_Name__c} Program on {!Contact.Job_Certificate_Date__c}</subject>
+    <textOnly>Dear {!Contact.FirstName}
+
+We trust you enjoyed the first part of your ENS journey. For the second part of your ENS {!Contact.Program_Name__c} program you are attending, here are the details.
+
+Date:   {!Contact.Job_Certificate_Date__c}
+Time:   {!Contact.Job_Start_Finish_Time__c}
+Venue:
+
+{!Contact.Job_Venue_Name__c}
+{!Contact.Job_Venue_Address__c}
+{!Contact.Job_City_State_PC__c}
+{!Contact.Job_Venue_Country__c}
+
+Program Leader/s:   {!Contact.Job_Presenters__c}
+Dress:   Smart casual
+
+Please remember to bring your ENS materials along.
+
+{!Contact.Job_Presenters__c} looks forward to seeing you again and hearing your stories!
+
+Kind regards
+
+{!Contact.Job_CSM_Name__c}
+Client Service Coordinator
+
+Suite 507, 83 York Street
+Sydney NSW 2000
+Australia
+p: +61 9299 9688  f: +61 9299 1633
+www.negotiate.org
+
+
+Note this email and any attachments may be privileged and confidential. If you are not the intended recipient please delete the message and notify the sender. Copying or distribution by anyone else is prohibited. Thank you.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>includes PFQ (Influencing) only with SG3</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>02 Reminder 1 PFQ (Influencing)</name>
+    <style>none</style>
+    <subject>[Reminder] ENSI Program Focus Questionnaire for {!Contact.Job_Certificate_Date__c} Program</subject>
+    <textOnly>Dear {!Contact.FirstName}
+
+Please remember to complete the ENS International Program Focus Questionnaire (PFQ) by {!Contact.Job_PFQ_Due_Date__c}.The PFQ helps the program leader to customise the program based on your needs.
+
+Click here to access your PFQ.
+Note: This link is specific to you, please don&apos;t forward to others.
+Please ensure Java is enabled in your web browser.
+
+NB: If you have already started your questionnaire and have opted to &apos;save and continue&apos; while in the questionnaire - it is important that you use the link that was sent to you at the time you saved your response, otherwise the above link will open a new questionnaire.
+
+Should you have any questions, please don&apos;t hesitate to contact me.
+
+Kind regards
+
+{!Contact.Job_CSM_Name__c}
+Client Service Manager
+
+Suite 507, 83 York Street
+Sydney NSW 2000
+Australia
+p: +61 9299 9688  f: +61 9299 1633
+www.negotiate.org
+
+
+Note this email and any attachments may be privileged and confidential. If you are not the intended recipient please delete the message and notify the sender. Copying or distribution by anyone else is prohibited. Thank you.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

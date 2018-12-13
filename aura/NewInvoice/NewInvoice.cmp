@@ -1,0 +1,67 @@
+<aura:component controller="newInvoiceController" implements="force:lightningQuickAction,force:hasRecordId" >
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    
+		<!-- variable for showing loading spinner -->
+	<aura:attribute name="showSpinner" type="boolean" default="false" />
+    <aura:attribute name="op" type="Opportunity" />
+    <aura:attribute name="olis" type="OpportunityLineItem[]" />
+    
+    <aura:attribute name="amt" type="Decimal" default="0" />
+    <aura:attribute name="finalize" type="Boolean" default="false" />
+    
+    <aura:attribute name="oliAmt" type="Decimal" default="0" />
+    <aura:attribute name="partPaidOliAmt" type="Decimal" default="0" />
+    <aura:attribute name="unPaidOliAmt" type="Decimal" default="0" />
+
+    <aura:attribute name="prevInvoiced" type="Decimal" default="0" />
+    <aura:attribute name="pctOpts" type="Integer[]" default="[]" />
+    
+	<!-- variable for showing output message -->
+	<aura:attribute name="returnMsg" type="String" />
+
+	<div class="slds-text-longform slds-is-relative">
+		<p>
+			Generate a new Invoice for this Opportunity
+		</p>
+        <p>
+            <aura:if isTrue="{!v.op != null}">
+                Amount Previously Invoiced: $<ui:outputNumber value="{!v.prevInvoiced || 0}" format="0.00" /> (<ui:outputNumber value="{!v.op.Amount_invoiced_so_far__c || 0}" format="0.00" />%)<br />
+                Amount to Invoice: $<ui:outputNumber value="{!if(v.finalize, v.oliAmt, (v.amt/100)*(v.oliAmt || 0))}" format="0.00" /><br />
+            </aura:if>
+        </p>
+        <p class="slds-text-align--center">
+            <!--<lightning:slider step="1" 
+                              min="0" 
+                              max="{!100-(v.op.Amount_invoiced_so_far__c || 0)}" 
+                              value="{!v.amt}" 
+                              label="Amount to Invoice (%)" 
+                              disabled="{!v.finalize}" />-->
+            <lightning:select value="{!v.amt}" 
+                              label="Amount to Invoice (%)"
+                              disabled="{!v.finalize}">
+                <option value="">-- None --</option>
+                <aura:iteration items="{!v.pctOpts}" var="opt">
+                    <aura:if isTrue="{!opt le (100-(v.op.Amount_invoiced_so_far__c || 0))}">
+                        <option value="{!opt}" text="{!opt + '%'}"></option>
+                    </aura:if>
+                </aura:iteration>
+            </lightning:select>
+                              
+        </p>
+        <p class="slds-text-align--center">
+            OR<br />
+            <lightning:input type="checkbox" label="Finalise and invoice all outstanding." checked="{!v.finalize}" onchange="{!c.setFinalize}" />
+        </p>
+		<p class="slds-text-align--center">
+			<lightning:button variant="brand" label="Create" onclick="{!c.createInvoice}"/>
+		</p>
+		<p>{!v.returnMsg}</p>
+
+		<!-- loading spinner (requires "slds-is-relative" on parent div) -->
+		<aura:if isTrue="{!v.showSpinner}">
+			<lightning:spinner aura:id="spinner" size="large" variant="brand" alternativeText="loading"/>
+		</aura:if>
+		<!-- /loading spinner -->
+	</div>
+</aura:component>

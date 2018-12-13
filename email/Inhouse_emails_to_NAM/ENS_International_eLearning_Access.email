@@ -1,0 +1,14 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 0, 0);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+Hi&nbsp;{!Job__c.NAM_Name__c}<br>
+<br>
+Please note that access to our online reinforcement module is now available to you and your participants.<br>
+<br>
+Feel free to login and see the module yourself using your email address as the username and password.&nbsp;<br>
+<br>
+Access to the reinforcement module is via: http://www.negotiate.org/ens-reinforcement-login<br>
+<br>
+Kind regards</span></span>												
+</html>

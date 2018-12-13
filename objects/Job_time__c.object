@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>Custom</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Custom</fullName>
+        <fields>Name</fields>
+        <fields>Job_effort__c</fields>
+        <fields>Start_date__c</fields>
+        <fields>Duration_hours__c</fields>
+        <fields>Recognised__c</fields>
+        <label>Custom</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Date_month__c</fullName>
+        <externalId>false</externalId>
+        <formula>MONTH(Recognised_date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Date, month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_year__c</fullName>
+        <externalId>false</externalId>
+        <formula>YEAR(Recognised_date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Date, year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Duration_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>Duration_hours__c / Opportunity__r.Hours_in_a_day__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Duration (Days)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Duration_hours__c</fullName>
+        <externalId>false</externalId>
+        <label>Duration (hours)</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_date__c</fullName>
+        <externalId>false</externalId>
+        <label>(deprecated) End date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Exception__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Admin only. When recognised date is in a month prior to created date.</inlineHelpText>
+        <label>Exception</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Facilitator__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Facilitator</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Facilitator time</relationshipLabel>
+        <relationshipName>Job_times</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Facilitator_position__c</fullName>
+        <externalId>false</externalId>
+        <label>Facilitator position</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+                <value>
+                    <fullName>Ad Hoc</fullName>
+                    <default>false</default>
+                    <label>Ad Hoc</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Job_Opportunity_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job__r.Opportunity__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Opportunity Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Job</label>
+        <referenceTo>Job__c</referenceTo>
+        <relationshipLabel>Recognised service time</relationshipLabel>
+        <relationshipName>Job_times</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Job_effort__c</fullName>
+        <externalId>false</externalId>
+        <label>Job effort</label>
+        <referenceTo>Job_effort__c</referenceTo>
+        <relationshipLabel>Recognised service time</relationshipLabel>
+        <relationshipName>Job_times</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Recognised service time</relationshipLabel>
+        <relationshipName>Job_times</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Recognised__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this box if this time record has already occurred. If the time record is in the future, this checkbox will be checked when that date comes to pass.</inlineHelpText>
+        <label>Recognised</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Recognised_date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the date this time should be recognised upon.</inlineHelpText>
+        <label>Recognised date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Recognised_revenue__c</fullName>
+        <externalId>false</externalId>
+        <formula>Duration_Days__c * Job_effort__r.Revenue_available_per_day__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Recognised revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Start_date__c</fullName>
+        <externalId>false</externalId>
+        <label>(deprecated) Start date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Touch__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Admin only</inlineHelpText>
+        <label>Touch</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <label>Job time</label>
+    <nameField>
+        <displayFormat>JT-{0000}</displayFormat>
+        <label>Job time ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Job times</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Effort_is_ad_hoc</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+Job_effort__r.Facilitator_position__c = &quot;Ad hoc&quot;,
+ISBLANK(TEXT(Facilitator_position__c))
+)</errorConditionFormula>
+        <errorDisplayField>Facilitator_position__c</errorDisplayField>
+        <errorMessage>There is no specific facilitator defined for the work you have selected. Please select which facilitator position has completed this service time.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>JobEffort_is_full</fullName>
+        <active>true</active>
+        <description>Prevent creation of a Job Time if it tips the parent Job Effort over it&apos;s capacity.</description>
+        <errorConditionFormula>AND(
+ISNEW(),
+Job_effort__r.Hours_recognised__c + Duration_hours__c &gt; Job_effort__r.Hours_sold__c
+)</errorConditionFormula>
+        <errorDisplayField>Duration_hours__c</errorDisplayField>
+        <errorMessage>By adding these hours you will go over the allocated hours sold for this service. Please refer to the Job for total hours remaining, and the Opportunity for a breakdown by service.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

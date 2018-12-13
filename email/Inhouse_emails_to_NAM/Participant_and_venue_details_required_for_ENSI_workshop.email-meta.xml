@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Participant and venue details required</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Participant and venue details required for ENSI workshop</name>
+    <style>none</style>
+    <subject>Participant and venue details required for {!Job__c.Certificate_Date_Text__c} ENSI Workshop</subject>
+    <textOnly>Dear {!Job__c.NAM_Name__c}
+
+We’re excited to be working with {!Job__c.Account_Name__c} and the participants on the upcoming workshop.
+
+In order for the participants to complete the pre-program requirements, could you please forward me a list with each participants full name and email address within the next week for your {!Job__c.Certificate_Date_Text__c} workshop. I have attached a template for your participant details if you’d like to use this.  As per our letter of engagement, we are able to accept up to XXX participants for this workshop.
+
+If you intend to take up the option for additional participants please let us know by DATE, to prevent the cost of another freight charge for the extra materials.
+
+I would appreciate if you could also advise the venue address and contact details for someone to receive the program materials. I will be sending the materials to arrive on DAY_DATE. Please refer to the attached Venue Administration Checklist for our venue requirements.
+
+Kind regards</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>Reporting_Job_Item__c.Assoc_PS_Revenue__c:SUM/Reporting_Job_Item__c.Attrib_Mkting_Days__c:SUM</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Daily Professional Fee</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>(Reporting_Job_Item__c.Attrib_ENS_Share_Amount_AUD__c:SUM
+/
+Reporting_Job_Item__c.Assoc_PS_Revenue__c:SUM)
+* 100</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Percentage to ENS</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>(Reporting_Job_Item__c.Attrib_Marketing_PS_Share_Amount_AUD__c:SUM
+/
+Reporting_Job_Item__c.Assoc_PS_Revenue__c:SUM)
+*100</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA3</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Percentage to Marketer</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Jobs__r.ReportingJobItem__r$Attrib_Marketing_Mats_Share_Amount_AUD__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Jobs__r.ReportingJobItem__r$AUD_Share_As_Presenter__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Jobs__r.ReportingJobItem__r$Attrib_Marketing_PS_Share_Amount_AUD__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <description>sales and presenter fees from legacy system</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Jobs__r.ReportingJobItem__r$Contact__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Drew McKinnie</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Jobs__r$Status__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Confirmed,Completed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Jobs__r.ReportingJobItem__r$Role__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>ENS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>test account,testing account</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Jobs__r$Training_or_Consulting__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Jobs__r$Aust_Int__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Jobs__r$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Drew Mckinnie old system</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Account_Job_Reporting_Job_Item_with_Job_Role__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account.Jobs__r.ReportingJobItem__r$Work_Start_Date__c</dateColumn>
+        <endDate>2018-06-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-01-01</startDate>
+    </timeFrameFilter>
+</Report>

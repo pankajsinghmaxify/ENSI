@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Contains all the products available for selection on the Job Item object</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Australian</fullName>
+                    <default>false</default>
+                    <label>Australian</label>
+                </value>
+                <value>
+                    <fullName>Coaching</fullName>
+                    <default>false</default>
+                    <label>Coaching</label>
+                </value>
+                <value>
+                    <fullName>Consulting</fullName>
+                    <default>false</default>
+                    <label>Consulting</label>
+                </value>
+                <value>
+                    <fullName>eLearning</fullName>
+                    <default>false</default>
+                    <label>eLearning</label>
+                </value>
+                <value>
+                    <fullName>English language books</fullName>
+                    <default>false</default>
+                    <label>English language books</label>
+                </value>
+                <value>
+                    <fullName>Foreign language books</fullName>
+                    <default>false</default>
+                    <label>Foreign language books</label>
+                </value>
+                <value>
+                    <fullName>International</fullName>
+                    <default>false</default>
+                    <label>International</label>
+                </value>
+                <value>
+                    <fullName>Materials</fullName>
+                    <default>false</default>
+                    <label>Materials</label>
+                </value>
+                <value>
+                    <fullName>Training</fullName>
+                    <default>false</default>
+                    <label>Training</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>DataMigrationFK__c</fullName>
+        <externalId>true</externalId>
+        <inlineHelpText>Used by Glenn for data migration only.</inlineHelpText>
+        <label>DataMigrationFK</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Face_to_Face_Day__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Flag whether this product should be classified as a Face to Face day for the purposes of calculating how many presenter-days a client would say they have experienced. For example, for a 3-day, 2-presenter program, we want to show 6-F2F days.</inlineHelpText>
+        <label>Face to Face Day</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>NO</fullName>
+                    <default>true</default>
+                    <label>NO</label>
+                </value>
+                <value>
+                    <fullName>YES</fullName>
+                    <default>false</default>
+                    <label>YES</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MYOB_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>MYOB Code</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Deliverable__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Old Deliverable</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Category__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>NIP Flat</fullName>
+                    <default>false</default>
+                    <label>NIP Flat</label>
+                </value>
+                <value>
+                    <fullName>NIP 360</fullName>
+                    <default>false</default>
+                    <label>NIP 360</label>
+                </value>
+                <value>
+                    <fullName>Tailored Case Studies</fullName>
+                    <default>false</default>
+                    <label>Tailored Case Studies</label>
+                </value>
+                <value>
+                    <fullName>Training Day</fullName>
+                    <default>false</default>
+                    <label>Training Day</label>
+                </value>
+                <value>
+                    <fullName>Additional Day</fullName>
+                    <default>false</default>
+                    <label>Additional Day</label>
+                </value>
+                <value>
+                    <fullName>Manual: 250 Page</fullName>
+                    <default>false</default>
+                    <label>Manual: 250 Page</label>
+                </value>
+                <value>
+                    <fullName>Workbook: 96 Page</fullName>
+                    <default>false</default>
+                    <label>Workbook: 96 Page</label>
+                </value>
+                <value>
+                    <fullName>Professional Services</fullName>
+                    <default>false</default>
+                    <label>Professional Services</label>
+                </value>
+                <value>
+                    <fullName>Materials</fullName>
+                    <default>false</default>
+                    <label>Materials</label>
+                </value>
+                <value>
+                    <fullName>eLearning</fullName>
+                    <default>false</default>
+                    <label>eLearning</label>
+                </value>
+                <value>
+                    <fullName>Leaders Guide</fullName>
+                    <default>false</default>
+                    <label>Leaders Guide</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Training</controllingFieldValue>
+                <valueName>NIP Flat</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Training</controllingFieldValue>
+                <valueName>NIP 360</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Training</controllingFieldValue>
+                <controllingFieldValue>Australian</controllingFieldValue>
+                <controllingFieldValue>International</controllingFieldValue>
+                <valueName>Tailored Case Studies</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Training</controllingFieldValue>
+                <controllingFieldValue>Australian</controllingFieldValue>
+                <controllingFieldValue>International</controllingFieldValue>
+                <valueName>Training Day</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Training</controllingFieldValue>
+                <controllingFieldValue>Australian</controllingFieldValue>
+                <controllingFieldValue>International</controllingFieldValue>
+                <valueName>Additional Day</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Consulting</controllingFieldValue>
+                <controllingFieldValue>Coaching</controllingFieldValue>
+                <controllingFieldValue>Australian</controllingFieldValue>
+                <controllingFieldValue>International</controllingFieldValue>
+                <valueName>Professional Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Materials</controllingFieldValue>
+                <valueName>Manual: 250 Page</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Materials</controllingFieldValue>
+                <valueName>Workbook: 96 Page</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Materials</controllingFieldValue>
+                <controllingFieldValue>English language books</controllingFieldValue>
+                <controllingFieldValue>Foreign language books</controllingFieldValue>
+                <valueName>Materials</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>eLearning</controllingFieldValue>
+                <valueName>eLearning</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>UOM__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The unit of measure for this product.</inlineHelpText>
+        <label>UOM</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Days</fullName>
+                    <default>false</default>
+                    <label>Days</label>
+                </value>
+                <value>
+                    <fullName>Hours</fullName>
+                    <default>false</default>
+                    <label>Hours</label>
+                </value>
+                <value>
+                    <fullName>Units</fullName>
+                    <default>false</default>
+                    <label>Units</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>ENSProduct</label>
+    <nameField>
+        <label>Product Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>ENSProducts</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>MYOB_Code__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Category__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UOM__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>MYOB_Code__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Category__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>UOM__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>MYOB_Code__c</searchFilterFields>
+        <searchFilterFields>Category__c</searchFilterFields>
+        <searchFilterFields>Type__c</searchFilterFields>
+        <searchFilterFields>UOM__c</searchFilterFields>
+        <searchResultsAdditionalFields>MYOB_Code__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Category__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>UOM__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

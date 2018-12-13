@@ -1,0 +1,119 @@
+<apex:page standardController="Job__c" showHeader="false" sidebar="false" extensions="EvalReport" renderAs="PDF">
+<table align="center" id="Evaluation Report" width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td id="header" colspan="2" style="padding-top:10px;line-height:120%;" >
+      <h1 style="font-weight:bolder;font-family:sans-serif;color:#666;font-size:18px;">{!Job__c.Survey__r.Name} Report</h1>
+      <br/><br/><br/>
+      <strong>{!Job__c.Account__r.Name}</strong><br/>
+      <span style="font-size:10px;"><strong>Presenters:</strong> {!Job__c.Presenters__c}<br/>
+      <strong>Job No.</strong> {!Job__c.Name}</span>
+    </td>
+    <td id="header2" align="right" colspan="5" style="line-height:120%;">
+      <img src="{!URLFOR($Resource.Logo)}" /><br/>
+      <span style="font-size:10px;">
+        <strong>Dates:</strong> {!Job__c.Certificate_Date_Text__c}<br/>
+        <strong>Duration:</strong> {!Job__c.Program_Duration__c}<br/>
+        <strong>Number of participants (completed evaluations):</strong> {!Participants} ({!CompletedEvals})<br/>
+
+      </span>
+    </td>
+  </tr>
+  <tr>
+    <td id="space" colspan="7">&nbsp;</td>
+  </tr>
+  
+  
+  <apex:repeat value="{!sections}" var="s">
+  
+  <tr>
+    <td id="section" colspan="7" style="padding:3px;border:1px solid #000;">
+      <span style="font-family: sans-serif;font-size:12px;font-weight:bold;">{!s.Section}</span>&nbsp;&nbsp;
+      <apex:outputPanel rendered="{!IF(s.Type == 'FIVE', true, false)}">
+        <span style="font-family:sans-serif;font-size:10px;font-weight:lighter;">(5=highest approval, 1=lowest approval)</span>
+      </apex:outputPanel>
+    </td>
+  </tr>
+  
+  <!-- Multiple Choice Questions & Answers -->
+  <apex:repeat value="{!s.questions}" var="q" rendered="{!IF(s.Type == 'FIVE', true, false)}">
+  <tr>
+    <td id="question" style="border-bottom:1px solid #000;padding:3px;font-family: sans-serif;font-size:10px;font-weight:lighter;width:35%;"><apex:outputField value="{!q.Question_Text__c}" /></td>
+    <apex:repeat value="{!s.answers}" var="a" rendered="{!IF(s.Type == 'FIVE', true, false)}">
+         <apex:outputText rendered="{!IF(a.Question_ID__c == q.Id, true, false)}">
+         <td id="answer" style="padding:3px;border-bottom:1px solid #000;font-family: sans-serif;font-size:9px;font-weight:lighter;" align="center">
+           <apex:outputField value="{!a.Answer_Text__c}" rendered="{!IF(a.Question_ID__c == q.Id, true, false)}"></apex:outputField><br/>
+           <apex:outputField value="{!a.tmp_noparticipants__c}" rendered="{!IF(a.Question_ID__c == q.Id, true, false)}"></apex:outputField><br/>
+           <apex:outputField value="{!a.tmp_percentage__c}" rendered="{!IF(a.Question_ID__c == q.Id, true, false)}"></apex:outputField><br/>
+         </td>
+         </apex:outputText>
+            
+    </apex:repeat>
+     <!-- Jack added to catch question a0M20000000BStx:manaully add one more td to the tr -->
+            <apex:outputText rendered="{!IF(q.Question_Number__c=='3.1', true, false)}">
+         <td id="extraTD" style="padding:3px;border-bottom:1px solid #000;font-family: sans-serif;font-size:9px;font-weight:lighter;" align="center">
+           &nbsp;<br/>
+           &nbsp;<br/>
+         </td>
+
+         </apex:outputText>            
+         <!--  Jack added ends -->
+    <td style="padding:3px;padding-top:14px;padding-right:10px;border-bottom:1px solid #000;font-family: sans-serif;font-size:10px;font-weight:bold;" align="right"><apex:outputField rendered="{!IF(q.Question_Number__c!='3.1', true, false)}" value="{!q.tmp_average__c}" /></td> <!-- GE 7/2/2013 Removed average from this row. -->
+  </tr>
+  </apex:repeat>  
+  <apex:outputText rendered="{!IF(s.Type == 'FIVE', true, false)}">
+  <tr>
+ 
+  <apex:outputText rendered="{!IF(CONTAINS(s.Section,'Presenter 1'), true, false)}">
+    <td id="average" style="border-bottom:0;padding:3px;padding-right:10px;font-family: sans-serif;font-size:11px;font-weight:bold;" colspan="7" align="right">Presenter 1 Average Rating:&nbsp;&nbsp;&nbsp;&nbsp; {!s.Average}</td>
+   </apex:outputText>
+ 
+    <apex:outputText rendered="{!IF(CONTAINS(s.Section,'Presenter 2'), true, false)}">
+    <td id="average" style="border-bottom:0;padding:3px;padding-right:10px;font-family: sans-serif;font-size:11px;font-weight:bold;" colspan="7" align="right">Presenter 2 Average Rating:&nbsp;&nbsp;&nbsp;&nbsp; {!s.Average}</td>
+   </apex:outputText>
+   
+       <apex:outputText rendered="{!IF(s.Section == 'Your further development', true, false)}">
+    <td style="border-bottom:0;padding:3px;padding-right:10px;font-family: sans-serif;font-size:12px;font-weight:bold;" colspan="7" align="right"></td>
+   </apex:outputText>
+   
+    <apex:outputText rendered="{!IF(s.Section == 'Workshop evaluation', true, false)}">
+    <td id="average" style="border-bottom:0;padding:3px;padding-right:10px;font-family: sans-serif;font-size:11px;font-weight:bold;" colspan="7" align="right">Workshop Evaluation Average Rating:&nbsp;&nbsp;&nbsp;&nbsp; {!s.Average}</td>
+   </apex:outputText>
+  </tr>
+    
+  <tr><td id="space" colspan="7">&nbsp;</td></tr>
+
+  </apex:outputText>
+  
+  
+  <!-- Free Text Questions & Answers -->
+  <apex:repeat value="{!s.questions}" var="q1" rendered="{!IF(s.Type == 'FREE', true, false)}">
+
+   <!-- hide question 4.2 , 4.3 and 6.1  -->
+    <apex:outputText rendered="{!IF(q1.Question_Number__c=='4.2' || q1.Question_Number__c=='4.3' || q1.Question_Number__c=='6.3' , true, false)}">
+    </apex:outputText>
+    
+    <apex:outputText rendered="{!IF(q1.Question_Number__c!='4.2' && q1.Question_Number__c!='4.3' && q1.Question_Number__c!='6.3', true, false)}">
+    <tr>
+      <td id="question" style="padding:3px;font-family: sans-serif;font-size:10px;font-weight:bold;" colspan="7">
+        <apex:outputField value="{!q1.Question_Text__c}"></apex:outputField>
+      </td>
+    </tr>
+    </apex:outputText>
+
+    <apex:repeat value="{!s.responses}" var="r" rendered="{!IF(s.Type == 'FREE', true, false)}">
+
+      <apex:outputText rendered="{!IF(r.Answer_Number__r.Question_ID__c == q1.Id, true, false)}">
+      <tr>
+        <td id="answer" style="padding:3px;font-family: sans-serif;font-size:10px;font-weight:lighter;" colspan="7">
+          <apex:outputField value="{!r.Get_Response_Text__c}" rendered="{!IF(r.Answer_Number__r.Question_ID__c == q1.Id, true, false)}"></apex:outputField>
+        </td>
+      </tr>
+      </apex:outputText>
+      
+    </apex:repeat>
+  </apex:repeat>
+  
+  </apex:repeat>
+  
+</table>
+</apex:page>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_58439534</developerName>
+        <masterLabel>Training actual front of class time</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Account.Jobs__r.JobItems__r$ENSProduct__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Int PF 1 Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Int PF 2 Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Int PF 3 Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Aust PF 1 Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Aust PF 2 Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Aust PF 3 Leader</sourceValue>
+            </sourceValues>
+            <value>Training front of class</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Int Retainer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Int Consulting</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Aust Retainer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Aust Consulting</sourceValue>
+            </sourceValues>
+            <value>Consulting front of class</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Int Royalty</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Aust Royalty</sourceValue>
+            </sourceValues>
+            <value>Royalty</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Aust Gap Learning</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Aust Implementation</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Aust Needs Analysis</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Int Implementation</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Int Needs Analysis</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Int Tailored Case Study</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Program Focus Questionnaire (Professional Fee)</sourceValue>
+            </sourceValues>
+            <value>Pre &amp; Post customisation</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Manual Only</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Manual Set</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Workbook Only</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Workbook Set</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Workshop notes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>English Card Set</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Pen (4-colour)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Handbook Only</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Handbook Set</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>NIP - Flat Aust</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>NIP - Flat Int</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>RAIT</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>French Workbook</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Spanish Workbook</sourceValue>
+            </sourceValues>
+            <value>Materials</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>WLD Handouts (texts, PPT DVD)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Leaders Guide</sourceValue>
+            </sourceValues>
+            <value>WLD Materials</value>
+        </values>
+    </buckets>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Jobs__r.JobItems__r$Item_Value_FX__c</field>
+    </columns>
+    <columns>
+        <field>Account.Jobs__r$Job_Days__c</field>
+    </columns>
+    <columns>
+        <field>Account.Jobs__r$Name</field>
+    </columns>
+    <currency>AUD</currency>
+    <description>shows the total royalties and materials fees for inhouse trainer programs</description>
+    <filter>
+        <booleanFilter>(1 AND 2 AND (3 or 4)) AND 5</booleanFilter>
+        <criteriaItems>
+            <column>Account$Account_GROUP__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Coveris,Amcor,Anglo American,kumba,takeda</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Jobs__r$Training_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Incompany - by inhouse trainers</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Jobs__r.JobItems__r$RecordType</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Job_Item__c.Material</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Jobs__r.JobItems__r$ENSProduct__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Int Royalty,Aust Royalty</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Jobs__r$Status__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Confirmed,Completed</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Jobs__r$Work_Start_Date_FIN_YR__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Jobs__r$Billing_Currency__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Jobs__r.JobItems__r$ENSProduct__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>OLD - Royalty payments</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Accounts_Jobs_Job_Items_with_Presenter__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account.Jobs__r$Job_First_Date__c</dateColumn>
+        <interval>INTERVAL_PREVFY</interval>
+    </timeFrameFilter>
+</Report>

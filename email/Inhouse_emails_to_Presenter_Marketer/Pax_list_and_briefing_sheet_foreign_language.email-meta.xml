@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Pax list and briefing sheet (foreign language)</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Pax list and briefing sheet (foreign language)</name>
+    <style>none</style>
+    <subject>Pax list and briefing sheet for {!Job__c.Account_Name__c}, {!Job__c.Certificate_Date_Text__c}</subject>
+    <textOnly>CC MARKETER
+
+Hi  {!Job__c.Facilitator_names__c}
+
+Attached is the current pax list and briefing sheet for the {!Job__c.Account_Name__c} workshop scheduled for {!Job__c.Certificate_Date_Text__c}.
+
+This may change as we lead up to the workshop but I wanted you to have the initial list.
+
+If you require any specific case studies, please let me know by DATE. Please note that only Crocodile Eggs and Munal Harbourside have been translated in {!Job__c.Language__c}, any other case studies required will be provided in English.
+
+Cheers</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 43, 73);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+
+Hi&nbsp;{!Job__c.Account_Sell_1_Name__c}<br>
+<br>
+Can you please give me an update on <strong><span style="color:#FF0090;">MONTH</span></strong> activity for the following retainers:<br>
+<br>
+<strong>ACCOUNT</strong> — <strong>NAM</strong>: <strong>XXX — XXX</strong> hours remaining in retainer — Last activity on <strong>DATE</strong><br>
+&nbsp;<br>
+<strong>ACCOUNT</strong> — <strong>NAM: XXX</strong> <strong>— XXX </strong>hours remaining in retainer — Last activity on <strong>DATE</strong><br>
+&nbsp;<br>
+<strong>ACCOUNT</strong> — <strong>NAM: XXX — XXX</strong> hours remaining in retainer — Last activity on <strong>DATE</strong><br>
+<br>
+All invoices are due by <strong><span style="color:#FF0090;">DATE</span></strong>.&nbsp;<br>
+<br>
+Cheers</span></span><br>
+												
+</html>

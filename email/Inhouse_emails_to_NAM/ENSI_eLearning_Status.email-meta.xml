@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>ENSI eLearning Status</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ENSI eLearning Status</name>
+    <style>none</style>
+    <subject>ENSI eLearning status Status</subject>
+    <textOnly>Hi {!Job__c.NAM_Name__c}
+
+As you may recall all ENSI programs include access to our online reinforcement module for a period of 6 months from the conclusion of your program.
+
+To date, X of X participants from your {!Job__c.Certificate_Date_Text__c} program have accessed the module.
+
+To guarantee the best return on your investment we encourage you to promote this resource to your group.
+
+Don’t hesitate to contact me if you would like further information.
+
+Regards</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

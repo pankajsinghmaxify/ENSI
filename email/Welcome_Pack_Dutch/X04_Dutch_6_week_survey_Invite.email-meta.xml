@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>email and URL are in Dutch</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>04 Dutch 6 week survey Invite</name>
+    <style>none</style>
+    <subject>ENSI Aanvraag casestudie - deel uw {!Contact.Job_Account_Name__c} O+B-ervaringen</subject>
+    <textOnly>Beste {!Contact.FirstName}
+
+U hebt ongetwijfeld uw onderhandelings- en beïnvloedingsvaardigheden succesvol toegepast op {!Contact.Job_Account_Name__c} cases sinds uw ENSI-workshop op  {!Contact.Job_Certificate_Date__c}.
+
+Als onderdeel van uw programma is nu het moment waarop we u vragen één kort voorbeeld te delen van hoe u uw onderhandelings- en beïnvloedingsvaardigheden hebt toegepast. Invullen van dit online onderzoek duurt niet langer dan 5-10 minuten en het kan hier worden geopend. Deze link is specifiek voor u, stuur deze niet door naar anderen.
+
+We stellen het op prijs als u een reactie geeft vóór:  {!Contact.Job_6_week_case_study_due__c}.
+
+Uw ENSI-begeleider {!Contact.Job_Presenters__c}, evalueert alle antwoorden; een rapport met feedback wordt ter beschikking gesteld aan de groep met de (anonieme) voorbeelden van iedereen.  Klik hier om een voorbeeldrapport te zien.
+http://www.surveygizmo.com/s3/1440857/ENS-onderzoek-naar-toepassing?jid={!Contact.Last_Job_ID__c}&amp;pid={!Contact.Last_Participant_Id__c}
+
+We moedigen u aan tijd hierin te investeren net zoals uw bedrijf in uw ontwikkeling heeft geïnvesteerd; zij worden zo nodig om reacties gevraagd.
+
+We zijn benieuwd naar uw onderhandelingservaringen en geven u graag meer feedback.
+
+Met vriendelijke groet
+
+{!Contact.Job_CSM_Name__c}
+{!Contact.Job_CSC_Title__c}
+
+Suite 507, 83 York Street
+Sydney NSW 2000
+Australia
+p: +61 9299 9688  f: +61 9299 1633
+www.negotiate.org
+
+
+Note this email and any attachments may be privileged and confidential. If you are not the intended recipient please delete the message and notify the sender. Copying or distribution by anyone else is prohibited. Thank you.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

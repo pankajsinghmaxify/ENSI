@@ -1,0 +1,20 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 43, 73);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+<span style="color:#FF0090; font-size:19px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;"><strong>CC PRESENTER</strong></span><br>
+<br>
+Hi&nbsp;{!Job__c.Account_Sell_1_Name__c}<br>
+<br>
+Attached is the report for the 3 month post program ‘Impact and Value’ survey issued for the {!Job__c.Account_Name__c}, {!Job__c.Certificate_Date_Text__c} program.<br>
+<br>
+<span style="color:#FF0090; font-size:19px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;"><strong>X</strong></span>
+ of 
+<span style="color:#FF0090; font-size:19px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;"><strong>X</strong></span>
+responded. The respondent key is for your eyes only.<br>
+<br>
+Please forward to NAM for discussion.&nbsp; &nbsp; &nbsp;<br>
+<br>
+Cheers</span></span><br>
+												
+</html>

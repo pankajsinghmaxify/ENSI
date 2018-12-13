@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Final Reminder 2 to pax to complete their Coaching Clinic PFQ (Bring Manual)</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Takeda Coaching Clinic PFQ Reminder 2 (Bring Manual)</name>
+    <style>none</style>
+    <subject>[Reminder] ENSI Program Focus Questionnaire DUE: {!Contact.Job_PFQ_Due_Date__c}</subject>
+    <textOnly>ENS International Participant Email
+
+
+M4NTRA Coaching Clinic – Think &amp; Act Differently to GET MORE
+
+Dear {!Contact.FirstName},
+
+Please note this will be your last chance to complete the ENSI Program Focus Questionnaire (PFQ). The PFQ helps the Facilitators to focus the Clinic based on your negotiation and it is highly recommended that you complete the questionnaire for your own benefit.
+
+Click here to access the questionnaire.*Please note that this link is specific to you, please don&apos;t forward it to others.
+
+Please complete the PFQ by {!Contact.Job_PFQ_Due_Date__c}.
+
+NB: If you have already started your questionnaire and have opted to &apos;save and continue&apos; while in the questionnaire - it is important that you use the link that was sent to you at the time you saved your response, otherwise the above link will open a new questionnaire.
+
+Remember to bring along your Green Negotiation and Influencing Manual.
+
+Should you have any questions, please don&apos;t hesitate to contact me.
+
+Kind regards,
+
+{!Contact.Job_CSM_Name__c}
+{!Contact.Job_CSC_Title__c}
+
+
+ENS International - Level 5, 83 York Street, Sydney 2000, NSW, Australia
+Phone: +61 2 9299 9688</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

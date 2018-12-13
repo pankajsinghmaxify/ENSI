@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_73011245</developerName>
+        <masterLabel>Opportunity Class</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Account.Opportunities1__r$Opportunity_Types__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Consulting / retainer</sourceValue>
+            </sourceValues>
+            <value>Consulting</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Training</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Organisational transformation</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Fundamentals</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Level 1</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Level 2</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Level 3</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Refresher</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Verhandlungsführung mit System: Grenzen explorieren, Neues ausprobieren</sourceValue>
+            </sourceValues>
+            <value>Training</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <aggregate>Sum</aggregate>
+            <axisBinding>y</axisBinding>
+            <column>Account.Opportunities1__r$Gross_Revenue__c.CONVERT</column>
+        </chartSummaries>
+        <chartType>VerticalColumnGrouped</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>Account.Opportunities1__r$Training_starts__c</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <secondaryGroupingColumn>Account.Opportunities1__r$Training_starts_comparator__c</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Opportunities1__r$Gross_Revenue__c.CONVERT</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities1__r$Xero_ID__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Account.Opportunities1__r$StageName</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_73011245</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>MonthInYear</dateGranularity>
+        <field>Account.Opportunities1__r$Training_starts__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Year</dateGranularity>
+        <field>Account.Opportunities1__r$Training_starts_comparator__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>3yr comparison 2018</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Accounts_with_opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account.Opportunities1__r$Training_starts__c</dateColumn>
+        <interval>INTERVAL_PREVCUR2FY</interval>
+    </timeFrameFilter>
+</Report>

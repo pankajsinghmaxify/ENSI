@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity.OpportunityLineItems$Id</field>
+    </columns>
+    <columns>
+        <field>Opportunity.OpportunityLineItems$Product_name__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.OpportunityLineItems$Recognised_date__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.OpportunityLineItems$Recognised__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.OpportunityLineItems$TotalPrice</field>
+    </columns>
+    <currency>AUD</currency>
+    <format>Tabular</format>
+    <name>Opportunity products, recognition</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunities_with_products_custom__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Opportunity$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

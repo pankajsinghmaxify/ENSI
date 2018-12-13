@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Job__c.Participants__r$Contact_Full_Name__c</field>
+    </columns>
+    <columns>
+        <field>Job__c.Participants__r$Contact_Email_Address__c</field>
+    </columns>
+    <columns>
+        <field>Job__c.Participants__r.Responses_Evaluation__r$Further_Training__c</field>
+    </columns>
+    <columns>
+        <field>Job__c.Participants__r.Responses_Evaluation__r$Process_Observation__c</field>
+    </columns>
+    <columns>
+        <field>Job__c.Participants__r.Responses_Evaluation__r$Coaching_Mentoring__c</field>
+    </columns>
+    <columns>
+        <field>Job__c.Participants__r.Responses_Evaluation__r$Preparation_Assistance__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Job__c$Name</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>J-09564</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Follow on Support 2018 v2</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Job_Participant_Evaluation_Response__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Job__c$Training_starts__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,3 @@
+<apex:page standardcontroller="Job__c">
+{!Job__c.id}
+</apex:page>

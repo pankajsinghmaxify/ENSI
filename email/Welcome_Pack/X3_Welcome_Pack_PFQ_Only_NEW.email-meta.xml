@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Includes PFQ in SG3</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>01 Welcome Pack PFQ</name>
+    <style>none</style>
+    <subject>Participant Information: ENS Program for {!Contact.Job_Account_Name__c} on {!Contact.Job_Certificate_Date__c}</subject>
+    <textOnly>Dear {!Contact.FirstName}
+
+As part of the ENS International {!Contact.Program_Name__c} Program for {!Contact.Job_Account_Name__c} on {!Contact.Job_Certificate_Date__c}, please read the following information to help empower your negotiation success.
+
+Date:   {!Contact.Job_Certificate_Date__c}
+
+Time:   {!Contact.Job_Start_Finish_Time__c}
+
+Venue:
+{!Contact.Job_Venue_Name__c}
+{!Contact.Job_Venue_Address__c}
+{!Contact.Job_City_State_PC__c}
+{!Contact.Job_Venue_Country__c}
+
+Program Leader/s:   {!Contact.Job_Presenters__c}
+
+Dress:   Smart casual
+
+The ENS Program is not only about giving you the skills required to approach negotiations confidently but to also ensure that your learnings are sustained and become a force of habit. We believe that engaging you before and after the workshop will increase your learning outcomes and ask that you participate fully in the activities outlined below. Results of the post program case study and survey are returned to your management to assist them in understanding your challenges and successes.
+
+Pre-Program Requirements
+
+1. Program Focus Questionnaire &apos;PFQ&apos;- the PFQ helps the program leader to customise the program based on your needs. We ask that all PFQs are completed by {!Contact.Job_PFQ_Due_Date__c}.
+Click below to access the questionnaire.
+http://www.surveygizmo.com/s3/756776/PFQ-AND-RAIT-Survey?pfq-rait&amp;rait=NO&amp;jid={!Contact.Last_Job_ID__c}&amp;pid={!Contact.Last_Participant_Id__c}
+
+Note: This link is specific to you, please don&apos;t forward to others.
+Please ensure Java is enabled in your web browser.
+
+2. Please come briefed with notes on at least one current negotiation situation (for use in diagnosis and review sessions during the workshop).
+
+Post Program Requirements
+
+1. You will receive 6 reinforcement emails sent fortnightly for 12 weeks.
+
+2. Six weeks after the workshop you will be sent a survey to provide a short example of how you have applied your new skills. These will be reviewed by your facilitator and provided back to the group on an anonymous basis.
+
+3. Three months after the workshop we will ask you to complete a short survey summarising the value you have realised from your application of negotiation skills.
+
+4. Subscription to our eBulletin Negotium. If you don’t sign the subscription form at the program, please feel free to register online at www.negotiate.org
+
+A full list of learning outcomes is available here.
+{!Contact.Job_Learning_Outcome__c}
+
+We look forward to seeing you at the workshop!
+
+Kind regards
+
+{!Contact.Job_CSM_Name__c}
+Client Service Manager
+
+Suite 507, 83 York Street
+Sydney NSW 2000
+Australia
+p: +61 9299 9688  f: +61 9299 1633
+www.negotiate.org
+
+
+Note this email and any attachments may be privileged and confidential. If you are not the intended recipient please delete the message and notify the sender. Copying or distribution by anyone else is prohibited. Thank you.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

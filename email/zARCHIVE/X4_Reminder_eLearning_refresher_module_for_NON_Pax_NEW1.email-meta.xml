@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>For eLearners who HAVEN&apos;T attended a program - Reminder Email with access details to eLearning refresher module</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>02 eLearning Reminder for Non-Pax</name>
+    <style>none</style>
+    <subject>ENS eLearning Module: Remember to focus on YOUR outcome</subject>
+    <textOnly>Dear {!Contact.FirstName}
+
+Please remember to make use of the ENS International Negotiation and Influencing eLearning module at http://www.negotiate.org/ens-reinforcement-login
+
+Your username and password is {!Contact.Email}
+
+*** Please note your password is case sensitive. We recommend you copy and paste the email above and paste into the username and password fields on the login screen ***
+
+Access to our online reinforcement module is available until {!Contact.Job_eLearning_Expiry_Date__c} and we encourage you to make use of this resource.
+
+
+The module is not read only and in some instances you are required to interact/participate before you can move onto the next component.
+
+You will need to have Flash enabled for your web browser and your volume turned on before you begin.
+
+Should you have any questions, please don&apos;t hesitate to contact me.
+
+Kind regards
+
+{!Contact.Job_CSM_Name__c}
+Client Service Manager
+
+Suite 507, 83 York Street
+Sydney NSW 2000
+Australia
+p: +61 9299 9688  f: +61 9299 1633
+www.negotiate.org
+
+
+Note this email and any attachments may be privileged and confidential. If you are not the intended recipient please delete the message and notify the sender. Copying or distribution by anyone else is prohibited. Thank you.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

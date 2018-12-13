@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>WLD Pre-Reading Material</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>00 Pre-Reading WLD</name>
+    <style>none</style>
+    <subject>Pre Reading Inforemation: ENS Workshop Leader Development Program on {!Job__c.Certificate_Date_Text__c}</subject>
+    <textOnly>ENS International Participant Email
+
+
+Dear {!Contact.FirstName},
+
+&apos;Get more of what you want&apos;
+
+As part of our preparation for our WLD on 7-10 May, and to get our mindsets aligned, here are some pre-readings.
+
+These are
+
+Recognizing Sub-Optimal Negotiation Outcomes
+Planning Your Negotiation Style
+ENSI Leader’s Guide (LG) Section 2.1 ‘Commence Day 1’ (to show you the LG layout)
+Broad WLD Agenda
+ENSI Terminology/Acronym
+
+Towards having a great WLD experience…
+
+ENS International - Level 5, 83 York Street, Sydney 2000, NSW, Australia
+Phone: +61 2 9299 9688</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

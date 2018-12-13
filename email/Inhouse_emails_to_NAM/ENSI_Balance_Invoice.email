@@ -1,0 +1,14 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 43, 73);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+Hi&nbsp;{!Job__c.NAM_Name__c}<br>
+<br>
+Attached is our balance invoice for the ENSI workshop conducted by&nbsp;{!Job__c.Facilitator_names__c} on {!Job__c.Certificate_Date_Text__c}&nbsp;at {!Job__c.Venue_Name__c}.<br>
+<br>
+I trust that everything was to your satisfaction.<br>
+<br>
+Don’t hesitate to contact me if you have any questions or concerns.<br>
+<br>
+Kind regards</span></span>												
+</html>

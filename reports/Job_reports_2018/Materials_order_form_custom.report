@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity.OpportunityLineItems$Product_Type__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.OpportunityLineItems$Product_name__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.OpportunityLineItems$Quantity</field>
+    </columns>
+    <columns>
+        <field>Opportunity.OpportunityLineItems$PricebookEntry.Product2.Instructions__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.OpportunityLineItems$Description</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity$Job_ID__c.Id</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.OpportunityLineItems$Product_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Material,Other,Case study,Handout</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Materials order form</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunities_with_products_custom__c</reportType>
+    <roleHierarchyFilter>ENSRole</roleHierarchyFilter>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Opportunity.OpportunityLineItems$Product_Type__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Opportunity$Training_starts__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

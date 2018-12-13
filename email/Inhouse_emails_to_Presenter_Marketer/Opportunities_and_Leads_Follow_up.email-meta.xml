@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Opportunities and Leads Follow-up</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Opportunities and Leads Follow-up</name>
+    <style>none</style>
+    <subject>Opportunities and Leads Follow-up - MONTH</subject>
+    <textOnly>Hi {!Job__c.Account_Sell_1_Name__c}
+
+Please give me an update on the proposals that you’ve sent out as below attached.
+
+If below use this format
+Proposal_date: ACCOUNT — NAM: XXX — Work Type: XXX — Job days: DD — Value: $$$
+
+Also, below are people we’ve recorded as opportunities that haven’t reached the proposal stage – what is the status here?
+
+ENSI Lead Added Date – Person’s Name – Title – Account – Activity Description (reference from SF Activity History on Contact)
+
+Many thanks</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

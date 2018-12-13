@@ -1,0 +1,18 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 0, 0);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">Hi {!Contact.FirstName}<br>
+<br>
+<span style="font-size: 16.5pt; color:#84bd00;">'Expand the possibilities'
+&nbsp;</span><br><br>
+A friendly reminder today to advise that this is <strong>your last chance</strong> to complete the online survey on how ENSI has had impact and value to you.<br><br>
+
+Please <a href="{!Contact.Job_Three_Month_Survey_PAX_URL__c}" style="color:#84bd00;">click here</a> to access the survey. <strong>This link is specific to you, please don't forward to others</strong>.<br><br>
+
+NB: If you have already started your survey and have opted to 'save and continue' while in the survey - it is important that you use the link that was sent to you at the time you saved your response otherwise, the above link will open a new survey.<br><br>
+
+
+We really appreciate your feedback.<br><br>
+
+Kind regards</span></span>												
+</html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 0, 0);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">Hi {!Contact.FirstName}<br>
+<br>
+<span style="font-size: 16.5pt; color:#84bd00;">'Expand the possibilities'
+&nbsp;</span><br><br>
+As a final request, we would appreciate 5 minutes of your time to share with us the impact and value you have seen since your ENSI workshop on {!Job__c.Certificate_Date_Text__c}.<br><br>
+
+Please <a href="{!Contact.Job_Three_Month_Survey_PAX_URL__c}" style="color:#84bd00;">click here</a> to access the survey. <strong>This link is specific to you, please don't forward to others</strong>.<br><br>
+
+We would appreciate if you could complete the survey by: <strong>{!Job__c.X3_month_case_study_due__c}</strong>.<br><br>
+
+
+Thank you in advance for your cooperation. If you have any questions or comments, please don't hesitate to contact me directly.<br><br>
+
+Kind regards</span></span>												
+</html>

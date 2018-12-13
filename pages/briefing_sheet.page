@@ -1,0 +1,235 @@
+<apex:page standardController="Job__c" Extensions="JobExt" showheader="false" renderAs="PDF" action="{!Totals}">
+  <table width="720" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td><span style="font-family:  Verdana, Arial, Helvetica, sans-serif;font-size: 20px; font-weight: normal; color: #355a80;">Workshop Briefing Sheet</span></td>
+      <td align="right"><img src="{!URLFOR($Resource.Logo)}" border="0" alt=""/></td>
+    </tr>
+  </table>
+  <br/>
+  <table width="720" align="center" style="margin-top:0.5px;border:1px solid #d9e6f0;" cellpadding="1" cellspacing="1">
+    <tr>
+      <td width="22%"><strong>Workshop Dates:</strong></td>
+      <td width="28%"><apex:outputField value="{!Job__c.Certificate_Date_Text__c}" /></td>
+      <td width="16%"><strong>ENS Job No.:</strong></td>
+      <td width="34%"><apex:outputField value="{!Job__c.Name}" /></td>
+    </tr>
+    <tr>
+      <td><strong>Start/Finish Time:</strong></td>
+      <td><apex:outputText value="{!Job__c.Start_Finish_Time__c}" /></td>
+      <td><strong>Program Name:</strong></td>
+      <td><apex:outputText value="{!Job__c.Program_Name__c}" /></td>    
+    </tr>    
+    <tr>
+      <td><strong>Workshop Leader/s:</strong></td>
+      <td><apex:outputField value="{!Job__c.Presenters__c}" /></td>
+      <td><strong>CSC:</strong></td>
+      <td><apex:outputField value="{!Job__c.CSM_Name__c}" /></td>
+    </tr>
+    <tr>
+      <td><strong>No. of Participants:</strong></td>
+      <td><apex:outputText value="{!Job__c.No_of_Participants__c}" /></td>
+            <td><strong>Type:</strong></td>
+      <td><apex:outputText value="{!Job__c.Job_Type__c}" /></td>
+      <td><strong>Status:</strong></td>
+      <td><apex:outputText value="{!Job__c.Status__c}" /></td>      
+    </tr>
+       </table>
+  <br/>
+  <table width="720" align="center" style="margin-top:1px;border:1px solid #d9e6f0;" cellpadding="1" cellspacing="1">
+    <tr>
+      <td width="22%"><strong>NAM:</strong></td>
+      <td width="28%"><apex:outputField value="{!Job__c.NAM_Name__c}" /></td>
+      <td width="16%"><strong>Title:</strong></td>
+      <td width="34%"><apex:outputField value="{!Job__c.NAM_Name__r.Title}" /></td>
+    </tr>
+    <tr>
+      <td><strong>Phone:</strong></td>
+      <td><apex:outputField value="{!Job__c.NAM_Name__r.Phone}" /></td>
+
+      <td><strong>Email:</strong></td>
+      <td><apex:outputField value="{!Job__c.NAM_Name__r.Email}" /></td>
+    </tr>
+   <tr>
+     
+            <td><strong>Mobile:</strong></td>
+      <td><apex:outputField value="{!Job__c.NAM_Name__r.MobilePhone}" /></td>
+     
+    </tr>
+     </table> 
+  <br/>
+  <table width="720" align="center" style="margin-top:1px;border:1px solid #d9e6f0;" cellpadding="1" cellspacing="1">
+    <tr>
+      <td width="22%"><strong>Contact Person:</strong></td>
+      <td width="28%"><apex:outputField value="{!Job__c.Admin_Contact__c}" /></td>
+      <td width="16%"><strong>Title:</strong></td>
+      <td width="34%"><apex:outputField value="{!Job__c.Admin_Contact__r.Title}" /></td>
+    </tr>
+    <tr>
+      <td><strong>Phone:</strong></td>
+      <td><apex:outputField value="{!Job__c.Admin_Contact__r.Phone}" /></td>
+      <td><strong>Email:</strong></td>
+      <td><apex:outputField value="{!Job__c.Admin_Contact__r.Email}" /></td>
+    </tr>
+  </table> 
+  <br/>
+  <table width="720" align="center" style="margin-top:1px;border:1px solid #d9e6f0;" cellpadding="1" cellspacing="1">    
+    <tr>
+      <td width="22%" valign="top"><strong>Client:</strong></td>
+      <td width="28%" valign="top">
+          <table cellpadding="0" cellspacing="0">
+              <tr>
+                  <td><apex:outputField value="{!Job__c.Account__c}" /></td>
+              </tr>
+              <tr>
+                  <td><apex:outputField value="{!Job__c.Account__r.BillingStreet}" /></td>
+              </tr>
+              <tr>
+                  <td><apex:outputField value="{!Job__c.Account__r.Billing_City_State_Postcode__c}" /></td>
+              </tr>
+              <tr>
+                  <td><apex:outputField value="{!Job__c.Account__r.BillingCountry}" /></td>
+              </tr>
+          </table>
+       </td>
+       <td width="16%" valign="top"><strong>Venue Address:</strong></td>
+      <td width="34%">
+          <table cellpadding="0" cellspacing="0">
+              <tr>
+                  <td><apex:outputField value="{!Job__c.Venue_Contact__c}" />&nbsp;-&nbsp;<apex:outputField value="{!Job__c.Venue_Phone__c}" /></td>              
+              </tr> 
+              <tr>
+                  <td><apex:outputField value="{!Job__c.Venue_Name__c}" /></td>
+              </tr>
+              <tr>
+                  <td><apex:outputField value="{!Job__c.Venue_Address__c}" /></td>
+              </tr>
+              <tr>
+                  <td><apex:outputField value="{!Job__c.Venue_City__c}" />, &nbsp;<apex:outputField value="{!Job__c.Venue_State__c}" />, &nbsp;<apex:outputField value="{!Job__c.Venue_Postcode__c}" /></td>
+              </tr>    
+              <tr>
+                  <td><apex:outputField value="{!Job__c.Venue_Country__c}" /></td>              
+              </tr>      
+          </table>
+       </td>
+    </tr>
+  </table>
+  <br/>
+  <table width="720" align="center" style="border:1px solid #d9e6f0;" cellpadding="0" cellspacing="0">
+      <tr>
+          <td>
+              <table width="694" align="center" style="margin-top:1px; border-collapse: collapse;" cellpadding="1" cellspacing="2">
+                <tr>
+                  <td colspan="9" style="color:#355a80; font-size:14px; padding-bottom:1px; padding-top:1px; padding-left:1px;">Fees</td>
+                </tr>
+                <tr>
+                <td colspan="9" style="color:#355a80; font-size:10px; padding-bottom:1px; padding-top:1px; padding-left:1px;">Fees in the briefing sheet are indicative only and not confirmed. Fees will be confirmed post program delivery by the CSC</td>
+                </tr>
+                <tr>
+                  <td width="8%"><strong>Role</strong></td>
+                  <td width="13%"><strong>Contact</strong></td>
+                  <td align="right" width="13%" style="background-color: #c0c7cd;"><strong>Materials %</strong></td>
+                  <td align="right" width="13%" style="background-color: #c0c7cd;"><strong>{!Job__c.Billing_Currency__r.Name} Fee</strong></td>
+                  <td align="right" width="13%" style="background-color: #c0c7cd;"><strong>AUD Fee</strong></td>
+                  <td width="1%"></td>
+                  <td align="right" width="13%" style="background-color: #d9e6f0;"><strong>Prof Serv %</strong></td>
+                  <td align="right" width="13%" style="background-color: #d9e6f0;"><strong>{!Job__c.Billing_Currency__r.Name} Fee</strong></td>
+                  <td align="right" width="13%" style="background-color: #d9e6f0;"><strong>AUD Fee</strong></td>
+                </tr>
+                <apex:repeat value="{!JR}" var="JobRoles">
+                <tr>
+                  <td><apex:outputField value="{!JobRoles.Role__c}" /></td>
+                  <td><apex:outputField value="{!JobRoles.Contact__r.FirstName}" />&nbsp;<apex:outputField value="{!JobRoles.Contact__r.LastName}" /></td>
+                  <td align="right" style="background-color: #c0c7cd;"><apex:outputField value="{!JobRoles.Materials_Share__c}" /></td>
+                  <td align="right" style="background-color: #c0c7cd;"><apex:outputField value="{!JobRoles.Materials_Share_FX_Total__c}" /></td>
+                  <td align="right" style="background-color: #c0c7cd;"><apex:outputField value="{!JobRoles.Materials_Share_AUD_Total__c}" /></td>
+                  <td></td>
+                  <td align="right" style="background:#d9e6f0;"><apex:outputField value="{!JobRoles.Prof_Serv_Share__c}" /></td>
+                  <td align="right" style="background:#d9e6f0;"><apex:outputField value="{!JobRoles.Prof_Serv_Share_FX_Total__c}" /></td>
+                  <td align="right" style="background:#d9e6f0;"><apex:outputField value="{!JobRoles.Prof_Serv_Share_AUD__c}" /></td>
+             
+                </tr>
+                </apex:repeat>
+                <tr>
+                  <td align="right" colspan="2">&nbsp;</td>
+                  <td align="right" style="background-color: #c0c7cd;">&nbsp;</td>
+                  <td align="right" style="background-color: #c0c7cd;"><strong>{!Materials_Total}</strong></td>
+                  <td align="right" style="background-color: #c0c7cd;"><strong>{!Materials_Total_AUD}</strong></td>
+                  <td></td>
+                  <td align="right" style="background-color:#d9e6f0;">&nbsp;</td>
+                  <td align="right" style="background-color:#d9e6f0;"><strong><apex:outputField value="{!Job__c.tmp_Total__c}" /></strong></td>
+                  <td align="right" style="background-color:#d9e6f0;"><strong><apex:outputField value="{!Job__c.tmp_Total_AUD__c}" /></strong></td>
+                </tr>
+                <tr style="line-height:3px;">
+                  <td colspan="8" style="padding:0;">&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+        </tr>                          
+  </table>
+  <br/>
+  <table width="720" align="center" style="margin-top:1px;border:1px solid #d9e6f0;" cellpadding="1" cellspacing="1">
+    <tr>
+      <td colspan="4" style="color:#355a80; font-size:14px; padding-bottom:1px; padding-top:1px;">Materials Fees</td>
+    </tr>
+    <tr>
+      <td width="48%"><strong>Product</strong></td>
+      <td align="right" width="13%"><strong>Quantity</strong></td>
+      <td align="right" width="13%"><strong>Price</strong></td>
+      <td align="right" width="13%"><strong>Price Total</strong></td>
+      <td align="right" width="13%"><strong>Total AUD</strong></td>
+    </tr>
+    <apex:repeat value="{!JI}" var="JobItems">
+    <tr>
+      <td><apex:outputField value="{!JobItems.ENSProduct__r.Name}" /></td>
+      <td align="right"><apex:outputField value="{!JobItems.Quantity__c}" /></td>
+      <td align="right"><apex:outputField value="{!JobItems.Price_FX__c}" /></td>
+      <td align="right"><apex:outputField value="{!JobItems.Item_Value_FX__c}" /></td>
+      <td align="right"><apex:outputField value="{!JobItems.Item_Value_AUD__c}" /></td>
+    </tr>
+    </apex:repeat>
+    <tr>
+      <td align="right" colspan="3">&nbsp;</td>
+      <td align="right"><strong><apex:outputField value="{!Job__c.FX_Materials_Total__c}" /></strong></td>
+      <td align="right"><strong><apex:outputField value="{!Job__c.AUD_Materials_Total__c}" /></strong></td>
+    </tr>
+  </table>
+  <br/>
+  <table width="720" align="center" style="margin-top:1px; border:1px solid #d9e6f0;" cellpadding="1" cellspacing="1">
+    <tr>
+      <td width="74%" colspan="3" style="color:#355a80; font-size:14px; padding-bottom:1px; padding-top:1px;">Grand Total:</td>
+      <td align="right" width="13%"><strong><apex:outputField value="{!Job__c.FX_Total__c}" /></strong></td>
+      <td align="right" width="13%"><strong><apex:outputField value="{!Job__c.Total_Job_Value_AUD__c}" /></strong></td>
+    </tr>
+  </table>
+  <br/>
+  <table width="720" align="center" style="margin-top:1px;border:1px solid #d9e6f0;" cellpadding="1" cellspacing="1">
+    <tr>
+      <td width="120"><strong>Expenses Agreed</strong></td>
+    </tr>
+    <tr>
+      <td><apex:outputfield value="{!Job__c.Expenses_Agreed__c}" /></td>
+    </tr>
+  </table>
+
+  <br/>
+  <table width="720" align="center" style="margin-top:1px;border:1px solid #d9e6f0;" cellpadding="1" cellspacing="1">
+    <tr>
+      <td width="120"><strong>Other Comments</strong></td>
+    </tr>
+    <tr>
+      <td><apex:outputfield value="{!Job__c.Comments__c}" /></td>
+    </tr>
+    
+        <tr>
+      <td><apex:outputfield value="{!Job__c.Additional_Comments__c}" /></td>
+    </tr>
+ 
+          <tr>
+      <td width="130"><strong>Case Studies</strong></td>
+    </tr>
+    <tr>
+        <td><apex:outputfield value="{!Job__c.Case_Studies__c}" /></td>
+</tr>
+
+  </table>
+</apex:page>

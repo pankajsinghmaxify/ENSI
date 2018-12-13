@@ -1,0 +1,32 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 43, 73);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">Hi {!Job__c.Facilitator_names__c}<br>
+<br>
+To help you prepare for the {!Job__c.Account_Name__c} program on {!Job__c.Certificate_Date_Text__c}, attached are the following:
+&nbsp;<br>
+
+<ul>
+	<li><strong>Briefing Sheet</strong> – includes venue address and contact details. Fees will be confirmed post workshop.</li>
+	<li><strong>A PFQ summary</strong> - includes most relevant information from the PFQ responses. We are able to collect partial responses as well which is why you might not have record of some of these responses.</li>
+	<li><strong>A PFQ Excerpt </strong>– groups the objectives, shortcomings and difficult aspects as indicated by participants.</li>
+	<li><strong>A RAIT summary</strong> (refer to PFQ summary spreadsheet – worksheet titled: RAIT_Summary) - Gives you an understanding of what pax have indicated is important to them. Individual areas are highlighted orange as most important and blue as medium importance. The yellow represents the most important areas as averaged by all ratings.</li>
+	<li><strong>Confidence and Competence Graph</strong> (refer to PFQ summary spreadsheet – worksheet titled: Conf_Comp) for group overview.</li>
+	<li><strong>Pax List</strong> – quick overview of participants including highlights of those who haven’t completed pre-work.</li>
+	<li><strong>Sample NIP</strong> – for group overview.</li>
+	<li><strong>Peer Review Form</strong> - As part of the ENSI Quality Assurance, please complete the attached ENSI Peer/Self Review form after the workshop and return to me. (Solo facilitators will complete a self-assessment and dual facilitators will peer review each other)</li>
+</ul>
+
+<div><strong>Reminders re RAIT</strong>, please remember to ask those who haven’t completed their pre-RAIT to do so while at the program. It’s usually good to ask them to do this prior to the program commencing or at morning tea. I’ve included blank <span style="color:#84bd00;">pre-RAIT forms (green text at top)</span> and <span style="color:#FF0000;">post-RAIT (red text at top)</span> in the materials to use if participants change at the last minute.<br>
+<br>
+The <span style="color:#FF0000;">post-RAIT forms</span> have the participant names printed on them.<br>
+&nbsp;<br>
+<strong>eLearning Reinforcement Module</strong>, please mention this to participants throughout the workshop. Login details will be sent to participants from ENSI office post program. They will have unlimited access for 6 months post program.<br>
+<br>
+The materials will be arriving on <span style="color:#FF0090;"><strong>XXX</strong></span>. &nbsp;<br>
+<br>
+Let me know if there’s anything else you need.<br>
+<br>
+Thanks</span></span><br>
+												
+</html>

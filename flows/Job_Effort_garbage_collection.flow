@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <name>To_be_deleted</name>
+        <label>To be deleted</label>
+        <locationX>982</locationX>
+        <locationY>164</locationY>
+        <assignmentItems>
+            <assignToReference>sJobEffortsToDelete</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>JobEffort</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Foreach_Job_Effort</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Job_Efforts_found</name>
+        <label>Job Efforts found?</label>
+        <locationX>170</locationX>
+        <locationY>184</locationY>
+        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <rules>
+            <name>Found_Job_Efforts</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>JobEfforts</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Find_OppProducts</targetReference>
+            </connector>
+            <label>Found Job Efforts</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Job_Efforts_to_delete</name>
+        <label>Job Efforts to delete?</label>
+        <locationX>680</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>No Job Efforts to delete</defaultConnectorLabel>
+        <rules>
+            <name>Found_Job_Efforts_to_delete</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>sJobEffortsToDelete</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Delete_Job_Efforts</targetReference>
+            </connector>
+            <label>Found Job Efforts to delete</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Match</name>
+        <label>Match</label>
+        <locationX>988</locationX>
+        <locationY>472</locationY>
+        <defaultConnector>
+            <targetReference>Foreach_OppProducts</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No match</defaultConnectorLabel>
+        <rules>
+            <name>OP_matches_JE</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>OppProduct.Id</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>JobEffort.Related_OpportunityProduct_ID__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Foreach_Job_Effort</targetReference>
+            </connector>
+            <label>OP matches JE</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>OppProducts_found</name>
+        <label>OppProducts found?</label>
+        <locationX>409</locationX>
+        <locationY>307</locationY>
+        <defaultConnectorLabel>OppProducts not found</defaultConnectorLabel>
+        <rules>
+            <name>Found_OppProducts</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>sOppProducts</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Foreach_Job_Effort</targetReference>
+            </connector>
+            <label>Found OppProducts</label>
+        </rules>
+    </decisions>
+    <interviewLabel>Job Effort garbage collection {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Job Effort garbage collection v</label>
+    <loops>
+        <name>Foreach_Job_Effort</name>
+        <label>Foreach Job Effort</label>
+        <locationX>681</locationX>
+        <locationY>302</locationY>
+        <assignNextValueToReference>JobEffort</assignNextValueToReference>
+        <collectionReference>JobEfforts</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Foreach_OppProducts</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Job_Efforts_to_delete</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <name>Foreach_OppProducts</name>
+        <label>Foreach OppProducts</label>
+        <locationX>987</locationX>
+        <locationY>302</locationY>
+        <assignNextValueToReference>OppProduct</assignNextValueToReference>
+        <collectionReference>sOppProducts</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Match</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>To_be_deleted</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processType>AutoLaunchedFlow</processType>
+    <recordDeletes>
+        <name>Delete_Job_Efforts</name>
+        <label>Delete Job Efforts</label>
+        <locationX>682</locationX>
+        <locationY>562</locationY>
+        <inputReference>sJobEffortsToDelete</inputReference>
+    </recordDeletes>
+    <recordLookups>
+        <name>Find_Job_Efforts</name>
+        <label>Find Job Efforts</label>
+        <locationX>173</locationX>
+        <locationY>58</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Job_Efforts_found</targetReference>
+        </connector>
+        <filters>
+            <field>Opportunity__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>OpportunityId</elementReference>
+            </value>
+        </filters>
+        <object>Job_effort__c</object>
+        <outputReference>JobEfforts</outputReference>
+        <queriedFields>Related_OpportunityProduct_ID__c</queriedFields>
+        <queriedFields>Id</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <name>Find_OppProducts</name>
+        <label>Find OppProducts</label>
+        <locationX>408</locationX>
+        <locationY>191</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>OppProducts_found</targetReference>
+        </connector>
+        <filters>
+            <field>OpportunityId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>OpportunityId</elementReference>
+            </value>
+        </filters>
+        <object>OpportunityLineItem</object>
+        <outputReference>sOppProducts</outputReference>
+        <queriedFields>Id</queriedFields>
+    </recordLookups>
+    <startElementReference>Find_Job_Efforts</startElementReference>
+    <status>Obsolete</status>
+    <variables>
+        <description>Current Job effort in loop</description>
+        <name>JobEffort</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Job_effort__c</objectType>
+    </variables>
+    <variables>
+        <name>JobEfforts</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Job_effort__c</objectType>
+    </variables>
+    <variables>
+        <name>OpportunityId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Current Opportunity Product</description>
+        <name>OppProduct</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>OpportunityLineItem</objectType>
+    </variables>
+    <variables>
+        <name>sJobEffortsToDelete</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Job_effort__c</objectType>
+    </variables>
+    <variables>
+        <name>sOppProducts</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>OpportunityLineItem</objectType>
+    </variables>
+</Flow>

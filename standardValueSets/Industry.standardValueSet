@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Agriculture</fullName>
+        <default>false</default>
+        <label>Agriculture</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Business Services</fullName>
+        <default>false</default>
+        <label>Business Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Communications Services</fullName>
+        <default>false</default>
+        <label>Communications Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cultural/Recreational</fullName>
+        <default>false</default>
+        <label>Cultural/Recreational</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Education/Training</fullName>
+        <default>false</default>
+        <label>Education/Training</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Energy/Utilities</fullName>
+        <default>false</default>
+        <label>Energy/Utilities</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Financial Services/Insurance</fullName>
+        <default>false</default>
+        <label>Financial Services/Insurance</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Government/Public Authorities</fullName>
+        <default>false</default>
+        <label>Government/Public Authorities</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hospitality/Tourism</fullName>
+        <default>false</default>
+        <label>Hospitality/Tourism</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Manufacturing</fullName>
+        <default>false</default>
+        <label>Manufacturing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Maritime &amp; Port Consultancy</fullName>
+        <default>false</default>
+        <label>Maritime &amp; Port Consultancy</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mining</fullName>
+        <default>false</default>
+        <label>Mining</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Not For Profit</fullName>
+        <default>false</default>
+        <label>Not For Profit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pharmaceutical/Health/Biotech</fullName>
+        <default>false</default>
+        <label>Pharmaceutical/Health/Biotech</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Property/Development/Construction</fullName>
+        <default>false</default>
+        <label>Property/Development/Construction</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Retail/Wholesale Trade</fullName>
+        <default>false</default>
+        <label>Retail/Wholesale Trade</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Technology/IT/Internet</fullName>
+        <default>false</default>
+        <label>Technology/IT/Internet</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Transport</fullName>
+        <default>false</default>
+        <label>Transport</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Unknown</fullName>
+        <default>false</default>
+        <label>Unknown</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,14 @@
+<apex:page tabStyle="Task" standardController="Job_Role__c" recordSetVar="jobroles" extensions="SendBriefSheet">
+  <apex:form >
+  <apex:SectionHeader title="Confirm Emailing of Briefing Sheet" />
+  <apex:pageBlock >
+    <p>This will send the briefing sheet to the following contacts:<br/><br/>
+    <apex:repeat value="{!selectedJR}" var="JR">
+      <apex:outputField value="{!JR.Contact__c}" /><br/><br/>
+    </apex:repeat>
+    </p><br/><br/>
+    <apex:commandButton action="{!getDeliverAsPDF}" value="Confirm" />&nbsp;&nbsp;&nbsp;
+    <apex:commandButton action="{!cancel}" value="Cancel" />
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

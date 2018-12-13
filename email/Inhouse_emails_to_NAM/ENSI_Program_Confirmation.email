@@ -1,0 +1,27 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 0, 0);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+
+<strong><span style="color:#ee0090;" >CC MARKETER</span></strong><br>
+<br>
+Hi {!Job__c.NAM_Name__c}<br>
+<br>
+Thank you for booking a program with ENSI.<br>
+<span style="color:#ee0090;"><strong>OR</strong></span><br>
+We’re delighted to be working with {!Job__c.Account_Name__c} again.<br>
+<br>
+I am writing to introduce myself as <strong><span style="color:#ee0090;" >MARKETER</span></strong>’s Client Services Manager. As per your communications with <strong><span style="color:#ee0090;" >MARKETER</span></strong>, attached are the relevant confirmation documents relating to the workshop booked for {!Job__c.Certificate_Date_Text__c}:<br>
+
+<ul>
+	<li>Letter of Engagement</li>
+	<li>Terms of Business</li>
+	<li>50% Confirmation Invoice</li>
+	<li>Venue Administration Checklist <span style="color:#ee0090;">(attach venue admin relevant to presenter)</span></li>
+	<li>TN Visa Application Letters for ENS Consultants <span style="color:#ee0090;">(if applicable)</span></li>
+</ul>
+
+I look forward to working together to ensure we deliver a great workshop.<br>
+<br>
+Kind regards</span></span>												
+</html>

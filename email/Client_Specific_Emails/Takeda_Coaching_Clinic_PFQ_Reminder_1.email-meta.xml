@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Includes link for Takeda Coaching Clinic PFQ (Bring Manual)</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Takeda Coaching Clinic PFQ Reminder 1</name>
+    <style>none</style>
+    <subject>[Reminder] ENSI Program Focus Questionnaire for {!Contact.Job_Certificate_Date__c} {!Contact.Program_Name__c}</subject>
+    <textOnly>M4NTRA Coaching Clinic
+
+Dear {!Contact.FirstName}
+
+Please remember to complete your ENSI Pre-Program Questionnaire by {!Job__c.PFQ_Survey_due_date__c}. The PFQ helps the program leader to customise the program based on your needs.
+
+Click here* to access the questionnaire.*Please note that this link is specific to you, please don&apos;t forward it to others.
+
+
+NB: If you have already started your questionnaire and have opted to &apos;save and continue&apos; while in the questionnaire - it is important that you use the link that was sent to you at the time you saved your response, otherwise the above link will open a new questionnaire.
+Remember to bring along your Green Negotiation and Influencing Manual.
+
+Should you have any questions, please don&apos;t hesitate to contact me.
+
+
+Kind regards</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

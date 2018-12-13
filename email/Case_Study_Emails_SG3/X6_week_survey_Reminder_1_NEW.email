@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta content="text/html; charset=utf-8"
+ http-equiv="Content-Type">
+  <title>ENS International Participant Email</title>
+</head>
+<body topmargin="0" leftmargin="0"
+ style="margin: 0px; background-color: rgb(244, 244, 241);"
+ marginheight="0" marginwidth="0">
+<!--100% body table -->
+<table bgcolor="#edf5fc" border="0" cellpadding="0"
+ cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <td><!--view in browser link-->
+      <table bgcolor="#f4f4f1" border="0"
+ cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td align="center" height="45"
+ valign="middle">
+            <p
+ style="margin: 5px auto 0pt; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 300;"></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--header-->
+<table style="background-color: rgb(255, 255, 255);"
+ align="center" bgcolor="#ffffff" border="0"
+ cellpadding="0" cellspacing="0" width="600">
+  <tbody>
+    <tr>
+      <td>
+      <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+        <tbody>
+          <tr>
+            <td height="119" valign="top" width="600"><a
+ href="http://www.negotiate.org/"><img
+ src="http://www.negotiate.org/images/ENSI_header.jpg"
+ style="display: block;" alt="ENSIHeader" border="0"
+ height="119" width="600"></a></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--email container-->
+<table align="center" bgcolor="#ffffff" border="0"
+ cellpadding="25" cellspacing="0" width="550">
+  <tbody>
+    <tr>
+      <td><!--email content-->
+      <table id="email-content" border="0"
+ cellpadding="0" cellspacing="0" width="550">
+        <tbody>
+          <tr>
+            <td>
+            <table border="0" cellpadding="0"
+ cellspacing="0" width="100%">
+              <tbody>
+                <tr>
+                  <td align="left" valign="top">
+                  <table border="0" cellpadding="0"
+ cellspacing="0" width="100%">
+                    <tbody>
+                      <tr>
+                      </tr>
+                    </tbody>
+                  </table>
+<!--email greeting/body--> </td>
+                  <td border="none" style="padding: 0px;"
+ valign="top" width="100%">
+                  <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">Dear
+{!Contact.FirstName},</p>
+                  <font
+ style="font-family: Georgia,serif; font-size: 22px; font-style: italic; text-align: center; color: rgb(110, 180, 63);">'You
+only get out what you put in'<br>
+                  </font>
+                  <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">Remember
+to provide us with a short example of how you have applied your
+{!Contact.Program_Name__c} skills.<br>
+                  </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+<!--email content-->
+            <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">Click
+            <a
+ href="http://www.surveygizmo.com/s3/1120228/6-WEEK-POST-PROGRAM-SURVEY?jid={!Contact.Last_Job_ID__c}&amp;pid={!Contact.Last_Participant_Id__c}"
+ style="color: rgb(110, 180, 63); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: top;">here</a>
+to access the survey.
+            <span style="font-weight: bold; color: red;"></span></p>
+            <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;"><span
+ style="font-weight: bold; color: red;">This
+link is specific to you, please don't forward to others.</span></p>
+            <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;"><span
+ style="font-weight: bold;">NB:</span>
+If you have already started your survey and have opted to 'save and
+continue' while in the survey - it is important that you use the link
+that was sent to you at the time you saved your response, otherwise the
+above link will open a new survey.</p>
+            <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">It
+would be appreciated if you could complete your response by: <span
+ style="font-weight: bold;">{!Contact.Job_6_week_case_study_due__c}.</span></p>
+<!--Pre-program--><!--Sign-off-->
+            <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">Your
+ENSI facilitator/s {!Contact.Job_Presenters__c}, will review all
+responses and a report with their feedback will be provided to the
+group along with everyone's (anonymous) examples. Click <a
+ href="http://www.negotiate.org/LiteratureRetrieve.aspx?ID=108529"
+ style="color: rgb(110, 180, 63); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: top;">here</a>
+to see a sample report.</p>
+            <p
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 100; vertical-align: top;">Kind
+regards, <br>
+            <br>
+{!Contact.Job_CSM_Name__c}<br>
+            <font
+ style="color: rgb(51, 51, 51); font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.2; font-weight: 900; vertical-align: top;">{!Contact.Job_CSC_Title__c}</font><br>
+            </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--footer-->
+<table style="background-color: rgb(255, 255, 255);"
+ align="center" border="0" cellpadding="0"
+ cellspacing="0" width="600">
+  <tbody>
+    <tr>
+      <td>
+      <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+        <tbody>
+          <tr>
+            <td border="0" height="77" valign="top"
+ width="600"><a href="http://www.negotiate.org/"><img
+ src="http://www.negotiate.org/images/ENSI_footer.jpg" alt=""
+ style="border: 0px none ; display: block; padding-top: 15px;"
+ height="77" width="600">
+            </a></td>
+          </tr>
+        </tbody>
+      </table>
+<!--footer info-->
+      <table bgcolor="#f4f4f1" border="0"
+ cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td align="center" height="60"
+ valign="middle">
+            <p
+ style="margin: 5px auto 0pt; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.4; font-weight: 300;"><a
+ href="http://www.negotiate.org/"
+ style="color: rgb(51, 51, 51); margin-bottom: 80px;">ENS
+International</a> - Level 5, 83 York Street, Sydney 2000, NSW,
+Australia <br>
+Phone: +61 2 9299 9688 </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--/email container-->
+<!--/1body table-->
+</body>
+</html>

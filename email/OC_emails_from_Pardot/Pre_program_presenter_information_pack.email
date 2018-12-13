@@ -1,0 +1,74 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 0, 0);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+
+<strong><span style="color:#ee0090;" >CC Ian</span></strong><br>
+<br>
+Hi {!Job__c.Facilitator_1__c}<br>
+<br>
+Please find attached the following information, to help you prepare for {!Job__c.Certificate_Date_Text__c} open course.
+<ul>
+<li>PFQ Excerpt – groups the objectives, shortcomings and difficult aspects as indicated by participants. 
+<li>PFQ Summary - includes most relevant information from the PFQ responses.   
+<li>Confidence and Competence Graph (refer to PFQ summary spreadsheet – worksheet titled: Conf_Comp) for group. 
+<li>Pax List – quick overview of participants including highlights of those who haven’t completed pre-work. 
+<li>Leaders Guide timetable
+<li>Open Course Code of Practice
+<li>Peer Review Form - As part of the ENS Quality Assurance, please complete the attached ENS Peer/Self Review form after the workshop and return to me. (Solo facilitators will complete a self-assessment and dual facilitators will peer review each other)
+</ul>
+<br><br>
+
+<strong>Venue</strong><br>
+{!Job__c.Venue_Name__c}<br>
+{!Job__c.Venue_Address__c}<br>
+{!Job__c.Venue_Contact__c}<br>
+
+<br><br>
+<strong>Materials and case studies include:</strong>
+<br>
+Fundamentals
+Handbooks (and pens)
+Green Recourses / Seamless Enterprises
+<br>
+Level 1
+Workbook set (4 cards and pen)
+Crocodile eggs
+Red/Blue process observation sheet
+Process observation sheet
+<br>
+Level 2
+Manual set (4 cards and pen)
+Harbourside/Munal
+Garden Block
+Process observation sheet
+<br>
+Level 3
+Advanced Workbook set (4 cards and pen)
+Process observation sheet
+3 recommendations
+Garden Block
+Customer Reluctance
+Sino Oil
+<br><br>
+<strong>Program timetable</strong>
+<br>
+0830 - 0845     Coffee/Tea – Meet and Greet<br>      
+0845 - 1030     Morning Session<br>
+1030 - 1045     Coffee/Tea Break<br>                         
+1045 - 1230     Morning Session continues<br>
+1230 - 1330     Lunch<br>                                                                                        
+1330 - 1530     Afternoon Session<br>
+1530 - 1545     Coffee/Tea Break<br>                             
+1545 - 1715     Afternoon Session continues<br>
+
+<br>
+The materials will be arriving on XXX
+<br><br>
+Let me know if you need anything else.
+
+
+<br>
+<br>
+Kind regards</span></span>												
+</html>

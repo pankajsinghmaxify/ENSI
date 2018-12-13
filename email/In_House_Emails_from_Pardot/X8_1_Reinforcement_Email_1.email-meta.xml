@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Reinforcement Email 1</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>8.1 Reinforcement Email 1</name>
+    <style>none</style>
+    <subject>{!Contact.FirstName}, here is your ENSI Reinforcement Email #1</subject>
+    <textOnly>Negotiation &amp; Influencing
+
+View this email in your browser
+
+
+{!Job__c.Account_Name__c} ENSI Reinforcement Email #1
+
+Greetings {!Contact.FirstName}
+
+First thank you for all your energy and input into our recent ENSI Negotiation &amp; Influencing program. And for your good humour too.
+
+Here are 3 electronic templates for your use
+
+Systematic Negotiation Preparation
+Negotiation Process Observation
+Post-Negotiation Review
+
+Please check them out and follow us on LinkedIn for the latest ENSI articles and insights.
+
+Towards greater negotiation success...
+
+{!Job__c.Facilitator_names__c}
+www.negotiate.org
+
+
+
+
+
+P +61 2 9299 9688  | E info.ens@negotiate.org
+Level 5  83 York Street  Sydney NSW 2000  Australia
+
+negotiate.org
+Manage subscription | Forward email</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

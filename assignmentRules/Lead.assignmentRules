@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>In-House or Open Course</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>In_house_oversight</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR 2 OR 3</booleanFilter>
+            <criteriaItems>
+                <field>Lead.Opportunity_record_type__c</field>
+                <operation>equals</operation>
+                <value>In-House</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_type__c</field>
+                <operation>equals</operation>
+                <value>In-house training,Negotiation Consulting,Organisational transformation</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_type__c</field>
+                <operation>equals</operation>
+            </criteriaItems>
+            <template>unfiled$public/New_Lead</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Open_course_oversight</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <criteriaItems>
+                <field>Lead.Opportunity_record_type__c</field>
+                <operation>equals</operation>
+                <value>OC PAX,OC Course,OC Course profit split</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_type__c</field>
+                <operation>equals</operation>
+                <value>Open Course</value>
+            </criteriaItems>
+            <template>unfiled$public/New_Lead</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>No_product_type</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Product_type__c</field>
+                <operation>equals</operation>
+                <value>Interested in joining ENS</value>
+            </criteriaItems>
+            <template>unfiled$public/New_Lead</template>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customObject>true</customObject>
+    <description>This App records Expense information incurred by people performing training sessions and is not passed on to the customer&apos;s invoice unless a product is added to a Opportunity</description>
+    <mobileReady>false</mobileReady>
+    <motif>Custom87: Safe</motif>
+</CustomTab>

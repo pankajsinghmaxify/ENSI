@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email introducing the up-coming 6 reinforcement emails</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>05 Reinforcement email intro</name>
+    <style>none</style>
+    <subject>ENSI Reinforcement Email #1</subject>
+    <textOnly>ENS International Participant Email
+
+
+Dear {!Contact.FirstName},
+
+&apos;Small investment LARGE IMPACT&apos;
+
+First thank you for all your energy and input into our recent ENSI Negotiation &amp; Influencing program. And for your good humour too.
+
+Here are 3 electronic templates for your use. They are
+
+Systematic Negotiation Preparation
+Negotiation Process Observation
+Post-Negotiation Review
+
+Please check them out.
+
+Towards greater negotiation success…
+
+Kind regards,
+
+{!Contact.Job_Presenters__c}
+
+ENS International - Level 5, 83 York Street, Sydney 2000, NSW, Australia
+Phone: +61 2 9299 9688</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

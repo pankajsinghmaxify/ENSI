@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Training</fullName>
+        <default>true</default>
+        <label>Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary training</fullName>
+        <default>false</default>
+        <label>Secondary training</label>
+    </customValue>
+    <customValue>
+        <fullName>Not related to training dates</fullName>
+        <default>false</default>
+        <label>Not related to training dates</label>
+    </customValue>
+    <customValue>
+        <fullName>Ad Hoc</fullName>
+        <default>false</default>
+        <label>Ad Hoc</label>
+    </customValue>
+    <masterLabel>Related to training dates</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

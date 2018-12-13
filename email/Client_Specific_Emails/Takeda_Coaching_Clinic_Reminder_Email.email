@@ -1,0 +1,53 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 0, 0);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">Dear {!Contact.FirstName}<br>
+<br>
+<span style="font-size: 16.5pt; color:#84bd00;">M4NTRA
+Coaching Clinic - Think & Act Differently to Achieve Success
+&nbsp;</span><br><br>
+In preparation for your Takeda M4NTRA Coaching Clinic, please read the following information.<br><br>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:100.0%;" width="100%">
+	<tbody>
+		<tr>
+			<td class=""><span class="mcnTextContent"><strong>Date:</strong></span></td>
+			<td class=""><span class="mcnTextContent">{!Job__c.Certificate_Date_Text__c}</span></td>
+		</tr>
+		<tr>
+			<td class=""><span class="mcnTextContent"><strong>Time:</strong></span></td>
+			<td class=""><span class="mcnTextContent">{!Job__c.Start_Finish_Time__c}</span></td>
+		</tr>
+		<tr>
+			<td class=""><span class="mcnTextContent"><strong>Venue:</strong></span></td>
+			<td class=""><span class="mcnTextContent">{!Job__c.Venue_Name__c}<br>
+			{!Job__c.Venue_Address__c}<br>
+			{!Job__c.Venue_City__c} {!Job__c.Venue_State__c} {!Job__c.Venue_Postcode__c}<br>
+			{!Job__c.Venue_Country__c}</span></td>
+		</tr>
+		<tr>
+			<td class=""><span class="mcnTextContent"><strong>Program Leader/s:</strong></span><strong> </strong></td>
+			<td class=""><span class="mcnTextContent">{!Job__c.Facilitator_names__c}<br>
+			{!Job__c.Facilitator_emails__c}</span></td>
+		</tr>
+		<tr>
+			<td class=""><span class="mcnTextContent"><strong>Dress:</strong></span></td>
+			<td class=""><span class="mcnTextContent">Smart casual</span></td>
+		</tr>
+		
+	</tbody>
+</table>
+<span class="mcnTextContent">&nbsp;<br>
+With the Coaching Clinic now just a few days away, a quick reminder that you should bring your </span>
+
+<span style="color:#84bd00;">GREEN Professional Negotiation and Influencing Manual</span> with you.<br>
+
+
+<br><span class="mcnTextContent">In addition to the manual, please also bring any material that you need to have on-hand in order to prepare / further prepare the negotiation strategy that you and the team will be working on during the Clinic.<br>
+
+<br>We look forward to seeing you at the Clinic, a key part of Takeda's M4NTRA investment to help you think and act differently, to help Takeda and patients get better results!<br>
+<br>
+
+
+<span class="mcnTextContent">Kind regards</span></span>												
+</html>

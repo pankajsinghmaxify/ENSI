@@ -1,0 +1,23 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	
+					<div><span style="color:rgb(0, 0, 0);"><span style="font-size:14.5px; font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;">
+
+Hi {!Job__c.NAM_Name__c}<br>
+<br>
+Please find attached a status update of how your participants are going with their pre-workshop requirements for the ENSI workshop taking place on {!Job__c.Certificate_Date_Text__c}.<br>
+<br>
+As you can see, there are a few participants that have not completed their surveys and I would appreciate if you could also prompt them to have this completed by {!Job__c.PFQ_Due_Date__c}, in order for us to have enough time to customise the program. A reminder from ENSI was sent to participants <strong><span style="color:#EE0090;">yesterday</span></strong>.<br>
+<br>
+For your reference, the pre-program survey<strong><span style="color:#EE0090;">s</span></strong> being completed <strong><span style="color:#EE0090;">is/are</span></strong>:<br>
+<br>
+Program Focus Questionnaires (PFQs)<br>
+The Program Focus Questionnaire (PFQ) is the first part of their pre-program preparation and helps presenter’s structure the program based on the key needs and development areas defined by participant responses.<br>
+<br>
+<strong><span style="color:#EE0090;">Negotiating &amp; Influencing Profiles (NIPs)<br>
+The NIP is an online profile covering 20 key competencies relating to the negotiation and influencing capabilities of individuals. At the program, participants will receive their individual profile, which will be discussed in detail.</span></strong><br>
+<br>
+Thank you in advance for your assistance.<br>
+<br>
+Kind regards</span></span>												
+</html>

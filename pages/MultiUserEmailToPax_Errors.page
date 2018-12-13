@@ -1,0 +1,9 @@
+<apex:page >
+<apex:pageMessages id="apexmsg"/>
+<h1>An error has occurred in Email to Participants.</h1>
+<p>Check with your administrator that the current user has a list specified in the
+ <a href="/ui/massmail/MassMailStageManager?setupid=MassMailFilter&ftype=C&wizardRetUrl=%2F003%2Fo" target="_blank">Mass Email Wizard</a> 
+and that that list is specified in the
+ <a href="/setup/ui/listCustomSettingsData.apexp?com.salesforce.visualforce.ViewStateCSRF=OU4Kw3u6bA5zpTIm3xKlD309dWzNMJWrqanHH6aaq7Fysj3OD.Obi91iatHCCrcw2uWjJ.kAQPii4ELe49EUSswGBHOpvIOdl0hMWz5lBnhdUThcQWTC0EgW176Bd2bO8rXJnhRUu2zML5epPZl2crYFk3IJ565NHICoSQz4X0zEOxYq&CS_Defn_View%3ACS_View=CS_Defn_View%3ACS_View&CS_Defn_View%3ACS_View%3AtheDetailBlock%3AdetailButtons%3Amanage=Manage&id=a0A&retURL=%2Fsetup%2Fui%2FviewCustomSettings.apexp%3Fid%3D01IR00000005Wew)" target="_blank">Email Pax Mass Email List 
+custom setting</a>.</p>
+</apex:page>
