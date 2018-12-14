@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Selection of job certificate types
+Connects to the HTML page in - Setup, App Setup, Develop, Pages</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <label>Certificate Type</label>
+    <nameField>
+        <label>Certificate Type</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Certificate Types</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>First_Para_Text__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Second_Para_Text__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Program_Title__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Third_Para_Text__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>First_Para_Text__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Second_Para_Text__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Program_Title__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Third_Para_Text__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchResultsAdditionalFields>First_Para_Text__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Second_Para_Text__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Program_Title__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Third_Para_Text__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>
